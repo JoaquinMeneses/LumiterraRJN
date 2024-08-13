@@ -45,10 +45,16 @@ const Energia = () => {
         <tbody>
           {data?.map(
             (
-              { name, cdnImage, attributes, minPrice, costPerEnergy, tokenId },
+              {
+                name,
+                cdnImage,
+                restoreEnergy,
+                minPrice,
+                costPerEnergy,
+                tokenId,
+              },
               index
             ) => {
-              const restoreEnergy = parseFloat(attributes["restore energy"][0]);
               return (
                 <tr key={index}>
                   <td>
