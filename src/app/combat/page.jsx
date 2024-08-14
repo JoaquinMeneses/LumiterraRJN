@@ -75,7 +75,7 @@ const Energia = () => {
                   .map((attribute, index) => {
                     const key = Object.keys(attribute)[0];
                     const value = Object.values(attribute)[0];
-                    return <Typography fontWeight="lg">Lv {value}</Typography>;
+                    return <Typography key={index} fontWeight="lg">Lv {value}</Typography>;
                   })}
               </Typography>
               <Typography fontSize="xl" fontWeight="lg">
