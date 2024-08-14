@@ -8,7 +8,7 @@ const fetchData = async (url, query) => {
     cache: "no-store",
     headers: {
       "Content-Type": "application/json",
-      "x-api-key": process.env.apiKeySkyMavis,
+      "x-api-key": process.env.API_KEY_SKY_MAVIS,
     },
     body: JSON.stringify({ query }),
   });
@@ -23,6 +23,20 @@ export async function GET(request) {
   const apiUrl = "https://api-gateway.skymavis.com/graphql/mavis-marketplace";
 
   try {
+    const dataExchangeRate = await fetchData(
+      apiUrl,
+      `
+      query MyQuery {
+        exchangeRate {
+          ron {
+            usd
+            }
+        }
+      }
+    `,
+    );
+    const exchangeRate = dataExchangeRate.data.exchangeRate.ron.usd;
+
     const dataCombatShoes = await fetchData(
       apiUrl,
       `
@@ -49,7 +63,6 @@ export async function GET(request) {
       }
       `,
     );
-
     const dataCombatPants = await fetchData(
       apiUrl,
       `
@@ -197,7 +210,6 @@ export async function GET(request) {
         }
       `,
     );
-
     const dataCombatHammer = await fetchData(
       apiUrl,
       `
@@ -223,20 +235,6 @@ export async function GET(request) {
       `,
     );
 
-    const dataExchangeRate = await fetchData(
-      apiUrl,
-      `
-      query MyQuery {
-        exchangeRate {
-          ron {
-            usd
-            }
-        }
-      }
-    `,
-    );
-    const exchangeRate = dataExchangeRate.data.exchangeRate.ron.usd;
-
     const resultsdataCombatShoes =
       dataCombatShoes.data.erc1155Tokens.results.map((result) => ({
         ...result,
@@ -250,7 +248,6 @@ export async function GET(request) {
         })),
         type: result.attributes["type"] && result.attributes["type"][0],
       }));
-
     const resultsdataCombatPants =
       dataCombatPants.data.erc1155Tokens.results.map((result) => ({
         ...result,
@@ -264,7 +261,6 @@ export async function GET(request) {
         })),
         type: result.attributes["type"] && result.attributes["type"][0],
       }));
-
     const resultsdataCombatGloves =
       dataCombatGloves.data.erc1155Tokens.results.map((result) => ({
         ...result,
@@ -278,7 +274,6 @@ export async function GET(request) {
         })),
         type: result.attributes["type"] && result.attributes["type"][0],
       }));
-
     const resultsdataCombatHat = dataCombatHat.data.erc1155Tokens.results.map(
       (result) => ({
         ...result,
@@ -293,7 +288,6 @@ export async function GET(request) {
         type: result.attributes["type"] && result.attributes["type"][0],
       }),
     );
-
     const resultsdataCombatJacket =
       dataCombatJacket.data.erc1155Tokens.results.map((result) => ({
         ...result,
@@ -307,7 +301,6 @@ export async function GET(request) {
         })),
         type: result.attributes["type"] && result.attributes["type"][0],
       }));
-
     const resultsdataCombatSword =
       dataCombatSword.data.erc1155Tokens.results.map((result) => ({
         ...result,
@@ -321,7 +314,6 @@ export async function GET(request) {
         })),
         type: result.attributes["type"] && result.attributes["type"][0],
       }));
-
     const resultsdataCombatbow = dataCombatBow.data.erc1155Tokens.results.map(
       (result) => ({
         ...result,
@@ -336,7 +328,6 @@ export async function GET(request) {
         type: result.attributes["type"] && result.attributes["type"][0],
       }),
     );
-
     const resultsdataCombatHammer =
       dataCombatHammer.data.erc1155Tokens.results.map((result) => ({
         ...result,

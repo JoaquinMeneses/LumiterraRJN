@@ -48,7 +48,6 @@ export async function GET(request) {
       }
       `,
     );
-
     const dataGatheringPants = await fetchData(
       apiUrl,
       `query MyQuery {
@@ -192,7 +191,6 @@ export async function GET(request) {
         }
       `,
     );
-
     const dataGatheringSickle = await fetchData(
       apiUrl,
       `query MyQuery {
