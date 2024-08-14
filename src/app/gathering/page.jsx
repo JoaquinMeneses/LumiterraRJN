@@ -47,7 +47,7 @@ const Gathering = () => {
   return (
     <main className="flex">
       <Filters data={data} setDataFiltered={setDataFiltered} />
-      <div className="flex w-full flex-wrap justify-center gap-3 p-3">
+      <div className="flex h-full w-full flex-wrap justify-center gap-3 p-3">
         {dataFiltered?.map(
           ({ name, minPrice, cdnImage, attributes, tokenId }) => {
             return (

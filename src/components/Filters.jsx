@@ -15,24 +15,7 @@ const Filters = ({ data, setDataFiltered }) => {
   useEffect(() => {
     const attributesMap = {};
 
-    const filteredData = data.filter((item) => {
-      return Object.keys(selectedFilters).every((key) => {
-        const filterValue = selectedFilters[key];
-
-        return item.attributes.some((attribute) => {
-          const attributeKey = Object.keys(attribute)[0];
-          const attributeValue = Object.values(attribute)[0];
-
-          if (attributeKey === key) {
-            return attributeValue === filterValue;
-          }
-
-          return false;
-        });
-      });
-    });
-
-    filteredData.forEach((item) => {
+    data.forEach((item) => {
       item.attributes.forEach((attribute) => {
         const key = Object.keys(attribute)[0];
         if (!attributesMap[key]) {
@@ -50,6 +33,26 @@ const Filters = ({ data, setDataFiltered }) => {
     );
 
     setUniqueAttributes(attributesArray);
+  }, [data]);
+
+  useEffect(() => {
+    const filteredData = data.filter((item) => {
+      return Object.keys(selectedFilters).every((key) => {
+        const filterValue = selectedFilters[key];
+
+        return item.attributes.some((attribute) => {
+          const attributeKey = Object.keys(attribute)[0];
+          const attributeValue = Object.values(attribute)[0];
+
+          if (attributeKey === key) {
+            return attributeValue === filterValue;
+          }
+
+          return false;
+        });
+      });
+    });
+
     setDataFiltered(filteredData);
   }, [data, selectedFilters, setDataFiltered]);
 
@@ -71,7 +74,7 @@ const Filters = ({ data, setDataFiltered }) => {
         flexDirection: "column",
         gap: 1,
         padding: 1,
-        width: 240,
+        width: 200,
       }}
     >
       <Button color="danger" onClick={resetFilters}>
@@ -87,19 +90,16 @@ const Filters = ({ data, setDataFiltered }) => {
           </FormLabel>
           <Select
             id={`select-field-${key}`}
-            placeholder="Filtrar"
-            value={selectedFilters[key]}
+            value={selectedFilters[key] || ""}
+            onChange={(e, value) => handleFilterChange(key, value)}
           >
+            <Option disabled value="">
+              Filtrar
+            </Option>
             {values
-              .sort((a, b) => {
-                return a - b;
-              })
+              .sort((a, b) => a - b)
               .map((value) => (
-                <Option
-                  key={value}
-                  value={value}
-                  onClick={() => handleFilterChange(key, value)}
-                >
+                <Option key={value} value={value}>
                   {value}
                 </Option>
               ))}
