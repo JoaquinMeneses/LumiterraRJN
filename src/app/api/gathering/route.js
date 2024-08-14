@@ -235,11 +235,6 @@ export async function GET(request) {
     const resultsdataGatheringShoes =
       dataGatheringShoes.data.erc1155Tokens.results.map((result) => ({
         ...result,
-        minPrice: Number(
-          (result.minPrice / 1000000000000000000) *
-            dataExchangeRate.data.exchangeRate.ron.usd,
-        ).toFixed(2),
-        ...result,
         minPrice: result.minPrice
           ? Number(
               (result.minPrice / 1000000000000000000) * exchangeRate,

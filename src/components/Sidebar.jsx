@@ -40,6 +40,26 @@ export default function Sidebar() {
           />
         </IconButton>
       </Link>
+      <Link href="/gathering">
+        <IconButton>
+          <Image
+            src="https://cdn.skymavis.com/mm-cache/d/e/18aa0ea45c2e1af5581934b49a7647.png"
+            alt="Iron Pickaxe"
+            width={32}
+            height={32}
+          />
+        </IconButton>
+      </Link>
+      <Link href="/farming">
+        <IconButton>
+          <Image
+            src="https://cdn.skymavis.com/mm-cache/5/a/a07b32d1643fa4d3ac4972256efc57.png"
+            alt="Iron Hoe"
+            width={32}
+            height={32}
+          />
+        </IconButton>
+      </Link>
     </Sheet>
   );
 }

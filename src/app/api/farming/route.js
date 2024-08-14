@@ -47,7 +47,7 @@ export async function GET(request) {
           total
         }
       }
-      `
+      `,
     );
 
     const dataFarmingPants = await fetchData(
@@ -67,13 +67,12 @@ export async function GET(request) {
               name
               tokenId
               attributes
-              image
               cdnImage
             }
             total
           }
         }
-      `
+      `,
     );
     const dataFarmingGloves = await fetchData(
       apiUrl,
@@ -92,13 +91,12 @@ export async function GET(request) {
               name
               tokenId
               attributes
-              image
               cdnImage
             }
             total
           }
         }
-      `
+      `,
     );
     const dataFarmingLuckyHat = await fetchData(
       apiUrl,
@@ -117,13 +115,12 @@ export async function GET(request) {
               name
               tokenId
               attributes
-              image
               cdnImage
             }
             total
           }
         }
-      `
+      `,
     );
     const dataFarmingJacket = await fetchData(
       apiUrl,
@@ -141,13 +138,12 @@ export async function GET(request) {
               name
               tokenId
               attributes
-              image
               cdnImage
             }
             total
           }
         }
-      `
+      `,
     );
     const dataFarmingHoe = await fetchData(
       apiUrl,
@@ -166,13 +162,12 @@ export async function GET(request) {
               name
               tokenId
               attributes
-              image
               cdnImage
             }
             total
           }
         }
-      `
+      `,
     );
     const dataFarmingKettle = await fetchData(
       apiUrl,
@@ -191,13 +186,12 @@ export async function GET(request) {
               name
               tokenId
               attributes
-              image
               cdnImage
             }
             total
           }
         }
-      `
+      `,
     );
 
     const dataExchangeRate = await fetchData(
@@ -210,149 +204,118 @@ export async function GET(request) {
             }
         }
       }
-    `
+    `,
     );
-    const resultsdataFarmingShoes = dataFarmingShoes.data.erc1155Tokens.results.map(
-      (result) => ({
-        ...result,
-        minPrice: Number(
-          (result.minPrice / 1000000000000000000) *
-            dataExchangeRate.data.exchangeRate.ron.usd
-        ).toFixed(2),
-        attributes:[
-          breedingproficiency= Number(result.attributes["breedingproficiency"][0]),
-          homeextramovespd= Number(result.attributes["homeextramovespd"][0]),
-          maxfertility= Number(result.attributes["maxfertility"][0]),
-          maxpethappiness= Number(result.attributes["maxpethappiness"][0]),
-          plantingproficiency= Number(result.attributes["plantingproficiency"][0]),
-          requireslevel= Number(result.attributes["requires level"][0]),
-          quality= result.attributes["quality"][0]
-        ],
-        image: result.image,
-        type: result.attributes["type"][0]
-      })
-    );
+    const exchangeRate = dataExchangeRate.data.exchangeRate.ron.usd;
 
-    const resultsdataFarmingPants = dataFarmingPants.data.erc1155Tokens.results.map(
-      (result) => ({
+    const resultsdataFarmingShoes =
+      dataFarmingShoes.data.erc1155Tokens.results.map((result) => ({
         ...result,
-        minPrice: Number(
-          (result.minPrice / 1000000000000000000) *
-            dataExchangeRate.data.exchangeRate.ron.usd
-        ).toFixed(2),
-        attributes:[
-          breedingproficiency= Number(result.attributes["breedingproficiency"][0]),
-          hoespd= Number(result.attributes["hoespd"][0]),
-          maxfertility= Number(result.attributes["maxfertility"][0]),
-          maxpethappiness= Number(result.attributes["maxpethappiness"][0]),
-          plantingproficiency= Number(result.attributes["plantingproficiency"][0]),
-          requireslevel= Number(result.attributes["requires level"][0]),
-          quality= result.attributes["quality"][0]
-        ],
-        image: result.image,
-        type: result.attributes["type"][0]
-      })
-    );
+        minPrice: result.minPrice
+          ? Number(
+              (result.minPrice / 1000000000000000000) * exchangeRate,
+            ).toFixed(2)
+          : "Not sale",
+        attributes: Object.keys(result.attributes).map((key) => ({
+          [key]: result.attributes[key][0],
+        })),
+        type: result.attributes["type"] && result.attributes["type"][0],
+      }));
 
-    const resultsdataFarmingGloves = dataFarmingGloves.data.erc1155Tokens.results.map(
-      (result) => ({
+    const resultsdataFarmingPants =
+      dataFarmingPants.data.erc1155Tokens.results.map((result) => ({
         ...result,
-        minPrice: Number(
-          (result.minPrice / 1000000000000000000) *
-            dataExchangeRate.data.exchangeRate.ron.usd
-        ).toFixed(2),
-        attributes:[
-          breedingproficiency= Number(result.attributes["breedingproficiency"][0]),
-          fertilitycapacity= Number(result.attributes["fertilitycapacity"][0]),
-          maxfertility= Number(result.attributes["maxfertility"][0]),
-          maxpethappiness= Number(result.attributes["maxpethappiness"][0]),
-          pethappinesscapacity= Number(result.attributes["pethappinesscapacity"][0]),
-          plantingproficiency= Number(result.attributes["plantingproficiency"][0]),
-          requireslevel= Number(result.attributes["requires level"][0]),
-          quality= result.attributes["quality"][0]
-        ],
-        image: result.image,
-        type: result.attributes["type"][0]
-      })
-    );
+        minPrice: result.minPrice
+          ? Number(
+              (result.minPrice / 1000000000000000000) * exchangeRate,
+            ).toFixed(2)
+          : "Not sale",
+        attributes: Object.keys(result.attributes).map((key) => ({
+          [key]: result.attributes[key][0],
+        })),
+        type: result.attributes["type"] && result.attributes["type"][0],
+      }));
 
-    const resultsdataFarmingLuckyHat = dataFarmingLuckyHat.data.erc1155Tokens.results.map(
-      (result) => ({
+    const resultsdataFarmingGloves =
+      dataFarmingGloves.data.erc1155Tokens.results.map((result) => ({
         ...result,
-        minPrice: Number(
-          (result.minPrice / 1000000000000000000) *
-            dataExchangeRate.data.exchangeRate.ron.usd
-        ).toFixed(2),
-        attributes:[
-          breedingproficiency= Number(result.attributes["breedingproficiency"][0]),
-          maxfertility= Number(result.attributes["maxfertility"][0]),
-          maxpethappiness= Number(result.attributes["maxpethappiness"][0]),
-          plantingproficiency= Number(result.attributes["plantingproficiency"][0]),
-          requireslevel= Number(result.attributes["requires level"][0]),
-          quality= result.attributes["quality"][0]
-        ],
-        image: result.image,
-        type: result.attributes["type"][0]
-      })
-    );
+        minPrice: result.minPrice
+          ? Number(
+              (result.minPrice / 1000000000000000000) * exchangeRate,
+            ).toFixed(2)
+          : "Not sale",
+        attributes: Object.keys(result.attributes).map((key) => ({
+          [key]: result.attributes[key][0],
+        })),
+        type: result.attributes["type"] && result.attributes["type"][0],
+      }));
 
-    const resultsdataFarmingJacket = dataFarmingJacket.data.erc1155Tokens.results.map(
-      (result) => ({
+    const resultsdataFarmingLuckyHat =
+      dataFarmingLuckyHat.data.erc1155Tokens.results.map((result) => ({
         ...result,
-        minPrice: Number(
-          (result.minPrice / 1000000000000000000) *
-            dataExchangeRate.data.exchangeRate.ron.usd
-        ).toFixed(2),
-        attributes:[
-          breedingproficiency= Number(result.attributes["breedingproficiency"][0]),
-          maxfertility= Number(result.attributes["maxfertility"][0]),
-          maxpethappiness= Number(result.attributes["maxpethappiness"][0]),
-          plantingproficiency= Number(result.attributes["plantingproficiency"][0]),
-          requireslevel= Number(result.attributes["requires level"][0]),
-          quality= result.attributes["quality"][0]
-        ],
-        image: result.image,
-        type: result.attributes["type"][0]
-      })
-    );
+        minPrice: result.minPrice
+          ? Number(
+              (result.minPrice / 1000000000000000000) * exchangeRate,
+            ).toFixed(2)
+          : "Not sale",
+        attributes: Object.keys(result.attributes).map((key) => ({
+          [key]: result.attributes[key][0],
+        })),
+        type: result.attributes["type"] && result.attributes["type"][0],
+      }));
+
+    const resultsdataFarmingJacket =
+      dataFarmingJacket.data.erc1155Tokens.results.map((result) => ({
+        ...result,
+        minPrice: result.minPrice
+          ? Number(
+              (result.minPrice / 1000000000000000000) * exchangeRate,
+            ).toFixed(2)
+          : "Not sale",
+        attributes: Object.keys(result.attributes).map((key) => ({
+          [key]: result.attributes[key][0],
+        })),
+        type: result.attributes["type"] && result.attributes["type"][0],
+      }));
 
     const resultsdataFarmingHoe = dataFarmingHoe.data.erc1155Tokens.results.map(
       (result) => ({
         ...result,
-        minPrice: Number(
-          (result.minPrice / 1000000000000000000) *
-            dataExchangeRate.data.exchangeRate.ron.usd
-        ).toFixed(2),
-        attributes:[
-          combatatt= Number(result.attributes["combatatt"][0]),
-          fertilitycapacity= Number(result.attributes["fertilitycapacity"][0]),
-          hoeingeffect= Number(result.attributes["hoeingeffect"][0]),
-          requireslevel= Number(result.attributes["requires level"][0]),
-          quality= result.attributes["quality"][0]
-        ],
-        image: result.image,
-        type: result.attributes["type"][0]
-      })
+        minPrice: result.minPrice
+          ? Number(
+              (result.minPrice / 1000000000000000000) * exchangeRate,
+            ).toFixed(2)
+          : "Not sale",
+        attributes: Object.keys(result.attributes).map((key) => ({
+          [key]: result.attributes[key][0],
+        })),
+        type: result.attributes["type"] && result.attributes["type"][0],
+      }),
     );
 
-    const resultsdataFarmingKettle = dataFarmingKettle.data.erc1155Tokens.results.map(
-      (result) => ({
+    const resultsdataFarmingKettle =
+      dataFarmingKettle.data.erc1155Tokens.results.map((result) => ({
         ...result,
-        minPrice: Number(
-          (result.minPrice / 1000000000000000000) *
-            dataExchangeRate.data.exchangeRate.ron.usd
-        ).toFixed(2),
-        attributes:[
-          wateringeffect= Number(result.attributes["wateringeffect"][0]),
-          requireslevel= Number(result.attributes["requires level"][0]),
-          quality= result.attributes["quality"][0]
-        ],
-        image: result.image,
-        type: result.attributes["type"][0]
-      })
-    );
+        minPrice: result.minPrice
+          ? Number(
+              (result.minPrice / 1000000000000000000) * exchangeRate,
+            ).toFixed(2)
+          : "Not sale",
+        attributes: Object.keys(result.attributes).map((key) => ({
+          [key]: result.attributes[key][0],
+        })),
+        type: result.attributes["type"] && result.attributes["type"][0],
+      }));
 
-
+    const allResults = [
+      ...resultsdataFarmingShoes,
+      ...resultsdataFarmingPants,
+      ...resultsdataFarmingGloves,
+      ...resultsdataFarmingLuckyHat,
+      ...resultsdataFarmingJacket,
+      ...resultsdataFarmingHoe,
+      ...resultsdataFarmingKettle,
+    ];
 
     return NextResponse.json(allResults);
   } catch (error) {

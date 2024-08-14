@@ -8,7 +8,7 @@ const fetchData = async (url, query) => {
     cache: "no-store",
     headers: {
       "Content-Type": "application/json",
-      "x-api-key": process.env.API_KEY_SKY_MAVIS,
+      "x-api-key": process.env.apiKeySkyMavis,
     },
     body: JSON.stringify({ query }),
   });
@@ -19,25 +19,14 @@ const fetchData = async (url, query) => {
   return response.json();
 };
 
-const formatResults = (data, exchangeRate) =>
-  data.erc1155Tokens.results.map((result) => ({
-    ...result,
-    minPrice: result.minPrice
-      ? Number((result.minPrice / 1000000000000000000) * exchangeRate).toFixed(
-          2
-        )
-      : "Not sale",
-    attributes: Object.keys(result.attributes).map((key) => ({
-      [key]: result.attributes[key][0],
-    })),
-    type: result.attributes["type"] && result.attributes["type"][0],
-  }));
-
 export async function GET(request) {
   const apiUrl = "https://api-gateway.skymavis.com/graphql/mavis-marketplace";
-  const queries = {
-    combatShoes: `
-      query {
+
+  try {
+    const dataCombatShoes = await fetchData(
+      apiUrl,
+      `
+        query MyQuery {
         erc1155Tokens(
           auctionType: Sale
           from: 0
@@ -52,186 +41,326 @@ export async function GET(request) {
             name
             tokenId
             attributes
+            image
             cdnImage
           }
           total
         }
       }
-    `,
-    combatPants: `
-      query {
-        erc1155Tokens(
-          auctionType: Sale
-          from: 0
-          name: "Pants"
-          rangeCriteria: {name: "combatdef", range: {from: "1", to: "1.157920892373162e+77"}}
-          size: 50
-          sort: PriceAsc
-          tokenAddress: "0xcc451977a4be9adee892f7e610fe3e3b3927b5a1"
-        ) {
-          results {
-            minPrice
-            name
-            tokenId
-            attributes
-            cdnImage
-          }
-          total
-        }
-      }
-    `,
-    combatGloves: `
-      query {
-        erc1155Tokens(
-          auctionType: Sale
-          from: 0
-          name: "Gloves"
-          rangeCriteria: {name: "combatdef", range: {from: "1", to: "1.157920892373162e+77"}}
-          size: 50
-          sort: PriceAsc
-          tokenAddress: "0xcc451977a4be9adee892f7e610fe3e3b3927b5a1"
-        ) {
-          results {
-            minPrice
-            name
-            tokenId
-            attributes
-            cdnImage
-          }
-          total
-        }
-      }
-    `,
-    combatHat: `
-      query {
-        erc1155Tokens(
-          auctionType: Sale
-          from: 0
-          name: "Hat"
-          rangeCriteria: {name: "combatdef", range: {from: "1", to: "1.157920892373162e+77"}}
-          size: 50
-          sort: PriceAsc
-          tokenAddress: "0xcc451977a4be9adee892f7e610fe3e3b3927b5a1"
-        ) {
-          results {
-            minPrice
-            name
-            tokenId
-            attributes
-            cdnImage
-          }
-          total
-        }
-      }
-    `,
-    combatJacket: `
-      query {
-        erc1155Tokens(
-          from: 0
-          size: 50
-          tokenAddress: "0xcc451977a4be9adee892f7e610fe3e3b3927b5a1"
-          rangeCriteria: {name: "combatdef", range: {to: "1.157920892373162e+77", from: "1"}}
-          criteria: {name: "type", values: "chest armor"}
-          auctionType: Sale
-          sort: PriceAsc
-        ) {
-          results {
-            minPrice
-            attributes
-            name
-            tokenId
-            cdnImage
-          }
-          total
-        }
-      }
-    `,
-    combatSword: `
-      query {
-        erc1155Tokens(
-          from: 0
-          size: 50
-          tokenAddress: "0xcc451977a4be9adee892f7e610fe3e3b3927b5a1"
-          name: "Sword"
-          sort: PriceAsc
-          auctionType: Sale
-        ) {
-          results {
-            minPrice
-            name
-            tokenId
-            attributes
-            cdnImage
-          }
-          total
-        }
-      }
-    `,
-    combatBow: `
-      query {
-        erc1155Tokens(
-          from: 0
-          size: 50
-          tokenAddress: "0xcc451977a4be9adee892f7e610fe3e3b3927b5a1"
-          name: "Bow"
-          sort: PriceAsc
-          auctionType: Sale
-        ) {
-          results {
-            minPrice
-            name
-            tokenId
-            attributes
-            cdnImage
-          }
-          total
-        }
-      }
-    `,
-    combatHammer: `
-      query {
-        erc1155Tokens(
-          from: 0
-          size: 50
-          tokenAddress: "0xcc451977a4be9adee892f7e610fe3e3b3927b5a1"
-          name: "Hammer"
-          sort: PriceAsc
-          auctionType: Sale
-        ) {
-          results {
-            minPrice
-            name
-            tokenId
-            attributes
-            cdnImage
-          }
-          total
-        }
-      }
-    `,
-  };
+      `,
+    );
 
-  const dataExchangeRate = await fetchData(
-    apiUrl,
-    `
-    query {
-      exchangeRate {
-        ron {
-          usd
+    const dataCombatPants = await fetchData(
+      apiUrl,
+      `
+        query MyQuery {
+          erc1155Tokens(
+            auctionType: Sale
+            from: 0
+            name: "Pants"
+            rangeCriteria: {name: "combatdef", range: {from: "1", to: "1.157920892373162e+77"}}
+            size: 50
+            sort: PriceAsc
+            tokenAddress: "0xcc451977a4be9adee892f7e610fe3e3b3927b5a1"
+          ) {
+            results {
+              minPrice
+              name
+              tokenId
+              attributes
+              cdnImage
+            }
+            total
+          }
+        }
+      `,
+    );
+    const dataCombatGloves = await fetchData(
+      apiUrl,
+      `
+        query MyQuery {
+          erc1155Tokens(
+            auctionType: Sale
+            from: 0
+            name: "Gloves"
+            rangeCriteria: {name: "combatdef", range: {from: "1", to: "1.157920892373162e+77"}}
+            size: 50
+            sort: PriceAsc
+            tokenAddress: "0xcc451977a4be9adee892f7e610fe3e3b3927b5a1"
+          ) {
+            results {
+              minPrice
+              name
+              tokenId
+              attributes
+              cdnImage
+            }
+            total
+          }
+        }
+      `,
+    );
+    const dataCombatHat = await fetchData(
+      apiUrl,
+      `
+        query MyQuery {
+          erc1155Tokens(
+            auctionType: Sale
+            from: 0
+            name: "Hat"
+            rangeCriteria: {name: "combatdef", range: {from: "1", to: "1.157920892373162e+77"}}
+            size: 50
+            sort: PriceAsc
+            tokenAddress: "0xcc451977a4be9adee892f7e610fe3e3b3927b5a1"
+          ) {
+            results {
+              minPrice
+              name
+              tokenId
+              attributes
+              cdnImage
+            }
+            total
+          }
+        }
+      `,
+    );
+    const dataCombatJacket = await fetchData(
+      apiUrl,
+      `query MyQuery {
+          erc1155Tokens(
+            from: 0
+            size: 50
+            tokenAddress: "0xcc451977a4be9adee892f7e610fe3e3b3927b5a1"
+            rangeCriteria: {name: "combatdef", range: {to: "1.157920892373162e+77", from: "1"}}
+            criteria: {name: "type", values: "chest armor"}
+            auctionType: Sale
+            sort: PriceAsc
+          ) {
+            results {
+              minPrice
+              attributes
+              name
+              tokenId
+              cdnImage
+            }
+            total
+          }
+        }
+      `,
+    );
+    const dataCombatSword = await fetchData(
+      apiUrl,
+      `        
+      query MyQuery {
+          erc1155Tokens(
+            from: 0
+            size: 50
+            tokenAddress: "0xcc451977a4be9adee892f7e610fe3e3b3927b5a1"
+            name: "Sword"
+            sort: PriceAsc
+            auctionType: Sale
+          ) {
+            results {
+              minPrice
+              name
+              tokenId
+              attributes
+              cdnImage
+            }
+            total
+          }
+        }
+      `,
+    );
+    const dataCombatBow = await fetchData(
+      apiUrl,
+      `
+        query MyQuery {
+          erc1155Tokens(
+            from: 0
+            size: 50
+            tokenAddress: "0xcc451977a4be9adee892f7e610fe3e3b3927b5a1"
+            name: "Bow"
+            sort: PriceAsc
+            auctionType: Sale
+          ) {
+            results {
+              minPrice
+              name
+              tokenId
+              attributes
+              cdnImage
+            }
+            total
+          }
+        }
+      `,
+    );
+
+    const dataCombatHammer = await fetchData(
+      apiUrl,
+      `
+      query MyQuery {
+          erc1155Tokens(
+            from: 0
+            size: 50
+            tokenAddress: "0xcc451977a4be9adee892f7e610fe3e3b3927b5a1"
+            name: "Hammer"
+            sort: PriceAsc
+            auctionType: Sale
+          ) {
+            results {
+              minPrice
+              name
+              tokenId
+              attributes
+              cdnImage
+            }
+            total
+          }
+        }
+      `,
+    );
+
+    const dataExchangeRate = await fetchData(
+      apiUrl,
+      `
+      query MyQuery {
+        exchangeRate {
+          ron {
+            usd
+            }
         }
       }
-    }
-  `
-  );
-  const exchangeRate = dataExchangeRate.data.exchangeRate.ron.usd;
+    `,
+    );
+    const exchangeRate = dataExchangeRate.data.exchangeRate.ron.usd;
 
-  try {
-    const promises = Object.keys(queries).map(async (key) => {
-      const res = await fetchData(apiUrl, queries[key]);
-      return formatResults(res.data, exchangeRate);
-    });
+    const resultsdataCombatShoes =
+      dataCombatShoes.data.erc1155Tokens.results.map((result) => ({
+        ...result,
+        minPrice: result.minPrice
+          ? Number(
+              (result.minPrice / 1000000000000000000) * exchangeRate,
+            ).toFixed(2)
+          : "Not sale",
+        attributes: Object.keys(result.attributes).map((key) => ({
+          [key]: result.attributes[key][0],
+        })),
+        type: result.attributes["type"] && result.attributes["type"][0],
+      }));
 
-    const allResults = (await Promise.all(promises)).flat();
+    const resultsdataCombatPants =
+      dataCombatPants.data.erc1155Tokens.results.map((result) => ({
+        ...result,
+        minPrice: result.minPrice
+          ? Number(
+              (result.minPrice / 1000000000000000000) * exchangeRate,
+            ).toFixed(2)
+          : "Not sale",
+        attributes: Object.keys(result.attributes).map((key) => ({
+          [key]: result.attributes[key][0],
+        })),
+        type: result.attributes["type"] && result.attributes["type"][0],
+      }));
+
+    const resultsdataCombatGloves =
+      dataCombatGloves.data.erc1155Tokens.results.map((result) => ({
+        ...result,
+        minPrice: result.minPrice
+          ? Number(
+              (result.minPrice / 1000000000000000000) * exchangeRate,
+            ).toFixed(2)
+          : "Not sale",
+        attributes: Object.keys(result.attributes).map((key) => ({
+          [key]: result.attributes[key][0],
+        })),
+        type: result.attributes["type"] && result.attributes["type"][0],
+      }));
+
+    const resultsdataCombatHat = dataCombatHat.data.erc1155Tokens.results.map(
+      (result) => ({
+        ...result,
+        minPrice: result.minPrice
+          ? Number(
+              (result.minPrice / 1000000000000000000) * exchangeRate,
+            ).toFixed(2)
+          : "Not sale",
+        attributes: Object.keys(result.attributes).map((key) => ({
+          [key]: result.attributes[key][0],
+        })),
+        type: result.attributes["type"] && result.attributes["type"][0],
+      }),
+    );
+
+    const resultsdataCombatJacket =
+      dataCombatJacket.data.erc1155Tokens.results.map((result) => ({
+        ...result,
+        minPrice: result.minPrice
+          ? Number(
+              (result.minPrice / 1000000000000000000) * exchangeRate,
+            ).toFixed(2)
+          : "Not sale",
+        attributes: Object.keys(result.attributes).map((key) => ({
+          [key]: result.attributes[key][0],
+        })),
+        type: result.attributes["type"] && result.attributes["type"][0],
+      }));
+
+    const resultsdataCombatSword =
+      dataCombatSword.data.erc1155Tokens.results.map((result) => ({
+        ...result,
+        minPrice: result.minPrice
+          ? Number(
+              (result.minPrice / 1000000000000000000) * exchangeRate,
+            ).toFixed(2)
+          : "Not sale",
+        attributes: Object.keys(result.attributes).map((key) => ({
+          [key]: result.attributes[key][0],
+        })),
+        type: result.attributes["type"] && result.attributes["type"][0],
+      }));
+
+    const resultsdataCombatbow = dataCombatBow.data.erc1155Tokens.results.map(
+      (result) => ({
+        ...result,
+        minPrice: result.minPrice
+          ? Number(
+              (result.minPrice / 1000000000000000000) * exchangeRate,
+            ).toFixed(2)
+          : "Not sale",
+        attributes: Object.keys(result.attributes).map((key) => ({
+          [key]: result.attributes[key][0],
+        })),
+        type: result.attributes["type"] && result.attributes["type"][0],
+      }),
+    );
+
+    const resultsdataCombatHammer =
+      dataCombatHammer.data.erc1155Tokens.results.map((result) => ({
+        ...result,
+        minPrice: result.minPrice
+          ? Number(
+              (result.minPrice / 1000000000000000000) * exchangeRate,
+            ).toFixed(2)
+          : "Not sale",
+        attributes: Object.keys(result.attributes).map((key) => ({
+          [key]: result.attributes[key][0],
+        })),
+        type: result.attributes["type"] && result.attributes["type"][0],
+      }));
+
+    const allResults = [
+      ...resultsdataCombatShoes,
+      ...resultsdataCombatPants,
+      ...resultsdataCombatGloves,
+      ...resultsdataCombatHat,
+      ...resultsdataCombatJacket,
+      ...resultsdataCombatSword,
+      ...resultsdataCombatbow,
+      ...resultsdataCombatHammer,
+    ];
 
     return NextResponse.json(allResults);
   } catch (error) {
