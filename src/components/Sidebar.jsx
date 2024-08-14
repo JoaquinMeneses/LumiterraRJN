@@ -44,8 +44,8 @@ export default function Sidebar() {
       <Link href="/farming">
         <IconButton>
           <Image
-            src="https://cdn.skymavis.com/mm-cache/5/a/a07b32d1643fa4d3ac4972256efc57.png"
-            alt="Iron Hoe"
+            src="https://cdn.skymavis.com/mm-cache/5/3/ca3f1a32f548ca9f52572f02517fac.png"
+            alt="Iron Kettle"
             width={32}
             height={32}
           />
