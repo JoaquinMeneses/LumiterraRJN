@@ -3,7 +3,7 @@ import { Typography } from "@mui/joy";
 
 const Inicio = () => {
   return (
-    <main className="flex flex-col px-2">
+    <main className="mx-2 flex">
       <Typography color="neutral" level="h1" variant="plain">
         Herramientas para Lumiterra
       </Typography>

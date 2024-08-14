@@ -17,7 +17,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="es" suppressHydrationWarning={true}>
-      <body className={`${inter.className} max-w-screen flex min-h-screen`}>
+      <body
+        className={`${inter.className} max-w-screen flex min-h-screen flex-col`}
+      >
         <InitColorSchemeScript />
         <CssVarsProvider defaultMode="dark">
           <CssBaseline />

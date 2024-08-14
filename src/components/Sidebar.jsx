@@ -9,7 +9,6 @@ export default function Sidebar() {
     <Sheet
       sx={{
         display: "flex",
-        flexDirection: "column",
         justifyContent: "center",
         alignItems: "center",
         padding: 1,
@@ -25,17 +24,17 @@ export default function Sidebar() {
         <IconButton>
           <Image
             src="https://cdn.skymavis.com/mm-cache/7/e/803fdd893e99fbdb34c55cb81fd6eb.png"
-            alt="Item de energia"
+            alt="Lv 1 Energy Restoration Potion 2.0"
             width={32}
             height={32}
           />
         </IconButton>
       </Link>
-      <Link href="/energia">
+      <Link href="/combat">
         <IconButton>
           <Image
-            src="https://cdn.skymavis.com/mm-cache/7/e/803fdd893e99fbdb34c55cb81fd6eb.png"
-            alt="Item de energia"
+            src="https://cdn.skymavis.com/mm-cache/e/d/34767ef4192a43fa9e43bf6536d4a8.png"
+            alt="Stone Sword"
             width={32}
             height={32}
           />

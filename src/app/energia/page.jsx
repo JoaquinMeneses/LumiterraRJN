@@ -26,13 +26,13 @@ const Energia = () => {
 
   if (loading)
     return (
-      <div className="grid w-full place-content-center">
+      <div className="grid w-full flex-grow place-content-center">
         <CircularProgress />
       </div>
     );
 
   return (
-    <main className="flex flex-col max-w-full">
+    <main className="flex max-w-full flex-col">
       <Table aria-label="basic table">
         <thead>
           <tr>
@@ -53,7 +53,7 @@ const Energia = () => {
                 costPerEnergy,
                 tokenId,
               },
-              index
+              index,
             ) => {
               return (
                 <tr key={index}>
@@ -73,7 +73,7 @@ const Energia = () => {
                   <td>{costPerEnergy}usd</td>
                 </tr>
               );
-            }
+            },
           )}
         </tbody>
       </Table>
