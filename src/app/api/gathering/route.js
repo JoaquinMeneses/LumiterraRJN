@@ -8,7 +8,7 @@ const fetchData = async (url, query) => {
     cache: "no-store",
     headers: {
       "Content-Type": "application/json",
-      "x-api-key": process.env.NEXT_PUBLIC_API_KEY_SKY_MAVIS,
+      "x-api-key": process.env.API_KEY_SKY_MAVIS,
     },
     body: JSON.stringify({ query }),
   });
