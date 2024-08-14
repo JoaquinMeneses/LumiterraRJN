@@ -2,29 +2,29 @@ import { NextResponse } from "next/server";
 
 export const dynamic = "force-dynamic";
 
-const fetchData = async (url, query) => {
-  const response = await fetch(url, {
-    method: "POST",
-    cache: "no-store",
-    headers: {
-      "Content-Type": "application/json",
-      "x-api-key": process.env.API_KEY_SKY_MAVIS,
+const fetchData = async (query) => {
+  const response = await fetch(
+    "https://api-gateway.skymavis.com/graphql/mavis-marketplace",
+    {
+      method: "POST",
+      cache: "no-store",
+      headers: {
+        "Content-Type": "application/json",
+        "x-api-key": process.env.API_KEY_SKY_MAVIS,
+      },
+      body: JSON.stringify({ query }),
     },
-    body: JSON.stringify({ query }),
-  });
+  );
 
   if (!response.ok) {
-    throw new Error(`Failed to fetch data from ${url}`);
+    throw new Error(`Failed to fetch data `);
   }
   return response.json();
 };
 
 export async function GET(request) {
-  const apiUrl = "https://api-gateway.skymavis.com/graphql/mavis-marketplace";
-
   try {
     const dataExchangeRate = await fetchData(
-      apiUrl,
       `
       query MyQuery {
         exchangeRate {
@@ -38,7 +38,6 @@ export async function GET(request) {
     const exchangeRate = dataExchangeRate.data.exchangeRate.ron.usd;
 
     const dataCombatShoes = await fetchData(
-      apiUrl,
       `
         query MyQuery {
         erc1155Tokens(
@@ -64,7 +63,6 @@ export async function GET(request) {
       `,
     );
     const dataCombatPants = await fetchData(
-      apiUrl,
       `
         query MyQuery {
           erc1155Tokens(
@@ -89,7 +87,6 @@ export async function GET(request) {
       `,
     );
     const dataCombatGloves = await fetchData(
-      apiUrl,
       `
         query MyQuery {
           erc1155Tokens(
@@ -114,7 +111,6 @@ export async function GET(request) {
       `,
     );
     const dataCombatHat = await fetchData(
-      apiUrl,
       `
         query MyQuery {
           erc1155Tokens(
@@ -139,7 +135,6 @@ export async function GET(request) {
       `,
     );
     const dataCombatJacket = await fetchData(
-      apiUrl,
       `query MyQuery {
           erc1155Tokens(
             from: 0
@@ -163,7 +158,6 @@ export async function GET(request) {
       `,
     );
     const dataCombatSword = await fetchData(
-      apiUrl,
       `        
       query MyQuery {
           erc1155Tokens(
@@ -187,7 +181,6 @@ export async function GET(request) {
       `,
     );
     const dataCombatBow = await fetchData(
-      apiUrl,
       `
         query MyQuery {
           erc1155Tokens(
@@ -211,7 +204,6 @@ export async function GET(request) {
       `,
     );
     const dataCombatHammer = await fetchData(
-      apiUrl,
       `
       query MyQuery {
           erc1155Tokens(

@@ -2,29 +2,42 @@ import { NextResponse } from "next/server";
 
 export const dynamic = "force-dynamic";
 
-const fetchData = async (url, query) => {
-  const response = await fetch(url, {
-    method: "POST",
-    cache: "no-store",
-    headers: {
-      "Content-Type": "application/json",
-      "x-api-key": process.env.API_KEY_SKY_MAVIS,
+const fetchData = async (query) => {
+  const response = await fetch(
+    "https://api-gateway.skymavis.com/graphql/mavis-marketplace",
+    {
+      method: "POST",
+      cache: "no-store",
+      headers: {
+        "Content-Type": "application/json",
+        "x-api-key": process.env.API_KEY_SKY_MAVIS,
+      },
+      body: JSON.stringify({ query }),
     },
-    body: JSON.stringify({ query }),
-  });
+  );
 
   if (!response.ok) {
-    throw new Error(`Failed to fetch data from ${url}`);
+    throw new Error(`Failed to fetch data `);
   }
   return response.json();
 };
 
 export async function GET(request) {
-  const apiUrl = "https://api-gateway.skymavis.com/graphql/mavis-marketplace";
-
   try {
+    const dataExchangeRate = await fetchData(
+      `
+      query MyQuery {
+        exchangeRate {
+          ron {
+            usd
+            }
+        }
+      }
+    `,
+    );
+    const exchangeRate = dataExchangeRate.data.exchangeRate.ron.usd;
+
     const dataGatheringShoes = await fetchData(
-      apiUrl,
       `
       query MyQuery {
         erc1155Tokens(
@@ -49,7 +62,6 @@ export async function GET(request) {
       `,
     );
     const dataGatheringPants = await fetchData(
-      apiUrl,
       `query MyQuery {
           erc1155Tokens(
             from: 0
@@ -73,7 +85,6 @@ export async function GET(request) {
       `,
     );
     const dataGatheringGloves = await fetchData(
-      apiUrl,
       `query MyQuery {
           erc1155Tokens(
             from: 0
@@ -97,7 +108,6 @@ export async function GET(request) {
       `,
     );
     const dataGatheringHat = await fetchData(
-      apiUrl,
       `
         query MyQuery {
           erc1155Tokens(
@@ -121,7 +131,6 @@ export async function GET(request) {
       `,
     );
     const dataGatheringJacket = await fetchData(
-      apiUrl,
       `query MyQuery {
           erc1155Tokens(
             from: 0
@@ -144,7 +153,6 @@ export async function GET(request) {
       `,
     );
     const dataGatheringAxe = await fetchData(
-      apiUrl,
       `query MyQuery {
           erc1155Tokens(
             from: 0
@@ -168,7 +176,6 @@ export async function GET(request) {
       `,
     );
     const dataGatheringPickaxe = await fetchData(
-      apiUrl,
       `query MyQuery {
           erc1155Tokens(
             from: 0
@@ -192,7 +199,6 @@ export async function GET(request) {
       `,
     );
     const dataGatheringSickle = await fetchData(
-      apiUrl,
       `query MyQuery {
           erc1155Tokens(
             from: 0
@@ -216,20 +222,6 @@ export async function GET(request) {
       `,
     );
 
-    const dataExchangeRate = await fetchData(
-      apiUrl,
-      `
-      query MyQuery {
-        exchangeRate {
-          ron {
-            usd
-            }
-        }
-      }
-    `,
-    );
-    const exchangeRate = dataExchangeRate.data.exchangeRate.ron.usd;
-
     const resultsdataGatheringShoes =
       dataGatheringShoes.data.erc1155Tokens.results.map((result) => ({
         ...result,
@@ -243,7 +235,6 @@ export async function GET(request) {
         })),
         type: result.attributes["type"] && result.attributes["type"][0],
       }));
-
     const resultsdataGatheringPants =
       dataGatheringPants.data.erc1155Tokens.results.map((result) => ({
         ...result,
@@ -257,7 +248,6 @@ export async function GET(request) {
         })),
         type: result.attributes["type"] && result.attributes["type"][0],
       }));
-
     const resultsdataGatheringGloves =
       dataGatheringGloves.data.erc1155Tokens.results.map((result) => ({
         ...result,
@@ -271,7 +261,6 @@ export async function GET(request) {
         })),
         type: result.attributes["type"] && result.attributes["type"][0],
       }));
-
     const resultsdataGatheringHat =
       dataGatheringHat.data.erc1155Tokens.results.map((result) => ({
         ...result,
@@ -285,7 +274,6 @@ export async function GET(request) {
         })),
         type: result.attributes["type"] && result.attributes["type"][0],
       }));
-
     const resultsdataGatheringJacket =
       dataGatheringJacket.data.erc1155Tokens.results.map((result) => ({
         ...result,
@@ -299,7 +287,6 @@ export async function GET(request) {
         })),
         type: result.attributes["type"] && result.attributes["type"][0],
       }));
-
     const resultsdataGatheringAxe =
       dataGatheringAxe.data.erc1155Tokens.results.map((result) => ({
         ...result,
@@ -313,7 +300,6 @@ export async function GET(request) {
         })),
         type: result.attributes["type"] && result.attributes["type"][0],
       }));
-
     const resultsdataGatheringPickaxe =
       dataGatheringPickaxe.data.erc1155Tokens.results.map((result) => ({
         ...result,
@@ -327,7 +313,6 @@ export async function GET(request) {
         })),
         type: result.attributes["type"] && result.attributes["type"][0],
       }));
-
     const resultsdataGatheringSickle =
       dataGatheringSickle.data.erc1155Tokens.results.map((result) => ({
         ...result,
