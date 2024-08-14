@@ -61,6 +61,16 @@ export default function Sidebar() {
           />
         </IconButton>
       </Link>
+      <Link href="/essence">
+        <IconButton>
+          <Image
+            src="https://cdn.skymavis.com/mm-cache/a/8/537df7e2d347efdb00720fbd031436.png"
+            alt="Essence"
+            width={32}
+            height={32}
+          />
+        </IconButton>
+      </Link>
     </Sheet>
   );
 }
