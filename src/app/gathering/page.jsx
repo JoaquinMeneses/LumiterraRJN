@@ -1,20 +1,11 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import {
-  CircularProgress,
-  Box,
-  Button,
-  Card,
-  CardContent,
-  Typography,
-  Sheet,
-} from "@mui/joy";
+import { CircularProgress, Box, Card, CardContent, Typography } from "@mui/joy";
 import Filters from "@/components/Filters";
 
 import AspectRatio from "@mui/joy/AspectRatio";
 import Link from "@mui/joy/Link";
-import Chip from "@mui/joy/Chip";
 
 const Gathering = () => {
   const [data, setData] = useState([]);
