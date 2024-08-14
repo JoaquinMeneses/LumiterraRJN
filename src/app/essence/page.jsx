@@ -47,7 +47,6 @@ const Essence = () => {
                   variant="plain"
                   orientation="horizontal"
                   sx={{
-                    height: 180,
                     width: 320,
                   }}
                 >
