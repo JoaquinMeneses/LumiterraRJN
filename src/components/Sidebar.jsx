@@ -13,6 +13,7 @@ export default function Sidebar() {
         alignItems: "center",
         padding: 1,
         gap: 1,
+        height: "10vh",
       }}
     >
       <Link href="/">

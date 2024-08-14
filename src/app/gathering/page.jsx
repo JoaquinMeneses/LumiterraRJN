@@ -12,6 +12,10 @@ import {
 } from "@mui/joy";
 import Filters from "@/components/Filters";
 
+import AspectRatio from "@mui/joy/AspectRatio";
+import Link from "@mui/joy/Link";
+import Chip from "@mui/joy/Chip";
+
 const Gathering = () => {
   const [data, setData] = useState([]);
   const [dataFiltered, setDataFiltered] = useState([]);
@@ -47,62 +51,84 @@ const Gathering = () => {
         {dataFiltered?.map(
           ({ name, minPrice, cdnImage, attributes, tokenId }) => {
             return (
-              <Card
-                key={tokenId}
-                variant="plain"
-                orientation="horizontal"
-                sx={{
-                  width: 240,
-                  maxHeight: 481,
-                  flexWrap: "wrap",
-                  overflow: "auto",
-                }}
-              >
-                <img src={cdnImage} loading="lazy" alt={name} />
-                <CardContent>
-                  <Typography
-                    level="body-sm"
-                    fontWeight="lg"
-                    textColor="text.tertiary"
-                  >
-                    {name}
-                  </Typography>
-                  <Typography
-                    level="body-xs"
-                    fontWeight="lg"
-                    textColor="text.tertiary"
-                  >
-                    {attributes
-                      .filter((attribute) => {
-                        const key = Object.keys(attribute)[0];
-                        return key === "requires level";
-                      })
-                      .map((attribute, index) => {
-                        const key = Object.keys(attribute)[0];
-                        const value = Object.values(attribute)[0];
-                        return (
-                          <Typography key={index} fontWeight="lg">
-                            Lv {value}
-                          </Typography>
-                        );
-                      })}
-                  </Typography>
-                  <Typography fontSize="xl" fontWeight="lg">
-                    {!isNaN(Number(minPrice)) ? `${minPrice} usd` : minPrice}
-                  </Typography>
-                  <Sheet
+              <>
+                <Card
+                  variant="plain"
+                  orientation="horizontal"
+                  sx={{
+                    height: 180,
+                    width: 320,
+                  }}
+                >
+                  <CardContent
                     sx={{
-                      bgcolor: "background.level1",
-                      borderRadius: "sm",
-                      p: 1,
-                      my: 1,
                       display: "flex",
-                      flexWrap: "wrap",
-                      gap: 2,
-                      "& > div": { flex: 1 },
+                      justifyContent: "center",
+                      height: "100%",
                     }}
                   >
-                    <div className="flex min-h-[108px] w-full flex-wrap">
+                    <Box
+                      sx={{
+                        display: "flex",
+                        gap: 1,
+                        alignItems: "center",
+                      }}
+                    >
+                      <AspectRatio ratio="1" sx={{ width: 60 }}>
+                        <img src={cdnImage} loading="lazy" alt={name} />
+                      </AspectRatio>
+                      <Box>
+                        <Typography level="body-sm" fontWeight="lg">
+                          <Link
+                            overlay
+                            underline="none"
+                            href={`https://marketplace.skymavis.com/collections/lumiterra/${tokenId}`}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            sx={{ color: "text.tertiary" }}
+                          >
+                            {name}
+                          </Link>
+                        </Typography>
+                        <Typography
+                          level="body-xs"
+                          fontWeight="lg"
+                          textColor="text.tertiary"
+                        >
+                          {attributes
+                            .filter((attribute) => {
+                              const key = Object.keys(attribute)[0];
+                              return key === "requires level";
+                            })
+                            .map((attribute, index) => {
+                              const key = Object.keys(attribute)[0];
+                              const value = Object.values(attribute)[0];
+                              return (
+                                <Typography key={index} fontWeight="lg">
+                                  Lv {value}
+                                </Typography>
+                              );
+                            })}
+                        </Typography>
+                        <Typography fontSize="xl" fontWeight="lg">
+                          {!isNaN(Number(minPrice))
+                            ? `${minPrice}usd`
+                            : minPrice}
+                        </Typography>
+                      </Box>
+                    </Box>
+                    <Box
+                      sx={{
+                        bgcolor: "background.level1",
+                        borderRadius: "sm",
+                        p: 0.5,
+                        display: "flex",
+                        flexWrap: "wrap",
+                        gap: 0.5,
+                        height: "100%",
+                        "& > div": { flex: 1 },
+                      }}
+                    >
                       {attributes
                         .filter((attribute) => {
                           const key = Object.keys(attribute)[0];
@@ -113,37 +139,18 @@ const Gathering = () => {
                           const key = Object.keys(attribute)[0];
                           const value = Object.values(attribute)[0];
                           return (
-                            <div key={index} className="w-1/2">
+                            <Box key={index}>
                               <Typography level="body-xs" fontWeight="lg">
                                 {key}
                               </Typography>
                               <Typography fontWeight="lg">{value}</Typography>
-                            </div>
+                            </Box>
                           );
                         })}
-                    </div>
-                  </Sheet>
-                  <Box
-                    sx={{
-                      display: "flex",
-                      gap: 1.5,
-                      "& > button": { flex: 1 },
-                    }}
-                  >
-                    <Button
-                      variant="solid"
-                      color="primary"
-                      component="a"
-                      href={`https://marketplace.skymavis.com/collections/lumiterra/${tokenId}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      sx={{ width: "100%" }}
-                    >
-                      Ver item
-                    </Button>
-                  </Box>
-                </CardContent>
-              </Card>
+                    </Box>
+                  </CardContent>
+                </Card>
+              </>
             );
           },
         )}
