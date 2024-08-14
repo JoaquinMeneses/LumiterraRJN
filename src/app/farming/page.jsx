@@ -10,7 +10,7 @@ import CardContent from "@mui/joy/CardContent";
 import Typography from "@mui/joy/Typography";
 import Sheet from "@mui/joy/Sheet";
 
-const Combat = () => {
+const Farming = () => {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
 
@@ -134,4 +134,4 @@ const Combat = () => {
   );
 };
 
-export default Combat;
+export default Farming;
