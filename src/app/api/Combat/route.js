@@ -30,7 +30,7 @@ const formatResults = (data, exchangeRate) =>
     attributes: Object.keys(result.attributes).map((key) => ({
       [key]: result.attributes[key][0],
     })),
-    type: result.attributes["type"] ? result.attributes["type"][0] : undefined,
+    type: result.attributes["type"] && result.attributes["type"][0],
   }));
 
 export async function GET(request) {

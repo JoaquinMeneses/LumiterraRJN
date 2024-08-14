@@ -41,13 +41,12 @@ export async function GET(request) {
             name
             tokenId
             attributes
-            image
             cdnImage
           }
           total
         }
       }
-      `
+      `,
     );
 
     const dataGatheringPants = await fetchData(
@@ -67,13 +66,12 @@ export async function GET(request) {
               name
               tokenId
               attributes
-              image
               cdnImage
             }
             total
           }
         }
-      `
+      `,
     );
     const dataGatheringGloves = await fetchData(
       apiUrl,
@@ -92,13 +90,12 @@ export async function GET(request) {
               name
               tokenId
               attributes
-              image
               cdnImage
             }
             total
           }
         }
-      `
+      `,
     );
     const dataGatheringHat = await fetchData(
       apiUrl,
@@ -117,13 +114,12 @@ export async function GET(request) {
               name
               tokenId
               attributes
-              image
               cdnImage
             }
             total
           }
         }
-      `
+      `,
     );
     const dataGatheringJacket = await fetchData(
       apiUrl,
@@ -141,13 +137,12 @@ export async function GET(request) {
               name
               tokenId
               attributes
-              image
               cdnImage
             }
             total
           }
         }
-      `
+      `,
     );
     const dataGatheringAxe = await fetchData(
       apiUrl,
@@ -166,13 +161,12 @@ export async function GET(request) {
               name
               tokenId
               attributes
-              image
               cdnImage
             }
             total
           }
         }
-      `
+      `,
     );
     const dataGatheringPickaxe = await fetchData(
       apiUrl,
@@ -191,13 +185,12 @@ export async function GET(request) {
               name
               tokenId
               attributes
-              image
               cdnImage
             }
             total
           }
         }
-      `
+      `,
     );
 
     const dataGatheringSickle = await fetchData(
@@ -217,13 +210,12 @@ export async function GET(request) {
               name
               tokenId
               attributes
-              image
               cdnImage
             }
             total
           }
         }
-      `
+      `,
     );
 
     const dataExchangeRate = await fetchData(
@@ -236,163 +228,137 @@ export async function GET(request) {
             }
         }
       }
-    `
+    `,
     );
-    const resultsdataGatheringShoes = dataGatheringShoes.data.erc1155Tokens.results.map(
-      (result) => ({
-        ...result,
-        minPrice: Number(
-          (result.minPrice / 1000000000000000000) *
-            dataExchangeRate.data.exchangeRate.ron.usd
-        ).toFixed(2),
-        attributes:[
-          grassproficiency= Number(result.attributes["grassproficiency"][0]),
-          oreproficiency= Number(result.attributes["oreproficiency"][0]),
-          treeproficiency= Number(result.attributes["treeproficiency"][0]),
-          requireslevel= Number(result.attributes["requires level"][0]),
-          quality= result.attributes["quality"][0]
-        ],
-        image: result.image,
-        type: result.attributes["type"][0]
-      })
-    );
+    const exchangeRate = dataExchangeRate.data.exchangeRate.ron.usd;
 
-    const resultsdataGatheringPants = dataGatheringPants.data.erc1155Tokens.results.map(
-      (result) => ({
+    const resultsdataGatheringShoes =
+      dataGatheringShoes.data.erc1155Tokens.results.map((result) => ({
         ...result,
         minPrice: Number(
           (result.minPrice / 1000000000000000000) *
-            dataExchangeRate.data.exchangeRate.ron.usd
+            dataExchangeRate.data.exchangeRate.ron.usd,
         ).toFixed(2),
-        attributes:[
-          grassproficiency= Number(result.attributes["grassproficiency"][0]),
-          oreproficiency= Number(result.attributes["oreproficiency"][0]),
-          treeproficiency= Number(result.attributes["treeproficiency"][0]),
-          orecritdmg= Number(result.attributes["orecritdmg"][0]),
-          requireslevel= Number(result.attributes["requires level"][0]),
-          quality= result.attributes["quality"][0]
-        ],
-        image: result.image,
-        type: result.attributes["type"][0]
-      })
-    );
+        ...result,
+        minPrice: result.minPrice
+          ? Number(
+              (result.minPrice / 1000000000000000000) * exchangeRate,
+            ).toFixed(2)
+          : "Not sale",
+        attributes: Object.keys(result.attributes).map((key) => ({
+          [key]: result.attributes[key][0],
+        })),
+        type: result.attributes["type"] && result.attributes["type"][0],
+      }));
 
-    const resultsdataGatheringGloves = dataGatheringGloves.data.erc1155Tokens.results.map(
-      (result) => ({
+    const resultsdataGatheringPants =
+      dataGatheringPants.data.erc1155Tokens.results.map((result) => ({
         ...result,
-        minPrice: Number(
-          (result.minPrice / 1000000000000000000) *
-            dataExchangeRate.data.exchangeRate.ron.usd
-        ).toFixed(2),
-        attributes:[
-          grassproficiency= Number(result.attributes["grassproficiency"][0]),
-          oreproficiency= Number(result.attributes["oreproficiency"][0]),
-          treeproficiency= Number(result.attributes["treeproficiency"][0]),
-          grassatt= Number(result.attributes["grassatt"][0]),
-          oreatt= Number(result.attributes["oreatt"][0]),
-          treeatt= Number(result.attributes["treeatt"][0]),
-          pickaxespd= Number(result.attributes["pickaxespd"][0]),
-          requireslevel= Number(result.attributes["requires level"][0]),
-          quality= result.attributes["quality"][0]
-        ],
-        image: result.image,
-        type: result.attributes["type"][0]
-      })
-    );
+        minPrice: result.minPrice
+          ? Number(
+              (result.minPrice / 1000000000000000000) * exchangeRate,
+            ).toFixed(2)
+          : "Not sale",
+        attributes: Object.keys(result.attributes).map((key) => ({
+          [key]: result.attributes[key][0],
+        })),
+        type: result.attributes["type"] && result.attributes["type"][0],
+      }));
 
-    const resultsdataGatheringHat = dataGatheringHat.data.erc1155Tokens.results.map(
-      (result) => ({
+    const resultsdataGatheringGloves =
+      dataGatheringGloves.data.erc1155Tokens.results.map((result) => ({
         ...result,
-        minPrice: Number(
-          (result.minPrice / 1000000000000000000) *
-            dataExchangeRate.data.exchangeRate.ron.usd
-        ).toFixed(2),
-        attributes:[
-          grassproficiency= Number(result.attributes["grassproficiency"][0]),
-          oreproficiency= Number(result.attributes["oreproficiency"][0]),
-          treeproficiency= Number(result.attributes["treeproficiency"][0]),
-          axespd= Number(result.attributes["axespd"][0]),
-          requireslevel= Number(result.attributes["requires level"][0]),
-          quality= result.attributes["quality"][0]
-        ],
-        image: result.image,
-        type: result.attributes["type"][0]
-      })
-    );
+        minPrice: result.minPrice
+          ? Number(
+              (result.minPrice / 1000000000000000000) * exchangeRate,
+            ).toFixed(2)
+          : "Not sale",
+        attributes: Object.keys(result.attributes).map((key) => ({
+          [key]: result.attributes[key][0],
+        })),
+        type: result.attributes["type"] && result.attributes["type"][0],
+      }));
 
-    const resultsdataGatheringJacket = dataGatheringJacket.data.erc1155Tokens.results.map(
-      (result) => ({
+    const resultsdataGatheringHat =
+      dataGatheringHat.data.erc1155Tokens.results.map((result) => ({
         ...result,
-        minPrice: Number(
-          (result.minPrice / 1000000000000000000) *
-            dataExchangeRate.data.exchangeRate.ron.usd
-        ).toFixed(2),
-        attributes:[
-          grassproficiency= Number(result.attributes["grassproficiency"][0]),
-          oreproficiency= Number(result.attributes["oreproficiency"][0]),
-          treeproficiency= Number(result.attributes["treeproficiency"][0]),
-          treedmgbonus= Number(result.attributes["treedmgbonus"][0]),
-          requireslevel= Number(result.attributes["requires level"][0]),
-          quality= result.attributes["quality"][0]
-        ],
-        image: result.image,
-        type: result.attributes["type"][0]
-      })
-    );
+        minPrice: result.minPrice
+          ? Number(
+              (result.minPrice / 1000000000000000000) * exchangeRate,
+            ).toFixed(2)
+          : "Not sale",
+        attributes: Object.keys(result.attributes).map((key) => ({
+          [key]: result.attributes[key][0],
+        })),
+        type: result.attributes["type"] && result.attributes["type"][0],
+      }));
 
-    const resultsdataGatheringAxe = dataGatheringAxe.data.erc1155Tokens.results.map(
-      (result) => ({
+    const resultsdataGatheringJacket =
+      dataGatheringJacket.data.erc1155Tokens.results.map((result) => ({
         ...result,
-        minPrice: Number(
-          (result.minPrice / 1000000000000000000) *
-            dataExchangeRate.data.exchangeRate.ron.usd
-        ).toFixed(2),
-        attributes:[
-          combatatt= Number(result.attributes["combatatt"][0]),
-          treeatt= Number(result.attributes["treeatt"][0]),
-          requireslevel= Number(result.attributes["requires level"][0]),
-          quality= result.attributes["quality"][0]
-        ],
-        image: result.image,
-        type: result.attributes["type"][0]
-      })
-    );
+        minPrice: result.minPrice
+          ? Number(
+              (result.minPrice / 1000000000000000000) * exchangeRate,
+            ).toFixed(2)
+          : "Not sale",
+        attributes: Object.keys(result.attributes).map((key) => ({
+          [key]: result.attributes[key][0],
+        })),
+        type: result.attributes["type"] && result.attributes["type"][0],
+      }));
 
-    const resultsdataGatheringPickaxe = dataGatheringPickaxe.data.erc1155Tokens.results.map(
-      (result) => ({
+    const resultsdataGatheringAxe =
+      dataGatheringAxe.data.erc1155Tokens.results.map((result) => ({
         ...result,
-        minPrice: Number(
-          (result.minPrice / 1000000000000000000) *
-            dataExchangeRate.data.exchangeRate.ron.usd
-        ).toFixed(2),
-        attributes:[
-          combatatt= Number(result.attributes["combatatt"][0]),
-          oreatt= Number(result.attributes["oreatt"][0]),
-          requireslevel= Number(result.attributes["requires level"][0]),
-          quality= result.attributes["quality"][0]
-        ],
-        image: result.image,
-        type: result.attributes["type"][0]
-      })
-    );
+        minPrice: result.minPrice
+          ? Number(
+              (result.minPrice / 1000000000000000000) * exchangeRate,
+            ).toFixed(2)
+          : "Not sale",
+        attributes: Object.keys(result.attributes).map((key) => ({
+          [key]: result.attributes[key][0],
+        })),
+        type: result.attributes["type"] && result.attributes["type"][0],
+      }));
 
-    const resultsdataGatheringSickle = dataGatheringSickle.data.erc1155Tokens.results.map(
-      (result) => ({
+    const resultsdataGatheringPickaxe =
+      dataGatheringPickaxe.data.erc1155Tokens.results.map((result) => ({
         ...result,
-        minPrice: Number(
-          (result.minPrice / 1000000000000000000) *
-            dataExchangeRate.data.exchangeRate.ron.usd
-        ).toFixed(2),
-        attributes:[
-          combatatt= Number(result.attributes["combatatt"][0]),
-          grassatt= Number(result.attributes["grassatt"][0]),
-          requireslevel= Number(result.attributes["requires level"][0]),
-          quality= result.attributes["quality"][0]
-        ],
-        image: result.image,
-        type: result.attributes["type"][0]
-      })
-    );
+        minPrice: result.minPrice
+          ? Number(
+              (result.minPrice / 1000000000000000000) * exchangeRate,
+            ).toFixed(2)
+          : "Not sale",
+        attributes: Object.keys(result.attributes).map((key) => ({
+          [key]: result.attributes[key][0],
+        })),
+        type: result.attributes["type"] && result.attributes["type"][0],
+      }));
+
+    const resultsdataGatheringSickle =
+      dataGatheringSickle.data.erc1155Tokens.results.map((result) => ({
+        ...result,
+        minPrice: result.minPrice
+          ? Number(
+              (result.minPrice / 1000000000000000000) * exchangeRate,
+            ).toFixed(2)
+          : "Not sale",
+        attributes: Object.keys(result.attributes).map((key) => ({
+          [key]: result.attributes[key][0],
+        })),
+        type: result.attributes["type"] && result.attributes["type"][0],
+      }));
+
+    const allResults = [
+      ...resultsdataGatheringShoes,
+      ...resultsdataGatheringPants,
+      ...resultsdataGatheringGloves,
+      ...resultsdataGatheringHat,
+      ...resultsdataGatheringJacket,
+      ...resultsdataGatheringAxe,
+      ...resultsdataGatheringPickaxe,
+      ...resultsdataGatheringSickle,
+    ];
 
     return NextResponse.json(allResults);
   } catch (error) {
