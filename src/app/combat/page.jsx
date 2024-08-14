@@ -7,7 +7,7 @@ import Filters from "@/components/Filters";
 import AspectRatio from "@mui/joy/AspectRatio";
 import Link from "@mui/joy/Link";
 
-const Farming = () => {
+const Combat = () => {
   const [data, setData] = useState([]);
   const [dataFiltered, setDataFiltered] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -150,5 +150,5 @@ const Farming = () => {
   );
 };
 
-export default Farming;
+export default Combat;
 
