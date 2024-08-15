@@ -30,11 +30,9 @@ export async function GET(request) {
       let from = 0;
       const size = 50;
       let hasMoreData = true;
-    
       while (hasMoreData) {
         const response = await fetchData(
-          `
-          query MyQuery {
+          `query MyQuery {
             erc1155Tokens(
               from: ${from}
               size: ${size}
@@ -50,11 +48,8 @@ export async function GET(request) {
               total
             }
           }
-          `
-        );
-    
+          `);
         const data = response.data.erc1155Tokens.results;
-    
         if (data && data.length > 0) {
           allData = [...allData, ...data];
           from += size; // Incrementar el valor de `from` para la siguiente iteración
@@ -62,7 +57,6 @@ export async function GET(request) {
           hasMoreData = false; // Salir del loop si no hay más datos
         }
       }
-    
       return allData;
     };
     
