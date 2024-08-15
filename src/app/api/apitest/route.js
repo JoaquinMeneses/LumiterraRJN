@@ -24,7 +24,7 @@ const fetchData = async (query) => {
 
 export async function GET(request) {
   try {
-    const result ='minPrice name attributes cdnImage tokenId';
+    const result = "minPrice name attributes cdnImage tokenId";
     const fetchAllDataGatheringPickaxe = async () => {
       let allData = [];
       let from = 0;
@@ -48,7 +48,8 @@ export async function GET(request) {
               total
             }
           }
-          `);
+          `,
+        );
         const data = response.data.erc1155Tokens.results;
         if (data && data.length > 0) {
           allData = [...allData, ...data];
@@ -59,7 +60,7 @@ export async function GET(request) {
       }
       return allData;
     };
-    
+
     // Uso del método para obtener todos los datos
     const dataGatheringPickaxe = await fetchAllDataGatheringPickaxe();
 
