@@ -141,21 +141,58 @@ export async function GET(request) {
             {recipe:[
               {materials:[
                 {'Lv 1 Agricultural Livestock Essence':[
-                  {quantity: 2},
+                  {quantity: 1},
                   {img: "https://icons.lumiterra.net/item-icon-213.png"},
-                  {minpriceRon: dataEssence.find(item => item.name === 'Lv 1 Agricultural Livestock Essence')?.minPriceRon * 2 || "Not sale"},
-                  {minpriceUsd: dataEssence.find(item => item.name === 'Lv 1 Agricultural Livestock Essence')?.minPriceUsd * 2 || "Not sale"},
+                  {minpriceRon: dataEssence.find(item => item.name === 'Lv 1 Agricultural Livestock Essence')?.minPriceRon || "Not sale"},
+                  {minpriceUsd: Number(dataEssence.find(item => item.name === 'Lv 1 Agricultural Livestock Essence')?.minPriceUsd) || "Not sale"},
                 ]},
                 {'Lv 1 Agricultural Planting Essence':[
-                  {quantity: 2},
+                  {quantity: 1},
                   {img: "https://icons.lumiterra.net/item-icon-210.png"},
-                  {minpriceRon: dataEssence.find(item => item.name === 'Lv 1 Agricultural Planting Essence')?.minPriceRon * 2 || "Not sale"},
-                  {minpriceUsd: dataEssence.find(item => item.name === 'Lv 1 Agricultural Planting Essence')?.minPriceUsd * 2 || "Not sale"},
+                  {minpriceRon: dataEssence.find(item => item.name === 'Lv 1 Agricultural Planting Essence')?.minPriceRon || "Not sale"},
+                  {minpriceUsd: Number(dataEssence.find(item => item.name === 'Lv 1 Agricultural Planting Essence')?.minPriceUsd) || "Not sale"},
                 ]},
-              ]}
+              ]},
+              {minPrinceTotalRecipeRon: Number((dataEssence.find(item => item.name === 'Lv 1 Agricultural Livestock Essence')?.minPriceRon) + (dataEssence.find(item => item.name === 'Lv 1 Agricultural Planting Essence')?.minPriceRon)).toFixed(2) || "Not sale"},
+              {minPrinceTotalRecipeUsd: Number(((dataEssence.find(item => item.name === 'Lv 1 Agricultural Livestock Essence')?.minPriceRon) + (dataEssence.find(item => item.name === 'Lv 1 Agricultural Planting Essence')?.minPriceRon))* exchangeRate).toFixed(2) || "Not sale"}
             ]},
             {attributes:[
               {Combatatt: "40-122"},
+              {Combatcritrate: "0.00%-0.00%"},
+              {Grassatt: "20-25"}
+            ]}
+          ]},
+          {'Iron Sword': [
+            {minpriceRon: Number(dataCombatWeapons.data.IronSword.results.find(item => item.name === 'Iron Sword')?.minPrice / 1000000000000000000).toFixed(2) || "Not sale"},
+            {minpriceUsd: Number((dataCombatWeapons.data.IronSword.results.find(item => item.name === 'Iron Sword')?.minPrice / 1000000000000000000) * exchangeRate).toFixed(2) || "Not sale"},
+            {img: "https://icons.lumiterra.net/item-icon-40.png"},
+            {'require level': 2},
+            {recipe:[
+              {materials:[
+                {'Lv 2 Agricultural Livestock Essence':[
+                  {quantity: 1},
+                  {img: "https://icons.lumiterra.net/item-icon-214.png"},
+                  {minpriceRon: Number(dataEssence.find(item => item.name === 'Lv 2 Agricultural Livestock Essence')?.minPriceRon).toFixed(2) || "Not sale"},
+                  {minpriceUsd: Number(dataEssence.find(item => item.name === 'Lv 2 Agricultural Livestock Essence')?.minPriceUsd).toFixed(2) || "Not sale"},
+                ]},
+                {'Lv 2 Agricultural Planting Essence':[
+                  {quantity: 1},
+                  {img: "https://icons.lumiterra.net/item-icon-211.png"},
+                  {minpriceRon: Number(dataEssence.find(item => item.name === 'Lv 2 Agricultural Planting Essence')?.minPriceRon).toFixed(2) || "Not sale"},
+                  {minpriceUsd: Number(dataEssence.find(item => item.name === 'Lv 2 Agricultural Planting Essence')?.minPriceUsd).toFixed(2) || "Not sale"},
+                ]},
+                {'Lv 1 Gather Essence':[
+                  {quantity: 2},
+                  {img: "https://icons.lumiterra.net/item-icon-207.png"},
+                  {minpriceRon: Number(dataEssence.find(item => item.name === 'Lv 1 Gather Essence')?.minPriceRon).toFixed(2) * 2 || "Not sale"},
+                  {minpriceUsd: Number(dataEssence.find(item => item.name === 'Lv 1 Gather Essence')?.minPriceUsd).toFixed(2) * 2 || "Not sale"},
+                ]},
+              ]},
+              {minPrinceTotalRecipeRon: Number((dataEssence.find(item => item.name === 'Lv 1 Agricultural Livestock Essence')?.minPriceRon) + (dataEssence.find(item => item.name === 'Lv 1 Agricultural Planting Essence')?.minPriceRon) + (dataEssence.find(item => item.name === 'Lv 1 Gather Essence')?.minPriceRon)*2).toFixed(2)|| "Not sale"},
+              {minPrinceTotalRecipeUsd: Number(((dataEssence.find(item => item.name === 'Lv 1 Agricultural Livestock Essence')?.minPriceRon) + (dataEssence.find(item => item.name === 'Lv 1 Agricultural Planting Essence')?.minPriceRon) + (dataEssence.find(item => item.name === 'Lv 1 Gather Essence')?.minPriceRon)*2) * exchangeRate).toFixed(2)|| "Not sale"}
+            ]},
+            {attributes:[
+              {Combatatt: "121-162"},
               {Combatcritrate: "0.00%-0.00%"},
               {Grassatt: "20-25"}
             ]}
