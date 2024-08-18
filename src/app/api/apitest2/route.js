@@ -27,9 +27,28 @@ export async function POST(request) {
   const body = await request.json();
   const { type, quality, requiresLevel } = body;
 
-  const breedingproficiency = 1;
-  const fertilitycapacity = 1;
-  const wateringeffect = 1;
+  const combatatt = 1;
+  const combatdef = 1;
+
+  const types = [
+    "sword",
+    "hands armor",
+    "head armor",
+    "feet armor",
+    "legs armor",
+    "chest armor",
+  ];
+  const qualities = ["basic", "ultimate", "enhanced", "advanced", "super"];
+  const requiresLevels = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+  const typeVerified = types.includes(type) ? type : "";
+  const qualityVerified = qualities.includes(quality) ? quality : "";
+  const requiresLevelVerified = requiresLevels.includes(requiresLevel)
+    ? requiresLevel
+    : "";
+
+  const rangeCriteria = `${typeVerified} ${qualityVerified} ${requiresLevelVerified}
+  `;
 
   try {
     const query = `
@@ -62,9 +81,7 @@ export async function POST(request) {
     const exchangeRate = response.data.exchangeRate.ron.usd;
     const items = response.data.erc1155Tokens.results;
 
-    return NextResponse.json(
-      type == "" ? null : type && quality == "" ? null : quality,
-    );
+    return NextResponse.json(rangeCriteria);
   } catch (error) {
     return NextResponse.json({ message: error.message }, { status: 500 });
   }

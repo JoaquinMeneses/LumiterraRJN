@@ -24,6 +24,10 @@ export default function RootLayout({ children }) {
         <CssVarsProvider defaultMode="dark">
           <CssBaseline />
           <Sidebar />
+          <div className="text-wrap bg-blue-600 p-2 text-center">
+            Se esta trabajando en las paginas de skills, el filtrado puede no
+            funcionar correctamente
+          </div>
           {children}
         </CssVarsProvider>
       </body>
