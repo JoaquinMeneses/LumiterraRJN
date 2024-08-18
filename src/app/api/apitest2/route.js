@@ -25,11 +25,9 @@ const fetchData = async (query) => {
 
 export async function POST(request) {
   const body = await request.json();
-  const { type, quality, requiresLevel } = body;
+  const { auctionType, type, quality, requiresLevel } = body;
 
-  const combatatt = 1;
-  const combatdef = 1;
-
+  const auctionsTypes = ["All", "Sale", "NotForSale"];
   const types = [
     "sword",
     "hands armor",
@@ -41,47 +39,75 @@ export async function POST(request) {
   const qualities = ["basic", "ultimate", "enhanced", "advanced", "super"];
   const requiresLevels = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
+  const auctionTypeVerified = auctionsTypes.includes(auctionType)
+    ? auctionType
+    : "";
   const typeVerified = types.includes(type) ? type : "";
   const qualityVerified = qualities.includes(quality) ? quality : "";
-  const requiresLevelVerified = requiresLevels.includes(requiresLevel)
+  const requiresLevelsVerified = requiresLevels.includes(requiresLevel)
     ? requiresLevel
     : "";
+  const statVerified = types.includes(type)
+    ? type === "sword"
+      ? "combatatt"
+      : "combatdef"
+    : "";
 
-  const rangeCriteria = `${typeVerified} ${qualityVerified} ${requiresLevelVerified}
+  const auctionsTypeField = auctionTypeVerified
+    ? `auctionType: ${auctionTypeVerified}`
+    : ``;
+
+  const criteriaField = [];
+  if (typeVerified)
+    criteriaField.push(`{name: "type", values: ["${typeVerified}"]}`);
+  if (qualityVerified)
+    criteriaField.push(`{name: "quality", values: ["${qualityVerified}"]}`);
+
+  const rangeCriteriaField = [];
+  if (requiresLevelsVerified)
+    rangeCriteriaField.push(
+      `{name: "requires level", range: {from: ${requiresLevelsVerified}, to: "${requiresLevelsVerified}"}}`,
+    );
+  if (statVerified)
+    rangeCriteriaField.push(
+      `{name: "${statVerified}", range: {from: "1", to: "1.157920892373162e+77"}}`,
+    );
+
+  const query = `
+    query Farming {
+      exchangeRate {
+        ron {
+          usd
+        }
+      }
+      erc1155Tokens(
+        from: 0
+        tokenAddress: "0xcc451977a4be9adee892f7e610fe3e3b3927b5a1"
+        sort: PriceAsc
+        size: 50
+        ${auctionsTypeField}
+        ${criteriaField.length ? `criteria: [${criteriaField.join(", ")}]` : ""}
+        ${rangeCriteriaField.length ? `rangeCriteria: [${rangeCriteriaField.join(", ")}]` : ""}
+      ) {
+        results {
+          name
+          cdnImage
+          minPrice
+          tokenId
+          attributes
+        }
+        total
+      }
+    }
   `;
 
   try {
-    const query = `
-      query Farming {
-        exchangeRate {
-          ron {
-            usd
-          }
-        }
-        erc1155Tokens(
-          from: 0
-          tokenAddress: "0xcc451977a4be9adee892f7e610fe3e3b3927b5a1"
-          sort: PriceAsc
-          auctionType: Sale
-          size: 50
-          
-        ) {
-          results {
-            name
-            cdnImage
-            minPrice
-            tokenId
-            attributes
-          }
-        }
-      }
-    `;
-
     const response = await fetchData(query);
     const exchangeRate = response.data.exchangeRate.ron.usd;
+    const total = response.data.erc1155Tokens.total;
     const items = response.data.erc1155Tokens.results;
 
-    return NextResponse.json(rangeCriteria);
+    return NextResponse.json({ exchangeRate, total, items });
   } catch (error) {
     return NextResponse.json({ message: error.message }, { status: 500 });
   }
