@@ -40,7 +40,14 @@ const Essence = () => {
       <Filters data={data} setDataFiltered={setDataFiltered} />
       <div className="flex h-full w-full flex-wrap justify-center gap-3 p-3">
         {dataFiltered?.map(
-          ({ name, minPrice, cdnImage, attributes, tokenId }) => {
+          ({
+            name,
+            minPriceUsd,
+            minPriceRon,
+            cdnImage,
+            attributes,
+            tokenId,
+          }) => {
             return (
               <>
                 <Card
@@ -100,11 +107,18 @@ const Essence = () => {
                               );
                             })}
                         </Typography>
-                        <Typography fontSize="xl" fontWeight="lg">
-                          {!isNaN(Number(minPrice))
-                            ? `${minPrice}usd`
-                            : minPrice}
-                        </Typography>
+                        <Box sx={{ display: "flex", gap: 1 }}>
+                          <Typography fontSize="xl" fontWeight="lg">
+                            {!isNaN(Number(minPriceRon))
+                              ? `${minPriceRon}RON`
+                              : minPriceRon}
+                          </Typography>
+                          <Typography fontSize="xl" fontWeight="lg">
+                            {!isNaN(Number(minPriceUsd))
+                              ? `${minPriceUsd}USD`
+                              : minPriceUsd}
+                          </Typography>
+                        </Box>
                       </Box>
                     </Box>
                   </CardContent>

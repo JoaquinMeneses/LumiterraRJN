@@ -26,9 +26,8 @@ export async function GET(request) {
   //const result ='minPrice name attributes cdnImage tokenId';
 
   try {
-    const result = 'minPrice name attributes cdnImage tokenId'
-    const query =
-      `
+    const result = "minPrice name attributes cdnImage tokenId";
+    const query = `
       query CombinedQuery {
         gatherEssenceTokens: erc1155Tokens(
           from: 0
@@ -91,13 +90,13 @@ export async function GET(request) {
           }
         }
       }
-      `
+      `;
     const dataEssence = await fetchData(query);
     const exchangeRate = dataEssence.data.exchangeRate.ron.usd;
-    const resultsdatagatherEssence = dataEssence.data.gatherEssenceTokens.results.map(
-      (result) => ({
+    const resultsdatagatherEssence =
+      dataEssence.data.gatherEssenceTokens.results.map((result) => ({
         ...result,
-        minPriceRon: Number(result.minPrice / 1000000000000000000),
+        minPriceRon: Number(result.minPrice / 1000000000000000000).toFixed(2),
         minPriceUsd: result.minPrice
           ? Number(
               (result.minPrice / 1000000000000000000) * exchangeRate,
@@ -108,10 +107,10 @@ export async function GET(request) {
         })),
         type: result.attributes["type"] && result.attributes["type"][0],
       }));
-    const resultsdatacombatEssence = dataEssence.data.combatEssenceTokens.results.map(
-      (result) => ({
+    const resultsdatacombatEssence =
+      dataEssence.data.combatEssenceTokens.results.map((result) => ({
         ...result,
-        minPriceRon: Number(result.minPrice / 1000000000000000000),
+        minPriceRon: Number(result.minPrice / 1000000000000000000).toFixed(2),
         minPriceUsd: result.minPrice
           ? Number(
               (result.minPrice / 1000000000000000000) * exchangeRate,
@@ -122,42 +121,46 @@ export async function GET(request) {
         })),
         type: result.attributes["type"] && result.attributes["type"][0],
       }));
-    const resultsdataagriculturalPlantingEssence = dataEssence.data.agriculturalPlantingEssenceTokens.results.map(
-      (result) => ({
-        ...result,
-        minPriceRon: Number(result.minPrice / 1000000000000000000),
-        minPriceUsd: result.minPrice
-          ? Number(
-              (result.minPrice / 1000000000000000000) * exchangeRate,
-            ).toFixed(2)
-          : "Not sale",
-        attributes: Object.keys(result.attributes).map((key) => ({
-          [key]: result.attributes[key][0],
-        })),
-        type: result.attributes["type"] && result.attributes["type"][0],
-      }));
-    const resultsdataagriculturalLivestockEssence = dataEssence.data.agriculturalLivestockEssenceTokens.results.map(
-      (result) => ({
-        ...result,
-        minPriceRon: Number(result.minPrice / 1000000000000000000),
-        minPriceUsd: result.minPrice
-          ? Number(
-              (result.minPrice / 1000000000000000000) * exchangeRate,
-            ).toFixed(2)
-          : "Not sale",
-        attributes: Object.keys(result.attributes).map((key) => ({
-          [key]: result.attributes[key][0],
-        })),
-        type: result.attributes["type"] && result.attributes["type"][0],
-      }));
+    const resultsdataagriculturalPlantingEssence =
+      dataEssence.data.agriculturalPlantingEssenceTokens.results.map(
+        (result) => ({
+          ...result,
+          minPriceRon: Number(result.minPrice / 1000000000000000000).toFixed(2),
+          minPriceUsd: result.minPrice
+            ? Number(
+                (result.minPrice / 1000000000000000000) * exchangeRate,
+              ).toFixed(2)
+            : "Not sale",
+          attributes: Object.keys(result.attributes).map((key) => ({
+            [key]: result.attributes[key][0],
+          })),
+          type: result.attributes["type"] && result.attributes["type"][0],
+        }),
+      );
+    const resultsdataagriculturalLivestockEssence =
+      dataEssence.data.agriculturalLivestockEssenceTokens.results.map(
+        (result) => ({
+          ...result,
+          minPriceRon: Number(result.minPrice / 1000000000000000000).toFixed(2),
+          minPriceUsd: result.minPrice
+            ? Number(
+                (result.minPrice / 1000000000000000000) * exchangeRate,
+              ).toFixed(2)
+            : "Not sale",
+          attributes: Object.keys(result.attributes).map((key) => ({
+            [key]: result.attributes[key][0],
+          })),
+          type: result.attributes["type"] && result.attributes["type"][0],
+        }),
+      );
 
     const allResults = [
       ...resultsdatagatherEssence,
       ...resultsdatacombatEssence,
       ...resultsdataagriculturalPlantingEssence,
-      ...resultsdataagriculturalLivestockEssence
+      ...resultsdataagriculturalLivestockEssence,
     ];
-    
+
     return NextResponse.json(allResults);
   } catch (error) {
     return NextResponse.json({ message: error.message }, { status: 500 });
