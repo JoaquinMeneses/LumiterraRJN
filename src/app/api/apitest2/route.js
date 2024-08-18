@@ -105,7 +105,17 @@ export async function POST(request) {
     const response = await fetchData(query);
     const exchangeRate = response.data.exchangeRate.ron.usd;
     const total = response.data.erc1155Tokens.total;
-    const items = response.data.erc1155Tokens.results;
+    const items = response.data.erc1155Tokens.results.map((result) => ({
+      ...result,
+      minPrice: result.minPrice
+        ? Number(
+            (result.minPrice / 1000000000000000000) * exchangeRate,
+          ).toFixed(2)
+        : "Not sale",
+      attributes: Object.keys(result.attributes).map((key) => ({
+        [key]: result.attributes[key][0],
+      })),
+    }));
 
     return NextResponse.json({ exchangeRate, total, items });
   } catch (error) {
