@@ -25,8 +25,7 @@ export default function RootLayout({ children }) {
           <CssBaseline />
           <Sidebar />
           <div className="text-wrap bg-blue-600 p-2 text-center">
-            Se esta trabajando en las paginas de skills, el filtrado puede no
-            funcionar correctamente
+            Filtros en desarrollo
           </div>
           {children}
         </CssVarsProvider>

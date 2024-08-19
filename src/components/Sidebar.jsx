@@ -31,7 +31,7 @@ export default function Sidebar() {
           />
         </IconButton>
       </Link>
-      <Link href="/combat">
+      <Link href="/market/combat">
         <IconButton>
           <Image
             src="https://cdn.skymavis.com/mm-cache/e/d/34767ef4192a43fa9e43bf6536d4a8.png"
@@ -41,7 +41,7 @@ export default function Sidebar() {
           />
         </IconButton>
       </Link>
-      <Link href="/farming">
+      <Link href="/market/farming">
         <IconButton>
           <Image
             src="https://cdn.skymavis.com/mm-cache/5/3/ca3f1a32f548ca9f52572f02517fac.png"
@@ -51,7 +51,7 @@ export default function Sidebar() {
           />
         </IconButton>
       </Link>
-      <Link href="/gathering">
+      <Link href="/market/gathering">
         <IconButton>
           <Image
             src="https://cdn.skymavis.com/mm-cache/d/e/18aa0ea45c2e1af5581934b49a7647.png"

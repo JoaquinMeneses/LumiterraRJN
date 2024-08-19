@@ -7,7 +7,7 @@ import FiltersTemporally from "@/components/FiltersTemporally";
 import AspectRatio from "@mui/joy/AspectRatio";
 import Link from "@mui/joy/Link";
 
-const Combat = () => {
+const Profession = ({ params }) => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [filters, setFilters] = useState({
@@ -20,10 +20,10 @@ const Combat = () => {
   async function fetchData(body) {
     try {
       const res = await axios.post(
-        `${window.location.origin}/api/apitest2`,
+        `${window.location.origin}/api/market/${params.profession}`,
         body,
       );
-      setData(res.data.items);
+      setData(res.data);
       setLoading(false);
     } catch (error) {
       console.error(error);
@@ -51,7 +51,7 @@ const Combat = () => {
         skill="combat"
       />
       <div className="flex h-full w-full flex-wrap justify-center gap-3 p-3">
-        {data?.map(({ name, minPrice, cdnImage, attributes, tokenId }) => {
+        {data?.map(({ name, prices, cdnImage, attributes, tokenId }) => {
           return (
             <Card
               key={tokenId}
@@ -113,7 +113,9 @@ const Combat = () => {
                         })}
                     </Typography>
                     <Typography fontSize="xl" fontWeight="lg">
-                      {!isNaN(Number(minPrice)) ? `${minPrice}usd` : minPrice}
+                      {!isNaN(Number(prices.usd))
+                        ? `${prices.usd}usd`
+                        : prices.usd}
                     </Typography>
                   </Box>
                 </Box>
@@ -157,4 +159,4 @@ const Combat = () => {
   );
 };
 
-export default Combat;
+export default Profession;
