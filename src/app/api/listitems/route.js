@@ -1,4 +1,3 @@
-import Farming from "@/app/farming/page";
 import { NextResponse } from "next/server";
 
 export const dynamic = "force-dynamic";
