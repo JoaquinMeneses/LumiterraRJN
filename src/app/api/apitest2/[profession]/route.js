@@ -24,13 +24,29 @@ const fetchData = async (query) => {
   return response.json();
 };
 
+const fetchDataEnergy = async () => {
+  const response = await fetch(
+    `http://localhost:3000/api/energia`,
+    {
+      method: "GET",
+      cache: "no-store",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    },
+  );
+
+  if (!response.ok) {
+    throw new Error(`Failed to fetch data `);
+  }
+  return response.json();
+};
+
 export async function POST(request, { params }) {
   const profession = params.profession;
 
-  
-
-
   try {
+    const dataEnergy = await fetchDataEnergy()
     const itemsVerified =
       profession && itemsData[profession]
     
@@ -52,9 +68,7 @@ export async function POST(request, { params }) {
             sort: PriceAsc
             auctionType: Sale
             rangeCriteria: [
-              { name: "requires level", range: { from: ${requiresLevel}, to: ${requiresLevel} } },
-              ${stats.map((stat) => `{ name: "${stat.name}", range: { from: "${stat.values.min}", to: "${stat.values.max}" } }`).join(",\n")}
-            ]
+              { name: "requires level", range: { from: ${requiresLevel}, to: ${requiresLevel} } }]
           ) {
             results {
               tokenId
@@ -90,11 +104,19 @@ export async function POST(request, { params }) {
             ? ((result.minPrice / 1e18) * exchangeRate).toFixed(2)
             : "Not sale",
         }
-      }))
+    }))
 
+    itemsVerified.forEach(item => {
+      const itemFinalResponse = finalResponse.find(response => response.name === item.name && Number(response.requiresLevel[0]) === item.requiresLevel);
+      if(itemFinalResponse){
+        item.prices = itemFinalResponse.prices;
+      } else{
+        item.prices = { ron: "Not sale", usd: "Not sale" };
+      }
+      item.recipe.totalEnergyCost = item.recipe.totalRequireEnergy * dataEnergy[0].costPerEnergy
+    });
 
-
-    return NextResponse.json(finalResponse);
+    return NextResponse.json(itemsVerified);
   } catch (error) {
     return NextResponse.json({ message: error.message }, { status: 500 });
   }
