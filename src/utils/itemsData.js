@@ -18,6 +18,19 @@ const fetchDataEssen = async () => {
 
 const dataEssence = await fetchDataEssen();
 
+
+const calculateEnergyForMaterial = (material) => {
+    const baseEnergy = 15;
+    let energyRequired = baseEnergy;
+
+    for (let i = 2; i <= material; i++) {
+      energyRequired = baseEnergy + 2 * energyRequired;
+    }
+
+    return energyRequired;
+  };
+
+
 function createMaterial(name, quantity, cdnImage, requireLevel) {
   return {
     name: name,
@@ -25,7 +38,7 @@ function createMaterial(name, quantity, cdnImage, requireLevel) {
     cdnImage: `https://icons.lumiterra.net/item-icon-${cdnImage}.png`,
     minpriceRon: getMaterialPrice(name, 'Ron'),
     minpriceUsd: getMaterialPrice(name, 'Usd'),
-    requireEnergy: requireLevel * 15 * quantity
+    requireEnergy: calculateEnergyForMaterial(requireLevel) * quantity
   };
 }
 
