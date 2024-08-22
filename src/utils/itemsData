@@ -1,0 +1,2451 @@
+const fetchDataEssen = async () => {
+  const response = await fetch(
+    `http://localhost:3000/api/essence`,
+    {
+      method: "GET",
+      cache: "no-store",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    },
+  );
+
+  if (!response.ok) {
+    throw new Error(`Failed to fetch data `);
+  }
+  return response.json();
+};
+
+const dataEssence = await fetchDataEssen();
+
+function createMaterial(name, quantity, cdnImage, requireLevel) {
+  return {
+    name: name,
+    quantity: quantity,
+    cdnImage: `https://icons.lumiterra.net/item-icon-${cdnImage}.png`,
+    minpriceRon: getMaterialPrice(name, 'Ron'),
+    minpriceUsd: getMaterialPrice(name, 'Usd'),
+    requireEnergy: requireLevel * 15 * quantity
+  };
+}
+
+function getMaterialPrice(name, currency) {
+  const item = dataEssence.find(item => item.name === name);
+  return item ? item[`minPrice${currency}`] : "Not sale";
+}
+
+function calculateTotalPrice(materials, currency) {
+  return materials.reduce((total, material) => {
+    return total + Number(material[`minprice${currency}`]) * material.quantity;
+  }, 0).toFixed(2);
+}
+
+function calculatetotalRequireEnergy(materials) {
+  return materials.reduce((total, material) => {
+    return total + Number(material[`requireEnergy`]);
+  }, 0).toFixed(2);
+}
+
+
+const itemsData = {
+  combat: [
+    {
+      name: "Stone Sword",
+      alias: "StoneSword",
+      prices: { ron: null, usd: null },
+      cdnImage:"https://icons.lumiterra.net/item-icon-40.png",
+      requiresLevel: 1,
+      stats: [
+        { name: "combatatt", typeNumber: "integer", values:  {min:40, max:122 }},
+        //{ name: "combatcritrate",typeNumber: "percentage",  values: {min: 0, max:0 }}, Atributo con valores ramdons
+        { name: "grassatt",typeNumber: "integer",  values: {min: 20, max:25 }},
+      ],
+      recipe: {
+          materials:[
+              createMaterial('Lv 1 Agricultural Livestock Essence', 1, 213,1),
+              createMaterial('Lv 1 Agricultural Planting Essence', 1, 210,1)
+          ],
+          minPriceTotalRon: calculateTotalPrice([
+              createMaterial('Lv 1 Agricultural Livestock Essence', 1, 213,1),
+              createMaterial('Lv 1 Agricultural Planting Essence', 1, 210,1)
+          ], 'Ron'),
+          minPriceTotalUsd: calculateTotalPrice([
+              createMaterial('Lv 1 Agricultural Livestock Essence', 1, 213,1),
+              createMaterial('Lv 1 Agricultural Planting Essence', 1, 210,1)
+          ], 'Usd'),
+          totalRequireEnergy: calculatetotalRequireEnergy([
+            createMaterial('Lv 1 Agricultural Livestock Essence', 1, 213,1),
+            createMaterial('Lv 1 Agricultural Planting Essence', 1, 210,1)
+          ])
+      },
+    },
+    {
+      name: "Iron Sword",
+      alias: "IronSword",
+      prices: { ron: null, usd: null },
+      cdnImage:"https://icons.lumiterra.net/item-icon-41.png",
+      requiresLevel: 2,
+      stats: [
+        { name: "combatatt", typeNumber: "integer", values:  {min:121, max:203 }},
+        //{ name: "combatcritrate",typeNumber: "percentage",  values: {min: 0, max:0 }}, Atributo con valores ramdons
+        { name: "grassatt",typeNumber: "integer",  values: {min: 20, max:25 }},
+      ],
+      recipe: {
+          materials:[
+            createMaterial('Lv 2 Agricultural Livestock Essence', 1, 214,2),
+            createMaterial('Lv 2 Agricultural Planting Essence', 1, 211,2),
+            createMaterial('Lv 1 Gather Essence', 2, 207,1)
+          ],
+          minPriceTotalRon: calculateTotalPrice([
+            createMaterial('Lv 2 Agricultural Livestock Essence', 1, 214,2),
+            createMaterial('Lv 2 Agricultural Planting Essence', 1, 211,2),
+            createMaterial('Lv 1 Gather Essence', 2, 207,1)
+          ], 'Ron'),
+          minPriceTotalUsd: calculateTotalPrice([
+            createMaterial('Lv 2 Agricultural Livestock Essence', 1, 214,2),
+            createMaterial('Lv 2 Agricultural Planting Essence', 1, 211,2),
+            createMaterial('Lv 1 Gather Essence', 2, 207,1)
+          ], 'Usd'),
+          totalRequireEnergy: calculatetotalRequireEnergy([
+            createMaterial('Lv 2 Agricultural Livestock Essence', 1, 214,2),
+            createMaterial('Lv 2 Agricultural Planting Essence', 1, 211,2),
+            createMaterial('Lv 1 Gather Essence', 2, 207,1)
+          ])
+      },
+    },
+    {
+      name: "Crystal Sword",
+      alias: "CrystalSword",
+      prices: { ron: null, usd: null },
+      cdnImage:"https://icons.lumiterra.net/item-icon-42.png",
+      requiresLevel: 3,
+      stats: [
+        { name: "combatatt", typeNumber: "integer", values:  {min:202, max:284 }},
+        //{ name: "combatcritrate",typeNumber: "percentage",  values: {min: 0, max:0 }}, Atributo con valores ramdons
+        { name: "grassatt",typeNumber: "integer",  values: {min: 20, max:25 }},
+      ],
+      recipe: {
+          materials:[
+            createMaterial('Lv 3 Agricultural Livestock Essence', 1, 215,3),
+            createMaterial('Lv 3 Agricultural Planting Essence', 1, 212,3),
+            createMaterial('Lv 2 Gather Essence', 2, 208,2)
+          ],
+          minPriceTotalRon: calculateTotalPrice([
+            createMaterial('Lv 3 Agricultural Livestock Essence', 1, 215,3),
+            createMaterial('Lv 3 Agricultural Planting Essence', 1, 212,3),
+            createMaterial('Lv 2 Gather Essence', 2, 208,2)
+          ], 'Ron'),
+          minPriceTotalUsd: calculateTotalPrice([
+            createMaterial('Lv 3 Agricultural Livestock Essence', 1, 215,3),
+            createMaterial('Lv 3 Agricultural Planting Essence', 1, 212,3),
+            createMaterial('Lv 2 Gather Essence', 2, 208,2)
+          ], 'Usd'),
+          totalRequireEnergy: calculatetotalRequireEnergy([
+            createMaterial('Lv 3 Agricultural Livestock Essence', 1, 215,3),
+            createMaterial('Lv 3 Agricultural Planting Essence', 1, 212,3),
+            createMaterial('Lv 2 Gather Essence', 2, 208,2)
+          ])
+      },
+    },
+    {
+      name: "Golden Sword",
+      alias: "GoldenSword",
+      prices: { ron: null, usd: null },
+      cdnImage:"https://icons.lumiterra.net/item-icon-317.png",
+      requiresLevel: 4,
+      stats: [
+        { name: "combatatt", typeNumber: "integer", values:  {min:283, max:365 }},
+        //{ name: "combatcritrate",typeNumber: "percentage",  values: {min: 0, max:0 }}, Atributo con valores ramdons
+        { name: "grassatt",typeNumber: "integer",  values: {min: 20, max:25 }},
+      ],
+      recipe: {
+          materials:[
+            createMaterial('Lv 4 Agricultural Livestock Essence', 1, 410,4),
+            createMaterial('Lv 4 Agricultural Planting Essence', 1, 407,4),
+            createMaterial('Lv 3 Gather Essence', 2, 209,3)
+          ],
+          minPriceTotalRon: calculateTotalPrice([
+            createMaterial('Lv 4 Agricultural Livestock Essence', 1, 410,4),
+            createMaterial('Lv 4 Agricultural Planting Essence', 1, 407,4),
+            createMaterial('Lv 3 Gather Essence', 2, 209,3)
+          ], 'Ron'),
+          minPriceTotalUsd: calculateTotalPrice([
+            createMaterial('Lv 4 Agricultural Livestock Essence', 1, 410,4),
+            createMaterial('Lv 4 Agricultural Planting Essence', 1, 407,4),
+            createMaterial('Lv 3 Gather Essence', 2, 209,3)
+          ], 'Usd'),
+          totalRequireEnergy: calculatetotalRequireEnergy([
+            createMaterial('Lv 4 Agricultural Livestock Essence', 1, 410,4),
+            createMaterial('Lv 4 Agricultural Planting Essence', 1, 407,4),
+            createMaterial('Lv 3 Gather Essence', 2, 209,3)
+          ])
+      },
+    },
+    {
+      name: "Diamond Sword",
+      alias: "DiamondSword",
+      prices: { ron: null, usd: null },
+      cdnImage:"https://icons.lumiterra.net/item-icon-318.png",
+      requiresLevel: 5,
+      stats: [
+        { name: "combatatt", typeNumber: "integer", values:  {min:364, max:446 }},
+        //{ name: "combatcritrate",typeNumber: "percentage",  values: {min: 0, max:0 }}, Atributo con valores ramdons
+        { name: "grassatt",typeNumber: "integer",  values: {min: 20, max:25 }},
+      ],
+      recipe: {
+          materials:[
+            createMaterial('Lv 5 Agricultural Livestock Essence', 1, 411,5),
+            createMaterial('Lv 5 Agricultural Planting Essence', 1, 408,5),
+            createMaterial('Lv 4 Gather Essence', 2, 404,4)
+          ],
+          minPriceTotalRon: calculateTotalPrice([
+            createMaterial('Lv 5 Agricultural Livestock Essence', 1, 411,5),
+            createMaterial('Lv 5 Agricultural Planting Essence', 1, 408,5),
+            createMaterial('Lv 4 Gather Essence', 2, 404,4)
+          ], 'Ron'),
+          minPriceTotalUsd: calculateTotalPrice([
+            createMaterial('Lv 5 Agricultural Livestock Essence', 1, 411,5),
+            createMaterial('Lv 5 Agricultural Planting Essence', 1, 408,5),
+            createMaterial('Lv 4 Gather Essence', 2, 404,4)
+          ], 'Usd'),
+          totalRequireEnergy: calculatetotalRequireEnergy([
+            createMaterial('Lv 5 Agricultural Livestock Essence', 1, 411,5),
+            createMaterial('Lv 5 Agricultural Planting Essence', 1, 408,5),
+            createMaterial('Lv 4 Gather Essence', 2, 404,4)
+          ])
+      },
+    },
+    {
+      name: "Star Sword",
+      alias: "StarSword",
+      prices: { ron: null, usd: null },
+      cdnImage:"https://icons.lumiterra.net/item-icon-319.png",
+      requiresLevel: 6,
+      stats: [
+        { name: "combatatt", typeNumber: "integer", values:  {min:445, max:527 }},
+        //{ name: "combatcritrate",typeNumber: "percentage",  values: {min: 0, max:0 }}, Atributo con valores ramdons
+        { name: "grassatt",typeNumber: "integer",  values: {min: 20, max:25 }},
+      ],
+      recipe: {
+          materials:[
+            createMaterial('Lv 6 Agricultural Livestock Essence', 1, 412,6),
+            createMaterial('Lv 6 Agricultural Planting Essence', 1, 409,6),
+            createMaterial('Lv 5 Gather Essence', 2, 405,5)
+          ],
+          minPriceTotalRon: calculateTotalPrice([
+            createMaterial('Lv 6 Agricultural Livestock Essence', 1, 412,6),
+            createMaterial('Lv 6 Agricultural Planting Essence', 1, 409,6),
+            createMaterial('Lv 5 Gather Essence', 2, 405,5)
+          ], 'Ron'),
+          minPriceTotalUsd: calculateTotalPrice([
+            createMaterial('Lv 6 Agricultural Livestock Essence', 1, 412,6),
+            createMaterial('Lv 6 Agricultural Planting Essence', 1, 409,6),
+            createMaterial('Lv 5 Gather Essence', 2, 405,5)
+          ], 'Usd'),
+          totalRequireEnergy: calculatetotalRequireEnergy([
+            createMaterial('Lv 6 Agricultural Livestock Essence', 1, 412,6),
+            createMaterial('Lv 6 Agricultural Planting Essence', 1, 409,6),
+            createMaterial('Lv 5 Gather Essence', 2, 405,5)
+          ])
+      },
+    },
+    {
+      name: "Lava Sword",
+      alias: "LavaSword",
+      prices: { ron: null, usd: null },
+      cdnImage:"https://icons.lumiterra.net/item-icon-527.png",
+      requiresLevel: 7,
+      stats: [
+        { name: "combatatt", typeNumber: "integer", values:  {min:526, max:608 }},
+        //{ name: "combatcritrate",typeNumber: "percentage",  values: {min: 0, max:0 }}, Atributo con valores ramdons
+        { name: "grassatt",typeNumber: "integer",  values: {min: 20, max:25 }},
+      ],
+      recipe: {
+          materials:[
+            createMaterial('Lv 7 Agricultural Livestock Essence', 1, 611,7),
+            createMaterial('Lv 7 Agricultural Planting Essence', 1, 608,7),
+            createMaterial('Lv 6 Gather Essence', 2, 406,6)
+          ],
+          minPriceTotalRon: calculateTotalPrice([
+            createMaterial('Lv 7 Agricultural Livestock Essence', 1, 611,7),
+            createMaterial('Lv 7 Agricultural Planting Essence', 1, 608,7),
+            createMaterial('Lv 6 Gather Essence', 2, 406,6)
+          ], 'Ron'),
+          minPriceTotalUsd: calculateTotalPrice([
+            createMaterial('Lv 7 Agricultural Livestock Essence', 1, 611,7),
+            createMaterial('Lv 7 Agricultural Planting Essence', 1, 608,7),
+            createMaterial('Lv 6 Gather Essence', 2, 406,6)
+          ], 'Usd'),
+          totalRequireEnergy: calculatetotalRequireEnergy([
+            createMaterial('Lv 7 Agricultural Livestock Essence', 1, 611,7),
+            createMaterial('Lv 7 Agricultural Planting Essence', 1, 608,7),
+            createMaterial('Lv 5 Gather Essence', 2, 405,6)
+          ])
+      },
+    },
+    {
+      name: "Hollow Sword",
+      alias: "HollowSword",
+      prices: { ron: null, usd: null },
+      cdnImage:"https://icons.lumiterra.net/item-icon-551.png",
+      requiresLevel: 8,
+      stats: [
+        { name: "combatatt", typeNumber: "integer", values:  {min:607, max:689 }},
+        //{ name: "combatcritrate",typeNumber: "percentage",  values: {min: 0, max:0 }}, Atributo con valores ramdons
+        { name: "grassatt",typeNumber: "integer",  values: {min: 20, max:25 }},
+      ],
+      recipe: {
+          materials:[
+            createMaterial('Lv 8 Agricultural Livestock Essence', 1, 612,8),
+            createMaterial('Lv 8 Agricultural Planting Essence', 1, 609,8),
+            createMaterial('Lv 7 Gather Essence', 2, 406,7)
+          ],
+          minPriceTotalRon: calculateTotalPrice([
+            createMaterial('Lv 8 Agricultural Livestock Essence', 1, 612,8),
+            createMaterial('Lv 8 Agricultural Planting Essence', 1, 609,8),
+            createMaterial('Lv 7 Gather Essence', 2, 406,7)
+          ], 'Ron'),
+          minPriceTotalUsd: calculateTotalPrice([
+            createMaterial('Lv 8 Agricultural Livestock Essence', 1, 612,8),
+            createMaterial('Lv 8 Agricultural Planting Essence', 1, 609,8),
+            createMaterial('Lv 7 Gather Essence', 2, 406,7)
+          ], 'Usd'),
+          totalRequireEnergy: calculatetotalRequireEnergy([
+            createMaterial('Lv 8 Agricultural Livestock Essence', 1, 612,8),
+            createMaterial('Lv 8 Agricultural Planting Essence', 1, 609,8),
+            createMaterial('Lv 7 Gather Essence', 2, 406,7)
+          ])
+      },
+    },
+    {
+      name: "Bronze Sword",
+      alias: "BronzeSword",
+      prices: { ron: null, usd: null },
+      cdnImage:"https://icons.lumiterra.net/item-icon-575.png",
+      requiresLevel: 9,
+      stats: [
+        { name: "combatatt", typeNumber: "integer", values:  {min:688, max:753 }},
+        //{ name: "combatcritrate",typeNumber: "percentage",  values: {min: 0, max:0 }}, Atributo con valores ramdons
+        { name: "grassatt",typeNumber: "integer",  values: {min: 20, max:25 }},
+      ],
+      recipe: {
+          materials:[
+            createMaterial('Lv 9 Agricultural Livestock Essence', 1, 613,9),
+            createMaterial('Lv 9 Agricultural Planting Essence', 1, 610,9),
+            createMaterial('Lv 8 Gather Essence', 2, 606,8)
+          ],
+          minPriceTotalRon: calculateTotalPrice([
+            createMaterial('Lv 9 Agricultural Livestock Essence', 1, 613,9),
+            createMaterial('Lv 9 Agricultural Planting Essence', 1, 610,9),
+            createMaterial('Lv 8 Gather Essence', 2, 606,8)
+          ], 'Ron'),
+          minPriceTotalUsd: calculateTotalPrice([
+            createMaterial('Lv 9 Agricultural Livestock Essence', 1, 613,9),
+            createMaterial('Lv 9 Agricultural Planting Essence', 1, 610,9),
+            createMaterial('Lv 8 Gather Essence', 2, 606,8)
+          ], 'Usd'),
+          totalRequireEnergy: calculatetotalRequireEnergy([
+            createMaterial('Lv 9 Agricultural Livestock Essence', 1, 613,9),
+            createMaterial('Lv 9 Agricultural Planting Essence', 1, 610,9),
+            createMaterial('Lv 8 Gather Essence', 2, 606,8)
+          ])
+      },
+    },
+    {
+      name: "Stone Bow",
+      alias: "StoneBow",
+      prices: { ron: null, usd: null },
+      cdnImage:"https://icons.lumiterra.net/item-icon-287.png",
+      requiresLevel: 1,
+      stats: [
+        { name: "combatatt", typeNumber: "integer", values:  {min:40, max:122 }},
+        //{ name: "combatcritrate",typeNumber: "percentage",  values: {min: 0, max:0 }}, Atributo con valores ramdons
+        { name: "Combathit",typeNumber: "integer",  values: {min: 0, max:5 }},
+      ],
+      recipe: {
+          materials:[
+              createMaterial('Lv 1 Agricultural Livestock Essence', 1, 213,1),
+              createMaterial('Lv 1 Agricultural Planting Essence', 1, 210,1)
+          ],
+          minPriceTotalRon: calculateTotalPrice([
+              createMaterial('Lv 1 Agricultural Livestock Essence', 1, 213,1),
+              createMaterial('Lv 1 Agricultural Planting Essence', 1, 210,1)
+          ], 'Ron'),
+          minPriceTotalUsd: calculateTotalPrice([
+              createMaterial('Lv 1 Agricultural Livestock Essence', 1, 213,1),
+              createMaterial('Lv 1 Agricultural Planting Essence', 1, 210,1)
+          ], 'Usd'),
+          totalRequireEnergy: calculatetotalRequireEnergy([
+            createMaterial('Lv 1 Agricultural Livestock Essence', 1, 213,1),
+            createMaterial('Lv 1 Agricultural Planting Essence', 1, 210,1)
+          ])
+      },
+    },
+    {
+      name: "Metal Bow",
+      alias: "MetalBow",
+      prices: { ron: null, usd: null },
+      cdnImage:"https://icons.lumiterra.net/item-icon-288.png",
+      requiresLevel: 2,
+      stats: [
+        { name: "combatatt", typeNumber: "integer", values:  {min:121, max:203 }},
+        //{ name: "combatcritrate",typeNumber: "percentage",  values: {min: 0, max:0 }}, Atributo con valores ramdons
+        { name: "Combathit",typeNumber: "integer",  values: {min: 5, max:10 }},
+      ],
+      recipe: {
+          materials:[
+            createMaterial('Lv 2 Agricultural Livestock Essence', 1, 214,2),
+            createMaterial('Lv 2 Agricultural Planting Essence', 1, 211,2),
+            createMaterial('Lv 1 Gather Essence', 2, 207,1)
+          ],
+          minPriceTotalRon: calculateTotalPrice([
+            createMaterial('Lv 2 Agricultural Livestock Essence', 1, 214,2),
+            createMaterial('Lv 2 Agricultural Planting Essence', 1, 211,2),
+            createMaterial('Lv 1 Gather Essence', 2, 207,1)
+          ], 'Ron'),
+          minPriceTotalUsd: calculateTotalPrice([
+            createMaterial('Lv 2 Agricultural Livestock Essence', 1, 214,2),
+            createMaterial('Lv 2 Agricultural Planting Essence', 1, 211,2),
+            createMaterial('Lv 1 Gather Essence', 2, 207,1)
+          ], 'Usd'),
+          totalRequireEnergy: calculatetotalRequireEnergy([
+            createMaterial('Lv 2 Agricultural Livestock Essence', 1, 214,2),
+            createMaterial('Lv 2 Agricultural Planting Essence', 1, 211,2),
+            createMaterial('Lv 1 Gather Essence', 2, 207,1)
+          ])
+      },
+    },
+    {
+      name: "Crystal Bow",
+      alias: "CrystalBow",
+      prices: { ron: null, usd: null },
+      cdnImage:"https://icons.lumiterra.net/item-icon-289.png",
+      requiresLevel: 3,
+      stats: [
+        { name: "combatatt", typeNumber: "integer", values:  {min:202, max:284 }},
+        //{ name: "combatcritrate",typeNumber: "percentage",  values: {min: 0, max:0 }}, Atributo con valores ramdons
+        { name: "Combathit",typeNumber: "integer",  values: {min: 10, max:15 }},
+      ],
+      recipe: {
+          materials:[
+            createMaterial('Lv 3 Agricultural Livestock Essence', 1, 215,3),
+            createMaterial('Lv 3 Agricultural Planting Essence', 1, 212,3),
+            createMaterial('Lv 2 Gather Essence', 2, 208,2)
+          ],
+          minPriceTotalRon: calculateTotalPrice([
+            createMaterial('Lv 3 Agricultural Livestock Essence', 1, 215,3),
+            createMaterial('Lv 3 Agricultural Planting Essence', 1, 212,3),
+            createMaterial('Lv 2 Gather Essence', 2, 208,2)
+          ], 'Ron'),
+          minPriceTotalUsd: calculateTotalPrice([
+            createMaterial('Lv 3 Agricultural Livestock Essence', 1, 215,3),
+            createMaterial('Lv 3 Agricultural Planting Essence', 1, 212,3),
+            createMaterial('Lv 2 Gather Essence', 2, 208,2)
+          ], 'Usd'),
+          totalRequireEnergy: calculatetotalRequireEnergy([
+            createMaterial('Lv 3 Agricultural Livestock Essence', 1, 215,3),
+            createMaterial('Lv 3 Agricultural Planting Essence', 1, 212,3),
+            createMaterial('Lv 2 Gather Essence', 2, 208,2)
+          ])
+      },
+    },
+    {
+      name: "Golden Bow",
+      alias: "GoldenBow",
+      prices: { ron: null, usd: null },
+      cdnImage:"https://icons.lumiterra.net/item-icon-450.png",
+      requiresLevel: 4,
+      stats: [
+        { name: "combatatt", typeNumber: "integer", values:  {min:283, max:365 }},
+        //{ name: "combatcritrate",typeNumber: "percentage",  values: {min: 0, max:0 }}, Atributo con valores ramdons
+        { name: "Combathit",typeNumber: "integer",  values: {min: 15, max:20 }},
+      ],
+      recipe: {
+          materials:[
+            createMaterial('Lv 4 Agricultural Livestock Essence', 1, 410,4),
+            createMaterial('Lv 4 Agricultural Planting Essence', 1, 407,4),
+            createMaterial('Lv 3 Gather Essence', 2, 209,3)
+          ],
+          minPriceTotalRon: calculateTotalPrice([
+            createMaterial('Lv 4 Agricultural Livestock Essence', 1, 410,4),
+            createMaterial('Lv 4 Agricultural Planting Essence', 1, 407,4),
+            createMaterial('Lv 3 Gather Essence', 2, 209,3)
+          ], 'Ron'),
+          minPriceTotalUsd: calculateTotalPrice([
+            createMaterial('Lv 4 Agricultural Livestock Essence', 1, 410,4),
+            createMaterial('Lv 4 Agricultural Planting Essence', 1, 407,4),
+            createMaterial('Lv 3 Gather Essence', 2, 209,3)
+          ], 'Usd'),
+          totalRequireEnergy: calculatetotalRequireEnergy([
+            createMaterial('Lv 4 Agricultural Livestock Essence', 1, 410,4),
+            createMaterial('Lv 4 Agricultural Planting Essence', 1, 407,4),
+            createMaterial('Lv 3 Gather Essence', 2, 209,3)
+          ])
+      },
+    },
+    {
+      name: "Diamond Bow",
+      alias: "DiamondBow",
+      prices: { ron: null, usd: null },
+      cdnImage:"https://icons.lumiterra.net/item-icon-451.png",
+      requiresLevel: 5,
+      stats: [
+        { name: "combatatt", typeNumber: "integer", values:  {min:364, max:446 }},
+        //{ name: "combatcritrate",typeNumber: "percentage",  values: {min: 0, max:0 }}, Atributo con valores ramdons
+        { name: "Combathit",typeNumber: "integer",  values: {min: 20, max:25 }},
+      ],
+      recipe: {
+          materials:[
+            createMaterial('Lv 5 Agricultural Livestock Essence', 1, 411,5),
+            createMaterial('Lv 5 Agricultural Planting Essence', 1, 408,5),
+            createMaterial('Lv 4 Gather Essence', 2, 404,4)
+          ],
+          minPriceTotalRon: calculateTotalPrice([
+            createMaterial('Lv 5 Agricultural Livestock Essence', 1, 411,5),
+            createMaterial('Lv 5 Agricultural Planting Essence', 1, 408,5),
+            createMaterial('Lv 4 Gather Essence', 2, 404,4)
+          ], 'Ron'),
+          minPriceTotalUsd: calculateTotalPrice([
+            createMaterial('Lv 5 Agricultural Livestock Essence', 1, 411,5),
+            createMaterial('Lv 5 Agricultural Planting Essence', 1, 408,5),
+            createMaterial('Lv 4 Gather Essence', 2, 404,4)
+          ], 'Usd'),
+          totalRequireEnergy: calculatetotalRequireEnergy([
+            createMaterial('Lv 5 Agricultural Livestock Essence', 1, 411,5),
+            createMaterial('Lv 5 Agricultural Planting Essence', 1, 408,5),
+            createMaterial('Lv 4 Gather Essence', 2, 404,4)
+          ])
+      },
+    },
+    {
+      name: "Starlight Bow",
+      alias: "StarlightBow",
+      prices: { ron: null, usd: null },
+      cdnImage:"https://icons.lumiterra.net/item-icon-452.png",
+      requiresLevel: 6,
+      stats: [
+        { name: "combatatt", typeNumber: "integer", values:  {min:445, max:527 }},
+        //{ name: "combatcritrate",typeNumber: "percentage",  values: {min: 0, max:0 }}, Atributo con valores ramdons
+        { name: "Combathit",typeNumber: "integer",  values: {min: 25, max:30 }},
+      ],
+      recipe: {
+          materials:[
+            createMaterial('Lv 6 Agricultural Livestock Essence', 1, 412,6),
+            createMaterial('Lv 6 Agricultural Planting Essence', 1, 409,6),
+            createMaterial('Lv 5 Gather Essence', 2, 405,5)
+          ],
+          minPriceTotalRon: calculateTotalPrice([
+            createMaterial('Lv 6 Agricultural Livestock Essence', 1, 412,6),
+            createMaterial('Lv 6 Agricultural Planting Essence', 1, 409,6),
+            createMaterial('Lv 5 Gather Essence', 2, 405,5)
+          ], 'Ron'),
+          minPriceTotalUsd: calculateTotalPrice([
+            createMaterial('Lv 6 Agricultural Livestock Essence', 1, 412,6),
+            createMaterial('Lv 6 Agricultural Planting Essence', 1, 409,6),
+            createMaterial('Lv 5 Gather Essence', 2, 405,5)
+          ], 'Usd'),
+          totalRequireEnergy: calculatetotalRequireEnergy([
+            createMaterial('Lv 6 Agricultural Livestock Essence', 1, 412,6),
+            createMaterial('Lv 6 Agricultural Planting Essence', 1, 409,6),
+            createMaterial('Lv 5 Gather Essence', 2, 405,5)
+          ])
+      },
+    },
+    {
+      name: "Lava Bow",
+      alias: "LavaBow",
+      prices: { ron: null, usd: null },
+      cdnImage:"https://icons.lumiterra.net/item-icon-529.png",
+      requiresLevel: 7,
+      stats: [
+        { name: "combatatt", typeNumber: "integer", values:  {min:526, max:608 }},
+        //{ name: "combatcritrate",typeNumber: "percentage",  values: {min: 0, max:0 }}, Atributo con valores ramdons
+        { name: "Combathit",typeNumber: "integer",  values: {min: 30, max:35 }},
+      ],
+      recipe: {
+          materials:[
+            createMaterial('Lv 7 Agricultural Livestock Essence', 1, 611,7),
+            createMaterial('Lv 7 Agricultural Planting Essence', 1, 608,7),
+            createMaterial('Lv 6 Gather Essence', 2, 406,6)
+          ],
+          minPriceTotalRon: calculateTotalPrice([
+            createMaterial('Lv 7 Agricultural Livestock Essence', 1, 611,7),
+            createMaterial('Lv 7 Agricultural Planting Essence', 1, 608,7),
+            createMaterial('Lv 6 Gather Essence', 2, 406,6)
+          ], 'Ron'),
+          minPriceTotalUsd: calculateTotalPrice([
+            createMaterial('Lv 7 Agricultural Livestock Essence', 1, 611,7),
+            createMaterial('Lv 7 Agricultural Planting Essence', 1, 608,7),
+            createMaterial('Lv 6 Gather Essence', 2, 406,6)
+          ], 'Usd'),
+          totalRequireEnergy: calculatetotalRequireEnergy([
+            createMaterial('Lv 7 Agricultural Livestock Essence', 1, 611,7),
+            createMaterial('Lv 7 Agricultural Planting Essence', 1, 608,7),
+            createMaterial('Lv 5 Gather Essence', 2, 405,6)
+          ])
+      },
+    },
+    {
+      name: "Hollow Bow",
+      alias: "HollowBow",
+      prices: { ron: null, usd: null },
+      cdnImage:"https://icons.lumiterra.net/item-icon-553.png",
+      requiresLevel: 8,
+      stats: [
+        { name: "combatatt", typeNumber: "integer", values:  {min:607, max:689 }},
+        //{ name: "combatcritrate",typeNumber: "percentage",  values: {min: 0, max:0 }}, Atributo con valores ramdons
+        { name: "Combathit",typeNumber: "integer",  values: {min: 35, max:40 }},
+      ],
+      recipe: {
+          materials:[
+            createMaterial('Lv 8 Agricultural Livestock Essence', 1, 612,8),
+            createMaterial('Lv 8 Agricultural Planting Essence', 1, 609,8),
+            createMaterial('Lv 7 Gather Essence', 2, 406,7)
+          ],
+          minPriceTotalRon: calculateTotalPrice([
+            createMaterial('Lv 8 Agricultural Livestock Essence', 1, 612,8),
+            createMaterial('Lv 8 Agricultural Planting Essence', 1, 609,8),
+            createMaterial('Lv 7 Gather Essence', 2, 406,7)
+          ], 'Ron'),
+          minPriceTotalUsd: calculateTotalPrice([
+            createMaterial('Lv 8 Agricultural Livestock Essence', 1, 612,8),
+            createMaterial('Lv 8 Agricultural Planting Essence', 1, 609,8),
+            createMaterial('Lv 7 Gather Essence', 2, 406,7)
+          ], 'Usd'),
+          totalRequireEnergy: calculatetotalRequireEnergy([
+            createMaterial('Lv 8 Agricultural Livestock Essence', 1, 612,8),
+            createMaterial('Lv 8 Agricultural Planting Essence', 1, 609,8),
+            createMaterial('Lv 7 Gather Essence', 2, 406,7)
+          ])
+      },
+    },
+    {
+      name: "Bronze Bow",
+      alias: "BronzeBow",
+      prices: { ron: null, usd: null },
+      cdnImage:"https://icons.lumiterra.net/item-icon-577.png",
+      requiresLevel: 9,
+      stats: [
+        { name: "combatatt", typeNumber: "integer", values:  {min:688, max:753 }},
+        //{ name: "combatcritrate",typeNumber: "percentage",  values: {min: 0, max:0 }}, Atributo con valores ramdons
+        { name: "Combathit",typeNumber: "integer",  values: {min: 40, max:45 }},
+      ],
+      recipe: {
+          materials:[
+            createMaterial('Lv 9 Agricultural Livestock Essence', 1, 613,9),
+            createMaterial('Lv 9 Agricultural Planting Essence', 1, 610,9),
+            createMaterial('Lv 8 Gather Essence', 2, 606,8)
+          ],
+          minPriceTotalRon: calculateTotalPrice([
+            createMaterial('Lv 9 Agricultural Livestock Essence', 1, 613,9),
+            createMaterial('Lv 9 Agricultural Planting Essence', 1, 610,9),
+            createMaterial('Lv 8 Gather Essence', 2, 606,8)
+          ], 'Ron'),
+          minPriceTotalUsd: calculateTotalPrice([
+            createMaterial('Lv 9 Agricultural Livestock Essence', 1, 613,9),
+            createMaterial('Lv 9 Agricultural Planting Essence', 1, 610,9),
+            createMaterial('Lv 8 Gather Essence', 2, 606,8)
+          ], 'Usd'),
+          totalRequireEnergy: calculatetotalRequireEnergy([
+            createMaterial('Lv 9 Agricultural Livestock Essence', 1, 613,9),
+            createMaterial('Lv 9 Agricultural Planting Essence', 1, 610,9),
+            createMaterial('Lv 8 Gather Essence', 2, 606,8)
+          ])
+      },
+    },
+    {
+      name: "Copper Hammer",
+      alias: "CopperHammer",
+      prices: { ron: null, usd: null },
+      cdnImage:"https://icons.lumiterra.net/item-icon-441.png",
+      requiresLevel: 1,
+      stats: [
+        { name: "combatatt", typeNumber: "integer", values:  {min:40, max:122 }},
+        //{ name: "combatcritrate",typeNumber: "percentage",  values: {min: 0, max:0 }}, Atributo con valores ramdons
+        { name: "Combathit",typeNumber: "integer",  values: {min: 0, max:5 }},
+      ],
+      recipe: {
+          materials:[
+              createMaterial('Lv 1 Agricultural Livestock Essence', 1, 213,1),
+              createMaterial('Lv 1 Agricultural Planting Essence', 1, 210,1)
+          ],
+          minPriceTotalRon: calculateTotalPrice([
+              createMaterial('Lv 1 Agricultural Livestock Essence', 1, 213,1),
+              createMaterial('Lv 1 Agricultural Planting Essence', 1, 210,1)
+          ], 'Ron'),
+          minPriceTotalUsd: calculateTotalPrice([
+              createMaterial('Lv 1 Agricultural Livestock Essence', 1, 213,1),
+              createMaterial('Lv 1 Agricultural Planting Essence', 1, 210,1)
+          ], 'Usd'),
+          totalRequireEnergy: calculatetotalRequireEnergy([
+            createMaterial('Lv 1 Agricultural Livestock Essence', 1, 213,1),
+            createMaterial('Lv 1 Agricultural Planting Essence', 1, 210,1)
+          ])
+      },
+    },
+    {
+      name: "Iron Hammer",
+      alias: "IronHammer",
+      prices: { ron: null, usd: null },
+      cdnImage:"https://icons.lumiterra.net/item-icon-442.png",
+      requiresLevel: 2,
+      stats: [
+        { name: "combatatt", typeNumber: "integer", values:  {min:121, max:203 }},
+        //{ name: "combatcritrate",typeNumber: "percentage",  values: {min: 0, max:0 }}, Atributo con valores ramdons
+        { name: "Combathit",typeNumber: "integer",  values: {min: 5, max:10 }},
+      ],
+      recipe: {
+          materials:[
+            createMaterial('Lv 2 Agricultural Livestock Essence', 1, 214,2),
+            createMaterial('Lv 2 Agricultural Planting Essence', 1, 211,2),
+            createMaterial('Lv 1 Gather Essence', 2, 207,1)
+          ],
+          minPriceTotalRon: calculateTotalPrice([
+            createMaterial('Lv 2 Agricultural Livestock Essence', 1, 214,2),
+            createMaterial('Lv 2 Agricultural Planting Essence', 1, 211,2),
+            createMaterial('Lv 1 Gather Essence', 2, 207,1)
+          ], 'Ron'),
+          minPriceTotalUsd: calculateTotalPrice([
+            createMaterial('Lv 2 Agricultural Livestock Essence', 1, 214,2),
+            createMaterial('Lv 2 Agricultural Planting Essence', 1, 211,2),
+            createMaterial('Lv 1 Gather Essence', 2, 207,1)
+          ], 'Usd'),
+          totalRequireEnergy: calculatetotalRequireEnergy([
+            createMaterial('Lv 2 Agricultural Livestock Essence', 1, 214,2),
+            createMaterial('Lv 2 Agricultural Planting Essence', 1, 211,2),
+            createMaterial('Lv 1 Gather Essence', 2, 207,1)
+          ])
+      },
+    },
+    {
+      name: "Crystal Hammer",
+      alias: "CrystalHammer",
+      prices: { ron: null, usd: null },
+      cdnImage:"https://icons.lumiterra.net/item-icon-443.png",
+      requiresLevel: 3,
+      stats: [
+        { name: "combatatt", typeNumber: "integer", values:  {min:202, max:284 }},
+        //{ name: "combatcritrate",typeNumber: "percentage",  values: {min: 0, max:0 }}, Atributo con valores ramdons
+        { name: "Combathit",typeNumber: "integer",  values: {min: 10, max:15 }},
+      ],
+      recipe: {
+          materials:[
+            createMaterial('Lv 3 Agricultural Livestock Essence', 1, 215,3),
+            createMaterial('Lv 3 Agricultural Planting Essence', 1, 212,3),
+            createMaterial('Lv 2 Gather Essence', 2, 208,2)
+          ],
+          minPriceTotalRon: calculateTotalPrice([
+            createMaterial('Lv 3 Agricultural Livestock Essence', 1, 215,3),
+            createMaterial('Lv 3 Agricultural Planting Essence', 1, 212,3),
+            createMaterial('Lv 2 Gather Essence', 2, 208,2)
+          ], 'Ron'),
+          minPriceTotalUsd: calculateTotalPrice([
+            createMaterial('Lv 3 Agricultural Livestock Essence', 1, 215,3),
+            createMaterial('Lv 3 Agricultural Planting Essence', 1, 212,3),
+            createMaterial('Lv 2 Gather Essence', 2, 208,2)
+          ], 'Usd'),
+          totalRequireEnergy: calculatetotalRequireEnergy([
+            createMaterial('Lv 3 Agricultural Livestock Essence', 1, 215,3),
+            createMaterial('Lv 3 Agricultural Planting Essence', 1, 212,3),
+            createMaterial('Lv 2 Gather Essence', 2, 208,2)
+          ])
+      },
+    },
+    {
+      name: "Golden Hammer",
+      alias: "GoldenHammer",
+      prices: { ron: null, usd: null },
+      cdnImage:"https://icons.lumiterra.net/item-icon-444.png",
+      requiresLevel: 4,
+      stats: [
+        { name: "combatatt", typeNumber: "integer", values:  {min:283, max:365 }},
+        //{ name: "combatcritrate",typeNumber: "percentage",  values: {min: 0, max:0 }}, Atributo con valores ramdons
+        { name: "Combathit",typeNumber: "integer",  values: {min: 15, max:20 }},
+      ],
+      recipe: {
+          materials:[
+            createMaterial('Lv 4 Agricultural Livestock Essence', 1, 410,4),
+            createMaterial('Lv 4 Agricultural Planting Essence', 1, 407,4),
+            createMaterial('Lv 3 Gather Essence', 2, 209,3)
+          ],
+          minPriceTotalRon: calculateTotalPrice([
+            createMaterial('Lv 4 Agricultural Livestock Essence', 1, 410,4),
+            createMaterial('Lv 4 Agricultural Planting Essence', 1, 407,4),
+            createMaterial('Lv 3 Gather Essence', 2, 209,3)
+          ], 'Ron'),
+          minPriceTotalUsd: calculateTotalPrice([
+            createMaterial('Lv 4 Agricultural Livestock Essence', 1, 410,4),
+            createMaterial('Lv 4 Agricultural Planting Essence', 1, 407,4),
+            createMaterial('Lv 3 Gather Essence', 2, 209,3)
+          ], 'Usd'),
+          totalRequireEnergy: calculatetotalRequireEnergy([
+            createMaterial('Lv 4 Agricultural Livestock Essence', 1, 410,4),
+            createMaterial('Lv 4 Agricultural Planting Essence', 1, 407,4),
+            createMaterial('Lv 3 Gather Essence', 2, 209,3)
+          ])
+      },
+    },
+    {
+      name: "Diamond Hammer",
+      alias: "DiamondHammer",
+      prices: { ron: null, usd: null },
+      cdnImage:"https://icons.lumiterra.net/item-icon-445.png",
+      requiresLevel: 5,
+      stats: [
+        { name: "combatatt", typeNumber: "integer", values:  {min:364, max:446 }},
+        //{ name: "combatcritrate",typeNumber: "percentage",  values: {min: 0, max:0 }}, Atributo con valores ramdons
+        { name: "Combathit",typeNumber: "integer",  values: {min: 20, max:25 }},
+      ],
+      recipe: {
+          materials:[
+            createMaterial('Lv 5 Agricultural Livestock Essence', 1, 411,5),
+            createMaterial('Lv 5 Agricultural Planting Essence', 1, 408,5),
+            createMaterial('Lv 4 Gather Essence', 2, 404,4)
+          ],
+          minPriceTotalRon: calculateTotalPrice([
+            createMaterial('Lv 5 Agricultural Livestock Essence', 1, 411,5),
+            createMaterial('Lv 5 Agricultural Planting Essence', 1, 408,5),
+            createMaterial('Lv 4 Gather Essence', 2, 404,4)
+          ], 'Ron'),
+          minPriceTotalUsd: calculateTotalPrice([
+            createMaterial('Lv 5 Agricultural Livestock Essence', 1, 411,5),
+            createMaterial('Lv 5 Agricultural Planting Essence', 1, 408,5),
+            createMaterial('Lv 4 Gather Essence', 2, 404,4)
+          ], 'Usd'),
+          totalRequireEnergy: calculatetotalRequireEnergy([
+            createMaterial('Lv 5 Agricultural Livestock Essence', 1, 411,5),
+            createMaterial('Lv 5 Agricultural Planting Essence', 1, 408,5),
+            createMaterial('Lv 4 Gather Essence', 2, 404,4)
+          ])
+      },
+    },
+    {
+      name: "Starlight Hammer",
+      alias: "StarlightHammer",
+      prices: { ron: null, usd: null },
+      cdnImage:"https://icons.lumiterra.net/item-icon-446.png",
+      requiresLevel: 6,
+      stats: [
+        { name: "combatatt", typeNumber: "integer", values:  {min:445, max:527 }},
+        //{ name: "combatcritrate",typeNumber: "percentage",  values: {min: 0, max:0 }}, Atributo con valores ramdons
+        { name: "Combathit",typeNumber: "integer",  values: {min: 25, max:30 }},
+      ],
+      recipe: {
+          materials:[
+            createMaterial('Lv 6 Agricultural Livestock Essence', 1, 412,6),
+            createMaterial('Lv 6 Agricultural Planting Essence', 1, 409,6),
+            createMaterial('Lv 5 Gather Essence', 2, 405,5)
+          ],
+          minPriceTotalRon: calculateTotalPrice([
+            createMaterial('Lv 6 Agricultural Livestock Essence', 1, 412,6),
+            createMaterial('Lv 6 Agricultural Planting Essence', 1, 409,6),
+            createMaterial('Lv 5 Gather Essence', 2, 405,5)
+          ], 'Ron'),
+          minPriceTotalUsd: calculateTotalPrice([
+            createMaterial('Lv 6 Agricultural Livestock Essence', 1, 412,6),
+            createMaterial('Lv 6 Agricultural Planting Essence', 1, 409,6),
+            createMaterial('Lv 5 Gather Essence', 2, 405,5)
+          ], 'Usd'),
+          totalRequireEnergy: calculatetotalRequireEnergy([
+            createMaterial('Lv 6 Agricultural Livestock Essence', 1, 412,6),
+            createMaterial('Lv 6 Agricultural Planting Essence', 1, 409,6),
+            createMaterial('Lv 5 Gather Essence', 2, 405,5)
+          ])
+      },
+    },
+    {
+      name: "Lava Hammer",
+      alias: "LavaHammer",
+      prices: { ron: null, usd: null },
+      cdnImage:"https://icons.lumiterra.net/item-icon-528.png",
+      requiresLevel: 7,
+      stats: [
+        { name: "combatatt", typeNumber: "integer", values:  {min:526, max:608 }},
+        //{ name: "combatcritrate",typeNumber: "percentage",  values: {min: 0, max:0 }}, Atributo con valores ramdons
+        { name: "Combathit",typeNumber: "integer",  values: {min: 30, max:35 }},
+      ],
+      recipe: {
+          materials:[
+            createMaterial('Lv 7 Agricultural Livestock Essence', 1, 611,7),
+            createMaterial('Lv 7 Agricultural Planting Essence', 1, 608,7),
+            createMaterial('Lv 6 Gather Essence', 2, 406,6)
+          ],
+          minPriceTotalRon: calculateTotalPrice([
+            createMaterial('Lv 7 Agricultural Livestock Essence', 1, 611,7),
+            createMaterial('Lv 7 Agricultural Planting Essence', 1, 608,7),
+            createMaterial('Lv 6 Gather Essence', 2, 406,6)
+          ], 'Ron'),
+          minPriceTotalUsd: calculateTotalPrice([
+            createMaterial('Lv 7 Agricultural Livestock Essence', 1, 611,7),
+            createMaterial('Lv 7 Agricultural Planting Essence', 1, 608,7),
+            createMaterial('Lv 6 Gather Essence', 2, 406,6)
+          ], 'Usd'),
+          totalRequireEnergy: calculatetotalRequireEnergy([
+            createMaterial('Lv 7 Agricultural Livestock Essence', 1, 611,7),
+            createMaterial('Lv 7 Agricultural Planting Essence', 1, 608,7),
+            createMaterial('Lv 5 Gather Essence', 2, 405,6)
+          ])
+      },
+    },
+    {
+      name: "Hollow Hammer",
+      alias: "HollowHammer",
+      prices: { ron: null, usd: null },
+      cdnImage:"https://icons.lumiterra.net/item-icon-552.png",
+      requiresLevel: 8,
+      stats: [
+        { name: "combatatt", typeNumber: "integer", values:  {min:607, max:689 }},
+        //{ name: "combatcritrate",typeNumber: "percentage",  values: {min: 0, max:0 }}, Atributo con valores ramdons
+        { name: "Combathit",typeNumber: "integer",  values: {min: 35, max:40 }},
+      ],
+      recipe: {
+          materials:[
+            createMaterial('Lv 8 Agricultural Livestock Essence', 1, 612,8),
+            createMaterial('Lv 8 Agricultural Planting Essence', 1, 609,8),
+            createMaterial('Lv 7 Gather Essence', 2, 406,7)
+          ],
+          minPriceTotalRon: calculateTotalPrice([
+            createMaterial('Lv 8 Agricultural Livestock Essence', 1, 612,8),
+            createMaterial('Lv 8 Agricultural Planting Essence', 1, 609,8),
+            createMaterial('Lv 7 Gather Essence', 2, 406,7)
+          ], 'Ron'),
+          minPriceTotalUsd: calculateTotalPrice([
+            createMaterial('Lv 8 Agricultural Livestock Essence', 1, 612,8),
+            createMaterial('Lv 8 Agricultural Planting Essence', 1, 609,8),
+            createMaterial('Lv 7 Gather Essence', 2, 406,7)
+          ], 'Usd'),
+          totalRequireEnergy: calculatetotalRequireEnergy([
+            createMaterial('Lv 8 Agricultural Livestock Essence', 1, 612,8),
+            createMaterial('Lv 8 Agricultural Planting Essence', 1, 609,8),
+            createMaterial('Lv 7 Gather Essence', 2, 406,7)
+          ])
+      },
+    },
+    {
+      name: "Bronze Hammer",
+      alias: "BronzeHammer",
+      prices: { ron: null, usd: null },
+      cdnImage:"https://icons.lumiterra.net/item-icon-576.png",
+      requiresLevel: 9,
+      stats: [
+        { name: "combatatt", typeNumber: "integer", values:  {min:688, max:753 }},
+        //{ name: "combatcritrate",typeNumber: "percentage",  values: {min: 0, max:0 }}, Atributo con valores ramdons
+        { name: "Combathit",typeNumber: "integer",  values: {min: 40, max:45 }},
+      ],
+      recipe: {
+          materials:[
+            createMaterial('Lv 9 Agricultural Livestock Essence', 1, 613,9),
+            createMaterial('Lv 9 Agricultural Planting Essence', 1, 610,9),
+            createMaterial('Lv 8 Gather Essence', 2, 606,8)
+          ],
+          minPriceTotalRon: calculateTotalPrice([
+            createMaterial('Lv 9 Agricultural Livestock Essence', 1, 613,9),
+            createMaterial('Lv 9 Agricultural Planting Essence', 1, 610,9),
+            createMaterial('Lv 8 Gather Essence', 2, 606,8)
+          ], 'Ron'),
+          minPriceTotalUsd: calculateTotalPrice([
+            createMaterial('Lv 9 Agricultural Livestock Essence', 1, 613,9),
+            createMaterial('Lv 9 Agricultural Planting Essence', 1, 610,9),
+            createMaterial('Lv 8 Gather Essence', 2, 606,8)
+          ], 'Usd'),
+          totalRequireEnergy: calculatetotalRequireEnergy([
+            createMaterial('Lv 9 Agricultural Livestock Essence', 1, 613,9),
+            createMaterial('Lv 9 Agricultural Planting Essence', 1, 610,9),
+            createMaterial('Lv 8 Gather Essence', 2, 606,8)
+          ])
+      },
+    },
+    {
+      name: "Cracked Crystal Grass Shoes",
+      alias: "CrackedCrystalGrassShoes",
+      prices: { ron: null, usd: null },
+      cdnImage:"https://icons.lumiterra.net/item-icon-55.png",
+      requiresLevel: 1,
+      stats: [
+        { name: "Combatdef", typeNumber: "integer", values:  {min:9, max:27 }},
+        { name: "Movespd",typeNumber: "integer",  values: {min: 5, max:10 }},
+        { name: "Maxhp",typeNumber: "integer",  values: {min: 36, max:110 }},
+      ],
+      recipe: {
+          materials:[
+              createMaterial('Lv 1 Agricultural Livestock Essence', 1, 213,1),
+              createMaterial('Lv 1 Agricultural Planting Essence', 1, 210,1)
+          ],
+          minPriceTotalRon: calculateTotalPrice([
+              createMaterial('Lv 1 Agricultural Livestock Essence', 1, 213,1),
+              createMaterial('Lv 1 Agricultural Planting Essence', 1, 210,1)
+          ], 'Ron'),
+          minPriceTotalUsd: calculateTotalPrice([
+              createMaterial('Lv 1 Agricultural Livestock Essence', 1, 213,1),
+              createMaterial('Lv 1 Agricultural Planting Essence', 1, 210,1)
+          ], 'Usd'),
+          totalRequireEnergy: calculatetotalRequireEnergy([
+            createMaterial('Lv 1 Agricultural Livestock Essence', 1, 213,1),
+            createMaterial('Lv 1 Agricultural Planting Essence', 1, 210,1)
+          ])
+      },
+    },
+    {
+      name: "Crystal Skin Boots",
+      alias: "CrystalSkinBoots",
+      prices: { ron: null, usd: null },
+      cdnImage:"https://icons.lumiterra.net/item-icon-56.png",
+      requiresLevel: 2,
+      stats: [
+        { name: "Combatdef", typeNumber: "integer", values:  {min:28, max:46 }},
+        { name: "Movespd",typeNumber: "integer",  values: {min: 15, max:20 }},
+        { name: "Maxhp",typeNumber: "integer",  values: {min: 105, max:179 }},
+      ],
+      recipe: {
+          materials:[
+            createMaterial('Lv 2 Agricultural Livestock Essence', 1, 214,2),
+            createMaterial('Lv 2 Agricultural Planting Essence', 1, 211,2),
+            createMaterial('Lv 1 Gather Essence', 2, 207,1)
+          ],
+          minPriceTotalRon: calculateTotalPrice([
+            createMaterial('Lv 2 Agricultural Livestock Essence', 1, 214,2),
+            createMaterial('Lv 2 Agricultural Planting Essence', 1, 211,2),
+            createMaterial('Lv 1 Gather Essence', 2, 207,1)
+          ], 'Ron'),
+          minPriceTotalUsd: calculateTotalPrice([
+            createMaterial('Lv 2 Agricultural Livestock Essence', 1, 214,2),
+            createMaterial('Lv 2 Agricultural Planting Essence', 1, 211,2),
+            createMaterial('Lv 1 Gather Essence', 2, 207,1)
+          ], 'Usd'),
+          totalRequireEnergy: calculatetotalRequireEnergy([
+            createMaterial('Lv 2 Agricultural Livestock Essence', 1, 214,2),
+            createMaterial('Lv 2 Agricultural Planting Essence', 1, 211,2),
+            createMaterial('Lv 1 Gather Essence', 2, 207,1)
+          ])
+      },
+    },
+    {
+      name: "Crystal Stone Shoes",
+      alias: "CrystalStoneShoes",
+      prices: { ron: null, usd: null },
+      cdnImage:"https://icons.lumiterra.net/item-icon-57.png",
+      requiresLevel: 3,
+      stats: [
+        { name: "Combatdef", typeNumber: "integer", values:  {min:46, max:64 }},
+        { name: "Movespd",typeNumber: "integer",  values: {min: 30, max:35 }},
+        { name: "Maxhp",typeNumber: "integer",  values: {min: 175, max:249 }},
+      ],
+      recipe: {
+          materials:[
+            createMaterial('Lv 3 Agricultural Livestock Essence', 1, 215,3),
+            createMaterial('Lv 3 Agricultural Planting Essence', 1, 212,3),
+            createMaterial('Lv 2 Gather Essence', 2, 208,2)
+          ],
+          minPriceTotalRon: calculateTotalPrice([
+            createMaterial('Lv 3 Agricultural Livestock Essence', 1, 215,3),
+            createMaterial('Lv 3 Agricultural Planting Essence', 1, 212,3),
+            createMaterial('Lv 2 Gather Essence', 2, 208,2)
+          ], 'Ron'),
+          minPriceTotalUsd: calculateTotalPrice([
+            createMaterial('Lv 3 Agricultural Livestock Essence', 1, 215,3),
+            createMaterial('Lv 3 Agricultural Planting Essence', 1, 212,3),
+            createMaterial('Lv 2 Gather Essence', 2, 208,2)
+          ], 'Usd'),
+          totalRequireEnergy: calculatetotalRequireEnergy([
+            createMaterial('Lv 3 Agricultural Livestock Essence', 1, 215,3),
+            createMaterial('Lv 3 Agricultural Planting Essence', 1, 212,3),
+            createMaterial('Lv 2 Gather Essence', 2, 208,2)
+          ])
+      },
+    },
+    {
+      name: "Golden Fighter Shoes",
+      alias: "GoldenFighterShoes",
+      prices: { ron: null, usd: null },
+      cdnImage:"https://icons.lumiterra.net/item-icon-339.png",
+      requiresLevel: 4,
+      stats: [
+        { name: "Combatdef", typeNumber: "integer", values:  {min:64, max:82 }},
+        { name: "Movespd",typeNumber: "integer",  values: {min: 40, max:64 }},
+        { name: "Maxhp",typeNumber: "integer",  values: {min: 244, max:318 }},
+      ],
+      recipe: {
+          materials:[
+            createMaterial('Lv 4 Agricultural Livestock Essence', 1, 410,4),
+            createMaterial('Lv 4 Agricultural Planting Essence', 1, 407,4),
+            createMaterial('Lv 3 Gather Essence', 2, 209,3)
+          ],
+          minPriceTotalRon: calculateTotalPrice([
+            createMaterial('Lv 4 Agricultural Livestock Essence', 1, 410,4),
+            createMaterial('Lv 4 Agricultural Planting Essence', 1, 407,4),
+            createMaterial('Lv 3 Gather Essence', 2, 209,3)
+          ], 'Ron'),
+          minPriceTotalUsd: calculateTotalPrice([
+            createMaterial('Lv 4 Agricultural Livestock Essence', 1, 410,4),
+            createMaterial('Lv 4 Agricultural Planting Essence', 1, 407,4),
+            createMaterial('Lv 3 Gather Essence', 2, 209,3)
+          ], 'Usd'),
+          totalRequireEnergy: calculatetotalRequireEnergy([
+            createMaterial('Lv 4 Agricultural Livestock Essence', 1, 410,4),
+            createMaterial('Lv 4 Agricultural Planting Essence', 1, 407,4),
+            createMaterial('Lv 3 Gather Essence', 2, 209,3)
+          ])
+      },
+    },
+    {
+      name: "Diamond Fighter Shoes",
+      alias: "DiamondFighterShoes",
+      prices: { ron: null, usd: null },
+      cdnImage:"https://icons.lumiterra.net/item-icon-344.png",
+      requiresLevel: 5,
+      stats: [
+        { name: "Combatdef", typeNumber: "integer", values:  {min:83, max:97 }},
+        { name: "Movespd",typeNumber: "integer",  values: {min: 45, max:65 }},
+        { name: "Maxhp",typeNumber: "integer",  values: {min: 311, max:385 }},
+      ],
+      recipe: {
+          materials:[
+            createMaterial('Lv 5 Agricultural Livestock Essence', 1, 411,5),
+            createMaterial('Lv 5 Agricultural Planting Essence', 1, 408,5),
+            createMaterial('Lv 4 Gather Essence', 2, 404,4)
+          ],
+          minPriceTotalRon: calculateTotalPrice([
+            createMaterial('Lv 5 Agricultural Livestock Essence', 1, 411,5),
+            createMaterial('Lv 5 Agricultural Planting Essence', 1, 408,5),
+            createMaterial('Lv 4 Gather Essence', 2, 404,4)
+          ], 'Ron'),
+          minPriceTotalUsd: calculateTotalPrice([
+            createMaterial('Lv 5 Agricultural Livestock Essence', 1, 411,5),
+            createMaterial('Lv 5 Agricultural Planting Essence', 1, 408,5),
+            createMaterial('Lv 4 Gather Essence', 2, 404,4)
+          ], 'Usd'),
+          totalRequireEnergy: calculatetotalRequireEnergy([
+            createMaterial('Lv 5 Agricultural Livestock Essence', 1, 411,5),
+            createMaterial('Lv 5 Agricultural Planting Essence', 1, 408,5),
+            createMaterial('Lv 4 Gather Essence', 2, 404,4)
+          ])
+      },
+    },
+    {
+      name: "Star Fighter Shoes",
+      alias: "StarFighterShoes",
+      prices: { ron: null, usd: null },
+      cdnImage:"https://icons.lumiterra.net/item-icon-349.png",
+      requiresLevel: 6,
+      stats: [
+        { name: "Combatdef", typeNumber: "integer", values:  {min:101, max:119 }},
+        { name: "Movespd",typeNumber: "integer",  values: {min: 50, max:66 }},
+        { name: "Maxhp",typeNumber: "integer",  values: {min: 380, max:454 }},
+      ],
+      recipe: {
+          materials:[
+            createMaterial('Lv 6 Agricultural Livestock Essence', 1, 412,6),
+            createMaterial('Lv 6 Agricultural Planting Essence', 1, 409,6),
+            createMaterial('Lv 5 Gather Essence', 2, 405,5)
+          ],
+          minPriceTotalRon: calculateTotalPrice([
+            createMaterial('Lv 6 Agricultural Livestock Essence', 1, 412,6),
+            createMaterial('Lv 6 Agricultural Planting Essence', 1, 409,6),
+            createMaterial('Lv 5 Gather Essence', 2, 405,5)
+          ], 'Ron'),
+          minPriceTotalUsd: calculateTotalPrice([
+            createMaterial('Lv 6 Agricultural Livestock Essence', 1, 412,6),
+            createMaterial('Lv 6 Agricultural Planting Essence', 1, 409,6),
+            createMaterial('Lv 5 Gather Essence', 2, 405,5)
+          ], 'Usd'),
+          totalRequireEnergy: calculatetotalRequireEnergy([
+            createMaterial('Lv 6 Agricultural Livestock Essence', 1, 412,6),
+            createMaterial('Lv 6 Agricultural Planting Essence', 1, 409,6),
+            createMaterial('Lv 5 Gather Essence', 2, 405,5)
+          ])
+      },
+    },
+    {
+      name: "Lava Combat Shoes",
+      alias: "LavaCombatShoes",
+      prices: { ron: null, usd: null },
+      cdnImage:"https://icons.lumiterra.net/item-icon-534.png",
+      requiresLevel: 7,
+      stats: [
+        { name: "Combatdef", typeNumber: "integer", values:  {min:120, max:138 }},
+        { name: "Movespd",typeNumber: "integer",  values: {min: 55, max:67 }},
+        { name: "Maxhp",typeNumber: "integer",  values: {min: 447, max:521 }},
+      ],
+      recipe: {
+          materials:[
+            createMaterial('Lv 7 Agricultural Livestock Essence', 1, 611,7),
+            createMaterial('Lv 7 Agricultural Planting Essence', 1, 608,7),
+            createMaterial('Lv 6 Gather Essence', 2, 406,6)
+          ],
+          minPriceTotalRon: calculateTotalPrice([
+            createMaterial('Lv 7 Agricultural Livestock Essence', 1, 611,7),
+            createMaterial('Lv 7 Agricultural Planting Essence', 1, 608,7),
+            createMaterial('Lv 6 Gather Essence', 2, 406,6)
+          ], 'Ron'),
+          minPriceTotalUsd: calculateTotalPrice([
+            createMaterial('Lv 7 Agricultural Livestock Essence', 1, 611,7),
+            createMaterial('Lv 7 Agricultural Planting Essence', 1, 608,7),
+            createMaterial('Lv 6 Gather Essence', 2, 406,6)
+          ], 'Usd'),
+          totalRequireEnergy: calculatetotalRequireEnergy([
+            createMaterial('Lv 7 Agricultural Livestock Essence', 1, 611,7),
+            createMaterial('Lv 7 Agricultural Planting Essence', 1, 608,7),
+            createMaterial('Lv 5 Gather Essence', 2, 405,6)
+          ])
+      },
+    },
+    {
+      name: "Hollow Combat Shoes",
+      alias: "HollowCombatShoes",
+      prices: { ron: null, usd: null },
+      cdnImage:"https://icons.lumiterra.net/item-icon-558.png",
+      requiresLevel: 8,
+      stats: [
+        { name: "Combatdef", typeNumber: "integer", values:  {min:138, max:156 }},
+        { name: "Movespd",typeNumber: "integer",  values: {min: 60, max:68 }},
+        { name: "Maxhp",typeNumber: "integer",  values: {min: 514, max:588 }},
+      ],
+      recipe: {
+          materials:[
+            createMaterial('Lv 8 Agricultural Livestock Essence', 1, 612,8),
+            createMaterial('Lv 8 Agricultural Planting Essence', 1, 609,8),
+            createMaterial('Lv 7 Gather Essence', 2, 406,7)
+          ],
+          minPriceTotalRon: calculateTotalPrice([
+            createMaterial('Lv 8 Agricultural Livestock Essence', 1, 612,8),
+            createMaterial('Lv 8 Agricultural Planting Essence', 1, 609,8),
+            createMaterial('Lv 7 Gather Essence', 2, 406,7)
+          ], 'Ron'),
+          minPriceTotalUsd: calculateTotalPrice([
+            createMaterial('Lv 8 Agricultural Livestock Essence', 1, 612,8),
+            createMaterial('Lv 8 Agricultural Planting Essence', 1, 609,8),
+            createMaterial('Lv 7 Gather Essence', 2, 406,7)
+          ], 'Usd'),
+          totalRequireEnergy: calculatetotalRequireEnergy([
+            createMaterial('Lv 8 Agricultural Livestock Essence', 1, 612,8),
+            createMaterial('Lv 8 Agricultural Planting Essence', 1, 609,8),
+            createMaterial('Lv 7 Gather Essence', 2, 406,7)
+          ])
+      },
+    },
+    {
+      name: "Bronze Combat Shoes",
+      alias: "BronzeCombatShoes",
+      prices: { ron: null, usd: null },
+      cdnImage:"https://icons.lumiterra.net/item-icon-582.png",
+      requiresLevel: 9,
+      stats: [
+        { name: "Combatdef", typeNumber: "integer", values:  {min:156, max:174 }},
+        { name: "Movespd",typeNumber: "integer",  values: {min: 65, max:69 }},
+        { name: "Maxhp",typeNumber: "integer",  values: {min: 583, max:657 }},
+      ],
+      recipe: {
+          materials:[
+            createMaterial('Lv 9 Agricultural Livestock Essence', 1, 613,9),
+            createMaterial('Lv 9 Agricultural Planting Essence', 1, 610,9),
+            createMaterial('Lv 8 Gather Essence', 2, 606,8)
+          ],
+          minPriceTotalRon: calculateTotalPrice([
+            createMaterial('Lv 9 Agricultural Livestock Essence', 1, 613,9),
+            createMaterial('Lv 9 Agricultural Planting Essence', 1, 610,9),
+            createMaterial('Lv 8 Gather Essence', 2, 606,8)
+          ], 'Ron'),
+          minPriceTotalUsd: calculateTotalPrice([
+            createMaterial('Lv 9 Agricultural Livestock Essence', 1, 613,9),
+            createMaterial('Lv 9 Agricultural Planting Essence', 1, 610,9),
+            createMaterial('Lv 8 Gather Essence', 2, 606,8)
+          ], 'Usd'),
+          totalRequireEnergy: calculatetotalRequireEnergy([
+            createMaterial('Lv 9 Agricultural Livestock Essence', 1, 613,9),
+            createMaterial('Lv 9 Agricultural Planting Essence', 1, 610,9),
+            createMaterial('Lv 8 Gather Essence', 2, 606,8)
+          ])
+      },
+    },
+    {
+      name: "Cracked Crystal Bracelet",
+      alias: "CrackedCrystalBracelet",
+      prices: { ron: null, usd: null },
+      cdnImage:"https://icons.lumiterra.net/item-icon-52.png",
+      requiresLevel: 1,
+      stats: [
+        { name: "Combatdef", typeNumber: "integer", values:  {min:7, max:21 }},
+        { name: "Combatatt",typeNumber: "integer",  values: {min: 4, max:14 }},
+        { name: "Maxhp",typeNumber: "integer",  values: {min: 27, max:81 }},
+      ],
+      recipe: {
+          materials:[
+              createMaterial('Lv 1 Agricultural Livestock Essence', 1, 213,1),
+              createMaterial('Lv 1 Agricultural Planting Essence', 1, 210,1)
+          ],
+          minPriceTotalRon: calculateTotalPrice([
+              createMaterial('Lv 1 Agricultural Livestock Essence', 1, 213,1),
+              createMaterial('Lv 1 Agricultural Planting Essence', 1, 210,1)
+          ], 'Ron'),
+          minPriceTotalUsd: calculateTotalPrice([
+              createMaterial('Lv 1 Agricultural Livestock Essence', 1, 213,1),
+              createMaterial('Lv 1 Agricultural Planting Essence', 1, 210,1)
+          ], 'Usd'),
+          totalRequireEnergy: calculatetotalRequireEnergy([
+            createMaterial('Lv 1 Agricultural Livestock Essence', 1, 213,1),
+            createMaterial('Lv 1 Agricultural Planting Essence', 1, 210,1)
+          ])
+      },
+    },
+    {
+      name: "Crystal Skin Glove",
+      alias: "CrystalSkinGlove",
+      prices: { ron: null, usd: null },
+      cdnImage:"https://icons.lumiterra.net/item-icon-53.png",
+      requiresLevel: 2,
+      stats: [
+        { name: "Combatdef", typeNumber: "integer", values:  {min:21, max:35 }},
+        { name: "Combatatt",typeNumber: "integer",  values: {min: 13, max:23 }},
+        { name: "Maxhp",typeNumber: "integer",  values: {min: 78, max:132 }},
+      ],
+      recipe: {
+          materials:[
+            createMaterial('Lv 2 Agricultural Livestock Essence', 1, 214,2),
+            createMaterial('Lv 2 Agricultural Planting Essence', 1, 211,2),
+            createMaterial('Lv 1 Gather Essence', 2, 207,1)
+          ],
+          minPriceTotalRon: calculateTotalPrice([
+            createMaterial('Lv 2 Agricultural Livestock Essence', 1, 214,2),
+            createMaterial('Lv 2 Agricultural Planting Essence', 1, 211,2),
+            createMaterial('Lv 1 Gather Essence', 2, 207,1)
+          ], 'Ron'),
+          minPriceTotalUsd: calculateTotalPrice([
+            createMaterial('Lv 2 Agricultural Livestock Essence', 1, 214,2),
+            createMaterial('Lv 2 Agricultural Planting Essence', 1, 211,2),
+            createMaterial('Lv 1 Gather Essence', 2, 207,1)
+          ], 'Usd'),
+          totalRequireEnergy: calculatetotalRequireEnergy([
+            createMaterial('Lv 2 Agricultural Livestock Essence', 1, 214,2),
+            createMaterial('Lv 2 Agricultural Planting Essence', 1, 211,2),
+            createMaterial('Lv 1 Gather Essence', 2, 207,1)
+          ])
+      },
+    },
+    {
+      name: "Crystal Stone Gauntlet",
+      alias: "CrystalStoneGauntlet",
+      prices: { ron: null, usd: null },
+      cdnImage:"https://icons.lumiterra.net/item-icon-54.png",
+      requiresLevel: 3,
+      stats: [
+        { name: "Combatdef", typeNumber: "integer", values:  {min:35, max:49 }},
+        { name: "Combatatt",typeNumber: "integer",  values: {min: 22, max:32 }},
+        { name: "Maxhp",typeNumber: "integer",  values: {min: 128, max:182 }},
+      ],
+      recipe: {
+          materials:[
+            createMaterial('Lv 3 Agricultural Livestock Essence', 1, 215,3),
+            createMaterial('Lv 3 Agricultural Planting Essence', 1, 212,3),
+            createMaterial('Lv 2 Gather Essence', 2, 208,2)
+          ],
+          minPriceTotalRon: calculateTotalPrice([
+            createMaterial('Lv 3 Agricultural Livestock Essence', 1, 215,3),
+            createMaterial('Lv 3 Agricultural Planting Essence', 1, 212,3),
+            createMaterial('Lv 2 Gather Essence', 2, 208,2)
+          ], 'Ron'),
+          minPriceTotalUsd: calculateTotalPrice([
+            createMaterial('Lv 3 Agricultural Livestock Essence', 1, 215,3),
+            createMaterial('Lv 3 Agricultural Planting Essence', 1, 212,3),
+            createMaterial('Lv 2 Gather Essence', 2, 208,2)
+          ], 'Usd'),
+          totalRequireEnergy: calculatetotalRequireEnergy([
+            createMaterial('Lv 3 Agricultural Livestock Essence', 1, 215,3),
+            createMaterial('Lv 3 Agricultural Planting Essence', 1, 212,3),
+            createMaterial('Lv 2 Gather Essence', 2, 208,2)
+          ])
+      },
+    },
+    {
+      name: "Golden Fighter Glove",
+      alias: "GoldenFighterGlove",
+      prices: { ron: null, usd: null },
+      cdnImage:"https://icons.lumiterra.net/item-icon-337.png",
+      requiresLevel: 4,
+      stats: [
+        { name: "Combatdef", typeNumber: "integer", values:  {min:179, max:233 }},
+        { name: "Combatatt",typeNumber: "integer",  values: {min: 48, max:62 }},
+        { name: "Maxhp",typeNumber: "integer",  values: {min: 31, max:41 }},
+      ],
+      recipe: {
+          materials:[
+            createMaterial('Lv 4 Agricultural Livestock Essence', 1, 410,4),
+            createMaterial('Lv 4 Agricultural Planting Essence', 1, 407,4),
+            createMaterial('Lv 3 Gather Essence', 2, 209,3)
+          ],
+          minPriceTotalRon: calculateTotalPrice([
+            createMaterial('Lv 4 Agricultural Livestock Essence', 1, 410,4),
+            createMaterial('Lv 4 Agricultural Planting Essence', 1, 407,4),
+            createMaterial('Lv 3 Gather Essence', 2, 209,3)
+          ], 'Ron'),
+          minPriceTotalUsd: calculateTotalPrice([
+            createMaterial('Lv 4 Agricultural Livestock Essence', 1, 410,4),
+            createMaterial('Lv 4 Agricultural Planting Essence', 1, 407,4),
+            createMaterial('Lv 3 Gather Essence', 2, 209,3)
+          ], 'Usd'),
+          totalRequireEnergy: calculatetotalRequireEnergy([
+            createMaterial('Lv 4 Agricultural Livestock Essence', 1, 410,4),
+            createMaterial('Lv 4 Agricultural Planting Essence', 1, 407,4),
+            createMaterial('Lv 3 Gather Essence', 2, 209,3)
+          ])
+      },
+    },
+    {
+      name: "Diamond Fighter Glove",
+      alias: "DiamondFighterGlove",
+      prices: { ron: null, usd: null },
+      cdnImage:"https://icons.lumiterra.net/item-icon-342.png",
+      requiresLevel: 5,
+      stats: [
+        { name: "Combatdef", typeNumber: "integer", values:  {min:228, max:282 }},
+        { name: "Combatatt",typeNumber: "integer",  values: {min: 62, max:76 }},
+        { name: "Maxhp",typeNumber: "integer",  values: {min: 40, max:50 }},
+      ],
+      recipe: {
+          materials:[
+            createMaterial('Lv 5 Agricultural Livestock Essence', 1, 411,5),
+            createMaterial('Lv 5 Agricultural Planting Essence', 1, 408,5),
+            createMaterial('Lv 4 Gather Essence', 2, 404,4)
+          ],
+          minPriceTotalRon: calculateTotalPrice([
+            createMaterial('Lv 5 Agricultural Livestock Essence', 1, 411,5),
+            createMaterial('Lv 5 Agricultural Planting Essence', 1, 408,5),
+            createMaterial('Lv 4 Gather Essence', 2, 404,4)
+          ], 'Ron'),
+          minPriceTotalUsd: calculateTotalPrice([
+            createMaterial('Lv 5 Agricultural Livestock Essence', 1, 411,5),
+            createMaterial('Lv 5 Agricultural Planting Essence', 1, 408,5),
+            createMaterial('Lv 4 Gather Essence', 2, 404,4)
+          ], 'Usd'),
+          totalRequireEnergy: calculatetotalRequireEnergy([
+            createMaterial('Lv 5 Agricultural Livestock Essence', 1, 411,5),
+            createMaterial('Lv 5 Agricultural Planting Essence', 1, 408,5),
+            createMaterial('Lv 4 Gather Essence', 2, 404,4)
+          ])
+      },
+    },
+    {
+      name: "Star Fighter Glove",
+      alias: "StarFighterGlove",
+      prices: { ron: null, usd: null },
+      cdnImage:"https://icons.lumiterra.net/item-icon-347.png",
+      requiresLevel: 6,
+      stats: [
+        { name: "Combatdef", typeNumber: "integer", values:  {min:279, max:333 }},
+        { name: "Combatatt",typeNumber: "integer",  values: {min: 76, max:90 }},
+        { name: "Maxhp",typeNumber: "integer",  values: {min: 49, max:59 }},
+      ],
+      recipe: {
+          materials:[
+            createMaterial('Lv 6 Agricultural Livestock Essence', 1, 412,6),
+            createMaterial('Lv 6 Agricultural Planting Essence', 1, 409,6),
+            createMaterial('Lv 5 Gather Essence', 2, 405,5)
+          ],
+          minPriceTotalRon: calculateTotalPrice([
+            createMaterial('Lv 6 Agricultural Livestock Essence', 1, 412,6),
+            createMaterial('Lv 6 Agricultural Planting Essence', 1, 409,6),
+            createMaterial('Lv 5 Gather Essence', 2, 405,5)
+          ], 'Ron'),
+          minPriceTotalUsd: calculateTotalPrice([
+            createMaterial('Lv 6 Agricultural Livestock Essence', 1, 412,6),
+            createMaterial('Lv 6 Agricultural Planting Essence', 1, 409,6),
+            createMaterial('Lv 5 Gather Essence', 2, 405,5)
+          ], 'Usd'),
+          totalRequireEnergy: calculatetotalRequireEnergy([
+            createMaterial('Lv 6 Agricultural Livestock Essence', 1, 412,6),
+            createMaterial('Lv 6 Agricultural Planting Essence', 1, 409,6),
+            createMaterial('Lv 5 Gather Essence', 2, 405,5)
+          ])
+      },
+    },
+    {
+      name: "Lava Combat Gloves",
+      alias: "LavaCombatGloves",
+      prices: { ron: null, usd: null },
+      cdnImage:"https://icons.lumiterra.net/item-icon-533.png",
+      requiresLevel: 7,
+      stats: [
+        { name: "Combatdef", typeNumber: "integer", values:  {min:329, max:383 }},
+        { name: "Combatatt",typeNumber: "integer",  values: {min: 90, max:104 }},
+        { name: "Maxhp",typeNumber: "integer",  values: {min: 58, max:58 }},
+      ],
+      recipe: {
+          materials:[
+            createMaterial('Lv 7 Agricultural Livestock Essence', 1, 611,7),
+            createMaterial('Lv 7 Agricultural Planting Essence', 1, 608,7),
+            createMaterial('Lv 6 Gather Essence', 2, 406,6)
+          ],
+          minPriceTotalRon: calculateTotalPrice([
+            createMaterial('Lv 7 Agricultural Livestock Essence', 1, 611,7),
+            createMaterial('Lv 7 Agricultural Planting Essence', 1, 608,7),
+            createMaterial('Lv 6 Gather Essence', 2, 406,6)
+          ], 'Ron'),
+          minPriceTotalUsd: calculateTotalPrice([
+            createMaterial('Lv 7 Agricultural Livestock Essence', 1, 611,7),
+            createMaterial('Lv 7 Agricultural Planting Essence', 1, 608,7),
+            createMaterial('Lv 6 Gather Essence', 2, 406,6)
+          ], 'Usd'),
+          totalRequireEnergy: calculatetotalRequireEnergy([
+            createMaterial('Lv 7 Agricultural Livestock Essence', 1, 611,7),
+            createMaterial('Lv 7 Agricultural Planting Essence', 1, 608,7),
+            createMaterial('Lv 5 Gather Essence', 2, 405,6)
+          ])
+      },
+    },
+    {
+      name: "Hollow Combat Gloves",
+      alias: "HollowCombatGloves",
+      prices: { ron: null, usd: null },
+      cdnImage:"https://icons.lumiterra.net/item-icon-557.png",
+      requiresLevel: 8,
+      stats: [
+        { name: "Combatdef", typeNumber: "integer", values:  {min:378, max:432 }},
+        { name: "Combatatt",typeNumber: "integer",  values: {min: 104, max:118 }},
+        { name: "Maxhp",typeNumber: "integer",  values: {min: 67, max:77 }},
+      ],
+      recipe: {
+          materials:[
+            createMaterial('Lv 8 Agricultural Livestock Essence', 1, 612,8),
+            createMaterial('Lv 8 Agricultural Planting Essence', 1, 609,8),
+            createMaterial('Lv 7 Gather Essence', 2, 406,7)
+          ],
+          minPriceTotalRon: calculateTotalPrice([
+            createMaterial('Lv 8 Agricultural Livestock Essence', 1, 612,8),
+            createMaterial('Lv 8 Agricultural Planting Essence', 1, 609,8),
+            createMaterial('Lv 7 Gather Essence', 2, 406,7)
+          ], 'Ron'),
+          minPriceTotalUsd: calculateTotalPrice([
+            createMaterial('Lv 8 Agricultural Livestock Essence', 1, 612,8),
+            createMaterial('Lv 8 Agricultural Planting Essence', 1, 609,8),
+            createMaterial('Lv 7 Gather Essence', 2, 406,7)
+          ], 'Usd'),
+          totalRequireEnergy: calculatetotalRequireEnergy([
+            createMaterial('Lv 8 Agricultural Livestock Essence', 1, 612,8),
+            createMaterial('Lv 8 Agricultural Planting Essence', 1, 609,8),
+            createMaterial('Lv 7 Gather Essence', 2, 406,7)
+          ])
+      },
+    },
+    {
+      name: "Bronze Combat Gloves",
+      alias: "BronzeCombatGloves",
+      prices: { ron: null, usd: null },
+      cdnImage:"https://icons.lumiterra.net/item-icon-581.png",
+      requiresLevel: 9,
+      stats: [
+        { name: "Combatdef", typeNumber: "integer", values:  {min:429, max:483 }},
+        { name: "Combatatt",typeNumber: "integer",  values: {min: 118, max:132 }},
+        { name: "Maxhp",typeNumber: "integer",  values: {min: 76, max:86 }},
+      ],
+      recipe: {
+          materials:[
+            createMaterial('Lv 9 Agricultural Livestock Essence', 1, 613,9),
+            createMaterial('Lv 9 Agricultural Planting Essence', 1, 610,9),
+            createMaterial('Lv 8 Gather Essence', 2, 606,8)
+          ],
+          minPriceTotalRon: calculateTotalPrice([
+            createMaterial('Lv 9 Agricultural Livestock Essence', 1, 613,9),
+            createMaterial('Lv 9 Agricultural Planting Essence', 1, 610,9),
+            createMaterial('Lv 8 Gather Essence', 2, 606,8)
+          ], 'Ron'),
+          minPriceTotalUsd: calculateTotalPrice([
+            createMaterial('Lv 9 Agricultural Livestock Essence', 1, 613,9),
+            createMaterial('Lv 9 Agricultural Planting Essence', 1, 610,9),
+            createMaterial('Lv 8 Gather Essence', 2, 606,8)
+          ], 'Usd'),
+          totalRequireEnergy: calculatetotalRequireEnergy([
+            createMaterial('Lv 9 Agricultural Livestock Essence', 1, 613,9),
+            createMaterial('Lv 9 Agricultural Planting Essence', 1, 610,9),
+            createMaterial('Lv 8 Gather Essence', 2, 606,8)
+          ])
+      },
+    },
+    {
+      name: "Chip Head Ring",
+      alias: "ChipHeadRing",
+      prices: { ron: null, usd: null },
+      cdnImage:"https://icons.lumiterra.net/item-icon-43.png",
+      requiresLevel: 1,
+      stats: [
+        { name: "Combatdef", typeNumber: "integer", values:  {min:9, max:27 }},
+        { name: "Maxhp",typeNumber: "integer",  values: {min: 35, max:105 }},
+      ],
+      recipe: {
+          materials:[
+              createMaterial('Lv 1 Agricultural Livestock Essence', 1, 213,1),
+              createMaterial('Lv 1 Agricultural Planting Essence', 1, 210,1)
+          ],
+          minPriceTotalRon: calculateTotalPrice([
+              createMaterial('Lv 1 Agricultural Livestock Essence', 1, 213,1),
+              createMaterial('Lv 1 Agricultural Planting Essence', 1, 210,1)
+          ], 'Ron'),
+          minPriceTotalUsd: calculateTotalPrice([
+              createMaterial('Lv 1 Agricultural Livestock Essence', 1, 213,1),
+              createMaterial('Lv 1 Agricultural Planting Essence', 1, 210,1)
+          ], 'Usd'),
+          totalRequireEnergy: calculatetotalRequireEnergy([
+            createMaterial('Lv 1 Agricultural Livestock Essence', 1, 213,1),
+            createMaterial('Lv 1 Agricultural Planting Essence', 1, 210,1)
+          ])
+      },
+    },
+    {
+      name: "Crystal Skin Soft Hat",
+      alias: "CrystalSkinSoftHat",
+      prices: { ron: null, usd: null },
+      cdnImage:"https://icons.lumiterra.net/item-icon-44.png",
+      requiresLevel: 2,
+      stats: [
+        { name: "Combatdef", typeNumber: "integer", values:  {min:28, max:46 }},
+        { name: "Maxhp",typeNumber: "integer",  values: {min: 101, max:171 }},
+      ],
+      recipe: {
+          materials:[
+            createMaterial('Lv 2 Agricultural Livestock Essence', 1, 214,2),
+            createMaterial('Lv 2 Agricultural Planting Essence', 1, 211,2),
+            createMaterial('Lv 1 Gather Essence', 2, 207,1)
+          ],
+          minPriceTotalRon: calculateTotalPrice([
+            createMaterial('Lv 2 Agricultural Livestock Essence', 1, 214,2),
+            createMaterial('Lv 2 Agricultural Planting Essence', 1, 211,2),
+            createMaterial('Lv 1 Gather Essence', 2, 207,1)
+          ], 'Ron'),
+          minPriceTotalUsd: calculateTotalPrice([
+            createMaterial('Lv 2 Agricultural Livestock Essence', 1, 214,2),
+            createMaterial('Lv 2 Agricultural Planting Essence', 1, 211,2),
+            createMaterial('Lv 1 Gather Essence', 2, 207,1)
+          ], 'Usd'),
+          totalRequireEnergy: calculatetotalRequireEnergy([
+            createMaterial('Lv 2 Agricultural Livestock Essence', 1, 214,2),
+            createMaterial('Lv 2 Agricultural Planting Essence', 1, 211,2),
+            createMaterial('Lv 1 Gather Essence', 2, 207,1)
+          ])
+      },
+    },
+    {
+      name: "Crystal Stone Helmet",
+      alias: "CrystalStoneHelmet",
+      prices: { ron: null, usd: null },
+      cdnImage:"https://icons.lumiterra.net/item-icon-45.png",
+      requiresLevel: 3,
+      stats: [
+        { name: "Combatdef", typeNumber: "integer", values:  {min:46, max:64 }},
+        { name: "Maxhp",typeNumber: "integer",  values: {min: 167, max:237 }},
+      ],
+      recipe: {
+          materials:[
+            createMaterial('Lv 3 Agricultural Livestock Essence', 1, 215,3),
+            createMaterial('Lv 3 Agricultural Planting Essence', 1, 212,3),
+            createMaterial('Lv 2 Gather Essence', 2, 208,2)
+          ],
+          minPriceTotalRon: calculateTotalPrice([
+            createMaterial('Lv 3 Agricultural Livestock Essence', 1, 215,3),
+            createMaterial('Lv 3 Agricultural Planting Essence', 1, 212,3),
+            createMaterial('Lv 2 Gather Essence', 2, 208,2)
+          ], 'Ron'),
+          minPriceTotalUsd: calculateTotalPrice([
+            createMaterial('Lv 3 Agricultural Livestock Essence', 1, 215,3),
+            createMaterial('Lv 3 Agricultural Planting Essence', 1, 212,3),
+            createMaterial('Lv 2 Gather Essence', 2, 208,2)
+          ], 'Usd'),
+          totalRequireEnergy: calculatetotalRequireEnergy([
+            createMaterial('Lv 3 Agricultural Livestock Essence', 1, 215,3),
+            createMaterial('Lv 3 Agricultural Planting Essence', 1, 212,3),
+            createMaterial('Lv 2 Gather Essence', 2, 208,2)
+          ])
+      },
+    },
+    {
+      name: "Golden Fighter Hat",
+      alias: "GoldenFighterHat",
+      prices: { ron: null, usd: null },
+      cdnImage:"https://icons.lumiterra.net/item-icon-335.png",
+      requiresLevel: 4,
+      stats: [
+        { name: "Combatdef", typeNumber: "integer", values:  {min:64, max:82 }},
+        { name: "Maxhp",typeNumber: "integer",  values: {min: 233, max:303 }},
+      ],
+      recipe: {
+          materials:[
+            createMaterial('Lv 4 Agricultural Livestock Essence', 1, 410,4),
+            createMaterial('Lv 4 Agricultural Planting Essence', 1, 407,4),
+            createMaterial('Lv 3 Gather Essence', 2, 209,3)
+          ],
+          minPriceTotalRon: calculateTotalPrice([
+            createMaterial('Lv 4 Agricultural Livestock Essence', 1, 410,4),
+            createMaterial('Lv 4 Agricultural Planting Essence', 1, 407,4),
+            createMaterial('Lv 3 Gather Essence', 2, 209,3)
+          ], 'Ron'),
+          minPriceTotalUsd: calculateTotalPrice([
+            createMaterial('Lv 4 Agricultural Livestock Essence', 1, 410,4),
+            createMaterial('Lv 4 Agricultural Planting Essence', 1, 407,4),
+            createMaterial('Lv 3 Gather Essence', 2, 209,3)
+          ], 'Usd'),
+          totalRequireEnergy: calculatetotalRequireEnergy([
+            createMaterial('Lv 4 Agricultural Livestock Essence', 1, 410,4),
+            createMaterial('Lv 4 Agricultural Planting Essence', 1, 407,4),
+            createMaterial('Lv 3 Gather Essence', 2, 209,3)
+          ])
+      },
+    },
+    {
+      name: "Diamond Fighter Hat",
+      alias: "DiamondFighterHat",
+      prices: { ron: null, usd: null },
+      cdnImage:"https://icons.lumiterra.net/item-icon-340.png",
+      requiresLevel: 5,
+      stats: [
+        { name: "Combatdef", typeNumber: "integer", values:  {min:83, max:97 }},
+        { name: "Maxhp",typeNumber: "integer",  values: {min: 233, max:303 }},
+      ],
+      recipe: {
+          materials:[
+            createMaterial('Lv 5 Agricultural Livestock Essence', 1, 411,5),
+            createMaterial('Lv 5 Agricultural Planting Essence', 1, 408,5),
+            createMaterial('Lv 4 Gather Essence', 2, 404,4)
+          ],
+          minPriceTotalRon: calculateTotalPrice([
+            createMaterial('Lv 5 Agricultural Livestock Essence', 1, 411,5),
+            createMaterial('Lv 5 Agricultural Planting Essence', 1, 408,5),
+            createMaterial('Lv 4 Gather Essence', 2, 404,4)
+          ], 'Ron'),
+          minPriceTotalUsd: calculateTotalPrice([
+            createMaterial('Lv 5 Agricultural Livestock Essence', 1, 411,5),
+            createMaterial('Lv 5 Agricultural Planting Essence', 1, 408,5),
+            createMaterial('Lv 4 Gather Essence', 2, 404,4)
+          ], 'Usd'),
+          totalRequireEnergy: calculatetotalRequireEnergy([
+            createMaterial('Lv 5 Agricultural Livestock Essence', 1, 411,5),
+            createMaterial('Lv 5 Agricultural Planting Essence', 1, 408,5),
+            createMaterial('Lv 4 Gather Essence', 2, 404,4)
+          ])
+      },
+    },
+    {
+      name: "Star Fighter Hat",
+      alias: "StarFighterHat",
+      prices: { ron: null, usd: null },
+      cdnImage:"https://icons.lumiterra.net/item-icon-345.png",
+      requiresLevel: 6,
+      stats: [
+        { name: "Combatdef", typeNumber: "integer", values:  {min:101, max:119 }},
+        { name: "Maxhp",typeNumber: "integer",  values: {min: 364, max:434 }},
+      ],
+      recipe: {
+          materials:[
+            createMaterial('Lv 6 Agricultural Livestock Essence', 1, 412,6),
+            createMaterial('Lv 6 Agricultural Planting Essence', 1, 409,6),
+            createMaterial('Lv 5 Gather Essence', 2, 405,5)
+          ],
+          minPriceTotalRon: calculateTotalPrice([
+            createMaterial('Lv 6 Agricultural Livestock Essence', 1, 412,6),
+            createMaterial('Lv 6 Agricultural Planting Essence', 1, 409,6),
+            createMaterial('Lv 5 Gather Essence', 2, 405,5)
+          ], 'Ron'),
+          minPriceTotalUsd: calculateTotalPrice([
+            createMaterial('Lv 6 Agricultural Livestock Essence', 1, 412,6),
+            createMaterial('Lv 6 Agricultural Planting Essence', 1, 409,6),
+            createMaterial('Lv 5 Gather Essence', 2, 405,5)
+          ], 'Usd'),
+          totalRequireEnergy: calculatetotalRequireEnergy([
+            createMaterial('Lv 6 Agricultural Livestock Essence', 1, 412,6),
+            createMaterial('Lv 6 Agricultural Planting Essence', 1, 409,6),
+            createMaterial('Lv 5 Gather Essence', 2, 405,5)
+          ])
+      },
+    },
+    {
+      name: "Lava Combat Hat",
+      alias: "LavaCombatHat",
+      prices: { ron: null, usd: null },
+      cdnImage:"https://icons.lumiterra.net/item-icon-530.png",
+      requiresLevel: 7,
+      stats: [
+        { name: "Combatdef", typeNumber: "integer", values:  {min:120, max:138 }},
+        { name: "Maxhp",typeNumber: "integer",  values: {min: 428, max:498 }},
+      ],
+      recipe: {
+          materials:[
+            createMaterial('Lv 7 Agricultural Livestock Essence', 1, 611,7),
+            createMaterial('Lv 7 Agricultural Planting Essence', 1, 608,7),
+            createMaterial('Lv 6 Gather Essence', 2, 406,6)
+          ],
+          minPriceTotalRon: calculateTotalPrice([
+            createMaterial('Lv 7 Agricultural Livestock Essence', 1, 611,7),
+            createMaterial('Lv 7 Agricultural Planting Essence', 1, 608,7),
+            createMaterial('Lv 6 Gather Essence', 2, 406,6)
+          ], 'Ron'),
+          minPriceTotalUsd: calculateTotalPrice([
+            createMaterial('Lv 7 Agricultural Livestock Essence', 1, 611,7),
+            createMaterial('Lv 7 Agricultural Planting Essence', 1, 608,7),
+            createMaterial('Lv 6 Gather Essence', 2, 406,6)
+          ], 'Usd'),
+          totalRequireEnergy: calculatetotalRequireEnergy([
+            createMaterial('Lv 7 Agricultural Livestock Essence', 1, 611,7),
+            createMaterial('Lv 7 Agricultural Planting Essence', 1, 608,7),
+            createMaterial('Lv 5 Gather Essence', 2, 405,6)
+          ])
+      },
+    },
+    {
+      name: "Hollow Combat Hat",
+      alias: "HollowCombatHat",
+      prices: { ron: null, usd: null },
+      cdnImage:"https://icons.lumiterra.net/item-icon-554.png",
+      requiresLevel: 8,
+      stats: [
+        { name: "Combatdef", typeNumber: "integer", values:  {min:138, max:156 }},
+        { name: "Maxhp",typeNumber: "integer",  values: {min: 492, max:562 }},
+      ],
+      recipe: {
+          materials:[
+            createMaterial('Lv 8 Agricultural Livestock Essence', 1, 612,8),
+            createMaterial('Lv 8 Agricultural Planting Essence', 1, 609,8),
+            createMaterial('Lv 7 Gather Essence', 2, 406,7)
+          ],
+          minPriceTotalRon: calculateTotalPrice([
+            createMaterial('Lv 8 Agricultural Livestock Essence', 1, 612,8),
+            createMaterial('Lv 8 Agricultural Planting Essence', 1, 609,8),
+            createMaterial('Lv 7 Gather Essence', 2, 406,7)
+          ], 'Ron'),
+          minPriceTotalUsd: calculateTotalPrice([
+            createMaterial('Lv 8 Agricultural Livestock Essence', 1, 612,8),
+            createMaterial('Lv 8 Agricultural Planting Essence', 1, 609,8),
+            createMaterial('Lv 7 Gather Essence', 2, 406,7)
+          ], 'Usd'),
+          totalRequireEnergy: calculatetotalRequireEnergy([
+            createMaterial('Lv 8 Agricultural Livestock Essence', 1, 612,8),
+            createMaterial('Lv 8 Agricultural Planting Essence', 1, 609,8),
+            createMaterial('Lv 7 Gather Essence', 2, 406,7)
+          ])
+      },
+    },
+    {
+      name: "Bronze Combat Hat",
+      alias: "BronzeCombatHat",
+      prices: { ron: null, usd: null },
+      cdnImage:"https://icons.lumiterra.net/item-icon-578.png",
+      requiresLevel: 9,
+      stats: [
+        { name: "Combatdef", typeNumber: "integer", values:  {min:156, max:174 }},
+        { name: "Maxhp",typeNumber: "integer",  values: {min: 558, max:628 }},
+      ],
+      recipe: {
+          materials:[
+            createMaterial('Lv 9 Agricultural Livestock Essence', 1, 613,9),
+            createMaterial('Lv 9 Agricultural Planting Essence', 1, 610,9),
+            createMaterial('Lv 8 Gather Essence', 2, 606,8)
+          ],
+          minPriceTotalRon: calculateTotalPrice([
+            createMaterial('Lv 9 Agricultural Livestock Essence', 1, 613,9),
+            createMaterial('Lv 9 Agricultural Planting Essence', 1, 610,9),
+            createMaterial('Lv 8 Gather Essence', 2, 606,8)
+          ], 'Ron'),
+          minPriceTotalUsd: calculateTotalPrice([
+            createMaterial('Lv 9 Agricultural Livestock Essence', 1, 613,9),
+            createMaterial('Lv 9 Agricultural Planting Essence', 1, 610,9),
+            createMaterial('Lv 8 Gather Essence', 2, 606,8)
+          ], 'Usd'),
+          totalRequireEnergy: calculatetotalRequireEnergy([
+            createMaterial('Lv 9 Agricultural Livestock Essence', 1, 613,9),
+            createMaterial('Lv 9 Agricultural Planting Essence', 1, 610,9),
+            createMaterial('Lv 8 Gather Essence', 2, 606,8)
+          ])
+      },
+    },
+    {
+      name: "Cracked Crystal Grass Skirt",
+      alias: "CrackedCrystalGrassSkirt",
+      prices: { ron: null, usd: null },
+      cdnImage:"https://icons.lumiterra.net/item-icon-49.png",
+      requiresLevel: 1,
+      stats: [
+        { name: "Combatdef", typeNumber: "integer", values:  {min:8, max:26 }},
+        { name: "Maxhp",typeNumber: "integer",  values: {min: 36, max:110 }},
+      ],
+      recipe: {
+          materials:[
+              createMaterial('Lv 1 Agricultural Livestock Essence', 1, 213,1),
+              createMaterial('Lv 1 Agricultural Planting Essence', 1, 210,1)
+          ],
+          minPriceTotalRon: calculateTotalPrice([
+              createMaterial('Lv 1 Agricultural Livestock Essence', 1, 213,1),
+              createMaterial('Lv 1 Agricultural Planting Essence', 1, 210,1)
+          ], 'Ron'),
+          minPriceTotalUsd: calculateTotalPrice([
+              createMaterial('Lv 1 Agricultural Livestock Essence', 1, 213,1),
+              createMaterial('Lv 1 Agricultural Planting Essence', 1, 210,1)
+          ], 'Usd'),
+          totalRequireEnergy: calculatetotalRequireEnergy([
+            createMaterial('Lv 1 Agricultural Livestock Essence', 1, 213,1),
+            createMaterial('Lv 1 Agricultural Planting Essence', 1, 210,1)
+          ])
+      },
+    },
+    {
+      name: "Crystal Skin Pants",
+      alias: "CrystalSkinPants",
+      prices: { ron: null, usd: null },
+      cdnImage:"https://icons.lumiterra.net/item-icon-50.png",
+      requiresLevel: 2,
+      stats: [
+        { name: "Combatdef", typeNumber: "integer", values:  {min:26, max:44 }},
+        { name: "Maxhp",typeNumber: "integer",  values: {min: 105, max:179 }},
+      ],
+      recipe: {
+          materials:[
+            createMaterial('Lv 2 Agricultural Livestock Essence', 1, 214,2),
+            createMaterial('Lv 2 Agricultural Planting Essence', 1, 211,2),
+            createMaterial('Lv 1 Gather Essence', 2, 207,1)
+          ],
+          minPriceTotalRon: calculateTotalPrice([
+            createMaterial('Lv 2 Agricultural Livestock Essence', 1, 214,2),
+            createMaterial('Lv 2 Agricultural Planting Essence', 1, 211,2),
+            createMaterial('Lv 1 Gather Essence', 2, 207,1)
+          ], 'Ron'),
+          minPriceTotalUsd: calculateTotalPrice([
+            createMaterial('Lv 2 Agricultural Livestock Essence', 1, 214,2),
+            createMaterial('Lv 2 Agricultural Planting Essence', 1, 211,2),
+            createMaterial('Lv 1 Gather Essence', 2, 207,1)
+          ], 'Usd'),
+          totalRequireEnergy: calculatetotalRequireEnergy([
+            createMaterial('Lv 2 Agricultural Livestock Essence', 1, 214,2),
+            createMaterial('Lv 2 Agricultural Planting Essence', 1, 211,2),
+            createMaterial('Lv 1 Gather Essence', 2, 207,1)
+          ])
+      },
+    },
+    {
+      name: "Crystal Leg Armor",
+      alias: "CrystalLegArmor",
+      prices: { ron: null, usd: null },
+      cdnImage:"https://icons.lumiterra.net/item-icon-51.png",
+      requiresLevel: 3,
+      stats: [
+        { name: "Combatdef", typeNumber: "integer", values:  {min:43, max:61 }},
+        { name: "Maxhp",typeNumber: "integer",  values: {min: 175, max:249 }},
+      ],
+      recipe: {
+          materials:[
+            createMaterial('Lv 3 Agricultural Livestock Essence', 1, 215,3),
+            createMaterial('Lv 3 Agricultural Planting Essence', 1, 212,3),
+            createMaterial('Lv 2 Gather Essence', 2, 208,2)
+          ],
+          minPriceTotalRon: calculateTotalPrice([
+            createMaterial('Lv 3 Agricultural Livestock Essence', 1, 215,3),
+            createMaterial('Lv 3 Agricultural Planting Essence', 1, 212,3),
+            createMaterial('Lv 2 Gather Essence', 2, 208,2)
+          ], 'Ron'),
+          minPriceTotalUsd: calculateTotalPrice([
+            createMaterial('Lv 3 Agricultural Livestock Essence', 1, 215,3),
+            createMaterial('Lv 3 Agricultural Planting Essence', 1, 212,3),
+            createMaterial('Lv 2 Gather Essence', 2, 208,2)
+          ], 'Usd'),
+          totalRequireEnergy: calculatetotalRequireEnergy([
+            createMaterial('Lv 3 Agricultural Livestock Essence', 1, 215,3),
+            createMaterial('Lv 3 Agricultural Planting Essence', 1, 212,3),
+            createMaterial('Lv 2 Gather Essence', 2, 208,2)
+          ])
+      },
+    },
+    {
+      name: "Golden Fighter Pants",
+      alias: "GoldenFighterPants",
+      prices: { ron: null, usd: null },
+      cdnImage:"https://icons.lumiterra.net/item-icon-338.png",
+      requiresLevel: 4,
+      stats: [
+        { name: "Combatdef", typeNumber: "integer", values:  {min:61, max:79 }},
+        { name: "Maxhp",typeNumber: "integer",  values: {min: 244, max:318 }},
+      ],
+      recipe: {
+          materials:[
+            createMaterial('Lv 4 Agricultural Livestock Essence', 1, 410,4),
+            createMaterial('Lv 4 Agricultural Planting Essence', 1, 407,4),
+            createMaterial('Lv 3 Gather Essence', 2, 209,3)
+          ],
+          minPriceTotalRon: calculateTotalPrice([
+            createMaterial('Lv 4 Agricultural Livestock Essence', 1, 410,4),
+            createMaterial('Lv 4 Agricultural Planting Essence', 1, 407,4),
+            createMaterial('Lv 3 Gather Essence', 2, 209,3)
+          ], 'Ron'),
+          minPriceTotalUsd: calculateTotalPrice([
+            createMaterial('Lv 4 Agricultural Livestock Essence', 1, 410,4),
+            createMaterial('Lv 4 Agricultural Planting Essence', 1, 407,4),
+            createMaterial('Lv 3 Gather Essence', 2, 209,3)
+          ], 'Usd'),
+          totalRequireEnergy: calculatetotalRequireEnergy([
+            createMaterial('Lv 4 Agricultural Livestock Essence', 1, 410,4),
+            createMaterial('Lv 4 Agricultural Planting Essence', 1, 407,4),
+            createMaterial('Lv 3 Gather Essence', 2, 209,3)
+          ])
+      },
+    },
+    {
+      name: "Diamond Fighter Pants",
+      alias: "DiamondFighterPants",
+      prices: { ron: null, usd: null },
+      cdnImage:"https://icons.lumiterra.net/item-icon-343.png",
+      requiresLevel: 5,
+      stats: [
+        { name: "Combatdef", typeNumber: "integer", values:  {min:78, max:96 }},
+        { name: "Maxhp",typeNumber: "integer",  values: {min: 311, max:385 }},
+      ],
+      recipe: {
+          materials:[
+            createMaterial('Lv 5 Agricultural Livestock Essence', 1, 411,5),
+            createMaterial('Lv 5 Agricultural Planting Essence', 1, 408,5),
+            createMaterial('Lv 4 Gather Essence', 2, 404,4)
+          ],
+          minPriceTotalRon: calculateTotalPrice([
+            createMaterial('Lv 5 Agricultural Livestock Essence', 1, 411,5),
+            createMaterial('Lv 5 Agricultural Planting Essence', 1, 408,5),
+            createMaterial('Lv 4 Gather Essence', 2, 404,4)
+          ], 'Ron'),
+          minPriceTotalUsd: calculateTotalPrice([
+            createMaterial('Lv 5 Agricultural Livestock Essence', 1, 411,5),
+            createMaterial('Lv 5 Agricultural Planting Essence', 1, 408,5),
+            createMaterial('Lv 4 Gather Essence', 2, 404,4)
+          ], 'Usd'),
+          totalRequireEnergy: calculatetotalRequireEnergy([
+            createMaterial('Lv 5 Agricultural Livestock Essence', 1, 411,5),
+            createMaterial('Lv 5 Agricultural Planting Essence', 1, 408,5),
+            createMaterial('Lv 4 Gather Essence', 2, 404,4)
+          ])
+      },
+    },
+    {
+      name: "Star Fighter Pants",
+      alias: "StarFighterPants",
+      prices: { ron: null, usd: null },
+      cdnImage:"https://icons.lumiterra.net/item-icon-348.png",
+      requiresLevel: 6,
+      stats: [
+        { name: "Combatdef", typeNumber: "integer", values:  {min:96, max:114 }},
+        { name: "Maxhp",typeNumber: "integer",  values: {min: 380, max:454 }},
+      ],
+      recipe: {
+          materials:[
+            createMaterial('Lv 6 Agricultural Livestock Essence', 1, 412,6),
+            createMaterial('Lv 6 Agricultural Planting Essence', 1, 409,6),
+            createMaterial('Lv 5 Gather Essence', 2, 405,5)
+          ],
+          minPriceTotalRon: calculateTotalPrice([
+            createMaterial('Lv 6 Agricultural Livestock Essence', 1, 412,6),
+            createMaterial('Lv 6 Agricultural Planting Essence', 1, 409,6),
+            createMaterial('Lv 5 Gather Essence', 2, 405,5)
+          ], 'Ron'),
+          minPriceTotalUsd: calculateTotalPrice([
+            createMaterial('Lv 6 Agricultural Livestock Essence', 1, 412,6),
+            createMaterial('Lv 6 Agricultural Planting Essence', 1, 409,6),
+            createMaterial('Lv 5 Gather Essence', 2, 405,5)
+          ], 'Usd'),
+          totalRequireEnergy: calculatetotalRequireEnergy([
+            createMaterial('Lv 6 Agricultural Livestock Essence', 1, 412,6),
+            createMaterial('Lv 6 Agricultural Planting Essence', 1, 409,6),
+            createMaterial('Lv 5 Gather Essence', 2, 405,5)
+          ])
+      },
+    },
+    {
+      name: "Lava Combat Pants",
+      alias: "LavaCombatPants",
+      prices: { ron: null, usd: null },
+      cdnImage:"https://icons.lumiterra.net/item-icon-532.png",
+      requiresLevel: 7,
+      stats: [
+        { name: "Combatdef", typeNumber: "integer", values:  {min:113, max:131 }},
+        { name: "Maxhp",typeNumber: "integer",  values: {min: 447, max:521 }},
+      ],
+      recipe: {
+          materials:[
+            createMaterial('Lv 7 Agricultural Livestock Essence', 1, 611,7),
+            createMaterial('Lv 7 Agricultural Planting Essence', 1, 608,7),
+            createMaterial('Lv 6 Gather Essence', 2, 406,6)
+          ],
+          minPriceTotalRon: calculateTotalPrice([
+            createMaterial('Lv 7 Agricultural Livestock Essence', 1, 611,7),
+            createMaterial('Lv 7 Agricultural Planting Essence', 1, 608,7),
+            createMaterial('Lv 6 Gather Essence', 2, 406,6)
+          ], 'Ron'),
+          minPriceTotalUsd: calculateTotalPrice([
+            createMaterial('Lv 7 Agricultural Livestock Essence', 1, 611,7),
+            createMaterial('Lv 7 Agricultural Planting Essence', 1, 608,7),
+            createMaterial('Lv 6 Gather Essence', 2, 406,6)
+          ], 'Usd'),
+          totalRequireEnergy: calculatetotalRequireEnergy([
+            createMaterial('Lv 7 Agricultural Livestock Essence', 1, 611,7),
+            createMaterial('Lv 7 Agricultural Planting Essence', 1, 608,7),
+            createMaterial('Lv 5 Gather Essence', 2, 405,6)
+          ])
+      },
+    },
+    {
+      name: "Hollow Combat Pants",
+      alias: "HollowCombatPants",
+      prices: { ron: null, usd: null },
+      cdnImage:"https://icons.lumiterra.net/item-icon-556.png",
+      requiresLevel: 8,
+      stats: [
+        { name: "Combatdef", typeNumber: "integer", values:  {min:131, max:149 }},
+        { name: "Maxhp",typeNumber: "integer",  values: {min: 514, max:588 }},
+      ],
+      recipe: {
+          materials:[
+            createMaterial('Lv 8 Agricultural Livestock Essence', 1, 612,8),
+            createMaterial('Lv 8 Agricultural Planting Essence', 1, 609,8),
+            createMaterial('Lv 7 Gather Essence', 2, 406,7)
+          ],
+          minPriceTotalRon: calculateTotalPrice([
+            createMaterial('Lv 8 Agricultural Livestock Essence', 1, 612,8),
+            createMaterial('Lv 8 Agricultural Planting Essence', 1, 609,8),
+            createMaterial('Lv 7 Gather Essence', 2, 406,7)
+          ], 'Ron'),
+          minPriceTotalUsd: calculateTotalPrice([
+            createMaterial('Lv 8 Agricultural Livestock Essence', 1, 612,8),
+            createMaterial('Lv 8 Agricultural Planting Essence', 1, 609,8),
+            createMaterial('Lv 7 Gather Essence', 2, 406,7)
+          ], 'Usd'),
+          totalRequireEnergy: calculatetotalRequireEnergy([
+            createMaterial('Lv 8 Agricultural Livestock Essence', 1, 612,8),
+            createMaterial('Lv 8 Agricultural Planting Essence', 1, 609,8),
+            createMaterial('Lv 7 Gather Essence', 2, 406,7)
+          ])
+      },
+    },
+    {
+      name: "Bronze Combat Pants",
+      alias: "BronzeCombatPants",
+      prices: { ron: null, usd: null },
+      cdnImage:"https://icons.lumiterra.net/item-icon-583.png",
+      requiresLevel: 9,
+      stats: [
+        { name: "Combatdef", typeNumber: "integer", values:  {min:148, max:166 }},
+        { name: "Maxhp",typeNumber: "integer",  values: {min: 583, max:657 }},
+      ],
+      recipe: {
+          materials:[
+            createMaterial('Lv 9 Agricultural Livestock Essence', 1, 613,9),
+            createMaterial('Lv 9 Agricultural Planting Essence', 1, 610,9),
+            createMaterial('Lv 8 Gather Essence', 2, 606,8)
+          ],
+          minPriceTotalRon: calculateTotalPrice([
+            createMaterial('Lv 9 Agricultural Livestock Essence', 1, 613,9),
+            createMaterial('Lv 9 Agricultural Planting Essence', 1, 610,9),
+            createMaterial('Lv 8 Gather Essence', 2, 606,8)
+          ], 'Ron'),
+          minPriceTotalUsd: calculateTotalPrice([
+            createMaterial('Lv 9 Agricultural Livestock Essence', 1, 613,9),
+            createMaterial('Lv 9 Agricultural Planting Essence', 1, 610,9),
+            createMaterial('Lv 8 Gather Essence', 2, 606,8)
+          ], 'Usd'),
+          totalRequireEnergy: calculatetotalRequireEnergy([
+            createMaterial('Lv 9 Agricultural Livestock Essence', 1, 613,9),
+            createMaterial('Lv 9 Agricultural Planting Essence', 1, 610,9),
+            createMaterial('Lv 8 Gather Essence', 2, 606,8)
+          ])
+      },
+    },
+    {
+      name: "Cracked Crystal Armor",
+      alias: "CrackedCrystalArmor",
+      prices: { ron: null, usd: null },
+      cdnImage:"https://icons.lumiterra.net/item-icon-46.png",
+      requiresLevel: 1,
+      stats: [
+        { name: "Combatdef", typeNumber: "integer", values:  {min:11, max:33 }},
+        { name: "Maxhp",typeNumber: "integer",  values: {min: 27, max:81 }},
+      ],
+      recipe: {
+          materials:[
+              createMaterial('Lv 1 Agricultural Livestock Essence', 1, 213,1),
+              createMaterial('Lv 1 Agricultural Planting Essence', 1, 210,1)
+          ],
+          minPriceTotalRon: calculateTotalPrice([
+              createMaterial('Lv 1 Agricultural Livestock Essence', 1, 213,1),
+              createMaterial('Lv 1 Agricultural Planting Essence', 1, 210,1)
+          ], 'Ron'),
+          minPriceTotalUsd: calculateTotalPrice([
+              createMaterial('Lv 1 Agricultural Livestock Essence', 1, 213,1),
+              createMaterial('Lv 1 Agricultural Planting Essence', 1, 210,1)
+          ], 'Usd'),
+          totalRequireEnergy: calculatetotalRequireEnergy([
+            createMaterial('Lv 1 Agricultural Livestock Essence', 1, 213,1),
+            createMaterial('Lv 1 Agricultural Planting Essence', 1, 210,1)
+          ])
+      },
+    },
+    {
+      name: "Crystal Skin Armor",
+      alias: "CrystalSkinArmor",
+      prices: { ron: null, usd: null },
+      cdnImage:"https://icons.lumiterra.net/item-icon-47.png",
+      requiresLevel: 2,
+      stats: [
+        { name: "Combatdef", typeNumber: "integer", values:  {min:33, max:55 }},
+        { name: "Maxhp",typeNumber: "integer",  values: {min: 78, max:132 }},
+      ],
+      recipe: {
+          materials:[
+            createMaterial('Lv 2 Agricultural Livestock Essence', 1, 214,2),
+            createMaterial('Lv 2 Agricultural Planting Essence', 1, 211,2),
+            createMaterial('Lv 1 Gather Essence', 2, 207,1)
+          ],
+          minPriceTotalRon: calculateTotalPrice([
+            createMaterial('Lv 2 Agricultural Livestock Essence', 1, 214,2),
+            createMaterial('Lv 2 Agricultural Planting Essence', 1, 211,2),
+            createMaterial('Lv 1 Gather Essence', 2, 207,1)
+          ], 'Ron'),
+          minPriceTotalUsd: calculateTotalPrice([
+            createMaterial('Lv 2 Agricultural Livestock Essence', 1, 214,2),
+            createMaterial('Lv 2 Agricultural Planting Essence', 1, 211,2),
+            createMaterial('Lv 1 Gather Essence', 2, 207,1)
+          ], 'Usd'),
+          totalRequireEnergy: calculatetotalRequireEnergy([
+            createMaterial('Lv 2 Agricultural Livestock Essence', 1, 214,2),
+            createMaterial('Lv 2 Agricultural Planting Essence', 1, 211,2),
+            createMaterial('Lv 1 Gather Essence', 2, 207,1)
+          ])
+      },
+    },
+    {
+      name: "Crystal Stone Armor",
+      alias: "CrystalStoneArmor",
+      prices: { ron: null, usd: null },
+      cdnImage:"https://icons.lumiterra.net/item-icon-48.png",
+      requiresLevel: 3,
+      stats: [
+        { name: "Combatdef", typeNumber: "integer", values:  {min:55, max:77 }},
+        { name: "Maxhp",typeNumber: "integer",  values: {min: 128, max:182 }},
+      ],
+      recipe: {
+          materials:[
+            createMaterial('Lv 3 Agricultural Livestock Essence', 1, 215,3),
+            createMaterial('Lv 3 Agricultural Planting Essence', 1, 212,3),
+            createMaterial('Lv 2 Gather Essence', 2, 208,2)
+          ],
+          minPriceTotalRon: calculateTotalPrice([
+            createMaterial('Lv 3 Agricultural Livestock Essence', 1, 215,3),
+            createMaterial('Lv 3 Agricultural Planting Essence', 1, 212,3),
+            createMaterial('Lv 2 Gather Essence', 2, 208,2)
+          ], 'Ron'),
+          minPriceTotalUsd: calculateTotalPrice([
+            createMaterial('Lv 3 Agricultural Livestock Essence', 1, 215,3),
+            createMaterial('Lv 3 Agricultural Planting Essence', 1, 212,3),
+            createMaterial('Lv 2 Gather Essence', 2, 208,2)
+          ], 'Usd'),
+          totalRequireEnergy: calculatetotalRequireEnergy([
+            createMaterial('Lv 3 Agricultural Livestock Essence', 1, 215,3),
+            createMaterial('Lv 3 Agricultural Planting Essence', 1, 212,3),
+            createMaterial('Lv 2 Gather Essence', 2, 208,2)
+          ])
+      },
+    },
+    {
+      name: "Golden Fighter Coat",
+      alias: "GoldenFighterCoat",
+      prices: { ron: null, usd: null },
+      cdnImage:"https://icons.lumiterra.net/item-icon-336.png",
+      requiresLevel: 4,
+      stats: [
+        { name: "Combatdef", typeNumber: "integer", values:  {min:77, max:99 }},
+        { name: "Maxhp",typeNumber: "integer",  values: {min: 179, max:233 }},
+      ],
+      recipe: {
+          materials:[
+            createMaterial('Lv 4 Agricultural Livestock Essence', 1, 410,4),
+            createMaterial('Lv 4 Agricultural Planting Essence', 1, 407,4),
+            createMaterial('Lv 3 Gather Essence', 2, 209,3)
+          ],
+          minPriceTotalRon: calculateTotalPrice([
+            createMaterial('Lv 4 Agricultural Livestock Essence', 1, 410,4),
+            createMaterial('Lv 4 Agricultural Planting Essence', 1, 407,4),
+            createMaterial('Lv 3 Gather Essence', 2, 209,3)
+          ], 'Ron'),
+          minPriceTotalUsd: calculateTotalPrice([
+            createMaterial('Lv 4 Agricultural Livestock Essence', 1, 410,4),
+            createMaterial('Lv 4 Agricultural Planting Essence', 1, 407,4),
+            createMaterial('Lv 3 Gather Essence', 2, 209,3)
+          ], 'Usd'),
+          totalRequireEnergy: calculatetotalRequireEnergy([
+            createMaterial('Lv 4 Agricultural Livestock Essence', 1, 410,4),
+            createMaterial('Lv 4 Agricultural Planting Essence', 1, 407,4),
+            createMaterial('Lv 3 Gather Essence', 2, 209,3)
+          ])
+      },
+    },
+    {
+      name: "Diamond Fighter Coat",
+      alias: "DiamondFighterCoat",
+      prices: { ron: null, usd: null },
+      cdnImage:"https://icons.lumiterra.net/item-icon-341.png",
+      requiresLevel: 5,
+      stats: [
+        { name: "Combatdef", typeNumber: "integer", values:  {min:99, max:121 }},
+        { name: "Maxhp",typeNumber: "integer",  values: {min: 228, max:282 }},
+      ],
+      recipe: {
+          materials:[
+            createMaterial('Lv 5 Agricultural Livestock Essence', 1, 411,5),
+            createMaterial('Lv 5 Agricultural Planting Essence', 1, 408,5),
+            createMaterial('Lv 4 Gather Essence', 2, 404,4)
+          ],
+          minPriceTotalRon: calculateTotalPrice([
+            createMaterial('Lv 5 Agricultural Livestock Essence', 1, 411,5),
+            createMaterial('Lv 5 Agricultural Planting Essence', 1, 408,5),
+            createMaterial('Lv 4 Gather Essence', 2, 404,4)
+          ], 'Ron'),
+          minPriceTotalUsd: calculateTotalPrice([
+            createMaterial('Lv 5 Agricultural Livestock Essence', 1, 411,5),
+            createMaterial('Lv 5 Agricultural Planting Essence', 1, 408,5),
+            createMaterial('Lv 4 Gather Essence', 2, 404,4)
+          ], 'Usd'),
+          totalRequireEnergy: calculatetotalRequireEnergy([
+            createMaterial('Lv 5 Agricultural Livestock Essence', 1, 411,5),
+            createMaterial('Lv 5 Agricultural Planting Essence', 1, 408,5),
+            createMaterial('Lv 4 Gather Essence', 2, 404,4)
+          ])
+      },
+    },
+    {
+      name: "Star Fighter Coat",
+      alias: "StarFighterCoat",
+      prices: { ron: null, usd: null },
+      cdnImage:"https://icons.lumiterra.net/item-icon-346.png",
+      requiresLevel: 6,
+      stats: [
+        { name: "Combatdef", typeNumber: "integer", values:  {min:121, max:143 }},
+        { name: "Maxhp",typeNumber: "integer",  values: {min: 279, max:333 }},
+      ],
+      recipe: {
+          materials:[
+            createMaterial('Lv 6 Agricultural Livestock Essence', 1, 412,6),
+            createMaterial('Lv 6 Agricultural Planting Essence', 1, 409,6),
+            createMaterial('Lv 5 Gather Essence', 2, 405,5)
+          ],
+          minPriceTotalRon: calculateTotalPrice([
+            createMaterial('Lv 6 Agricultural Livestock Essence', 1, 412,6),
+            createMaterial('Lv 6 Agricultural Planting Essence', 1, 409,6),
+            createMaterial('Lv 5 Gather Essence', 2, 405,5)
+          ], 'Ron'),
+          minPriceTotalUsd: calculateTotalPrice([
+            createMaterial('Lv 6 Agricultural Livestock Essence', 1, 412,6),
+            createMaterial('Lv 6 Agricultural Planting Essence', 1, 409,6),
+            createMaterial('Lv 5 Gather Essence', 2, 405,5)
+          ], 'Usd'),
+          totalRequireEnergy: calculatetotalRequireEnergy([
+            createMaterial('Lv 6 Agricultural Livestock Essence', 1, 412,6),
+            createMaterial('Lv 6 Agricultural Planting Essence', 1, 409,6),
+            createMaterial('Lv 5 Gather Essence', 2, 405,5)
+          ])
+      },
+    },
+    {
+      name: "Lava Combat Coat",
+      alias: "LavaCombatCoat",
+      prices: { ron: null, usd: null },
+      cdnImage:"https://icons.lumiterra.net/item-icon-531.png",
+      requiresLevel: 7,
+      stats: [
+        { name: "Combatdef", typeNumber: "integer", values:  {min:143, max:165 }},
+        { name: "Maxhp",typeNumber: "integer",  values: {min: 329, max:383 }},
+      ],
+      recipe: {
+          materials:[
+            createMaterial('Lv 7 Agricultural Livestock Essence', 1, 611,7),
+            createMaterial('Lv 7 Agricultural Planting Essence', 1, 608,7),
+            createMaterial('Lv 6 Gather Essence', 2, 406,6)
+          ],
+          minPriceTotalRon: calculateTotalPrice([
+            createMaterial('Lv 7 Agricultural Livestock Essence', 1, 611,7),
+            createMaterial('Lv 7 Agricultural Planting Essence', 1, 608,7),
+            createMaterial('Lv 6 Gather Essence', 2, 406,6)
+          ], 'Ron'),
+          minPriceTotalUsd: calculateTotalPrice([
+            createMaterial('Lv 7 Agricultural Livestock Essence', 1, 611,7),
+            createMaterial('Lv 7 Agricultural Planting Essence', 1, 608,7),
+            createMaterial('Lv 6 Gather Essence', 2, 406,6)
+          ], 'Usd'),
+          totalRequireEnergy: calculatetotalRequireEnergy([
+            createMaterial('Lv 7 Agricultural Livestock Essence', 1, 611,7),
+            createMaterial('Lv 7 Agricultural Planting Essence', 1, 608,7),
+            createMaterial('Lv 5 Gather Essence', 2, 405,6)
+          ])
+      },
+    },
+    {
+      name: "Hollow Combat Coat",
+      alias: "HollowCombatCoat",
+      prices: { ron: null, usd: null },
+      cdnImage:"https://icons.lumiterra.net/item-icon-555.png",
+      requiresLevel: 8,
+      stats: [
+        { name: "Combatdef", typeNumber: "integer", values:  {min:165, max:187 }},
+        { name: "Maxhp",typeNumber: "integer",  values: {min: 378, max:432 }},
+      ],
+      recipe: {
+          materials:[
+            createMaterial('Lv 8 Agricultural Livestock Essence', 1, 612,8),
+            createMaterial('Lv 8 Agricultural Planting Essence', 1, 609,8),
+            createMaterial('Lv 7 Gather Essence', 2, 406,7)
+          ],
+          minPriceTotalRon: calculateTotalPrice([
+            createMaterial('Lv 8 Agricultural Livestock Essence', 1, 612,8),
+            createMaterial('Lv 8 Agricultural Planting Essence', 1, 609,8),
+            createMaterial('Lv 7 Gather Essence', 2, 406,7)
+          ], 'Ron'),
+          minPriceTotalUsd: calculateTotalPrice([
+            createMaterial('Lv 8 Agricultural Livestock Essence', 1, 612,8),
+            createMaterial('Lv 8 Agricultural Planting Essence', 1, 609,8),
+            createMaterial('Lv 7 Gather Essence', 2, 406,7)
+          ], 'Usd'),
+          totalRequireEnergy: calculatetotalRequireEnergy([
+            createMaterial('Lv 8 Agricultural Livestock Essence', 1, 612,8),
+            createMaterial('Lv 8 Agricultural Planting Essence', 1, 609,8),
+            createMaterial('Lv 7 Gather Essence', 2, 406,7)
+          ])
+      },
+    },
+    {
+      name: "Bronze Combat Coat",
+      alias: "BronzeCombatCoat",
+      prices: { ron: null, usd: null },
+      cdnImage:"https://icons.lumiterra.net/item-icon-582.png",
+      requiresLevel: 9,
+      stats: [
+        { name: "Combatdef", typeNumber: "integer", values:  {min:187, max:209 }},
+        { name: "Maxhp",typeNumber: "integer",  values: {min: 429, max:483 }},
+      ],
+      recipe: {
+          materials:[
+            createMaterial('Lv 9 Agricultural Livestock Essence', 1, 613,9),
+            createMaterial('Lv 9 Agricultural Planting Essence', 1, 610,9),
+            createMaterial('Lv 8 Gather Essence', 2, 606,8)
+          ],
+          minPriceTotalRon: calculateTotalPrice([
+            createMaterial('Lv 9 Agricultural Livestock Essence', 1, 613,9),
+            createMaterial('Lv 9 Agricultural Planting Essence', 1, 610,9),
+            createMaterial('Lv 8 Gather Essence', 2, 606,8)
+          ], 'Ron'),
+          minPriceTotalUsd: calculateTotalPrice([
+            createMaterial('Lv 9 Agricultural Livestock Essence', 1, 613,9),
+            createMaterial('Lv 9 Agricultural Planting Essence', 1, 610,9),
+            createMaterial('Lv 8 Gather Essence', 2, 606,8)
+          ], 'Usd'),
+          totalRequireEnergy: calculatetotalRequireEnergy([
+            createMaterial('Lv 9 Agricultural Livestock Essence', 1, 613,9),
+            createMaterial('Lv 9 Agricultural Planting Essence', 1, 610,9),
+            createMaterial('Lv 8 Gather Essence', 2, 606,8)
+          ])
+      },
+    },
+  ],
+  farming: [
+
+  ],
+  gathering: [
+
+  ],
+  
+};
+
+export { itemsData };
