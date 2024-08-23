@@ -71,6 +71,21 @@ export default function Sidebar() {
           />
         </IconButton>
       </Link>
+      <Link href="/wiki/combat">
+        <IconButton>
+          Wiki Comat
+        </IconButton>
+      </Link>
+      <Link href="/wiki/farming">
+        <IconButton>
+          Wiki Farming
+        </IconButton>
+      </Link>
+      <Link href="/wiki/gathering">
+        <IconButton>
+          Wiki Gathering
+        </IconButton>
+      </Link>
     </Sheet>
   );
 }

@@ -25,7 +25,7 @@ export default function RootLayout({ children }) {
           <CssBaseline />
           <Sidebar />
           <div className="text-wrap bg-blue-600 p-2 text-center">
-            Filtros en desarrollo
+            Filtro de mercado y Wiki de items en desarrollo
           </div>
           {children}
         </CssVarsProvider>

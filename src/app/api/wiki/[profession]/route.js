@@ -26,7 +26,7 @@ const fetchData = async (query) => {
 
 const fetchDataEnergy = async () => {
   const response = await fetch(
-    `${window.location.origin}/api/energia`,
+    `http://localhost:3000/api/energia`,
     {
       method: "GET",
       cache: "no-store",
