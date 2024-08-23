@@ -1,14 +1,3 @@
-const auctionsTypes = ["All", "Sale", "NotForSale"];
-const types = [
-  "sword",
-  "hands armor",
-  "head armor",
-  "feet armor",
-  "legs armor",
-  "chest armor",
-];
-const qualities = ["basic", "ultimate", "enhanced", "advanced", "super"];
-const requiresLevels = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 const properties = {
   combat: {
     sword: [
@@ -93,4 +82,4 @@ const properties = {
   },
 };
 
-export { auctionsTypes, types, qualities, requiresLevels, properties };
+export { properties };
