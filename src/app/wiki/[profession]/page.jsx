@@ -6,19 +6,13 @@ import { CircularProgress, Box, Card, CardContent, Typography } from "@mui/joy";
 
 import AspectRatio from "@mui/joy/AspectRatio";
 
-
 const Profession = ({ params }) => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [selectedItem, setSelectedItem] = useState(null);
-  const image = (url,alt) =>{
-    <Image
-    src={url}
-    alt={alt}
-    width={20}
-    height={20}
-    />
-  }
+  const image = (url, alt) => {
+    <Image src={url} alt={alt} width={20} height={20} />;
+  };
   async function fetchData() {
     try {
       const res = await axios.post(
@@ -156,37 +150,37 @@ const Profession = ({ params }) => {
                     </React.Fragment>
                   ))}
                 </Box>
-                <Box sx={{ display: "flex", alignItems: "center", gap: 2, mb: 2 }}>
-
-                
-                {/* Resumen de Precios y Energía */}
-                <Typography level="body2">Total Recipe Price:
-                  <Box sx={{ display: "flex", gap: 0.5 }}>
-                  <Image
-                    src="https://cdn.skymavis.com/ronin/2020/ron/logo.png"
-                    alt="Ron"
-                    width={20}
-                    height={20}
-                    />
-                  {selectedItem.recipe.minPriceTotalRon}
-                  <Image
-                    src="https://cdn.skymavis.com/ronin/2020/erc20/0x0b7007c13325c48911f73a2dad5fa5dcbf808adc/logo.png"
-                    alt="Ron"
-                    width={20}
-                    height={20}
-                    />
-                  {selectedItem.recipe.minPriceTotalUsd}
-                  </Box>
-                </Typography>
-                <Typography level="body2">
-                  Total Energy Required:{" "}
-
-                  {selectedItem.recipe.totalRequireEnergy}
-                </Typography>
-                <Typography level="body2">Total Energy Cost:</Typography>
-                <Typography level="body2">
-                  USD: {selectedItem.recipe.totalEnergyCost}
-                </Typography>
+                <Box
+                  sx={{ display: "flex", alignItems: "center", gap: 2, mb: 2 }}
+                >
+                  {/* Resumen de Precios y Energía */}
+                  <Typography level="body2">
+                    Total Recipe Price:
+                    <Box sx={{ display: "flex", gap: 0.5 }}>
+                      <Image
+                        src="https://cdn.skymavis.com/ronin/2020/ron/logo.png"
+                        alt="Ron"
+                        width={20}
+                        height={20}
+                      />
+                      {selectedItem.recipe.minPriceTotalRon}
+                      <Image
+                        src="https://cdn.skymavis.com/ronin/2020/erc20/0x0b7007c13325c48911f73a2dad5fa5dcbf808adc/logo.png"
+                        alt="Ron"
+                        width={20}
+                        height={20}
+                      />
+                      {selectedItem.recipe.minPriceTotalUsd}
+                    </Box>
+                  </Typography>
+                  <Typography level="body2">
+                    Total Energy Required:{" "}
+                    {selectedItem.recipe.totalRequireEnergy}
+                  </Typography>
+                  <Typography level="body2">Total Energy Cost:</Typography>
+                  <Typography level="body2">
+                    USD: {selectedItem.recipe.totalEnergyCost}
+                  </Typography>
                 </Box>
               </CardContent>
             </Card>
