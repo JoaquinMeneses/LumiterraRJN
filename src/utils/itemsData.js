@@ -1,6 +1,6 @@
 const fetchDataEssen = async () => {
   const response = await fetch(
-    `${window.location.origin}/api/essence`,
+    `http://localhost:3000/api/essence`,
     {
       method: "GET",
       cache: "no-store",
