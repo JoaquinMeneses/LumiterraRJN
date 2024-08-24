@@ -40,9 +40,10 @@ const Profession = ({ params }) => {
   return (
     <main className="flex flex-grow">
       <div className="flex h-full w-full flex-wrap justify-center gap-2 p-2">
-        {data?.map((item) => {
+        {data?.map((item, index) => {
           return (
             <Box
+              key={index}
               sx={{
                 display: "flex",
                 gap: 1,
@@ -103,7 +104,7 @@ const Profession = ({ params }) => {
                 <Typography level="body1">
                   Require Level: {selectedItem.requiresLevel}
                 </Typography>
-                <Typography level="body1">
+                <Typography level="body1" sx={{ display: "flex", gap: 0.5 }}>
                   Floor Price:
                   <Typography level="body2">
                     {selectedItem.prices.ron} RON
@@ -133,10 +134,11 @@ const Profession = ({ params }) => {
                       <Box
                         sx={{ display: "flex", alignItems: "center", gap: 1 }}
                       >
-                        <img
+                        <Image
                           src={material.cdnImage}
                           alt={material.name}
-                          style={{ width: 40, height: 40 }}
+                          width={40}
+                          height={40}
                         />
                         <Typography level="body2">
                           x {material.quantity}
