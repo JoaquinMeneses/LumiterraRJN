@@ -3023,7 +3023,7 @@ const itemsData = {
       name: "Bronze Combat Pants",
       alias: "BronzeCombatPants",
       prices: { ron: null, usd: null },
-      cdnImage: "https://icons.lumiterra.net/item-icon-583.png",
+      cdnImage: "https://icons.lumiterra.net/item-icon-580.png",
       requiresLevel: 9,
       stats: [
         {
@@ -3434,7 +3434,7 @@ const itemsData = {
       name: "Bronze Combat Coat",
       alias: "BronzeCombatCoat",
       prices: { ron: null, usd: null },
-      cdnImage: "https://icons.lumiterra.net/item-icon-582.png",
+      cdnImage: "https://icons.lumiterra.net/item-icon-579.png",
       requiresLevel: 9,
       stats: [
         {
