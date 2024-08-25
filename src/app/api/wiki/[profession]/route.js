@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
-import { itemsData } from "@/utils/itemsData"
+import { itemsData } from "@/utils/itemsData";
+import apiUrl from "@/utils/apiUrl";
 
 export const dynamic = "force-dynamic";
 
@@ -25,16 +26,13 @@ const fetchData = async (query) => {
 };
 
 const fetchDataEnergy = async () => {
-  const response = await fetch(
-    `http://localhost:3000/api/energia`,
-    {
-      method: "GET",
-      cache: "no-store",
-      headers: {
-        "Content-Type": "application/json",
-      },
+  const response = await fetch(`${apiUrl}/api/energia`, {
+    method: "GET",
+    cache: "no-store",
+    headers: {
+      "Content-Type": "application/json",
     },
-  );
+  });
 
   if (!response.ok) {
     throw new Error(`Failed to fetch data `);
@@ -46,11 +44,10 @@ export async function POST(request, { params }) {
   const profession = params.profession;
 
   try {
-    const dataEnergy = await fetchDataEnergy()
-    const itemsVerified =
-      profession && itemsData[profession]
-    
-      const query = `
+    const dataEnergy = await fetchDataEnergy();
+    const itemsVerified = profession && itemsData[profession];
+
+    const query = `
       query data {
         exchangeRate {
           ron {
@@ -92,28 +89,30 @@ export async function POST(request, { params }) {
         return acc.concat(response.data[key].results);
       }, []);
 
-    const finalResponse = combinedResults
-      .map((result) => ({
-        name: result.name,
-        requiresLevel: result.attributes["requires level"],
-        prices: {
-          ron: result.minPrice
-            ? (result.minPrice / 1e18).toFixed(2)
-            : "Not sale",
-          usd: result.minPrice
-            ? ((result.minPrice / 1e18) * exchangeRate).toFixed(2)
-            : "Not sale",
-        }
-    }))
+    const finalResponse = combinedResults.map((result) => ({
+      name: result.name,
+      requiresLevel: result.attributes["requires level"],
+      prices: {
+        ron: result.minPrice ? (result.minPrice / 1e18).toFixed(2) : "Not sale",
+        usd: result.minPrice
+          ? ((result.minPrice / 1e18) * exchangeRate).toFixed(2)
+          : "Not sale",
+      },
+    }));
 
-    itemsVerified.forEach(item => {
-      const itemFinalResponse = finalResponse.find(response => response.name === item.name && Number(response.requiresLevel[0]) === item.requiresLevel);
-      if(itemFinalResponse){
+    itemsVerified.forEach((item) => {
+      const itemFinalResponse = finalResponse.find(
+        (response) =>
+          response.name === item.name &&
+          Number(response.requiresLevel[0]) === item.requiresLevel,
+      );
+      if (itemFinalResponse) {
         item.prices = itemFinalResponse.prices;
-      } else{
+      } else {
         item.prices = { ron: "Not sale", usd: "Not sale" };
       }
-      item.recipe.totalEnergyCost = item.recipe.totalRequireEnergy * dataEnergy[0].costPerEnergy
+      item.recipe.totalEnergyCost =
+        item.recipe.totalRequireEnergy * dataEnergy[0].costPerEnergy;
     });
 
     return NextResponse.json(itemsVerified);

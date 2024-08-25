@@ -73,7 +73,7 @@ export default function Sidebar() {
       </Link>
       <Link href="/wiki/combat">
         <IconButton>
-          Wiki Comat
+          Wiki Combat
         </IconButton>
       </Link>
       <Link href="/wiki/farming">

@@ -6,6 +6,10 @@ const nextConfig = {
         protocol: "https",
         hostname: "cdn.skymavis.com",
       },
+      {
+        protocol: "https",
+        hostname: "icons.lumiterra.net",
+      },
     ],
   },
 };
