@@ -139,7 +139,7 @@ const Profession = ({ params }) => {
               <Box
                 sx={{ display: "flex", alignItems: "center", gap: 1, mb: 2 }}
               >
-                {selectedItem.recipe.materials.map((material, index) => (
+                {selectedItem.recipe.craftRecipe.materials.map((material, index) => (
                   <React.Fragment key={index}>
                     <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
                       <Image
@@ -152,11 +152,30 @@ const Profession = ({ params }) => {
                         x {material.quantity}
                       </Typography>
                     </Box>
-                    {index < selectedItem.recipe.materials.length - 1 && (
+                    {index < selectedItem.recipe.craftRecipe.materials.length - 1 && (
                       <Typography level="body2" sx={{ mx: 1 }}>
                         +
                       </Typography>
                     )}
+                  </React.Fragment>
+                ))}
+              </Box>
+              <Box
+                sx={{ display: "flex", alignItems: "center", gap: 1, mb: 2 }}
+              >
+                {selectedItem.recipe.DesenchantRecipe.map((DesenchantRecipe, index) => (
+                  <React.Fragment key={index}>
+                    <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
+                      <Image
+                        src={DesenchantRecipe.cdnImage}
+                        alt={DesenchantRecipe.name}
+                        width={40}
+                        height={40}
+                      />
+                      <Typography level="body2">
+                        x {DesenchantRecipe.quantity}
+                      </Typography>
+                    </Box>
                   </React.Fragment>
                 ))}
               </Box>
@@ -168,7 +187,7 @@ const Profession = ({ params }) => {
                   <Typography level="body2">
                     Total Recipe Price:
                     <Box>
-                      {isNaN(selectedItem.recipe.minPriceTotalRon) ? (
+                      {isNaN(selectedItem.recipe.craftRecipe.minPriceTotalRon) ? (
                         <Box
                           sx={{
                             display: "flex",
@@ -187,14 +206,14 @@ const Profession = ({ params }) => {
                             width={20}
                             height={20}
                           />
-                          {selectedItem.recipe.minPriceTotalRon}
+                          {selectedItem.recipe.craftRecipe.minPriceTotalRon}
                           <Image
                             src="https://cdn.skymavis.com/ronin/2020/erc20/0x0b7007c13325c48911f73a2dad5fa5dcbf808adc/logo.png"
-                            alt="Ron"
+                            alt="Usd"
                             width={20}
                             height={20}
                           />
-                          {selectedItem.recipe.minPriceTotalUsd}
+                          {selectedItem.recipe.craftRecipe.minPriceTotalUsd}
                         </Box>
                       )}
                     </Box>
@@ -204,24 +223,31 @@ const Profession = ({ params }) => {
                   <Typography level="body2">Total Energy Required: </Typography>
                   <Box sx={{ display: "flex", gap: 0.5 }}>
                     <Image
-                      src="https://cdn.skymavis.com/mm-cache/7/e/803fdd893e99fbdb34c55cb81fd6eb.png"
-                      alt="Ron"
+                      src={selectedItem.recipe.craftRecipe.ImageEnergy}
+                      alt="ImageEnergy"
                       width={20}
                       height={20}
                     />
-                    {selectedItem.recipe.totalRequireEnergy}
+                    {selectedItem.recipe.craftRecipe.totalRequireEnergy}
                   </Box>
                 </CardContent>
                 <CardContent>
                   <Typography level="body2">Total Energy Cost:</Typography>
                   <Box sx={{ display: "flex", gap: 0.5 }}>
                     <Image
-                      src="https://cdn.skymavis.com/ronin/2020/erc20/0x0b7007c13325c48911f73a2dad5fa5dcbf808adc/logo.png"
+                      src="https://cdn.skymavis.com/ronin/2020/ron/logo.png"
                       alt="Ron"
                       width={20}
                       height={20}
                     />
-                    {selectedItem.recipe.totalEnergyCost}
+                    {selectedItem.recipe.craftRecipe.totalEnergyCostRon}
+                    <Image
+                      src="https://cdn.skymavis.com/ronin/2020/erc20/0x0b7007c13325c48911f73a2dad5fa5dcbf808adc/logo.png"
+                      alt="Usd"
+                      width={20}
+                      height={20}
+                    />
+                    {selectedItem.recipe.craftRecipe.totalEnergyCostUsd}
                   </Box>
                 </CardContent>
               </Box>

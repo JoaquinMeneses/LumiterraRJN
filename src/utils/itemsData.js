@@ -84,28 +84,37 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 1 Agricultural Livestock Essence", 1, 213, 1),
-          createMaterial("Lv 1 Agricultural Planting Essence", 1, 210, 1),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 1 Agricultural Livestock Essence", 1, 213, 1),
+            createMaterial("Lv 1 Agricultural Planting Essence", 1, 210, 1),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 1 Agricultural Livestock Essence", 1, 213, 1),
+              createMaterial("Lv 1 Agricultural Planting Essence", 1, 210, 1),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 1 Agricultural Livestock Essence", 1, 213, 1),
+              createMaterial("Lv 1 Agricultural Planting Essence", 1, 210, 1),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 1 Agricultural Livestock Essence", 1, 213, 1),
+            createMaterial("Lv 1 Agricultural Planting Essence", 1, 210, 1),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Combat Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-738.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 1 Agricultural Livestock Essence", 1, 213, 1),
-            createMaterial("Lv 1 Agricultural Planting Essence", 1, 210, 1),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 1 Agricultural Livestock Essence", 1, 213, 1),
-            createMaterial("Lv 1 Agricultural Planting Essence", 1, 210, 1),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 1 Agricultural Livestock Essence", 1, 213, 1),
-          createMaterial("Lv 1 Agricultural Planting Essence", 1, 210, 1),
-        ]),
       },
     },
     {
@@ -128,32 +137,41 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 2 Agricultural Livestock Essence", 1, 214, 2),
-          createMaterial("Lv 2 Agricultural Planting Essence", 1, 211, 2),
-          createMaterial("Lv 1 Gather Essence", 2, 207, 1),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 2 Agricultural Livestock Essence", 1, 214, 2),
+            createMaterial("Lv 2 Agricultural Planting Essence", 1, 211, 2),
+            createMaterial("Lv 1 Gather Essence", 2, 207, 1),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 2 Agricultural Livestock Essence", 1, 214, 2),
+              createMaterial("Lv 2 Agricultural Planting Essence", 1, 211, 2),
+              createMaterial("Lv 1 Gather Essence", 2, 207, 1),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 2 Agricultural Livestock Essence", 1, 214, 2),
+              createMaterial("Lv 2 Agricultural Planting Essence", 1, 211, 2),
+              createMaterial("Lv 1 Gather Essence", 2, 207, 1),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 2 Agricultural Livestock Essence", 1, 214, 2),
+            createMaterial("Lv 2 Agricultural Planting Essence", 1, 211, 2),
+            createMaterial("Lv 1 Gather Essence", 2, 207, 1),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Combat Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-739.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 2 Agricultural Livestock Essence", 1, 214, 2),
-            createMaterial("Lv 2 Agricultural Planting Essence", 1, 211, 2),
-            createMaterial("Lv 1 Gather Essence", 2, 207, 1),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 2 Agricultural Livestock Essence", 1, 214, 2),
-            createMaterial("Lv 2 Agricultural Planting Essence", 1, 211, 2),
-            createMaterial("Lv 1 Gather Essence", 2, 207, 1),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 2 Agricultural Livestock Essence", 1, 214, 2),
-          createMaterial("Lv 2 Agricultural Planting Essence", 1, 211, 2),
-          createMaterial("Lv 1 Gather Essence", 2, 207, 1),
-        ]),
       },
     },
     {
@@ -176,32 +194,41 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 3 Agricultural Livestock Essence", 1, 215, 3),
-          createMaterial("Lv 3 Agricultural Planting Essence", 1, 212, 3),
-          createMaterial("Lv 2 Gather Essence", 2, 208, 2),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 3 Agricultural Livestock Essence", 1, 215, 3),
+            createMaterial("Lv 3 Agricultural Planting Essence", 1, 212, 3),
+            createMaterial("Lv 2 Gather Essence", 2, 208, 2),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 3 Agricultural Livestock Essence", 1, 215, 3),
+              createMaterial("Lv 3 Agricultural Planting Essence", 1, 212, 3),
+              createMaterial("Lv 2 Gather Essence", 2, 208, 2),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 3 Agricultural Livestock Essence", 1, 215, 3),
+              createMaterial("Lv 3 Agricultural Planting Essence", 1, 212, 3),
+              createMaterial("Lv 2 Gather Essence", 2, 208, 2),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 3 Agricultural Livestock Essence", 1, 215, 3),
+            createMaterial("Lv 3 Agricultural Planting Essence", 1, 212, 3),
+            createMaterial("Lv 2 Gather Essence", 2, 208, 2),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Combat Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-740.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 3 Agricultural Livestock Essence", 1, 215, 3),
-            createMaterial("Lv 3 Agricultural Planting Essence", 1, 212, 3),
-            createMaterial("Lv 2 Gather Essence", 2, 208, 2),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 3 Agricultural Livestock Essence", 1, 215, 3),
-            createMaterial("Lv 3 Agricultural Planting Essence", 1, 212, 3),
-            createMaterial("Lv 2 Gather Essence", 2, 208, 2),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 3 Agricultural Livestock Essence", 1, 215, 3),
-          createMaterial("Lv 3 Agricultural Planting Essence", 1, 212, 3),
-          createMaterial("Lv 2 Gather Essence", 2, 208, 2),
-        ]),
       },
     },
     {
@@ -224,32 +251,41 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 4 Agricultural Livestock Essence", 1, 410, 4),
-          createMaterial("Lv 4 Agricultural Planting Essence", 1, 407, 4),
-          createMaterial("Lv 3 Gather Essence", 2, 209, 3),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 4 Agricultural Livestock Essence", 1, 410, 4),
+            createMaterial("Lv 4 Agricultural Planting Essence", 1, 407, 4),
+            createMaterial("Lv 3 Gather Essence", 2, 209, 3),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 4 Agricultural Livestock Essence", 1, 410, 4),
+              createMaterial("Lv 4 Agricultural Planting Essence", 1, 407, 4),
+              createMaterial("Lv 3 Gather Essence", 2, 209, 3),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 4 Agricultural Livestock Essence", 1, 410, 4),
+              createMaterial("Lv 4 Agricultural Planting Essence", 1, 407, 4),
+              createMaterial("Lv 3 Gather Essence", 2, 209, 3),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 4 Agricultural Livestock Essence", 1, 410, 4),
+            createMaterial("Lv 4 Agricultural Planting Essence", 1, 407, 4),
+            createMaterial("Lv 3 Gather Essence", 2, 209, 3),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Combat Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-741.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 4 Agricultural Livestock Essence", 1, 410, 4),
-            createMaterial("Lv 4 Agricultural Planting Essence", 1, 407, 4),
-            createMaterial("Lv 3 Gather Essence", 2, 209, 3),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 4 Agricultural Livestock Essence", 1, 410, 4),
-            createMaterial("Lv 4 Agricultural Planting Essence", 1, 407, 4),
-            createMaterial("Lv 3 Gather Essence", 2, 209, 3),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 4 Agricultural Livestock Essence", 1, 410, 4),
-          createMaterial("Lv 4 Agricultural Planting Essence", 1, 407, 4),
-          createMaterial("Lv 3 Gather Essence", 2, 209, 3),
-        ]),
       },
     },
     {
@@ -272,32 +308,41 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 5 Agricultural Livestock Essence", 1, 411, 5),
-          createMaterial("Lv 5 Agricultural Planting Essence", 1, 408, 5),
-          createMaterial("Lv 4 Gather Essence", 2, 404, 4),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 5 Agricultural Livestock Essence", 1, 411, 5),
+            createMaterial("Lv 5 Agricultural Planting Essence", 1, 408, 5),
+            createMaterial("Lv 4 Gather Essence", 2, 404, 4),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 5 Agricultural Livestock Essence", 1, 411, 5),
+              createMaterial("Lv 5 Agricultural Planting Essence", 1, 408, 5),
+              createMaterial("Lv 4 Gather Essence", 2, 404, 4),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 5 Agricultural Livestock Essence", 1, 411, 5),
+              createMaterial("Lv 5 Agricultural Planting Essence", 1, 408, 5),
+              createMaterial("Lv 4 Gather Essence", 2, 404, 4),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 5 Agricultural Livestock Essence", 1, 411, 5),
+            createMaterial("Lv 5 Agricultural Planting Essence", 1, 408, 5),
+            createMaterial("Lv 4 Gather Essence", 2, 404, 4),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Combat Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-742.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 5 Agricultural Livestock Essence", 1, 411, 5),
-            createMaterial("Lv 5 Agricultural Planting Essence", 1, 408, 5),
-            createMaterial("Lv 4 Gather Essence", 2, 404, 4),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 5 Agricultural Livestock Essence", 1, 411, 5),
-            createMaterial("Lv 5 Agricultural Planting Essence", 1, 408, 5),
-            createMaterial("Lv 4 Gather Essence", 2, 404, 4),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 5 Agricultural Livestock Essence", 1, 411, 5),
-          createMaterial("Lv 5 Agricultural Planting Essence", 1, 408, 5),
-          createMaterial("Lv 4 Gather Essence", 2, 404, 4),
-        ]),
       },
     },
     {
@@ -320,32 +365,41 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 6 Agricultural Livestock Essence", 1, 412, 6),
-          createMaterial("Lv 6 Agricultural Planting Essence", 1, 409, 6),
-          createMaterial("Lv 5 Gather Essence", 2, 405, 5),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 6 Agricultural Livestock Essence", 1, 412, 6),
+            createMaterial("Lv 6 Agricultural Planting Essence", 1, 409, 6),
+            createMaterial("Lv 5 Gather Essence", 2, 405, 5),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 6 Agricultural Livestock Essence", 1, 412, 6),
+              createMaterial("Lv 6 Agricultural Planting Essence", 1, 409, 6),
+              createMaterial("Lv 5 Gather Essence", 2, 405, 5),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 6 Agricultural Livestock Essence", 1, 412, 6),
+              createMaterial("Lv 6 Agricultural Planting Essence", 1, 409, 6),
+              createMaterial("Lv 5 Gather Essence", 2, 405, 5),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 6 Agricultural Livestock Essence", 1, 412, 6),
+            createMaterial("Lv 6 Agricultural Planting Essence", 1, 409, 6),
+            createMaterial("Lv 5 Gather Essence", 2, 405, 5),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Combat Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-743.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 6 Agricultural Livestock Essence", 1, 412, 6),
-            createMaterial("Lv 6 Agricultural Planting Essence", 1, 409, 6),
-            createMaterial("Lv 5 Gather Essence", 2, 405, 5),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 6 Agricultural Livestock Essence", 1, 412, 6),
-            createMaterial("Lv 6 Agricultural Planting Essence", 1, 409, 6),
-            createMaterial("Lv 5 Gather Essence", 2, 405, 5),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 6 Agricultural Livestock Essence", 1, 412, 6),
-          createMaterial("Lv 6 Agricultural Planting Essence", 1, 409, 6),
-          createMaterial("Lv 5 Gather Essence", 2, 405, 5),
-        ]),
       },
     },
     {
@@ -368,32 +422,41 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 7 Agricultural Livestock Essence", 1, 611, 7),
-          createMaterial("Lv 7 Agricultural Planting Essence", 1, 608, 7),
-          createMaterial("Lv 6 Gather Essence", 2, 406, 6),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 7 Agricultural Livestock Essence", 1, 611, 7),
+            createMaterial("Lv 7 Agricultural Planting Essence", 1, 608, 7),
+            createMaterial("Lv 6 Gather Essence", 2, 406, 6),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 7 Agricultural Livestock Essence", 1, 611, 7),
+              createMaterial("Lv 7 Agricultural Planting Essence", 1, 608, 7),
+              createMaterial("Lv 6 Gather Essence", 2, 406, 6),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 7 Agricultural Livestock Essence", 1, 611, 7),
+              createMaterial("Lv 7 Agricultural Planting Essence", 1, 608, 7),
+              createMaterial("Lv 6 Gather Essence", 2, 406, 6),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 7 Agricultural Livestock Essence", 1, 611, 7),
+            createMaterial("Lv 7 Agricultural Planting Essence", 1, 608, 7),
+            createMaterial("Lv 5 Gather Essence", 2, 405, 6),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Combat Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-744.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 7 Agricultural Livestock Essence", 1, 611, 7),
-            createMaterial("Lv 7 Agricultural Planting Essence", 1, 608, 7),
-            createMaterial("Lv 6 Gather Essence", 2, 406, 6),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 7 Agricultural Livestock Essence", 1, 611, 7),
-            createMaterial("Lv 7 Agricultural Planting Essence", 1, 608, 7),
-            createMaterial("Lv 6 Gather Essence", 2, 406, 6),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 7 Agricultural Livestock Essence", 1, 611, 7),
-          createMaterial("Lv 7 Agricultural Planting Essence", 1, 608, 7),
-          createMaterial("Lv 5 Gather Essence", 2, 405, 6),
-        ]),
       },
     },
     {
@@ -416,32 +479,41 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 8 Agricultural Livestock Essence", 1, 612, 8),
-          createMaterial("Lv 8 Agricultural Planting Essence", 1, 609, 8),
-          createMaterial("Lv 7 Gather Essence", 2, 406, 7),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 8 Agricultural Livestock Essence", 1, 612, 8),
+            createMaterial("Lv 8 Agricultural Planting Essence", 1, 609, 8),
+            createMaterial("Lv 7 Gather Essence", 2, 406, 7),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 8 Agricultural Livestock Essence", 1, 612, 8),
+              createMaterial("Lv 8 Agricultural Planting Essence", 1, 609, 8),
+              createMaterial("Lv 7 Gather Essence", 2, 406, 7),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 8 Agricultural Livestock Essence", 1, 612, 8),
+              createMaterial("Lv 8 Agricultural Planting Essence", 1, 609, 8),
+              createMaterial("Lv 7 Gather Essence", 2, 406, 7),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 8 Agricultural Livestock Essence", 1, 612, 8),
+            createMaterial("Lv 8 Agricultural Planting Essence", 1, 609, 8),
+            createMaterial("Lv 7 Gather Essence", 2, 406, 7),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Combat Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-745.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 8 Agricultural Livestock Essence", 1, 612, 8),
-            createMaterial("Lv 8 Agricultural Planting Essence", 1, 609, 8),
-            createMaterial("Lv 7 Gather Essence", 2, 406, 7),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 8 Agricultural Livestock Essence", 1, 612, 8),
-            createMaterial("Lv 8 Agricultural Planting Essence", 1, 609, 8),
-            createMaterial("Lv 7 Gather Essence", 2, 406, 7),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 8 Agricultural Livestock Essence", 1, 612, 8),
-          createMaterial("Lv 8 Agricultural Planting Essence", 1, 609, 8),
-          createMaterial("Lv 7 Gather Essence", 2, 406, 7),
-        ]),
       },
     },
     {
@@ -464,32 +536,41 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 9 Agricultural Livestock Essence", 1, 613, 9),
-          createMaterial("Lv 9 Agricultural Planting Essence", 1, 610, 9),
-          createMaterial("Lv 8 Gather Essence", 2, 606, 8),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 9 Agricultural Livestock Essence", 1, 613, 9),
+            createMaterial("Lv 9 Agricultural Planting Essence", 1, 610, 9),
+            createMaterial("Lv 8 Gather Essence", 2, 606, 8),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 9 Agricultural Livestock Essence", 1, 613, 9),
+              createMaterial("Lv 9 Agricultural Planting Essence", 1, 610, 9),
+              createMaterial("Lv 8 Gather Essence", 2, 606, 8),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 9 Agricultural Livestock Essence", 1, 613, 9),
+              createMaterial("Lv 9 Agricultural Planting Essence", 1, 610, 9),
+              createMaterial("Lv 8 Gather Essence", 2, 606, 8),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 9 Agricultural Livestock Essence", 1, 613, 9),
+            createMaterial("Lv 9 Agricultural Planting Essence", 1, 610, 9),
+            createMaterial("Lv 8 Gather Essence", 2, 606, 8),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Combat Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-746.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 9 Agricultural Livestock Essence", 1, 613, 9),
-            createMaterial("Lv 9 Agricultural Planting Essence", 1, 610, 9),
-            createMaterial("Lv 8 Gather Essence", 2, 606, 8),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 9 Agricultural Livestock Essence", 1, 613, 9),
-            createMaterial("Lv 9 Agricultural Planting Essence", 1, 610, 9),
-            createMaterial("Lv 8 Gather Essence", 2, 606, 8),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 9 Agricultural Livestock Essence", 1, 613, 9),
-          createMaterial("Lv 9 Agricultural Planting Essence", 1, 610, 9),
-          createMaterial("Lv 8 Gather Essence", 2, 606, 8),
-        ]),
       },
     },
     {
@@ -512,28 +593,37 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 1 Agricultural Livestock Essence", 1, 213, 1),
-          createMaterial("Lv 1 Agricultural Planting Essence", 1, 210, 1),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 1 Agricultural Livestock Essence", 1, 213, 1),
+            createMaterial("Lv 1 Agricultural Planting Essence", 1, 210, 1),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 1 Agricultural Livestock Essence", 1, 213, 1),
+              createMaterial("Lv 1 Agricultural Planting Essence", 1, 210, 1),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 1 Agricultural Livestock Essence", 1, 213, 1),
+              createMaterial("Lv 1 Agricultural Planting Essence", 1, 210, 1),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 1 Agricultural Livestock Essence", 1, 213, 1),
+            createMaterial("Lv 1 Agricultural Planting Essence", 1, 210, 1),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Combat Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-738.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 1 Agricultural Livestock Essence", 1, 213, 1),
-            createMaterial("Lv 1 Agricultural Planting Essence", 1, 210, 1),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 1 Agricultural Livestock Essence", 1, 213, 1),
-            createMaterial("Lv 1 Agricultural Planting Essence", 1, 210, 1),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 1 Agricultural Livestock Essence", 1, 213, 1),
-          createMaterial("Lv 1 Agricultural Planting Essence", 1, 210, 1),
-        ]),
       },
     },
     {
@@ -556,32 +646,41 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 2 Agricultural Livestock Essence", 1, 214, 2),
-          createMaterial("Lv 2 Agricultural Planting Essence", 1, 211, 2),
-          createMaterial("Lv 1 Gather Essence", 2, 207, 1),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 2 Agricultural Livestock Essence", 1, 214, 2),
+            createMaterial("Lv 2 Agricultural Planting Essence", 1, 211, 2),
+            createMaterial("Lv 1 Gather Essence", 2, 207, 1),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 2 Agricultural Livestock Essence", 1, 214, 2),
+              createMaterial("Lv 2 Agricultural Planting Essence", 1, 211, 2),
+              createMaterial("Lv 1 Gather Essence", 2, 207, 1),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 2 Agricultural Livestock Essence", 1, 214, 2),
+              createMaterial("Lv 2 Agricultural Planting Essence", 1, 211, 2),
+              createMaterial("Lv 1 Gather Essence", 2, 207, 1),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 2 Agricultural Livestock Essence", 1, 214, 2),
+            createMaterial("Lv 2 Agricultural Planting Essence", 1, 211, 2),
+            createMaterial("Lv 1 Gather Essence", 2, 207, 1),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Combat Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-739.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 2 Agricultural Livestock Essence", 1, 214, 2),
-            createMaterial("Lv 2 Agricultural Planting Essence", 1, 211, 2),
-            createMaterial("Lv 1 Gather Essence", 2, 207, 1),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 2 Agricultural Livestock Essence", 1, 214, 2),
-            createMaterial("Lv 2 Agricultural Planting Essence", 1, 211, 2),
-            createMaterial("Lv 1 Gather Essence", 2, 207, 1),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 2 Agricultural Livestock Essence", 1, 214, 2),
-          createMaterial("Lv 2 Agricultural Planting Essence", 1, 211, 2),
-          createMaterial("Lv 1 Gather Essence", 2, 207, 1),
-        ]),
       },
     },
     {
@@ -604,32 +703,41 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 3 Agricultural Livestock Essence", 1, 215, 3),
-          createMaterial("Lv 3 Agricultural Planting Essence", 1, 212, 3),
-          createMaterial("Lv 2 Gather Essence", 2, 208, 2),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 3 Agricultural Livestock Essence", 1, 215, 3),
+            createMaterial("Lv 3 Agricultural Planting Essence", 1, 212, 3),
+            createMaterial("Lv 2 Gather Essence", 2, 208, 2),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 3 Agricultural Livestock Essence", 1, 215, 3),
+              createMaterial("Lv 3 Agricultural Planting Essence", 1, 212, 3),
+              createMaterial("Lv 2 Gather Essence", 2, 208, 2),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 3 Agricultural Livestock Essence", 1, 215, 3),
+              createMaterial("Lv 3 Agricultural Planting Essence", 1, 212, 3),
+              createMaterial("Lv 2 Gather Essence", 2, 208, 2),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 3 Agricultural Livestock Essence", 1, 215, 3),
+            createMaterial("Lv 3 Agricultural Planting Essence", 1, 212, 3),
+            createMaterial("Lv 2 Gather Essence", 2, 208, 2),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Combat Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-740.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 3 Agricultural Livestock Essence", 1, 215, 3),
-            createMaterial("Lv 3 Agricultural Planting Essence", 1, 212, 3),
-            createMaterial("Lv 2 Gather Essence", 2, 208, 2),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 3 Agricultural Livestock Essence", 1, 215, 3),
-            createMaterial("Lv 3 Agricultural Planting Essence", 1, 212, 3),
-            createMaterial("Lv 2 Gather Essence", 2, 208, 2),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 3 Agricultural Livestock Essence", 1, 215, 3),
-          createMaterial("Lv 3 Agricultural Planting Essence", 1, 212, 3),
-          createMaterial("Lv 2 Gather Essence", 2, 208, 2),
-        ]),
       },
     },
     {
@@ -652,32 +760,41 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 4 Agricultural Livestock Essence", 1, 410, 4),
-          createMaterial("Lv 4 Agricultural Planting Essence", 1, 407, 4),
-          createMaterial("Lv 3 Gather Essence", 2, 209, 3),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 4 Agricultural Livestock Essence", 1, 410, 4),
+            createMaterial("Lv 4 Agricultural Planting Essence", 1, 407, 4),
+            createMaterial("Lv 3 Gather Essence", 2, 209, 3),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 4 Agricultural Livestock Essence", 1, 410, 4),
+              createMaterial("Lv 4 Agricultural Planting Essence", 1, 407, 4),
+              createMaterial("Lv 3 Gather Essence", 2, 209, 3),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 4 Agricultural Livestock Essence", 1, 410, 4),
+              createMaterial("Lv 4 Agricultural Planting Essence", 1, 407, 4),
+              createMaterial("Lv 3 Gather Essence", 2, 209, 3),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 4 Agricultural Livestock Essence", 1, 410, 4),
+            createMaterial("Lv 4 Agricultural Planting Essence", 1, 407, 4),
+            createMaterial("Lv 3 Gather Essence", 2, 209, 3),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Combat Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-741.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 4 Agricultural Livestock Essence", 1, 410, 4),
-            createMaterial("Lv 4 Agricultural Planting Essence", 1, 407, 4),
-            createMaterial("Lv 3 Gather Essence", 2, 209, 3),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 4 Agricultural Livestock Essence", 1, 410, 4),
-            createMaterial("Lv 4 Agricultural Planting Essence", 1, 407, 4),
-            createMaterial("Lv 3 Gather Essence", 2, 209, 3),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 4 Agricultural Livestock Essence", 1, 410, 4),
-          createMaterial("Lv 4 Agricultural Planting Essence", 1, 407, 4),
-          createMaterial("Lv 3 Gather Essence", 2, 209, 3),
-        ]),
       },
     },
     {
@@ -700,32 +817,41 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 5 Agricultural Livestock Essence", 1, 411, 5),
-          createMaterial("Lv 5 Agricultural Planting Essence", 1, 408, 5),
-          createMaterial("Lv 4 Gather Essence", 2, 404, 4),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 5 Agricultural Livestock Essence", 1, 411, 5),
+            createMaterial("Lv 5 Agricultural Planting Essence", 1, 408, 5),
+            createMaterial("Lv 4 Gather Essence", 2, 404, 4),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 5 Agricultural Livestock Essence", 1, 411, 5),
+              createMaterial("Lv 5 Agricultural Planting Essence", 1, 408, 5),
+              createMaterial("Lv 4 Gather Essence", 2, 404, 4),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 5 Agricultural Livestock Essence", 1, 411, 5),
+              createMaterial("Lv 5 Agricultural Planting Essence", 1, 408, 5),
+              createMaterial("Lv 4 Gather Essence", 2, 404, 4),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 5 Agricultural Livestock Essence", 1, 411, 5),
+            createMaterial("Lv 5 Agricultural Planting Essence", 1, 408, 5),
+            createMaterial("Lv 4 Gather Essence", 2, 404, 4),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Combat Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-742.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 5 Agricultural Livestock Essence", 1, 411, 5),
-            createMaterial("Lv 5 Agricultural Planting Essence", 1, 408, 5),
-            createMaterial("Lv 4 Gather Essence", 2, 404, 4),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 5 Agricultural Livestock Essence", 1, 411, 5),
-            createMaterial("Lv 5 Agricultural Planting Essence", 1, 408, 5),
-            createMaterial("Lv 4 Gather Essence", 2, 404, 4),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 5 Agricultural Livestock Essence", 1, 411, 5),
-          createMaterial("Lv 5 Agricultural Planting Essence", 1, 408, 5),
-          createMaterial("Lv 4 Gather Essence", 2, 404, 4),
-        ]),
       },
     },
     {
@@ -748,32 +874,41 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 6 Agricultural Livestock Essence", 1, 412, 6),
-          createMaterial("Lv 6 Agricultural Planting Essence", 1, 409, 6),
-          createMaterial("Lv 5 Gather Essence", 2, 405, 5),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 6 Agricultural Livestock Essence", 1, 412, 6),
+            createMaterial("Lv 6 Agricultural Planting Essence", 1, 409, 6),
+            createMaterial("Lv 5 Gather Essence", 2, 405, 5),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 6 Agricultural Livestock Essence", 1, 412, 6),
+              createMaterial("Lv 6 Agricultural Planting Essence", 1, 409, 6),
+              createMaterial("Lv 5 Gather Essence", 2, 405, 5),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 6 Agricultural Livestock Essence", 1, 412, 6),
+              createMaterial("Lv 6 Agricultural Planting Essence", 1, 409, 6),
+              createMaterial("Lv 5 Gather Essence", 2, 405, 5),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 6 Agricultural Livestock Essence", 1, 412, 6),
+            createMaterial("Lv 6 Agricultural Planting Essence", 1, 409, 6),
+            createMaterial("Lv 5 Gather Essence", 2, 405, 5),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Combat Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-743.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 6 Agricultural Livestock Essence", 1, 412, 6),
-            createMaterial("Lv 6 Agricultural Planting Essence", 1, 409, 6),
-            createMaterial("Lv 5 Gather Essence", 2, 405, 5),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 6 Agricultural Livestock Essence", 1, 412, 6),
-            createMaterial("Lv 6 Agricultural Planting Essence", 1, 409, 6),
-            createMaterial("Lv 5 Gather Essence", 2, 405, 5),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 6 Agricultural Livestock Essence", 1, 412, 6),
-          createMaterial("Lv 6 Agricultural Planting Essence", 1, 409, 6),
-          createMaterial("Lv 5 Gather Essence", 2, 405, 5),
-        ]),
       },
     },
     {
@@ -796,32 +931,41 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 7 Agricultural Livestock Essence", 1, 611, 7),
-          createMaterial("Lv 7 Agricultural Planting Essence", 1, 608, 7),
-          createMaterial("Lv 6 Gather Essence", 2, 406, 6),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 7 Agricultural Livestock Essence", 1, 611, 7),
+            createMaterial("Lv 7 Agricultural Planting Essence", 1, 608, 7),
+            createMaterial("Lv 6 Gather Essence", 2, 406, 6),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 7 Agricultural Livestock Essence", 1, 611, 7),
+              createMaterial("Lv 7 Agricultural Planting Essence", 1, 608, 7),
+              createMaterial("Lv 6 Gather Essence", 2, 406, 6),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 7 Agricultural Livestock Essence", 1, 611, 7),
+              createMaterial("Lv 7 Agricultural Planting Essence", 1, 608, 7),
+              createMaterial("Lv 6 Gather Essence", 2, 406, 6),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 7 Agricultural Livestock Essence", 1, 611, 7),
+            createMaterial("Lv 7 Agricultural Planting Essence", 1, 608, 7),
+            createMaterial("Lv 5 Gather Essence", 2, 405, 6),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Combat Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-744.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 7 Agricultural Livestock Essence", 1, 611, 7),
-            createMaterial("Lv 7 Agricultural Planting Essence", 1, 608, 7),
-            createMaterial("Lv 6 Gather Essence", 2, 406, 6),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 7 Agricultural Livestock Essence", 1, 611, 7),
-            createMaterial("Lv 7 Agricultural Planting Essence", 1, 608, 7),
-            createMaterial("Lv 6 Gather Essence", 2, 406, 6),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 7 Agricultural Livestock Essence", 1, 611, 7),
-          createMaterial("Lv 7 Agricultural Planting Essence", 1, 608, 7),
-          createMaterial("Lv 5 Gather Essence", 2, 405, 6),
-        ]),
       },
     },
     {
@@ -844,32 +988,41 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 8 Agricultural Livestock Essence", 1, 612, 8),
-          createMaterial("Lv 8 Agricultural Planting Essence", 1, 609, 8),
-          createMaterial("Lv 7 Gather Essence", 2, 406, 7),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 8 Agricultural Livestock Essence", 1, 612, 8),
+            createMaterial("Lv 8 Agricultural Planting Essence", 1, 609, 8),
+            createMaterial("Lv 7 Gather Essence", 2, 406, 7),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 8 Agricultural Livestock Essence", 1, 612, 8),
+              createMaterial("Lv 8 Agricultural Planting Essence", 1, 609, 8),
+              createMaterial("Lv 7 Gather Essence", 2, 406, 7),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 8 Agricultural Livestock Essence", 1, 612, 8),
+              createMaterial("Lv 8 Agricultural Planting Essence", 1, 609, 8),
+              createMaterial("Lv 7 Gather Essence", 2, 406, 7),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 8 Agricultural Livestock Essence", 1, 612, 8),
+            createMaterial("Lv 8 Agricultural Planting Essence", 1, 609, 8),
+            createMaterial("Lv 7 Gather Essence", 2, 406, 7),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Combat Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-745.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 8 Agricultural Livestock Essence", 1, 612, 8),
-            createMaterial("Lv 8 Agricultural Planting Essence", 1, 609, 8),
-            createMaterial("Lv 7 Gather Essence", 2, 406, 7),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 8 Agricultural Livestock Essence", 1, 612, 8),
-            createMaterial("Lv 8 Agricultural Planting Essence", 1, 609, 8),
-            createMaterial("Lv 7 Gather Essence", 2, 406, 7),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 8 Agricultural Livestock Essence", 1, 612, 8),
-          createMaterial("Lv 8 Agricultural Planting Essence", 1, 609, 8),
-          createMaterial("Lv 7 Gather Essence", 2, 406, 7),
-        ]),
       },
     },
     {
@@ -892,32 +1045,41 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 9 Agricultural Livestock Essence", 1, 613, 9),
-          createMaterial("Lv 9 Agricultural Planting Essence", 1, 610, 9),
-          createMaterial("Lv 8 Gather Essence", 2, 606, 8),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 9 Agricultural Livestock Essence", 1, 613, 9),
+            createMaterial("Lv 9 Agricultural Planting Essence", 1, 610, 9),
+            createMaterial("Lv 8 Gather Essence", 2, 606, 8),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 9 Agricultural Livestock Essence", 1, 613, 9),
+              createMaterial("Lv 9 Agricultural Planting Essence", 1, 610, 9),
+              createMaterial("Lv 8 Gather Essence", 2, 606, 8),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 9 Agricultural Livestock Essence", 1, 613, 9),
+              createMaterial("Lv 9 Agricultural Planting Essence", 1, 610, 9),
+              createMaterial("Lv 8 Gather Essence", 2, 606, 8),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 9 Agricultural Livestock Essence", 1, 613, 9),
+            createMaterial("Lv 9 Agricultural Planting Essence", 1, 610, 9),
+            createMaterial("Lv 8 Gather Essence", 2, 606, 8),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Combat Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-746.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 9 Agricultural Livestock Essence", 1, 613, 9),
-            createMaterial("Lv 9 Agricultural Planting Essence", 1, 610, 9),
-            createMaterial("Lv 8 Gather Essence", 2, 606, 8),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 9 Agricultural Livestock Essence", 1, 613, 9),
-            createMaterial("Lv 9 Agricultural Planting Essence", 1, 610, 9),
-            createMaterial("Lv 8 Gather Essence", 2, 606, 8),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 9 Agricultural Livestock Essence", 1, 613, 9),
-          createMaterial("Lv 9 Agricultural Planting Essence", 1, 610, 9),
-          createMaterial("Lv 8 Gather Essence", 2, 606, 8),
-        ]),
       },
     },
     {
@@ -940,28 +1102,37 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 1 Agricultural Livestock Essence", 1, 213, 1),
-          createMaterial("Lv 1 Agricultural Planting Essence", 1, 210, 1),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 1 Agricultural Livestock Essence", 1, 213, 1),
+            createMaterial("Lv 1 Agricultural Planting Essence", 1, 210, 1),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 1 Agricultural Livestock Essence", 1, 213, 1),
+              createMaterial("Lv 1 Agricultural Planting Essence", 1, 210, 1),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 1 Agricultural Livestock Essence", 1, 213, 1),
+              createMaterial("Lv 1 Agricultural Planting Essence", 1, 210, 1),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 1 Agricultural Livestock Essence", 1, 213, 1),
+            createMaterial("Lv 1 Agricultural Planting Essence", 1, 210, 1),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Combat Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-738.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 1 Agricultural Livestock Essence", 1, 213, 1),
-            createMaterial("Lv 1 Agricultural Planting Essence", 1, 210, 1),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 1 Agricultural Livestock Essence", 1, 213, 1),
-            createMaterial("Lv 1 Agricultural Planting Essence", 1, 210, 1),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 1 Agricultural Livestock Essence", 1, 213, 1),
-          createMaterial("Lv 1 Agricultural Planting Essence", 1, 210, 1),
-        ]),
       },
     },
     {
@@ -984,32 +1155,41 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 2 Agricultural Livestock Essence", 1, 214, 2),
-          createMaterial("Lv 2 Agricultural Planting Essence", 1, 211, 2),
-          createMaterial("Lv 1 Gather Essence", 2, 207, 1),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 2 Agricultural Livestock Essence", 1, 214, 2),
+            createMaterial("Lv 2 Agricultural Planting Essence", 1, 211, 2),
+            createMaterial("Lv 1 Gather Essence", 2, 207, 1),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 2 Agricultural Livestock Essence", 1, 214, 2),
+              createMaterial("Lv 2 Agricultural Planting Essence", 1, 211, 2),
+              createMaterial("Lv 1 Gather Essence", 2, 207, 1),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 2 Agricultural Livestock Essence", 1, 214, 2),
+              createMaterial("Lv 2 Agricultural Planting Essence", 1, 211, 2),
+              createMaterial("Lv 1 Gather Essence", 2, 207, 1),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 2 Agricultural Livestock Essence", 1, 214, 2),
+            createMaterial("Lv 2 Agricultural Planting Essence", 1, 211, 2),
+            createMaterial("Lv 1 Gather Essence", 2, 207, 1),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Combat Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-739.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 2 Agricultural Livestock Essence", 1, 214, 2),
-            createMaterial("Lv 2 Agricultural Planting Essence", 1, 211, 2),
-            createMaterial("Lv 1 Gather Essence", 2, 207, 1),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 2 Agricultural Livestock Essence", 1, 214, 2),
-            createMaterial("Lv 2 Agricultural Planting Essence", 1, 211, 2),
-            createMaterial("Lv 1 Gather Essence", 2, 207, 1),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 2 Agricultural Livestock Essence", 1, 214, 2),
-          createMaterial("Lv 2 Agricultural Planting Essence", 1, 211, 2),
-          createMaterial("Lv 1 Gather Essence", 2, 207, 1),
-        ]),
       },
     },
     {
@@ -1032,32 +1212,41 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 3 Agricultural Livestock Essence", 1, 215, 3),
-          createMaterial("Lv 3 Agricultural Planting Essence", 1, 212, 3),
-          createMaterial("Lv 2 Gather Essence", 2, 208, 2),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 3 Agricultural Livestock Essence", 1, 215, 3),
+            createMaterial("Lv 3 Agricultural Planting Essence", 1, 212, 3),
+            createMaterial("Lv 2 Gather Essence", 2, 208, 2),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 3 Agricultural Livestock Essence", 1, 215, 3),
+              createMaterial("Lv 3 Agricultural Planting Essence", 1, 212, 3),
+              createMaterial("Lv 2 Gather Essence", 2, 208, 2),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 3 Agricultural Livestock Essence", 1, 215, 3),
+              createMaterial("Lv 3 Agricultural Planting Essence", 1, 212, 3),
+              createMaterial("Lv 2 Gather Essence", 2, 208, 2),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 3 Agricultural Livestock Essence", 1, 215, 3),
+            createMaterial("Lv 3 Agricultural Planting Essence", 1, 212, 3),
+            createMaterial("Lv 2 Gather Essence", 2, 208, 2),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Combat Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-740.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 3 Agricultural Livestock Essence", 1, 215, 3),
-            createMaterial("Lv 3 Agricultural Planting Essence", 1, 212, 3),
-            createMaterial("Lv 2 Gather Essence", 2, 208, 2),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 3 Agricultural Livestock Essence", 1, 215, 3),
-            createMaterial("Lv 3 Agricultural Planting Essence", 1, 212, 3),
-            createMaterial("Lv 2 Gather Essence", 2, 208, 2),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 3 Agricultural Livestock Essence", 1, 215, 3),
-          createMaterial("Lv 3 Agricultural Planting Essence", 1, 212, 3),
-          createMaterial("Lv 2 Gather Essence", 2, 208, 2),
-        ]),
       },
     },
     {
@@ -1080,32 +1269,41 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 4 Agricultural Livestock Essence", 1, 410, 4),
-          createMaterial("Lv 4 Agricultural Planting Essence", 1, 407, 4),
-          createMaterial("Lv 3 Gather Essence", 2, 209, 3),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 4 Agricultural Livestock Essence", 1, 410, 4),
+            createMaterial("Lv 4 Agricultural Planting Essence", 1, 407, 4),
+            createMaterial("Lv 3 Gather Essence", 2, 209, 3),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 4 Agricultural Livestock Essence", 1, 410, 4),
+              createMaterial("Lv 4 Agricultural Planting Essence", 1, 407, 4),
+              createMaterial("Lv 3 Gather Essence", 2, 209, 3),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 4 Agricultural Livestock Essence", 1, 410, 4),
+              createMaterial("Lv 4 Agricultural Planting Essence", 1, 407, 4),
+              createMaterial("Lv 3 Gather Essence", 2, 209, 3),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 4 Agricultural Livestock Essence", 1, 410, 4),
+            createMaterial("Lv 4 Agricultural Planting Essence", 1, 407, 4),
+            createMaterial("Lv 3 Gather Essence", 2, 209, 3),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Combat Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-741.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 4 Agricultural Livestock Essence", 1, 410, 4),
-            createMaterial("Lv 4 Agricultural Planting Essence", 1, 407, 4),
-            createMaterial("Lv 3 Gather Essence", 2, 209, 3),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 4 Agricultural Livestock Essence", 1, 410, 4),
-            createMaterial("Lv 4 Agricultural Planting Essence", 1, 407, 4),
-            createMaterial("Lv 3 Gather Essence", 2, 209, 3),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 4 Agricultural Livestock Essence", 1, 410, 4),
-          createMaterial("Lv 4 Agricultural Planting Essence", 1, 407, 4),
-          createMaterial("Lv 3 Gather Essence", 2, 209, 3),
-        ]),
       },
     },
     {
@@ -1128,32 +1326,41 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 5 Agricultural Livestock Essence", 1, 411, 5),
-          createMaterial("Lv 5 Agricultural Planting Essence", 1, 408, 5),
-          createMaterial("Lv 4 Gather Essence", 2, 404, 4),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 5 Agricultural Livestock Essence", 1, 411, 5),
+            createMaterial("Lv 5 Agricultural Planting Essence", 1, 408, 5),
+            createMaterial("Lv 4 Gather Essence", 2, 404, 4),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 5 Agricultural Livestock Essence", 1, 411, 5),
+              createMaterial("Lv 5 Agricultural Planting Essence", 1, 408, 5),
+              createMaterial("Lv 4 Gather Essence", 2, 404, 4),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 5 Agricultural Livestock Essence", 1, 411, 5),
+              createMaterial("Lv 5 Agricultural Planting Essence", 1, 408, 5),
+              createMaterial("Lv 4 Gather Essence", 2, 404, 4),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 5 Agricultural Livestock Essence", 1, 411, 5),
+            createMaterial("Lv 5 Agricultural Planting Essence", 1, 408, 5),
+            createMaterial("Lv 4 Gather Essence", 2, 404, 4),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Combat Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-742.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 5 Agricultural Livestock Essence", 1, 411, 5),
-            createMaterial("Lv 5 Agricultural Planting Essence", 1, 408, 5),
-            createMaterial("Lv 4 Gather Essence", 2, 404, 4),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 5 Agricultural Livestock Essence", 1, 411, 5),
-            createMaterial("Lv 5 Agricultural Planting Essence", 1, 408, 5),
-            createMaterial("Lv 4 Gather Essence", 2, 404, 4),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 5 Agricultural Livestock Essence", 1, 411, 5),
-          createMaterial("Lv 5 Agricultural Planting Essence", 1, 408, 5),
-          createMaterial("Lv 4 Gather Essence", 2, 404, 4),
-        ]),
       },
     },
     {
@@ -1176,32 +1383,41 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 6 Agricultural Livestock Essence", 1, 412, 6),
-          createMaterial("Lv 6 Agricultural Planting Essence", 1, 409, 6),
-          createMaterial("Lv 5 Gather Essence", 2, 405, 5),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 6 Agricultural Livestock Essence", 1, 412, 6),
+            createMaterial("Lv 6 Agricultural Planting Essence", 1, 409, 6),
+            createMaterial("Lv 5 Gather Essence", 2, 405, 5),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 6 Agricultural Livestock Essence", 1, 412, 6),
+              createMaterial("Lv 6 Agricultural Planting Essence", 1, 409, 6),
+              createMaterial("Lv 5 Gather Essence", 2, 405, 5),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 6 Agricultural Livestock Essence", 1, 412, 6),
+              createMaterial("Lv 6 Agricultural Planting Essence", 1, 409, 6),
+              createMaterial("Lv 5 Gather Essence", 2, 405, 5),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 6 Agricultural Livestock Essence", 1, 412, 6),
+            createMaterial("Lv 6 Agricultural Planting Essence", 1, 409, 6),
+            createMaterial("Lv 5 Gather Essence", 2, 405, 5),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Combat Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-743.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 6 Agricultural Livestock Essence", 1, 412, 6),
-            createMaterial("Lv 6 Agricultural Planting Essence", 1, 409, 6),
-            createMaterial("Lv 5 Gather Essence", 2, 405, 5),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 6 Agricultural Livestock Essence", 1, 412, 6),
-            createMaterial("Lv 6 Agricultural Planting Essence", 1, 409, 6),
-            createMaterial("Lv 5 Gather Essence", 2, 405, 5),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 6 Agricultural Livestock Essence", 1, 412, 6),
-          createMaterial("Lv 6 Agricultural Planting Essence", 1, 409, 6),
-          createMaterial("Lv 5 Gather Essence", 2, 405, 5),
-        ]),
       },
     },
     {
@@ -1224,32 +1440,41 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 7 Agricultural Livestock Essence", 1, 611, 7),
-          createMaterial("Lv 7 Agricultural Planting Essence", 1, 608, 7),
-          createMaterial("Lv 6 Gather Essence", 2, 406, 6),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 7 Agricultural Livestock Essence", 1, 611, 7),
+            createMaterial("Lv 7 Agricultural Planting Essence", 1, 608, 7),
+            createMaterial("Lv 6 Gather Essence", 2, 406, 6),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 7 Agricultural Livestock Essence", 1, 611, 7),
+              createMaterial("Lv 7 Agricultural Planting Essence", 1, 608, 7),
+              createMaterial("Lv 6 Gather Essence", 2, 406, 6),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 7 Agricultural Livestock Essence", 1, 611, 7),
+              createMaterial("Lv 7 Agricultural Planting Essence", 1, 608, 7),
+              createMaterial("Lv 6 Gather Essence", 2, 406, 6),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 7 Agricultural Livestock Essence", 1, 611, 7),
+            createMaterial("Lv 7 Agricultural Planting Essence", 1, 608, 7),
+            createMaterial("Lv 5 Gather Essence", 2, 405, 6),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Combat Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-744.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 7 Agricultural Livestock Essence", 1, 611, 7),
-            createMaterial("Lv 7 Agricultural Planting Essence", 1, 608, 7),
-            createMaterial("Lv 6 Gather Essence", 2, 406, 6),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 7 Agricultural Livestock Essence", 1, 611, 7),
-            createMaterial("Lv 7 Agricultural Planting Essence", 1, 608, 7),
-            createMaterial("Lv 6 Gather Essence", 2, 406, 6),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 7 Agricultural Livestock Essence", 1, 611, 7),
-          createMaterial("Lv 7 Agricultural Planting Essence", 1, 608, 7),
-          createMaterial("Lv 5 Gather Essence", 2, 405, 6),
-        ]),
       },
     },
     {
@@ -1272,32 +1497,41 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 8 Agricultural Livestock Essence", 1, 612, 8),
-          createMaterial("Lv 8 Agricultural Planting Essence", 1, 609, 8),
-          createMaterial("Lv 7 Gather Essence", 2, 406, 7),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 8 Agricultural Livestock Essence", 1, 612, 8),
+            createMaterial("Lv 8 Agricultural Planting Essence", 1, 609, 8),
+            createMaterial("Lv 7 Gather Essence", 2, 406, 7),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 8 Agricultural Livestock Essence", 1, 612, 8),
+              createMaterial("Lv 8 Agricultural Planting Essence", 1, 609, 8),
+              createMaterial("Lv 7 Gather Essence", 2, 406, 7),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 8 Agricultural Livestock Essence", 1, 612, 8),
+              createMaterial("Lv 8 Agricultural Planting Essence", 1, 609, 8),
+              createMaterial("Lv 7 Gather Essence", 2, 406, 7),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 8 Agricultural Livestock Essence", 1, 612, 8),
+            createMaterial("Lv 8 Agricultural Planting Essence", 1, 609, 8),
+            createMaterial("Lv 7 Gather Essence", 2, 406, 7),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Combat Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-745.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 8 Agricultural Livestock Essence", 1, 612, 8),
-            createMaterial("Lv 8 Agricultural Planting Essence", 1, 609, 8),
-            createMaterial("Lv 7 Gather Essence", 2, 406, 7),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 8 Agricultural Livestock Essence", 1, 612, 8),
-            createMaterial("Lv 8 Agricultural Planting Essence", 1, 609, 8),
-            createMaterial("Lv 7 Gather Essence", 2, 406, 7),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 8 Agricultural Livestock Essence", 1, 612, 8),
-          createMaterial("Lv 8 Agricultural Planting Essence", 1, 609, 8),
-          createMaterial("Lv 7 Gather Essence", 2, 406, 7),
-        ]),
       },
     },
     {
@@ -1320,32 +1554,41 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 9 Agricultural Livestock Essence", 1, 613, 9),
-          createMaterial("Lv 9 Agricultural Planting Essence", 1, 610, 9),
-          createMaterial("Lv 8 Gather Essence", 2, 606, 8),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 9 Agricultural Livestock Essence", 1, 613, 9),
+            createMaterial("Lv 9 Agricultural Planting Essence", 1, 610, 9),
+            createMaterial("Lv 8 Gather Essence", 2, 606, 8),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 9 Agricultural Livestock Essence", 1, 613, 9),
+              createMaterial("Lv 9 Agricultural Planting Essence", 1, 610, 9),
+              createMaterial("Lv 8 Gather Essence", 2, 606, 8),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 9 Agricultural Livestock Essence", 1, 613, 9),
+              createMaterial("Lv 9 Agricultural Planting Essence", 1, 610, 9),
+              createMaterial("Lv 8 Gather Essence", 2, 606, 8),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 9 Agricultural Livestock Essence", 1, 613, 9),
+            createMaterial("Lv 9 Agricultural Planting Essence", 1, 610, 9),
+            createMaterial("Lv 8 Gather Essence", 2, 606, 8),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Combat Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-746.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 9 Agricultural Livestock Essence", 1, 613, 9),
-            createMaterial("Lv 9 Agricultural Planting Essence", 1, 610, 9),
-            createMaterial("Lv 8 Gather Essence", 2, 606, 8),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 9 Agricultural Livestock Essence", 1, 613, 9),
-            createMaterial("Lv 9 Agricultural Planting Essence", 1, 610, 9),
-            createMaterial("Lv 8 Gather Essence", 2, 606, 8),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 9 Agricultural Livestock Essence", 1, 613, 9),
-          createMaterial("Lv 9 Agricultural Planting Essence", 1, 610, 9),
-          createMaterial("Lv 8 Gather Essence", 2, 606, 8),
-        ]),
       },
     },
     {
@@ -1364,28 +1607,37 @@ const itemsData = {
         { name: "Maxhp", typeNumber: "integer", values: { min: 36, max: 110 } },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 1 Agricultural Livestock Essence", 1, 213, 1),
-          createMaterial("Lv 1 Agricultural Planting Essence", 1, 210, 1),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 1 Agricultural Livestock Essence", 1, 213, 1),
+            createMaterial("Lv 1 Agricultural Planting Essence", 1, 210, 1),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 1 Agricultural Livestock Essence", 1, 213, 1),
+              createMaterial("Lv 1 Agricultural Planting Essence", 1, 210, 1),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 1 Agricultural Livestock Essence", 1, 213, 1),
+              createMaterial("Lv 1 Agricultural Planting Essence", 1, 210, 1),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 1 Agricultural Livestock Essence", 1, 213, 1),
+            createMaterial("Lv 1 Agricultural Planting Essence", 1, 210, 1),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Combat Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-738.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 1 Agricultural Livestock Essence", 1, 213, 1),
-            createMaterial("Lv 1 Agricultural Planting Essence", 1, 210, 1),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 1 Agricultural Livestock Essence", 1, 213, 1),
-            createMaterial("Lv 1 Agricultural Planting Essence", 1, 210, 1),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 1 Agricultural Livestock Essence", 1, 213, 1),
-          createMaterial("Lv 1 Agricultural Planting Essence", 1, 210, 1),
-        ]),
       },
     },
     {
@@ -1412,32 +1664,41 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 2 Agricultural Livestock Essence", 1, 214, 2),
-          createMaterial("Lv 2 Agricultural Planting Essence", 1, 211, 2),
-          createMaterial("Lv 1 Gather Essence", 2, 207, 1),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 2 Agricultural Livestock Essence", 1, 214, 2),
+            createMaterial("Lv 2 Agricultural Planting Essence", 1, 211, 2),
+            createMaterial("Lv 1 Gather Essence", 2, 207, 1),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 2 Agricultural Livestock Essence", 1, 214, 2),
+              createMaterial("Lv 2 Agricultural Planting Essence", 1, 211, 2),
+              createMaterial("Lv 1 Gather Essence", 2, 207, 1),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 2 Agricultural Livestock Essence", 1, 214, 2),
+              createMaterial("Lv 2 Agricultural Planting Essence", 1, 211, 2),
+              createMaterial("Lv 1 Gather Essence", 2, 207, 1),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 2 Agricultural Livestock Essence", 1, 214, 2),
+            createMaterial("Lv 2 Agricultural Planting Essence", 1, 211, 2),
+            createMaterial("Lv 1 Gather Essence", 2, 207, 1),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Combat Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-739.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 2 Agricultural Livestock Essence", 1, 214, 2),
-            createMaterial("Lv 2 Agricultural Planting Essence", 1, 211, 2),
-            createMaterial("Lv 1 Gather Essence", 2, 207, 1),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 2 Agricultural Livestock Essence", 1, 214, 2),
-            createMaterial("Lv 2 Agricultural Planting Essence", 1, 211, 2),
-            createMaterial("Lv 1 Gather Essence", 2, 207, 1),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 2 Agricultural Livestock Essence", 1, 214, 2),
-          createMaterial("Lv 2 Agricultural Planting Essence", 1, 211, 2),
-          createMaterial("Lv 1 Gather Essence", 2, 207, 1),
-        ]),
       },
     },
     {
@@ -1464,32 +1725,41 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 3 Agricultural Livestock Essence", 1, 215, 3),
-          createMaterial("Lv 3 Agricultural Planting Essence", 1, 212, 3),
-          createMaterial("Lv 2 Gather Essence", 2, 208, 2),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 3 Agricultural Livestock Essence", 1, 215, 3),
+            createMaterial("Lv 3 Agricultural Planting Essence", 1, 212, 3),
+            createMaterial("Lv 2 Gather Essence", 2, 208, 2),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 3 Agricultural Livestock Essence", 1, 215, 3),
+              createMaterial("Lv 3 Agricultural Planting Essence", 1, 212, 3),
+              createMaterial("Lv 2 Gather Essence", 2, 208, 2),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 3 Agricultural Livestock Essence", 1, 215, 3),
+              createMaterial("Lv 3 Agricultural Planting Essence", 1, 212, 3),
+              createMaterial("Lv 2 Gather Essence", 2, 208, 2),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 3 Agricultural Livestock Essence", 1, 215, 3),
+            createMaterial("Lv 3 Agricultural Planting Essence", 1, 212, 3),
+            createMaterial("Lv 2 Gather Essence", 2, 208, 2),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Combat Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-740.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 3 Agricultural Livestock Essence", 1, 215, 3),
-            createMaterial("Lv 3 Agricultural Planting Essence", 1, 212, 3),
-            createMaterial("Lv 2 Gather Essence", 2, 208, 2),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 3 Agricultural Livestock Essence", 1, 215, 3),
-            createMaterial("Lv 3 Agricultural Planting Essence", 1, 212, 3),
-            createMaterial("Lv 2 Gather Essence", 2, 208, 2),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 3 Agricultural Livestock Essence", 1, 215, 3),
-          createMaterial("Lv 3 Agricultural Planting Essence", 1, 212, 3),
-          createMaterial("Lv 2 Gather Essence", 2, 208, 2),
-        ]),
       },
     },
     {
@@ -1516,32 +1786,41 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 4 Agricultural Livestock Essence", 1, 410, 4),
-          createMaterial("Lv 4 Agricultural Planting Essence", 1, 407, 4),
-          createMaterial("Lv 3 Gather Essence", 2, 209, 3),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 4 Agricultural Livestock Essence", 1, 410, 4),
+            createMaterial("Lv 4 Agricultural Planting Essence", 1, 407, 4),
+            createMaterial("Lv 3 Gather Essence", 2, 209, 3),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 4 Agricultural Livestock Essence", 1, 410, 4),
+              createMaterial("Lv 4 Agricultural Planting Essence", 1, 407, 4),
+              createMaterial("Lv 3 Gather Essence", 2, 209, 3),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 4 Agricultural Livestock Essence", 1, 410, 4),
+              createMaterial("Lv 4 Agricultural Planting Essence", 1, 407, 4),
+              createMaterial("Lv 3 Gather Essence", 2, 209, 3),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 4 Agricultural Livestock Essence", 1, 410, 4),
+            createMaterial("Lv 4 Agricultural Planting Essence", 1, 407, 4),
+            createMaterial("Lv 3 Gather Essence", 2, 209, 3),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Combat Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-741.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 4 Agricultural Livestock Essence", 1, 410, 4),
-            createMaterial("Lv 4 Agricultural Planting Essence", 1, 407, 4),
-            createMaterial("Lv 3 Gather Essence", 2, 209, 3),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 4 Agricultural Livestock Essence", 1, 410, 4),
-            createMaterial("Lv 4 Agricultural Planting Essence", 1, 407, 4),
-            createMaterial("Lv 3 Gather Essence", 2, 209, 3),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 4 Agricultural Livestock Essence", 1, 410, 4),
-          createMaterial("Lv 4 Agricultural Planting Essence", 1, 407, 4),
-          createMaterial("Lv 3 Gather Essence", 2, 209, 3),
-        ]),
       },
     },
     {
@@ -1568,32 +1847,41 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 5 Agricultural Livestock Essence", 1, 411, 5),
-          createMaterial("Lv 5 Agricultural Planting Essence", 1, 408, 5),
-          createMaterial("Lv 4 Gather Essence", 2, 404, 4),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 5 Agricultural Livestock Essence", 1, 411, 5),
+            createMaterial("Lv 5 Agricultural Planting Essence", 1, 408, 5),
+            createMaterial("Lv 4 Gather Essence", 2, 404, 4),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 5 Agricultural Livestock Essence", 1, 411, 5),
+              createMaterial("Lv 5 Agricultural Planting Essence", 1, 408, 5),
+              createMaterial("Lv 4 Gather Essence", 2, 404, 4),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 5 Agricultural Livestock Essence", 1, 411, 5),
+              createMaterial("Lv 5 Agricultural Planting Essence", 1, 408, 5),
+              createMaterial("Lv 4 Gather Essence", 2, 404, 4),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 5 Agricultural Livestock Essence", 1, 411, 5),
+            createMaterial("Lv 5 Agricultural Planting Essence", 1, 408, 5),
+            createMaterial("Lv 4 Gather Essence", 2, 404, 4),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Combat Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-742.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 5 Agricultural Livestock Essence", 1, 411, 5),
-            createMaterial("Lv 5 Agricultural Planting Essence", 1, 408, 5),
-            createMaterial("Lv 4 Gather Essence", 2, 404, 4),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 5 Agricultural Livestock Essence", 1, 411, 5),
-            createMaterial("Lv 5 Agricultural Planting Essence", 1, 408, 5),
-            createMaterial("Lv 4 Gather Essence", 2, 404, 4),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 5 Agricultural Livestock Essence", 1, 411, 5),
-          createMaterial("Lv 5 Agricultural Planting Essence", 1, 408, 5),
-          createMaterial("Lv 4 Gather Essence", 2, 404, 4),
-        ]),
       },
     },
     {
@@ -1620,32 +1908,41 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 6 Agricultural Livestock Essence", 1, 412, 6),
-          createMaterial("Lv 6 Agricultural Planting Essence", 1, 409, 6),
-          createMaterial("Lv 5 Gather Essence", 2, 405, 5),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 6 Agricultural Livestock Essence", 1, 412, 6),
+            createMaterial("Lv 6 Agricultural Planting Essence", 1, 409, 6),
+            createMaterial("Lv 5 Gather Essence", 2, 405, 5),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 6 Agricultural Livestock Essence", 1, 412, 6),
+              createMaterial("Lv 6 Agricultural Planting Essence", 1, 409, 6),
+              createMaterial("Lv 5 Gather Essence", 2, 405, 5),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 6 Agricultural Livestock Essence", 1, 412, 6),
+              createMaterial("Lv 6 Agricultural Planting Essence", 1, 409, 6),
+              createMaterial("Lv 5 Gather Essence", 2, 405, 5),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 6 Agricultural Livestock Essence", 1, 412, 6),
+            createMaterial("Lv 6 Agricultural Planting Essence", 1, 409, 6),
+            createMaterial("Lv 5 Gather Essence", 2, 405, 5),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Combat Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-743.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 6 Agricultural Livestock Essence", 1, 412, 6),
-            createMaterial("Lv 6 Agricultural Planting Essence", 1, 409, 6),
-            createMaterial("Lv 5 Gather Essence", 2, 405, 5),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 6 Agricultural Livestock Essence", 1, 412, 6),
-            createMaterial("Lv 6 Agricultural Planting Essence", 1, 409, 6),
-            createMaterial("Lv 5 Gather Essence", 2, 405, 5),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 6 Agricultural Livestock Essence", 1, 412, 6),
-          createMaterial("Lv 6 Agricultural Planting Essence", 1, 409, 6),
-          createMaterial("Lv 5 Gather Essence", 2, 405, 5),
-        ]),
       },
     },
     {
@@ -1672,32 +1969,41 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 7 Agricultural Livestock Essence", 1, 611, 7),
-          createMaterial("Lv 7 Agricultural Planting Essence", 1, 608, 7),
-          createMaterial("Lv 6 Gather Essence", 2, 406, 6),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 7 Agricultural Livestock Essence", 1, 611, 7),
+            createMaterial("Lv 7 Agricultural Planting Essence", 1, 608, 7),
+            createMaterial("Lv 6 Gather Essence", 2, 406, 6),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 7 Agricultural Livestock Essence", 1, 611, 7),
+              createMaterial("Lv 7 Agricultural Planting Essence", 1, 608, 7),
+              createMaterial("Lv 6 Gather Essence", 2, 406, 6),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 7 Agricultural Livestock Essence", 1, 611, 7),
+              createMaterial("Lv 7 Agricultural Planting Essence", 1, 608, 7),
+              createMaterial("Lv 6 Gather Essence", 2, 406, 6),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 7 Agricultural Livestock Essence", 1, 611, 7),
+            createMaterial("Lv 7 Agricultural Planting Essence", 1, 608, 7),
+            createMaterial("Lv 5 Gather Essence", 2, 405, 6),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Combat Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-744.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 7 Agricultural Livestock Essence", 1, 611, 7),
-            createMaterial("Lv 7 Agricultural Planting Essence", 1, 608, 7),
-            createMaterial("Lv 6 Gather Essence", 2, 406, 6),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 7 Agricultural Livestock Essence", 1, 611, 7),
-            createMaterial("Lv 7 Agricultural Planting Essence", 1, 608, 7),
-            createMaterial("Lv 6 Gather Essence", 2, 406, 6),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 7 Agricultural Livestock Essence", 1, 611, 7),
-          createMaterial("Lv 7 Agricultural Planting Essence", 1, 608, 7),
-          createMaterial("Lv 5 Gather Essence", 2, 405, 6),
-        ]),
       },
     },
     {
@@ -1724,32 +2030,41 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 8 Agricultural Livestock Essence", 1, 612, 8),
-          createMaterial("Lv 8 Agricultural Planting Essence", 1, 609, 8),
-          createMaterial("Lv 7 Gather Essence", 2, 406, 7),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 8 Agricultural Livestock Essence", 1, 612, 8),
+            createMaterial("Lv 8 Agricultural Planting Essence", 1, 609, 8),
+            createMaterial("Lv 7 Gather Essence", 2, 406, 7),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 8 Agricultural Livestock Essence", 1, 612, 8),
+              createMaterial("Lv 8 Agricultural Planting Essence", 1, 609, 8),
+              createMaterial("Lv 7 Gather Essence", 2, 406, 7),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 8 Agricultural Livestock Essence", 1, 612, 8),
+              createMaterial("Lv 8 Agricultural Planting Essence", 1, 609, 8),
+              createMaterial("Lv 7 Gather Essence", 2, 406, 7),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 8 Agricultural Livestock Essence", 1, 612, 8),
+            createMaterial("Lv 8 Agricultural Planting Essence", 1, 609, 8),
+            createMaterial("Lv 7 Gather Essence", 2, 406, 7),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Combat Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-745.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 8 Agricultural Livestock Essence", 1, 612, 8),
-            createMaterial("Lv 8 Agricultural Planting Essence", 1, 609, 8),
-            createMaterial("Lv 7 Gather Essence", 2, 406, 7),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 8 Agricultural Livestock Essence", 1, 612, 8),
-            createMaterial("Lv 8 Agricultural Planting Essence", 1, 609, 8),
-            createMaterial("Lv 7 Gather Essence", 2, 406, 7),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 8 Agricultural Livestock Essence", 1, 612, 8),
-          createMaterial("Lv 8 Agricultural Planting Essence", 1, 609, 8),
-          createMaterial("Lv 7 Gather Essence", 2, 406, 7),
-        ]),
       },
     },
     {
@@ -1776,32 +2091,41 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 9 Agricultural Livestock Essence", 1, 613, 9),
-          createMaterial("Lv 9 Agricultural Planting Essence", 1, 610, 9),
-          createMaterial("Lv 8 Gather Essence", 2, 606, 8),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 9 Agricultural Livestock Essence", 1, 613, 9),
+            createMaterial("Lv 9 Agricultural Planting Essence", 1, 610, 9),
+            createMaterial("Lv 8 Gather Essence", 2, 606, 8),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 9 Agricultural Livestock Essence", 1, 613, 9),
+              createMaterial("Lv 9 Agricultural Planting Essence", 1, 610, 9),
+              createMaterial("Lv 8 Gather Essence", 2, 606, 8),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 9 Agricultural Livestock Essence", 1, 613, 9),
+              createMaterial("Lv 9 Agricultural Planting Essence", 1, 610, 9),
+              createMaterial("Lv 8 Gather Essence", 2, 606, 8),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 9 Agricultural Livestock Essence", 1, 613, 9),
+            createMaterial("Lv 9 Agricultural Planting Essence", 1, 610, 9),
+            createMaterial("Lv 8 Gather Essence", 2, 606, 8),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Combat Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-746.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 9 Agricultural Livestock Essence", 1, 613, 9),
-            createMaterial("Lv 9 Agricultural Planting Essence", 1, 610, 9),
-            createMaterial("Lv 8 Gather Essence", 2, 606, 8),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 9 Agricultural Livestock Essence", 1, 613, 9),
-            createMaterial("Lv 9 Agricultural Planting Essence", 1, 610, 9),
-            createMaterial("Lv 8 Gather Essence", 2, 606, 8),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 9 Agricultural Livestock Essence", 1, 613, 9),
-          createMaterial("Lv 9 Agricultural Planting Essence", 1, 610, 9),
-          createMaterial("Lv 8 Gather Essence", 2, 606, 8),
-        ]),
       },
     },
     {
@@ -1824,28 +2148,37 @@ const itemsData = {
         { name: "Maxhp", typeNumber: "integer", values: { min: 27, max: 81 } },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 1 Agricultural Livestock Essence", 1, 213, 1),
-          createMaterial("Lv 1 Agricultural Planting Essence", 1, 210, 1),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 1 Agricultural Livestock Essence", 1, 213, 1),
+            createMaterial("Lv 1 Agricultural Planting Essence", 1, 210, 1),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 1 Agricultural Livestock Essence", 1, 213, 1),
+              createMaterial("Lv 1 Agricultural Planting Essence", 1, 210, 1),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 1 Agricultural Livestock Essence", 1, 213, 1),
+              createMaterial("Lv 1 Agricultural Planting Essence", 1, 210, 1),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 1 Agricultural Livestock Essence", 1, 213, 1),
+            createMaterial("Lv 1 Agricultural Planting Essence", 1, 210, 1),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Combat Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-738.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 1 Agricultural Livestock Essence", 1, 213, 1),
-            createMaterial("Lv 1 Agricultural Planting Essence", 1, 210, 1),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 1 Agricultural Livestock Essence", 1, 213, 1),
-            createMaterial("Lv 1 Agricultural Planting Essence", 1, 210, 1),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 1 Agricultural Livestock Essence", 1, 213, 1),
-          createMaterial("Lv 1 Agricultural Planting Essence", 1, 210, 1),
-        ]),
       },
     },
     {
@@ -1868,32 +2201,41 @@ const itemsData = {
         { name: "Maxhp", typeNumber: "integer", values: { min: 78, max: 132 } },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 2 Agricultural Livestock Essence", 1, 214, 2),
-          createMaterial("Lv 2 Agricultural Planting Essence", 1, 211, 2),
-          createMaterial("Lv 1 Gather Essence", 2, 207, 1),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 2 Agricultural Livestock Essence", 1, 214, 2),
+            createMaterial("Lv 2 Agricultural Planting Essence", 1, 211, 2),
+            createMaterial("Lv 1 Gather Essence", 2, 207, 1),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 2 Agricultural Livestock Essence", 1, 214, 2),
+              createMaterial("Lv 2 Agricultural Planting Essence", 1, 211, 2),
+              createMaterial("Lv 1 Gather Essence", 2, 207, 1),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 2 Agricultural Livestock Essence", 1, 214, 2),
+              createMaterial("Lv 2 Agricultural Planting Essence", 1, 211, 2),
+              createMaterial("Lv 1 Gather Essence", 2, 207, 1),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 2 Agricultural Livestock Essence", 1, 214, 2),
+            createMaterial("Lv 2 Agricultural Planting Essence", 1, 211, 2),
+            createMaterial("Lv 1 Gather Essence", 2, 207, 1),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Combat Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-739.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 2 Agricultural Livestock Essence", 1, 214, 2),
-            createMaterial("Lv 2 Agricultural Planting Essence", 1, 211, 2),
-            createMaterial("Lv 1 Gather Essence", 2, 207, 1),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 2 Agricultural Livestock Essence", 1, 214, 2),
-            createMaterial("Lv 2 Agricultural Planting Essence", 1, 211, 2),
-            createMaterial("Lv 1 Gather Essence", 2, 207, 1),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 2 Agricultural Livestock Essence", 1, 214, 2),
-          createMaterial("Lv 2 Agricultural Planting Essence", 1, 211, 2),
-          createMaterial("Lv 1 Gather Essence", 2, 207, 1),
-        ]),
       },
     },
     {
@@ -1920,32 +2262,41 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 3 Agricultural Livestock Essence", 1, 215, 3),
-          createMaterial("Lv 3 Agricultural Planting Essence", 1, 212, 3),
-          createMaterial("Lv 2 Gather Essence", 2, 208, 2),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 3 Agricultural Livestock Essence", 1, 215, 3),
+            createMaterial("Lv 3 Agricultural Planting Essence", 1, 212, 3),
+            createMaterial("Lv 2 Gather Essence", 2, 208, 2),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 3 Agricultural Livestock Essence", 1, 215, 3),
+              createMaterial("Lv 3 Agricultural Planting Essence", 1, 212, 3),
+              createMaterial("Lv 2 Gather Essence", 2, 208, 2),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 3 Agricultural Livestock Essence", 1, 215, 3),
+              createMaterial("Lv 3 Agricultural Planting Essence", 1, 212, 3),
+              createMaterial("Lv 2 Gather Essence", 2, 208, 2),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 3 Agricultural Livestock Essence", 1, 215, 3),
+            createMaterial("Lv 3 Agricultural Planting Essence", 1, 212, 3),
+            createMaterial("Lv 2 Gather Essence", 2, 208, 2),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Combat Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-740.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 3 Agricultural Livestock Essence", 1, 215, 3),
-            createMaterial("Lv 3 Agricultural Planting Essence", 1, 212, 3),
-            createMaterial("Lv 2 Gather Essence", 2, 208, 2),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 3 Agricultural Livestock Essence", 1, 215, 3),
-            createMaterial("Lv 3 Agricultural Planting Essence", 1, 212, 3),
-            createMaterial("Lv 2 Gather Essence", 2, 208, 2),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 3 Agricultural Livestock Essence", 1, 215, 3),
-          createMaterial("Lv 3 Agricultural Planting Essence", 1, 212, 3),
-          createMaterial("Lv 2 Gather Essence", 2, 208, 2),
-        ]),
       },
     },
     {
@@ -1968,32 +2319,41 @@ const itemsData = {
         { name: "Maxhp", typeNumber: "integer", values: { min: 31, max: 41 } },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 4 Agricultural Livestock Essence", 1, 410, 4),
-          createMaterial("Lv 4 Agricultural Planting Essence", 1, 407, 4),
-          createMaterial("Lv 3 Gather Essence", 2, 209, 3),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 4 Agricultural Livestock Essence", 1, 410, 4),
+            createMaterial("Lv 4 Agricultural Planting Essence", 1, 407, 4),
+            createMaterial("Lv 3 Gather Essence", 2, 209, 3),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 4 Agricultural Livestock Essence", 1, 410, 4),
+              createMaterial("Lv 4 Agricultural Planting Essence", 1, 407, 4),
+              createMaterial("Lv 3 Gather Essence", 2, 209, 3),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 4 Agricultural Livestock Essence", 1, 410, 4),
+              createMaterial("Lv 4 Agricultural Planting Essence", 1, 407, 4),
+              createMaterial("Lv 3 Gather Essence", 2, 209, 3),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 4 Agricultural Livestock Essence", 1, 410, 4),
+            createMaterial("Lv 4 Agricultural Planting Essence", 1, 407, 4),
+            createMaterial("Lv 3 Gather Essence", 2, 209, 3),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Combat Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-741.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 4 Agricultural Livestock Essence", 1, 410, 4),
-            createMaterial("Lv 4 Agricultural Planting Essence", 1, 407, 4),
-            createMaterial("Lv 3 Gather Essence", 2, 209, 3),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 4 Agricultural Livestock Essence", 1, 410, 4),
-            createMaterial("Lv 4 Agricultural Planting Essence", 1, 407, 4),
-            createMaterial("Lv 3 Gather Essence", 2, 209, 3),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 4 Agricultural Livestock Essence", 1, 410, 4),
-          createMaterial("Lv 4 Agricultural Planting Essence", 1, 407, 4),
-          createMaterial("Lv 3 Gather Essence", 2, 209, 3),
-        ]),
       },
     },
     {
@@ -2016,32 +2376,41 @@ const itemsData = {
         { name: "Maxhp", typeNumber: "integer", values: { min: 40, max: 50 } },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 5 Agricultural Livestock Essence", 1, 411, 5),
-          createMaterial("Lv 5 Agricultural Planting Essence", 1, 408, 5),
-          createMaterial("Lv 4 Gather Essence", 2, 404, 4),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 5 Agricultural Livestock Essence", 1, 411, 5),
+            createMaterial("Lv 5 Agricultural Planting Essence", 1, 408, 5),
+            createMaterial("Lv 4 Gather Essence", 2, 404, 4),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 5 Agricultural Livestock Essence", 1, 411, 5),
+              createMaterial("Lv 5 Agricultural Planting Essence", 1, 408, 5),
+              createMaterial("Lv 4 Gather Essence", 2, 404, 4),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 5 Agricultural Livestock Essence", 1, 411, 5),
+              createMaterial("Lv 5 Agricultural Planting Essence", 1, 408, 5),
+              createMaterial("Lv 4 Gather Essence", 2, 404, 4),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 5 Agricultural Livestock Essence", 1, 411, 5),
+            createMaterial("Lv 5 Agricultural Planting Essence", 1, 408, 5),
+            createMaterial("Lv 4 Gather Essence", 2, 404, 4),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Combat Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-742.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 5 Agricultural Livestock Essence", 1, 411, 5),
-            createMaterial("Lv 5 Agricultural Planting Essence", 1, 408, 5),
-            createMaterial("Lv 4 Gather Essence", 2, 404, 4),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 5 Agricultural Livestock Essence", 1, 411, 5),
-            createMaterial("Lv 5 Agricultural Planting Essence", 1, 408, 5),
-            createMaterial("Lv 4 Gather Essence", 2, 404, 4),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 5 Agricultural Livestock Essence", 1, 411, 5),
-          createMaterial("Lv 5 Agricultural Planting Essence", 1, 408, 5),
-          createMaterial("Lv 4 Gather Essence", 2, 404, 4),
-        ]),
       },
     },
     {
@@ -2064,32 +2433,41 @@ const itemsData = {
         { name: "Maxhp", typeNumber: "integer", values: { min: 49, max: 59 } },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 6 Agricultural Livestock Essence", 1, 412, 6),
-          createMaterial("Lv 6 Agricultural Planting Essence", 1, 409, 6),
-          createMaterial("Lv 5 Gather Essence", 2, 405, 5),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 6 Agricultural Livestock Essence", 1, 412, 6),
+            createMaterial("Lv 6 Agricultural Planting Essence", 1, 409, 6),
+            createMaterial("Lv 5 Gather Essence", 2, 405, 5),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 6 Agricultural Livestock Essence", 1, 412, 6),
+              createMaterial("Lv 6 Agricultural Planting Essence", 1, 409, 6),
+              createMaterial("Lv 5 Gather Essence", 2, 405, 5),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 6 Agricultural Livestock Essence", 1, 412, 6),
+              createMaterial("Lv 6 Agricultural Planting Essence", 1, 409, 6),
+              createMaterial("Lv 5 Gather Essence", 2, 405, 5),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 6 Agricultural Livestock Essence", 1, 412, 6),
+            createMaterial("Lv 6 Agricultural Planting Essence", 1, 409, 6),
+            createMaterial("Lv 5 Gather Essence", 2, 405, 5),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Combat Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-743.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 6 Agricultural Livestock Essence", 1, 412, 6),
-            createMaterial("Lv 6 Agricultural Planting Essence", 1, 409, 6),
-            createMaterial("Lv 5 Gather Essence", 2, 405, 5),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 6 Agricultural Livestock Essence", 1, 412, 6),
-            createMaterial("Lv 6 Agricultural Planting Essence", 1, 409, 6),
-            createMaterial("Lv 5 Gather Essence", 2, 405, 5),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 6 Agricultural Livestock Essence", 1, 412, 6),
-          createMaterial("Lv 6 Agricultural Planting Essence", 1, 409, 6),
-          createMaterial("Lv 5 Gather Essence", 2, 405, 5),
-        ]),
       },
     },
     {
@@ -2112,32 +2490,41 @@ const itemsData = {
         { name: "Maxhp", typeNumber: "integer", values: { min: 58, max: 58 } },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 7 Agricultural Livestock Essence", 1, 611, 7),
-          createMaterial("Lv 7 Agricultural Planting Essence", 1, 608, 7),
-          createMaterial("Lv 6 Gather Essence", 2, 406, 6),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 7 Agricultural Livestock Essence", 1, 611, 7),
+            createMaterial("Lv 7 Agricultural Planting Essence", 1, 608, 7),
+            createMaterial("Lv 6 Gather Essence", 2, 406, 6),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 7 Agricultural Livestock Essence", 1, 611, 7),
+              createMaterial("Lv 7 Agricultural Planting Essence", 1, 608, 7),
+              createMaterial("Lv 6 Gather Essence", 2, 406, 6),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 7 Agricultural Livestock Essence", 1, 611, 7),
+              createMaterial("Lv 7 Agricultural Planting Essence", 1, 608, 7),
+              createMaterial("Lv 6 Gather Essence", 2, 406, 6),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 7 Agricultural Livestock Essence", 1, 611, 7),
+            createMaterial("Lv 7 Agricultural Planting Essence", 1, 608, 7),
+            createMaterial("Lv 5 Gather Essence", 2, 405, 6),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Combat Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-744.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 7 Agricultural Livestock Essence", 1, 611, 7),
-            createMaterial("Lv 7 Agricultural Planting Essence", 1, 608, 7),
-            createMaterial("Lv 6 Gather Essence", 2, 406, 6),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 7 Agricultural Livestock Essence", 1, 611, 7),
-            createMaterial("Lv 7 Agricultural Planting Essence", 1, 608, 7),
-            createMaterial("Lv 6 Gather Essence", 2, 406, 6),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 7 Agricultural Livestock Essence", 1, 611, 7),
-          createMaterial("Lv 7 Agricultural Planting Essence", 1, 608, 7),
-          createMaterial("Lv 5 Gather Essence", 2, 405, 6),
-        ]),
       },
     },
     {
@@ -2160,32 +2547,41 @@ const itemsData = {
         { name: "Maxhp", typeNumber: "integer", values: { min: 67, max: 77 } },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 8 Agricultural Livestock Essence", 1, 612, 8),
-          createMaterial("Lv 8 Agricultural Planting Essence", 1, 609, 8),
-          createMaterial("Lv 7 Gather Essence", 2, 406, 7),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 8 Agricultural Livestock Essence", 1, 612, 8),
+            createMaterial("Lv 8 Agricultural Planting Essence", 1, 609, 8),
+            createMaterial("Lv 7 Gather Essence", 2, 406, 7),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 8 Agricultural Livestock Essence", 1, 612, 8),
+              createMaterial("Lv 8 Agricultural Planting Essence", 1, 609, 8),
+              createMaterial("Lv 7 Gather Essence", 2, 406, 7),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 8 Agricultural Livestock Essence", 1, 612, 8),
+              createMaterial("Lv 8 Agricultural Planting Essence", 1, 609, 8),
+              createMaterial("Lv 7 Gather Essence", 2, 406, 7),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 8 Agricultural Livestock Essence", 1, 612, 8),
+            createMaterial("Lv 8 Agricultural Planting Essence", 1, 609, 8),
+            createMaterial("Lv 7 Gather Essence", 2, 406, 7),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Combat Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-745.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 8 Agricultural Livestock Essence", 1, 612, 8),
-            createMaterial("Lv 8 Agricultural Planting Essence", 1, 609, 8),
-            createMaterial("Lv 7 Gather Essence", 2, 406, 7),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 8 Agricultural Livestock Essence", 1, 612, 8),
-            createMaterial("Lv 8 Agricultural Planting Essence", 1, 609, 8),
-            createMaterial("Lv 7 Gather Essence", 2, 406, 7),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 8 Agricultural Livestock Essence", 1, 612, 8),
-          createMaterial("Lv 8 Agricultural Planting Essence", 1, 609, 8),
-          createMaterial("Lv 7 Gather Essence", 2, 406, 7),
-        ]),
       },
     },
     {
@@ -2208,32 +2604,41 @@ const itemsData = {
         { name: "Maxhp", typeNumber: "integer", values: { min: 76, max: 86 } },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 9 Agricultural Livestock Essence", 1, 613, 9),
-          createMaterial("Lv 9 Agricultural Planting Essence", 1, 610, 9),
-          createMaterial("Lv 8 Gather Essence", 2, 606, 8),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 9 Agricultural Livestock Essence", 1, 613, 9),
+            createMaterial("Lv 9 Agricultural Planting Essence", 1, 610, 9),
+            createMaterial("Lv 8 Gather Essence", 2, 606, 8),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 9 Agricultural Livestock Essence", 1, 613, 9),
+              createMaterial("Lv 9 Agricultural Planting Essence", 1, 610, 9),
+              createMaterial("Lv 8 Gather Essence", 2, 606, 8),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 9 Agricultural Livestock Essence", 1, 613, 9),
+              createMaterial("Lv 9 Agricultural Planting Essence", 1, 610, 9),
+              createMaterial("Lv 8 Gather Essence", 2, 606, 8),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 9 Agricultural Livestock Essence", 1, 613, 9),
+            createMaterial("Lv 9 Agricultural Planting Essence", 1, 610, 9),
+            createMaterial("Lv 8 Gather Essence", 2, 606, 8),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Combat Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-746.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 9 Agricultural Livestock Essence", 1, 613, 9),
-            createMaterial("Lv 9 Agricultural Planting Essence", 1, 610, 9),
-            createMaterial("Lv 8 Gather Essence", 2, 606, 8),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 9 Agricultural Livestock Essence", 1, 613, 9),
-            createMaterial("Lv 9 Agricultural Planting Essence", 1, 610, 9),
-            createMaterial("Lv 8 Gather Essence", 2, 606, 8),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 9 Agricultural Livestock Essence", 1, 613, 9),
-          createMaterial("Lv 9 Agricultural Planting Essence", 1, 610, 9),
-          createMaterial("Lv 8 Gather Essence", 2, 606, 8),
-        ]),
       },
     },
     {
@@ -2251,28 +2656,37 @@ const itemsData = {
         { name: "Maxhp", typeNumber: "integer", values: { min: 35, max: 105 } },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 1 Agricultural Livestock Essence", 1, 213, 1),
-          createMaterial("Lv 1 Agricultural Planting Essence", 1, 210, 1),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 1 Agricultural Livestock Essence", 1, 213, 1),
+            createMaterial("Lv 1 Agricultural Planting Essence", 1, 210, 1),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 1 Agricultural Livestock Essence", 1, 213, 1),
+              createMaterial("Lv 1 Agricultural Planting Essence", 1, 210, 1),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 1 Agricultural Livestock Essence", 1, 213, 1),
+              createMaterial("Lv 1 Agricultural Planting Essence", 1, 210, 1),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 1 Agricultural Livestock Essence", 1, 213, 1),
+            createMaterial("Lv 1 Agricultural Planting Essence", 1, 210, 1),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Combat Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-738.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 1 Agricultural Livestock Essence", 1, 213, 1),
-            createMaterial("Lv 1 Agricultural Planting Essence", 1, 210, 1),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 1 Agricultural Livestock Essence", 1, 213, 1),
-            createMaterial("Lv 1 Agricultural Planting Essence", 1, 210, 1),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 1 Agricultural Livestock Essence", 1, 213, 1),
-          createMaterial("Lv 1 Agricultural Planting Essence", 1, 210, 1),
-        ]),
       },
     },
     {
@@ -2294,32 +2708,41 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 2 Agricultural Livestock Essence", 1, 214, 2),
-          createMaterial("Lv 2 Agricultural Planting Essence", 1, 211, 2),
-          createMaterial("Lv 1 Gather Essence", 2, 207, 1),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 2 Agricultural Livestock Essence", 1, 214, 2),
+            createMaterial("Lv 2 Agricultural Planting Essence", 1, 211, 2),
+            createMaterial("Lv 1 Gather Essence", 2, 207, 1),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 2 Agricultural Livestock Essence", 1, 214, 2),
+              createMaterial("Lv 2 Agricultural Planting Essence", 1, 211, 2),
+              createMaterial("Lv 1 Gather Essence", 2, 207, 1),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 2 Agricultural Livestock Essence", 1, 214, 2),
+              createMaterial("Lv 2 Agricultural Planting Essence", 1, 211, 2),
+              createMaterial("Lv 1 Gather Essence", 2, 207, 1),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 2 Agricultural Livestock Essence", 1, 214, 2),
+            createMaterial("Lv 2 Agricultural Planting Essence", 1, 211, 2),
+            createMaterial("Lv 1 Gather Essence", 2, 207, 1),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Combat Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-739.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 2 Agricultural Livestock Essence", 1, 214, 2),
-            createMaterial("Lv 2 Agricultural Planting Essence", 1, 211, 2),
-            createMaterial("Lv 1 Gather Essence", 2, 207, 1),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 2 Agricultural Livestock Essence", 1, 214, 2),
-            createMaterial("Lv 2 Agricultural Planting Essence", 1, 211, 2),
-            createMaterial("Lv 1 Gather Essence", 2, 207, 1),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 2 Agricultural Livestock Essence", 1, 214, 2),
-          createMaterial("Lv 2 Agricultural Planting Essence", 1, 211, 2),
-          createMaterial("Lv 1 Gather Essence", 2, 207, 1),
-        ]),
       },
     },
     {
@@ -2341,32 +2764,41 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 3 Agricultural Livestock Essence", 1, 215, 3),
-          createMaterial("Lv 3 Agricultural Planting Essence", 1, 212, 3),
-          createMaterial("Lv 2 Gather Essence", 2, 208, 2),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 3 Agricultural Livestock Essence", 1, 215, 3),
+            createMaterial("Lv 3 Agricultural Planting Essence", 1, 212, 3),
+            createMaterial("Lv 2 Gather Essence", 2, 208, 2),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 3 Agricultural Livestock Essence", 1, 215, 3),
+              createMaterial("Lv 3 Agricultural Planting Essence", 1, 212, 3),
+              createMaterial("Lv 2 Gather Essence", 2, 208, 2),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 3 Agricultural Livestock Essence", 1, 215, 3),
+              createMaterial("Lv 3 Agricultural Planting Essence", 1, 212, 3),
+              createMaterial("Lv 2 Gather Essence", 2, 208, 2),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 3 Agricultural Livestock Essence", 1, 215, 3),
+            createMaterial("Lv 3 Agricultural Planting Essence", 1, 212, 3),
+            createMaterial("Lv 2 Gather Essence", 2, 208, 2),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Combat Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-740.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 3 Agricultural Livestock Essence", 1, 215, 3),
-            createMaterial("Lv 3 Agricultural Planting Essence", 1, 212, 3),
-            createMaterial("Lv 2 Gather Essence", 2, 208, 2),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 3 Agricultural Livestock Essence", 1, 215, 3),
-            createMaterial("Lv 3 Agricultural Planting Essence", 1, 212, 3),
-            createMaterial("Lv 2 Gather Essence", 2, 208, 2),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 3 Agricultural Livestock Essence", 1, 215, 3),
-          createMaterial("Lv 3 Agricultural Planting Essence", 1, 212, 3),
-          createMaterial("Lv 2 Gather Essence", 2, 208, 2),
-        ]),
       },
     },
     {
@@ -2388,32 +2820,41 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 4 Agricultural Livestock Essence", 1, 410, 4),
-          createMaterial("Lv 4 Agricultural Planting Essence", 1, 407, 4),
-          createMaterial("Lv 3 Gather Essence", 2, 209, 3),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 4 Agricultural Livestock Essence", 1, 410, 4),
+            createMaterial("Lv 4 Agricultural Planting Essence", 1, 407, 4),
+            createMaterial("Lv 3 Gather Essence", 2, 209, 3),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 4 Agricultural Livestock Essence", 1, 410, 4),
+              createMaterial("Lv 4 Agricultural Planting Essence", 1, 407, 4),
+              createMaterial("Lv 3 Gather Essence", 2, 209, 3),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 4 Agricultural Livestock Essence", 1, 410, 4),
+              createMaterial("Lv 4 Agricultural Planting Essence", 1, 407, 4),
+              createMaterial("Lv 3 Gather Essence", 2, 209, 3),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 4 Agricultural Livestock Essence", 1, 410, 4),
+            createMaterial("Lv 4 Agricultural Planting Essence", 1, 407, 4),
+            createMaterial("Lv 3 Gather Essence", 2, 209, 3),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Combat Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-741.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 4 Agricultural Livestock Essence", 1, 410, 4),
-            createMaterial("Lv 4 Agricultural Planting Essence", 1, 407, 4),
-            createMaterial("Lv 3 Gather Essence", 2, 209, 3),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 4 Agricultural Livestock Essence", 1, 410, 4),
-            createMaterial("Lv 4 Agricultural Planting Essence", 1, 407, 4),
-            createMaterial("Lv 3 Gather Essence", 2, 209, 3),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 4 Agricultural Livestock Essence", 1, 410, 4),
-          createMaterial("Lv 4 Agricultural Planting Essence", 1, 407, 4),
-          createMaterial("Lv 3 Gather Essence", 2, 209, 3),
-        ]),
       },
     },
     {
@@ -2435,32 +2876,41 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 5 Agricultural Livestock Essence", 1, 411, 5),
-          createMaterial("Lv 5 Agricultural Planting Essence", 1, 408, 5),
-          createMaterial("Lv 4 Gather Essence", 2, 404, 4),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 5 Agricultural Livestock Essence", 1, 411, 5),
+            createMaterial("Lv 5 Agricultural Planting Essence", 1, 408, 5),
+            createMaterial("Lv 4 Gather Essence", 2, 404, 4),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 5 Agricultural Livestock Essence", 1, 411, 5),
+              createMaterial("Lv 5 Agricultural Planting Essence", 1, 408, 5),
+              createMaterial("Lv 4 Gather Essence", 2, 404, 4),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 5 Agricultural Livestock Essence", 1, 411, 5),
+              createMaterial("Lv 5 Agricultural Planting Essence", 1, 408, 5),
+              createMaterial("Lv 4 Gather Essence", 2, 404, 4),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 5 Agricultural Livestock Essence", 1, 411, 5),
+            createMaterial("Lv 5 Agricultural Planting Essence", 1, 408, 5),
+            createMaterial("Lv 4 Gather Essence", 2, 404, 4),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Combat Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-742.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 5 Agricultural Livestock Essence", 1, 411, 5),
-            createMaterial("Lv 5 Agricultural Planting Essence", 1, 408, 5),
-            createMaterial("Lv 4 Gather Essence", 2, 404, 4),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 5 Agricultural Livestock Essence", 1, 411, 5),
-            createMaterial("Lv 5 Agricultural Planting Essence", 1, 408, 5),
-            createMaterial("Lv 4 Gather Essence", 2, 404, 4),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 5 Agricultural Livestock Essence", 1, 411, 5),
-          createMaterial("Lv 5 Agricultural Planting Essence", 1, 408, 5),
-          createMaterial("Lv 4 Gather Essence", 2, 404, 4),
-        ]),
       },
     },
     {
@@ -2482,32 +2932,41 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 6 Agricultural Livestock Essence", 1, 412, 6),
-          createMaterial("Lv 6 Agricultural Planting Essence", 1, 409, 6),
-          createMaterial("Lv 5 Gather Essence", 2, 405, 5),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 6 Agricultural Livestock Essence", 1, 412, 6),
+            createMaterial("Lv 6 Agricultural Planting Essence", 1, 409, 6),
+            createMaterial("Lv 5 Gather Essence", 2, 405, 5),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 6 Agricultural Livestock Essence", 1, 412, 6),
+              createMaterial("Lv 6 Agricultural Planting Essence", 1, 409, 6),
+              createMaterial("Lv 5 Gather Essence", 2, 405, 5),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 6 Agricultural Livestock Essence", 1, 412, 6),
+              createMaterial("Lv 6 Agricultural Planting Essence", 1, 409, 6),
+              createMaterial("Lv 5 Gather Essence", 2, 405, 5),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 6 Agricultural Livestock Essence", 1, 412, 6),
+            createMaterial("Lv 6 Agricultural Planting Essence", 1, 409, 6),
+            createMaterial("Lv 5 Gather Essence", 2, 405, 5),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Combat Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-743.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 6 Agricultural Livestock Essence", 1, 412, 6),
-            createMaterial("Lv 6 Agricultural Planting Essence", 1, 409, 6),
-            createMaterial("Lv 5 Gather Essence", 2, 405, 5),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 6 Agricultural Livestock Essence", 1, 412, 6),
-            createMaterial("Lv 6 Agricultural Planting Essence", 1, 409, 6),
-            createMaterial("Lv 5 Gather Essence", 2, 405, 5),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 6 Agricultural Livestock Essence", 1, 412, 6),
-          createMaterial("Lv 6 Agricultural Planting Essence", 1, 409, 6),
-          createMaterial("Lv 5 Gather Essence", 2, 405, 5),
-        ]),
       },
     },
     {
@@ -2529,32 +2988,41 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 7 Agricultural Livestock Essence", 1, 611, 7),
-          createMaterial("Lv 7 Agricultural Planting Essence", 1, 608, 7),
-          createMaterial("Lv 6 Gather Essence", 2, 406, 6),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 7 Agricultural Livestock Essence", 1, 611, 7),
+            createMaterial("Lv 7 Agricultural Planting Essence", 1, 608, 7),
+            createMaterial("Lv 6 Gather Essence", 2, 406, 6),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 7 Agricultural Livestock Essence", 1, 611, 7),
+              createMaterial("Lv 7 Agricultural Planting Essence", 1, 608, 7),
+              createMaterial("Lv 6 Gather Essence", 2, 406, 6),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 7 Agricultural Livestock Essence", 1, 611, 7),
+              createMaterial("Lv 7 Agricultural Planting Essence", 1, 608, 7),
+              createMaterial("Lv 6 Gather Essence", 2, 406, 6),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 7 Agricultural Livestock Essence", 1, 611, 7),
+            createMaterial("Lv 7 Agricultural Planting Essence", 1, 608, 7),
+            createMaterial("Lv 5 Gather Essence", 2, 405, 6),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Combat Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-744.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 7 Agricultural Livestock Essence", 1, 611, 7),
-            createMaterial("Lv 7 Agricultural Planting Essence", 1, 608, 7),
-            createMaterial("Lv 6 Gather Essence", 2, 406, 6),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 7 Agricultural Livestock Essence", 1, 611, 7),
-            createMaterial("Lv 7 Agricultural Planting Essence", 1, 608, 7),
-            createMaterial("Lv 6 Gather Essence", 2, 406, 6),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 7 Agricultural Livestock Essence", 1, 611, 7),
-          createMaterial("Lv 7 Agricultural Planting Essence", 1, 608, 7),
-          createMaterial("Lv 5 Gather Essence", 2, 405, 6),
-        ]),
       },
     },
     {
@@ -2576,32 +3044,41 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 8 Agricultural Livestock Essence", 1, 612, 8),
-          createMaterial("Lv 8 Agricultural Planting Essence", 1, 609, 8),
-          createMaterial("Lv 7 Gather Essence", 2, 406, 7),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 8 Agricultural Livestock Essence", 1, 612, 8),
+            createMaterial("Lv 8 Agricultural Planting Essence", 1, 609, 8),
+            createMaterial("Lv 7 Gather Essence", 2, 406, 7),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 8 Agricultural Livestock Essence", 1, 612, 8),
+              createMaterial("Lv 8 Agricultural Planting Essence", 1, 609, 8),
+              createMaterial("Lv 7 Gather Essence", 2, 406, 7),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 8 Agricultural Livestock Essence", 1, 612, 8),
+              createMaterial("Lv 8 Agricultural Planting Essence", 1, 609, 8),
+              createMaterial("Lv 7 Gather Essence", 2, 406, 7),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 8 Agricultural Livestock Essence", 1, 612, 8),
+            createMaterial("Lv 8 Agricultural Planting Essence", 1, 609, 8),
+            createMaterial("Lv 7 Gather Essence", 2, 406, 7),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Combat Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-745.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 8 Agricultural Livestock Essence", 1, 612, 8),
-            createMaterial("Lv 8 Agricultural Planting Essence", 1, 609, 8),
-            createMaterial("Lv 7 Gather Essence", 2, 406, 7),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 8 Agricultural Livestock Essence", 1, 612, 8),
-            createMaterial("Lv 8 Agricultural Planting Essence", 1, 609, 8),
-            createMaterial("Lv 7 Gather Essence", 2, 406, 7),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 8 Agricultural Livestock Essence", 1, 612, 8),
-          createMaterial("Lv 8 Agricultural Planting Essence", 1, 609, 8),
-          createMaterial("Lv 7 Gather Essence", 2, 406, 7),
-        ]),
       },
     },
     {
@@ -2623,32 +3100,41 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 9 Agricultural Livestock Essence", 1, 613, 9),
-          createMaterial("Lv 9 Agricultural Planting Essence", 1, 610, 9),
-          createMaterial("Lv 8 Gather Essence", 2, 606, 8),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 9 Agricultural Livestock Essence", 1, 613, 9),
+            createMaterial("Lv 9 Agricultural Planting Essence", 1, 610, 9),
+            createMaterial("Lv 8 Gather Essence", 2, 606, 8),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 9 Agricultural Livestock Essence", 1, 613, 9),
+              createMaterial("Lv 9 Agricultural Planting Essence", 1, 610, 9),
+              createMaterial("Lv 8 Gather Essence", 2, 606, 8),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 9 Agricultural Livestock Essence", 1, 613, 9),
+              createMaterial("Lv 9 Agricultural Planting Essence", 1, 610, 9),
+              createMaterial("Lv 8 Gather Essence", 2, 606, 8),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 9 Agricultural Livestock Essence", 1, 613, 9),
+            createMaterial("Lv 9 Agricultural Planting Essence", 1, 610, 9),
+            createMaterial("Lv 8 Gather Essence", 2, 606, 8),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Combat Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-746.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 9 Agricultural Livestock Essence", 1, 613, 9),
-            createMaterial("Lv 9 Agricultural Planting Essence", 1, 610, 9),
-            createMaterial("Lv 8 Gather Essence", 2, 606, 8),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 9 Agricultural Livestock Essence", 1, 613, 9),
-            createMaterial("Lv 9 Agricultural Planting Essence", 1, 610, 9),
-            createMaterial("Lv 8 Gather Essence", 2, 606, 8),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 9 Agricultural Livestock Essence", 1, 613, 9),
-          createMaterial("Lv 9 Agricultural Planting Essence", 1, 610, 9),
-          createMaterial("Lv 8 Gather Essence", 2, 606, 8),
-        ]),
       },
     },
     {
@@ -2666,28 +3152,37 @@ const itemsData = {
         { name: "Maxhp", typeNumber: "integer", values: { min: 36, max: 110 } },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 1 Agricultural Livestock Essence", 1, 213, 1),
-          createMaterial("Lv 1 Agricultural Planting Essence", 1, 210, 1),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 1 Agricultural Livestock Essence", 1, 213, 1),
+            createMaterial("Lv 1 Agricultural Planting Essence", 1, 210, 1),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 1 Agricultural Livestock Essence", 1, 213, 1),
+              createMaterial("Lv 1 Agricultural Planting Essence", 1, 210, 1),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 1 Agricultural Livestock Essence", 1, 213, 1),
+              createMaterial("Lv 1 Agricultural Planting Essence", 1, 210, 1),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 1 Agricultural Livestock Essence", 1, 213, 1),
+            createMaterial("Lv 1 Agricultural Planting Essence", 1, 210, 1),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Combat Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-738.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 1 Agricultural Livestock Essence", 1, 213, 1),
-            createMaterial("Lv 1 Agricultural Planting Essence", 1, 210, 1),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 1 Agricultural Livestock Essence", 1, 213, 1),
-            createMaterial("Lv 1 Agricultural Planting Essence", 1, 210, 1),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 1 Agricultural Livestock Essence", 1, 213, 1),
-          createMaterial("Lv 1 Agricultural Planting Essence", 1, 210, 1),
-        ]),
       },
     },
     {
@@ -2709,32 +3204,41 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 2 Agricultural Livestock Essence", 1, 214, 2),
-          createMaterial("Lv 2 Agricultural Planting Essence", 1, 211, 2),
-          createMaterial("Lv 1 Gather Essence", 2, 207, 1),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 2 Agricultural Livestock Essence", 1, 214, 2),
+            createMaterial("Lv 2 Agricultural Planting Essence", 1, 211, 2),
+            createMaterial("Lv 1 Gather Essence", 2, 207, 1),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 2 Agricultural Livestock Essence", 1, 214, 2),
+              createMaterial("Lv 2 Agricultural Planting Essence", 1, 211, 2),
+              createMaterial("Lv 1 Gather Essence", 2, 207, 1),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 2 Agricultural Livestock Essence", 1, 214, 2),
+              createMaterial("Lv 2 Agricultural Planting Essence", 1, 211, 2),
+              createMaterial("Lv 1 Gather Essence", 2, 207, 1),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 2 Agricultural Livestock Essence", 1, 214, 2),
+            createMaterial("Lv 2 Agricultural Planting Essence", 1, 211, 2),
+            createMaterial("Lv 1 Gather Essence", 2, 207, 1),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Combat Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-739.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 2 Agricultural Livestock Essence", 1, 214, 2),
-            createMaterial("Lv 2 Agricultural Planting Essence", 1, 211, 2),
-            createMaterial("Lv 1 Gather Essence", 2, 207, 1),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 2 Agricultural Livestock Essence", 1, 214, 2),
-            createMaterial("Lv 2 Agricultural Planting Essence", 1, 211, 2),
-            createMaterial("Lv 1 Gather Essence", 2, 207, 1),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 2 Agricultural Livestock Essence", 1, 214, 2),
-          createMaterial("Lv 2 Agricultural Planting Essence", 1, 211, 2),
-          createMaterial("Lv 1 Gather Essence", 2, 207, 1),
-        ]),
       },
     },
     {
@@ -2756,32 +3260,41 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 3 Agricultural Livestock Essence", 1, 215, 3),
-          createMaterial("Lv 3 Agricultural Planting Essence", 1, 212, 3),
-          createMaterial("Lv 2 Gather Essence", 2, 208, 2),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 3 Agricultural Livestock Essence", 1, 215, 3),
+            createMaterial("Lv 3 Agricultural Planting Essence", 1, 212, 3),
+            createMaterial("Lv 2 Gather Essence", 2, 208, 2),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 3 Agricultural Livestock Essence", 1, 215, 3),
+              createMaterial("Lv 3 Agricultural Planting Essence", 1, 212, 3),
+              createMaterial("Lv 2 Gather Essence", 2, 208, 2),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 3 Agricultural Livestock Essence", 1, 215, 3),
+              createMaterial("Lv 3 Agricultural Planting Essence", 1, 212, 3),
+              createMaterial("Lv 2 Gather Essence", 2, 208, 2),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 3 Agricultural Livestock Essence", 1, 215, 3),
+            createMaterial("Lv 3 Agricultural Planting Essence", 1, 212, 3),
+            createMaterial("Lv 2 Gather Essence", 2, 208, 2),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Combat Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-740.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 3 Agricultural Livestock Essence", 1, 215, 3),
-            createMaterial("Lv 3 Agricultural Planting Essence", 1, 212, 3),
-            createMaterial("Lv 2 Gather Essence", 2, 208, 2),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 3 Agricultural Livestock Essence", 1, 215, 3),
-            createMaterial("Lv 3 Agricultural Planting Essence", 1, 212, 3),
-            createMaterial("Lv 2 Gather Essence", 2, 208, 2),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 3 Agricultural Livestock Essence", 1, 215, 3),
-          createMaterial("Lv 3 Agricultural Planting Essence", 1, 212, 3),
-          createMaterial("Lv 2 Gather Essence", 2, 208, 2),
-        ]),
       },
     },
     {
@@ -2803,32 +3316,41 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 4 Agricultural Livestock Essence", 1, 410, 4),
-          createMaterial("Lv 4 Agricultural Planting Essence", 1, 407, 4),
-          createMaterial("Lv 3 Gather Essence", 2, 209, 3),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 4 Agricultural Livestock Essence", 1, 410, 4),
+            createMaterial("Lv 4 Agricultural Planting Essence", 1, 407, 4),
+            createMaterial("Lv 3 Gather Essence", 2, 209, 3),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 4 Agricultural Livestock Essence", 1, 410, 4),
+              createMaterial("Lv 4 Agricultural Planting Essence", 1, 407, 4),
+              createMaterial("Lv 3 Gather Essence", 2, 209, 3),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 4 Agricultural Livestock Essence", 1, 410, 4),
+              createMaterial("Lv 4 Agricultural Planting Essence", 1, 407, 4),
+              createMaterial("Lv 3 Gather Essence", 2, 209, 3),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 4 Agricultural Livestock Essence", 1, 410, 4),
+            createMaterial("Lv 4 Agricultural Planting Essence", 1, 407, 4),
+            createMaterial("Lv 3 Gather Essence", 2, 209, 3),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Combat Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-741.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 4 Agricultural Livestock Essence", 1, 410, 4),
-            createMaterial("Lv 4 Agricultural Planting Essence", 1, 407, 4),
-            createMaterial("Lv 3 Gather Essence", 2, 209, 3),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 4 Agricultural Livestock Essence", 1, 410, 4),
-            createMaterial("Lv 4 Agricultural Planting Essence", 1, 407, 4),
-            createMaterial("Lv 3 Gather Essence", 2, 209, 3),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 4 Agricultural Livestock Essence", 1, 410, 4),
-          createMaterial("Lv 4 Agricultural Planting Essence", 1, 407, 4),
-          createMaterial("Lv 3 Gather Essence", 2, 209, 3),
-        ]),
       },
     },
     {
@@ -2850,32 +3372,41 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 5 Agricultural Livestock Essence", 1, 411, 5),
-          createMaterial("Lv 5 Agricultural Planting Essence", 1, 408, 5),
-          createMaterial("Lv 4 Gather Essence", 2, 404, 4),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 5 Agricultural Livestock Essence", 1, 411, 5),
+            createMaterial("Lv 5 Agricultural Planting Essence", 1, 408, 5),
+            createMaterial("Lv 4 Gather Essence", 2, 404, 4),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 5 Agricultural Livestock Essence", 1, 411, 5),
+              createMaterial("Lv 5 Agricultural Planting Essence", 1, 408, 5),
+              createMaterial("Lv 4 Gather Essence", 2, 404, 4),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 5 Agricultural Livestock Essence", 1, 411, 5),
+              createMaterial("Lv 5 Agricultural Planting Essence", 1, 408, 5),
+              createMaterial("Lv 4 Gather Essence", 2, 404, 4),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 5 Agricultural Livestock Essence", 1, 411, 5),
+            createMaterial("Lv 5 Agricultural Planting Essence", 1, 408, 5),
+            createMaterial("Lv 4 Gather Essence", 2, 404, 4),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Combat Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-742.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 5 Agricultural Livestock Essence", 1, 411, 5),
-            createMaterial("Lv 5 Agricultural Planting Essence", 1, 408, 5),
-            createMaterial("Lv 4 Gather Essence", 2, 404, 4),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 5 Agricultural Livestock Essence", 1, 411, 5),
-            createMaterial("Lv 5 Agricultural Planting Essence", 1, 408, 5),
-            createMaterial("Lv 4 Gather Essence", 2, 404, 4),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 5 Agricultural Livestock Essence", 1, 411, 5),
-          createMaterial("Lv 5 Agricultural Planting Essence", 1, 408, 5),
-          createMaterial("Lv 4 Gather Essence", 2, 404, 4),
-        ]),
       },
     },
     {
@@ -2897,32 +3428,41 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 6 Agricultural Livestock Essence", 1, 412, 6),
-          createMaterial("Lv 6 Agricultural Planting Essence", 1, 409, 6),
-          createMaterial("Lv 5 Gather Essence", 2, 405, 5),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 6 Agricultural Livestock Essence", 1, 412, 6),
+            createMaterial("Lv 6 Agricultural Planting Essence", 1, 409, 6),
+            createMaterial("Lv 5 Gather Essence", 2, 405, 5),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 6 Agricultural Livestock Essence", 1, 412, 6),
+              createMaterial("Lv 6 Agricultural Planting Essence", 1, 409, 6),
+              createMaterial("Lv 5 Gather Essence", 2, 405, 5),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 6 Agricultural Livestock Essence", 1, 412, 6),
+              createMaterial("Lv 6 Agricultural Planting Essence", 1, 409, 6),
+              createMaterial("Lv 5 Gather Essence", 2, 405, 5),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 6 Agricultural Livestock Essence", 1, 412, 6),
+            createMaterial("Lv 6 Agricultural Planting Essence", 1, 409, 6),
+            createMaterial("Lv 5 Gather Essence", 2, 405, 5),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Combat Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-743.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 6 Agricultural Livestock Essence", 1, 412, 6),
-            createMaterial("Lv 6 Agricultural Planting Essence", 1, 409, 6),
-            createMaterial("Lv 5 Gather Essence", 2, 405, 5),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 6 Agricultural Livestock Essence", 1, 412, 6),
-            createMaterial("Lv 6 Agricultural Planting Essence", 1, 409, 6),
-            createMaterial("Lv 5 Gather Essence", 2, 405, 5),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 6 Agricultural Livestock Essence", 1, 412, 6),
-          createMaterial("Lv 6 Agricultural Planting Essence", 1, 409, 6),
-          createMaterial("Lv 5 Gather Essence", 2, 405, 5),
-        ]),
       },
     },
     {
@@ -2944,32 +3484,41 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 7 Agricultural Livestock Essence", 1, 611, 7),
-          createMaterial("Lv 7 Agricultural Planting Essence", 1, 608, 7),
-          createMaterial("Lv 6 Gather Essence", 2, 406, 6),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 7 Agricultural Livestock Essence", 1, 611, 7),
+            createMaterial("Lv 7 Agricultural Planting Essence", 1, 608, 7),
+            createMaterial("Lv 6 Gather Essence", 2, 406, 6),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 7 Agricultural Livestock Essence", 1, 611, 7),
+              createMaterial("Lv 7 Agricultural Planting Essence", 1, 608, 7),
+              createMaterial("Lv 6 Gather Essence", 2, 406, 6),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 7 Agricultural Livestock Essence", 1, 611, 7),
+              createMaterial("Lv 7 Agricultural Planting Essence", 1, 608, 7),
+              createMaterial("Lv 6 Gather Essence", 2, 406, 6),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 7 Agricultural Livestock Essence", 1, 611, 7),
+            createMaterial("Lv 7 Agricultural Planting Essence", 1, 608, 7),
+            createMaterial("Lv 5 Gather Essence", 2, 405, 6),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Combat Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-744.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 7 Agricultural Livestock Essence", 1, 611, 7),
-            createMaterial("Lv 7 Agricultural Planting Essence", 1, 608, 7),
-            createMaterial("Lv 6 Gather Essence", 2, 406, 6),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 7 Agricultural Livestock Essence", 1, 611, 7),
-            createMaterial("Lv 7 Agricultural Planting Essence", 1, 608, 7),
-            createMaterial("Lv 6 Gather Essence", 2, 406, 6),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 7 Agricultural Livestock Essence", 1, 611, 7),
-          createMaterial("Lv 7 Agricultural Planting Essence", 1, 608, 7),
-          createMaterial("Lv 5 Gather Essence", 2, 405, 6),
-        ]),
       },
     },
     {
@@ -2991,32 +3540,41 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 8 Agricultural Livestock Essence", 1, 612, 8),
-          createMaterial("Lv 8 Agricultural Planting Essence", 1, 609, 8),
-          createMaterial("Lv 7 Gather Essence", 2, 406, 7),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 8 Agricultural Livestock Essence", 1, 612, 8),
+            createMaterial("Lv 8 Agricultural Planting Essence", 1, 609, 8),
+            createMaterial("Lv 7 Gather Essence", 2, 406, 7),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 8 Agricultural Livestock Essence", 1, 612, 8),
+              createMaterial("Lv 8 Agricultural Planting Essence", 1, 609, 8),
+              createMaterial("Lv 7 Gather Essence", 2, 406, 7),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 8 Agricultural Livestock Essence", 1, 612, 8),
+              createMaterial("Lv 8 Agricultural Planting Essence", 1, 609, 8),
+              createMaterial("Lv 7 Gather Essence", 2, 406, 7),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 8 Agricultural Livestock Essence", 1, 612, 8),
+            createMaterial("Lv 8 Agricultural Planting Essence", 1, 609, 8),
+            createMaterial("Lv 7 Gather Essence", 2, 406, 7),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Combat Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-745.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 8 Agricultural Livestock Essence", 1, 612, 8),
-            createMaterial("Lv 8 Agricultural Planting Essence", 1, 609, 8),
-            createMaterial("Lv 7 Gather Essence", 2, 406, 7),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 8 Agricultural Livestock Essence", 1, 612, 8),
-            createMaterial("Lv 8 Agricultural Planting Essence", 1, 609, 8),
-            createMaterial("Lv 7 Gather Essence", 2, 406, 7),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 8 Agricultural Livestock Essence", 1, 612, 8),
-          createMaterial("Lv 8 Agricultural Planting Essence", 1, 609, 8),
-          createMaterial("Lv 7 Gather Essence", 2, 406, 7),
-        ]),
       },
     },
     {
@@ -3038,32 +3596,41 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 9 Agricultural Livestock Essence", 1, 613, 9),
-          createMaterial("Lv 9 Agricultural Planting Essence", 1, 610, 9),
-          createMaterial("Lv 8 Gather Essence", 2, 606, 8),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 9 Agricultural Livestock Essence", 1, 613, 9),
+            createMaterial("Lv 9 Agricultural Planting Essence", 1, 610, 9),
+            createMaterial("Lv 8 Gather Essence", 2, 606, 8),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 9 Agricultural Livestock Essence", 1, 613, 9),
+              createMaterial("Lv 9 Agricultural Planting Essence", 1, 610, 9),
+              createMaterial("Lv 8 Gather Essence", 2, 606, 8),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 9 Agricultural Livestock Essence", 1, 613, 9),
+              createMaterial("Lv 9 Agricultural Planting Essence", 1, 610, 9),
+              createMaterial("Lv 8 Gather Essence", 2, 606, 8),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 9 Agricultural Livestock Essence", 1, 613, 9),
+            createMaterial("Lv 9 Agricultural Planting Essence", 1, 610, 9),
+            createMaterial("Lv 8 Gather Essence", 2, 606, 8),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Combat Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-746.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 9 Agricultural Livestock Essence", 1, 613, 9),
-            createMaterial("Lv 9 Agricultural Planting Essence", 1, 610, 9),
-            createMaterial("Lv 8 Gather Essence", 2, 606, 8),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 9 Agricultural Livestock Essence", 1, 613, 9),
-            createMaterial("Lv 9 Agricultural Planting Essence", 1, 610, 9),
-            createMaterial("Lv 8 Gather Essence", 2, 606, 8),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 9 Agricultural Livestock Essence", 1, 613, 9),
-          createMaterial("Lv 9 Agricultural Planting Essence", 1, 610, 9),
-          createMaterial("Lv 8 Gather Essence", 2, 606, 8),
-        ]),
       },
     },
     {
@@ -3081,28 +3648,37 @@ const itemsData = {
         { name: "Maxhp", typeNumber: "integer", values: { min: 27, max: 81 } },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 1 Agricultural Livestock Essence", 1, 213, 1),
-          createMaterial("Lv 1 Agricultural Planting Essence", 1, 210, 1),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 1 Agricultural Livestock Essence", 1, 213, 1),
+            createMaterial("Lv 1 Agricultural Planting Essence", 1, 210, 1),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 1 Agricultural Livestock Essence", 1, 213, 1),
+              createMaterial("Lv 1 Agricultural Planting Essence", 1, 210, 1),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 1 Agricultural Livestock Essence", 1, 213, 1),
+              createMaterial("Lv 1 Agricultural Planting Essence", 1, 210, 1),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 1 Agricultural Livestock Essence", 1, 213, 1),
+            createMaterial("Lv 1 Agricultural Planting Essence", 1, 210, 1),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Combat Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-738.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 1 Agricultural Livestock Essence", 1, 213, 1),
-            createMaterial("Lv 1 Agricultural Planting Essence", 1, 210, 1),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 1 Agricultural Livestock Essence", 1, 213, 1),
-            createMaterial("Lv 1 Agricultural Planting Essence", 1, 210, 1),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 1 Agricultural Livestock Essence", 1, 213, 1),
-          createMaterial("Lv 1 Agricultural Planting Essence", 1, 210, 1),
-        ]),
       },
     },
     {
@@ -3120,32 +3696,41 @@ const itemsData = {
         { name: "Maxhp", typeNumber: "integer", values: { min: 78, max: 132 } },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 2 Agricultural Livestock Essence", 1, 214, 2),
-          createMaterial("Lv 2 Agricultural Planting Essence", 1, 211, 2),
-          createMaterial("Lv 1 Gather Essence", 2, 207, 1),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 2 Agricultural Livestock Essence", 1, 214, 2),
+            createMaterial("Lv 2 Agricultural Planting Essence", 1, 211, 2),
+            createMaterial("Lv 1 Gather Essence", 2, 207, 1),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 2 Agricultural Livestock Essence", 1, 214, 2),
+              createMaterial("Lv 2 Agricultural Planting Essence", 1, 211, 2),
+              createMaterial("Lv 1 Gather Essence", 2, 207, 1),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 2 Agricultural Livestock Essence", 1, 214, 2),
+              createMaterial("Lv 2 Agricultural Planting Essence", 1, 211, 2),
+              createMaterial("Lv 1 Gather Essence", 2, 207, 1),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 2 Agricultural Livestock Essence", 1, 214, 2),
+            createMaterial("Lv 2 Agricultural Planting Essence", 1, 211, 2),
+            createMaterial("Lv 1 Gather Essence", 2, 207, 1),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Combat Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-739.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 2 Agricultural Livestock Essence", 1, 214, 2),
-            createMaterial("Lv 2 Agricultural Planting Essence", 1, 211, 2),
-            createMaterial("Lv 1 Gather Essence", 2, 207, 1),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 2 Agricultural Livestock Essence", 1, 214, 2),
-            createMaterial("Lv 2 Agricultural Planting Essence", 1, 211, 2),
-            createMaterial("Lv 1 Gather Essence", 2, 207, 1),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 2 Agricultural Livestock Essence", 1, 214, 2),
-          createMaterial("Lv 2 Agricultural Planting Essence", 1, 211, 2),
-          createMaterial("Lv 1 Gather Essence", 2, 207, 1),
-        ]),
       },
     },
     {
@@ -3167,32 +3752,41 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 3 Agricultural Livestock Essence", 1, 215, 3),
-          createMaterial("Lv 3 Agricultural Planting Essence", 1, 212, 3),
-          createMaterial("Lv 2 Gather Essence", 2, 208, 2),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 3 Agricultural Livestock Essence", 1, 215, 3),
+            createMaterial("Lv 3 Agricultural Planting Essence", 1, 212, 3),
+            createMaterial("Lv 2 Gather Essence", 2, 208, 2),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 3 Agricultural Livestock Essence", 1, 215, 3),
+              createMaterial("Lv 3 Agricultural Planting Essence", 1, 212, 3),
+              createMaterial("Lv 2 Gather Essence", 2, 208, 2),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 3 Agricultural Livestock Essence", 1, 215, 3),
+              createMaterial("Lv 3 Agricultural Planting Essence", 1, 212, 3),
+              createMaterial("Lv 2 Gather Essence", 2, 208, 2),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 3 Agricultural Livestock Essence", 1, 215, 3),
+            createMaterial("Lv 3 Agricultural Planting Essence", 1, 212, 3),
+            createMaterial("Lv 2 Gather Essence", 2, 208, 2),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Combat Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-740.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 3 Agricultural Livestock Essence", 1, 215, 3),
-            createMaterial("Lv 3 Agricultural Planting Essence", 1, 212, 3),
-            createMaterial("Lv 2 Gather Essence", 2, 208, 2),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 3 Agricultural Livestock Essence", 1, 215, 3),
-            createMaterial("Lv 3 Agricultural Planting Essence", 1, 212, 3),
-            createMaterial("Lv 2 Gather Essence", 2, 208, 2),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 3 Agricultural Livestock Essence", 1, 215, 3),
-          createMaterial("Lv 3 Agricultural Planting Essence", 1, 212, 3),
-          createMaterial("Lv 2 Gather Essence", 2, 208, 2),
-        ]),
       },
     },
     {
@@ -3214,32 +3808,41 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 4 Agricultural Livestock Essence", 1, 410, 4),
-          createMaterial("Lv 4 Agricultural Planting Essence", 1, 407, 4),
-          createMaterial("Lv 3 Gather Essence", 2, 209, 3),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 4 Agricultural Livestock Essence", 1, 410, 4),
+            createMaterial("Lv 4 Agricultural Planting Essence", 1, 407, 4),
+            createMaterial("Lv 3 Gather Essence", 2, 209, 3),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 4 Agricultural Livestock Essence", 1, 410, 4),
+              createMaterial("Lv 4 Agricultural Planting Essence", 1, 407, 4),
+              createMaterial("Lv 3 Gather Essence", 2, 209, 3),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 4 Agricultural Livestock Essence", 1, 410, 4),
+              createMaterial("Lv 4 Agricultural Planting Essence", 1, 407, 4),
+              createMaterial("Lv 3 Gather Essence", 2, 209, 3),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 4 Agricultural Livestock Essence", 1, 410, 4),
+            createMaterial("Lv 4 Agricultural Planting Essence", 1, 407, 4),
+            createMaterial("Lv 3 Gather Essence", 2, 209, 3),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Combat Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-741.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 4 Agricultural Livestock Essence", 1, 410, 4),
-            createMaterial("Lv 4 Agricultural Planting Essence", 1, 407, 4),
-            createMaterial("Lv 3 Gather Essence", 2, 209, 3),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 4 Agricultural Livestock Essence", 1, 410, 4),
-            createMaterial("Lv 4 Agricultural Planting Essence", 1, 407, 4),
-            createMaterial("Lv 3 Gather Essence", 2, 209, 3),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 4 Agricultural Livestock Essence", 1, 410, 4),
-          createMaterial("Lv 4 Agricultural Planting Essence", 1, 407, 4),
-          createMaterial("Lv 3 Gather Essence", 2, 209, 3),
-        ]),
       },
     },
     {
@@ -3261,32 +3864,41 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 5 Agricultural Livestock Essence", 1, 411, 5),
-          createMaterial("Lv 5 Agricultural Planting Essence", 1, 408, 5),
-          createMaterial("Lv 4 Gather Essence", 2, 404, 4),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 5 Agricultural Livestock Essence", 1, 411, 5),
+            createMaterial("Lv 5 Agricultural Planting Essence", 1, 408, 5),
+            createMaterial("Lv 4 Gather Essence", 2, 404, 4),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 5 Agricultural Livestock Essence", 1, 411, 5),
+              createMaterial("Lv 5 Agricultural Planting Essence", 1, 408, 5),
+              createMaterial("Lv 4 Gather Essence", 2, 404, 4),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 5 Agricultural Livestock Essence", 1, 411, 5),
+              createMaterial("Lv 5 Agricultural Planting Essence", 1, 408, 5),
+              createMaterial("Lv 4 Gather Essence", 2, 404, 4),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 5 Agricultural Livestock Essence", 1, 411, 5),
+            createMaterial("Lv 5 Agricultural Planting Essence", 1, 408, 5),
+            createMaterial("Lv 4 Gather Essence", 2, 404, 4),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Combat Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-742.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 5 Agricultural Livestock Essence", 1, 411, 5),
-            createMaterial("Lv 5 Agricultural Planting Essence", 1, 408, 5),
-            createMaterial("Lv 4 Gather Essence", 2, 404, 4),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 5 Agricultural Livestock Essence", 1, 411, 5),
-            createMaterial("Lv 5 Agricultural Planting Essence", 1, 408, 5),
-            createMaterial("Lv 4 Gather Essence", 2, 404, 4),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 5 Agricultural Livestock Essence", 1, 411, 5),
-          createMaterial("Lv 5 Agricultural Planting Essence", 1, 408, 5),
-          createMaterial("Lv 4 Gather Essence", 2, 404, 4),
-        ]),
       },
     },
     {
@@ -3308,32 +3920,41 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 6 Agricultural Livestock Essence", 1, 412, 6),
-          createMaterial("Lv 6 Agricultural Planting Essence", 1, 409, 6),
-          createMaterial("Lv 5 Gather Essence", 2, 405, 5),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 6 Agricultural Livestock Essence", 1, 412, 6),
+            createMaterial("Lv 6 Agricultural Planting Essence", 1, 409, 6),
+            createMaterial("Lv 5 Gather Essence", 2, 405, 5),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 6 Agricultural Livestock Essence", 1, 412, 6),
+              createMaterial("Lv 6 Agricultural Planting Essence", 1, 409, 6),
+              createMaterial("Lv 5 Gather Essence", 2, 405, 5),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 6 Agricultural Livestock Essence", 1, 412, 6),
+              createMaterial("Lv 6 Agricultural Planting Essence", 1, 409, 6),
+              createMaterial("Lv 5 Gather Essence", 2, 405, 5),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 6 Agricultural Livestock Essence", 1, 412, 6),
+            createMaterial("Lv 6 Agricultural Planting Essence", 1, 409, 6),
+            createMaterial("Lv 5 Gather Essence", 2, 405, 5),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Combat Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-743.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 6 Agricultural Livestock Essence", 1, 412, 6),
-            createMaterial("Lv 6 Agricultural Planting Essence", 1, 409, 6),
-            createMaterial("Lv 5 Gather Essence", 2, 405, 5),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 6 Agricultural Livestock Essence", 1, 412, 6),
-            createMaterial("Lv 6 Agricultural Planting Essence", 1, 409, 6),
-            createMaterial("Lv 5 Gather Essence", 2, 405, 5),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 6 Agricultural Livestock Essence", 1, 412, 6),
-          createMaterial("Lv 6 Agricultural Planting Essence", 1, 409, 6),
-          createMaterial("Lv 5 Gather Essence", 2, 405, 5),
-        ]),
       },
     },
     {
@@ -3355,32 +3976,41 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 7 Agricultural Livestock Essence", 1, 611, 7),
-          createMaterial("Lv 7 Agricultural Planting Essence", 1, 608, 7),
-          createMaterial("Lv 6 Gather Essence", 2, 406, 6),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 7 Agricultural Livestock Essence", 1, 611, 7),
+            createMaterial("Lv 7 Agricultural Planting Essence", 1, 608, 7),
+            createMaterial("Lv 6 Gather Essence", 2, 406, 6),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 7 Agricultural Livestock Essence", 1, 611, 7),
+              createMaterial("Lv 7 Agricultural Planting Essence", 1, 608, 7),
+              createMaterial("Lv 6 Gather Essence", 2, 406, 6),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 7 Agricultural Livestock Essence", 1, 611, 7),
+              createMaterial("Lv 7 Agricultural Planting Essence", 1, 608, 7),
+              createMaterial("Lv 6 Gather Essence", 2, 406, 6),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 7 Agricultural Livestock Essence", 1, 611, 7),
+            createMaterial("Lv 7 Agricultural Planting Essence", 1, 608, 7),
+            createMaterial("Lv 5 Gather Essence", 2, 405, 6),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Combat Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-744.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 7 Agricultural Livestock Essence", 1, 611, 7),
-            createMaterial("Lv 7 Agricultural Planting Essence", 1, 608, 7),
-            createMaterial("Lv 6 Gather Essence", 2, 406, 6),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 7 Agricultural Livestock Essence", 1, 611, 7),
-            createMaterial("Lv 7 Agricultural Planting Essence", 1, 608, 7),
-            createMaterial("Lv 6 Gather Essence", 2, 406, 6),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 7 Agricultural Livestock Essence", 1, 611, 7),
-          createMaterial("Lv 7 Agricultural Planting Essence", 1, 608, 7),
-          createMaterial("Lv 5 Gather Essence", 2, 405, 6),
-        ]),
       },
     },
     {
@@ -3402,32 +4032,41 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 8 Agricultural Livestock Essence", 1, 612, 8),
-          createMaterial("Lv 8 Agricultural Planting Essence", 1, 609, 8),
-          createMaterial("Lv 7 Gather Essence", 2, 406, 7),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 8 Agricultural Livestock Essence", 1, 612, 8),
+            createMaterial("Lv 8 Agricultural Planting Essence", 1, 609, 8),
+            createMaterial("Lv 7 Gather Essence", 2, 406, 7),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 8 Agricultural Livestock Essence", 1, 612, 8),
+              createMaterial("Lv 8 Agricultural Planting Essence", 1, 609, 8),
+              createMaterial("Lv 7 Gather Essence", 2, 406, 7),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 8 Agricultural Livestock Essence", 1, 612, 8),
+              createMaterial("Lv 8 Agricultural Planting Essence", 1, 609, 8),
+              createMaterial("Lv 7 Gather Essence", 2, 406, 7),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 8 Agricultural Livestock Essence", 1, 612, 8),
+            createMaterial("Lv 8 Agricultural Planting Essence", 1, 609, 8),
+            createMaterial("Lv 7 Gather Essence", 2, 406, 7),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Combat Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-745.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 8 Agricultural Livestock Essence", 1, 612, 8),
-            createMaterial("Lv 8 Agricultural Planting Essence", 1, 609, 8),
-            createMaterial("Lv 7 Gather Essence", 2, 406, 7),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 8 Agricultural Livestock Essence", 1, 612, 8),
-            createMaterial("Lv 8 Agricultural Planting Essence", 1, 609, 8),
-            createMaterial("Lv 7 Gather Essence", 2, 406, 7),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 8 Agricultural Livestock Essence", 1, 612, 8),
-          createMaterial("Lv 8 Agricultural Planting Essence", 1, 609, 8),
-          createMaterial("Lv 7 Gather Essence", 2, 406, 7),
-        ]),
       },
     },
     {
@@ -3449,32 +4088,41 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 9 Agricultural Livestock Essence", 1, 613, 9),
-          createMaterial("Lv 9 Agricultural Planting Essence", 1, 610, 9),
-          createMaterial("Lv 8 Gather Essence", 2, 606, 8),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 9 Agricultural Livestock Essence", 1, 613, 9),
+            createMaterial("Lv 9 Agricultural Planting Essence", 1, 610, 9),
+            createMaterial("Lv 8 Gather Essence", 2, 606, 8),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 9 Agricultural Livestock Essence", 1, 613, 9),
+              createMaterial("Lv 9 Agricultural Planting Essence", 1, 610, 9),
+              createMaterial("Lv 8 Gather Essence", 2, 606, 8),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 9 Agricultural Livestock Essence", 1, 613, 9),
+              createMaterial("Lv 9 Agricultural Planting Essence", 1, 610, 9),
+              createMaterial("Lv 8 Gather Essence", 2, 606, 8),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 9 Agricultural Livestock Essence", 1, 613, 9),
+            createMaterial("Lv 9 Agricultural Planting Essence", 1, 610, 9),
+            createMaterial("Lv 8 Gather Essence", 2, 606, 8),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Combat Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-746.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 9 Agricultural Livestock Essence", 1, 613, 9),
-            createMaterial("Lv 9 Agricultural Planting Essence", 1, 610, 9),
-            createMaterial("Lv 8 Gather Essence", 2, 606, 8),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 9 Agricultural Livestock Essence", 1, 613, 9),
-            createMaterial("Lv 9 Agricultural Planting Essence", 1, 610, 9),
-            createMaterial("Lv 8 Gather Essence", 2, 606, 8),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 9 Agricultural Livestock Essence", 1, 613, 9),
-          createMaterial("Lv 9 Agricultural Planting Essence", 1, 610, 9),
-          createMaterial("Lv 8 Gather Essence", 2, 606, 8),
-        ]),
       },
     },
   ],
@@ -3498,18 +4146,27 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [createMaterial("Lv 1 Gather Essence", 2, 207, 1)],
-        minPriceTotalRon: calculateTotalPrice(
-          [createMaterial("Lv 1 Gather Essence", 2, 207, 1)],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [createMaterial("Lv 1 Gather Essence", 2, 207, 1)],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 1 Gather Essence", 2, 207, 1),
-        ]),
+        craftRecipe: {
+          materials: [createMaterial("Lv 1 Gather Essence", 2, 207, 1)],
+          minPriceTotalRon: calculateTotalPrice(
+            [createMaterial("Lv 1 Gather Essence", 2, 207, 1)],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [createMaterial("Lv 1 Gather Essence", 2, 207, 1)],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 1 Gather Essence", 2, 207, 1),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Farming Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-747.png",
+            quantity: 100,
+          },
+        ],
       },
     },
     {
@@ -3531,28 +4188,37 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 1 Combat Essence", 2, 216, 1),
-          createMaterial("Lv 2 Gather Essence", 2, 208, 2),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 1 Combat Essence", 2, 216, 1),
+            createMaterial("Lv 2 Gather Essence", 2, 208, 2),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 1 Combat Essence", 2, 216, 1),
+              createMaterial("Lv 2 Gather Essence", 2, 208, 2),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 1 Combat Essence", 2, 216, 1),
+              createMaterial("Lv 2 Gather Essence", 2, 208, 2),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 1 Combat Essence", 2, 216, 1),
+            createMaterial("Lv 2 Gather Essence", 2, 208, 2),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Farming Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-748.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 1 Combat Essence", 2, 216, 1),
-            createMaterial("Lv 2 Gather Essence", 2, 208, 2),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 1 Combat Essence", 2, 216, 1),
-            createMaterial("Lv 2 Gather Essence", 2, 208, 2),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 1 Combat Essence", 2, 216, 1),
-          createMaterial("Lv 2 Gather Essence", 2, 208, 2),
-        ]),
       },
     },
     {
@@ -3574,28 +4240,37 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 2 Combat Essence", 2, 217, 2),
-          createMaterial("Lv 3 Gather Essence", 2, 209, 3),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 2 Combat Essence", 2, 217, 2),
+            createMaterial("Lv 3 Gather Essence", 2, 209, 3),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 2 Combat Essence", 2, 217, 2),
+              createMaterial("Lv 3 Gather Essence", 2, 209, 3),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 2 Combat Essence", 2, 217, 2),
+              createMaterial("Lv 3 Gather Essence", 2, 209, 3),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 2 Combat Essence", 2, 217, 2),
+            createMaterial("Lv 3 Gather Essence", 2, 209, 3),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Farming Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-749.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 2 Combat Essence", 2, 217, 2),
-            createMaterial("Lv 3 Gather Essence", 2, 209, 3),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 2 Combat Essence", 2, 217, 2),
-            createMaterial("Lv 3 Gather Essence", 2, 209, 3),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 2 Combat Essence", 2, 217, 2),
-          createMaterial("Lv 3 Gather Essence", 2, 209, 3),
-        ]),
       },
     },
     {
@@ -3617,28 +4292,37 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 3 Combat Essence", 2, 218, 3),
-          createMaterial("Lv 4 Gather Essence", 2, 404, 4),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 3 Combat Essence", 2, 218, 3),
+            createMaterial("Lv 4 Gather Essence", 2, 404, 4),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 3 Combat Essence", 2, 218, 3),
+              createMaterial("Lv 4 Gather Essence", 2, 404, 4),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 3 Combat Essence", 2, 218, 3),
+              createMaterial("Lv 4 Gather Essence", 2, 404, 4),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 3 Combat Essence", 2, 218, 3),
+            createMaterial("Lv 4 Gather Essence", 2, 404, 4),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Farming Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-750.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 3 Combat Essence", 2, 218, 3),
-            createMaterial("Lv 4 Gather Essence", 2, 404, 4),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 3 Combat Essence", 2, 218, 3),
-            createMaterial("Lv 4 Gather Essence", 2, 404, 4),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 3 Combat Essence", 2, 218, 3),
-          createMaterial("Lv 4 Gather Essence", 2, 404, 4),
-        ]),
       },
     },
     {
@@ -3660,28 +4344,37 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 4 Combat Essence", 2, 401, 4),
-          createMaterial("Lv 5 Gather Essence", 2, 405, 5),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 4 Combat Essence", 2, 401, 4),
+            createMaterial("Lv 5 Gather Essence", 2, 405, 5),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 4 Combat Essence", 2, 401, 4),
+              createMaterial("Lv 5 Gather Essence", 2, 405, 5),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 4 Combat Essence", 2, 401, 4),
+              createMaterial("Lv 5 Gather Essence", 2, 405, 5),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 4 Combat Essence", 2, 401, 4),
+            createMaterial("Lv 5 Gather Essence", 2, 405, 5),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Farming Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-751.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 4 Combat Essence", 2, 401, 4),
-            createMaterial("Lv 5 Gather Essence", 2, 405, 5),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 4 Combat Essence", 2, 401, 4),
-            createMaterial("Lv 5 Gather Essence", 2, 405, 5),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 4 Combat Essence", 2, 401, 4),
-          createMaterial("Lv 5 Gather Essence", 2, 405, 5),
-        ]),
       },
     },
     {
@@ -3703,28 +4396,37 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 5 Combat Essence", 2, 402, 5),
-          createMaterial("Lv 6 Gather Essence", 2, 406, 6),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 5 Combat Essence", 2, 402, 5),
+            createMaterial("Lv 6 Gather Essence", 2, 406, 6),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 5 Combat Essence", 2, 402, 5),
+              createMaterial("Lv 6 Gather Essence", 2, 406, 6),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 5 Combat Essence", 2, 402, 5),
+              createMaterial("Lv 6 Gather Essence", 2, 406, 6),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 5 Combat Essence", 2, 402, 5),
+            createMaterial("Lv 6 Gather Essence", 2, 406, 6),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Farming Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-752.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 5 Combat Essence", 2, 402, 5),
-            createMaterial("Lv 6 Gather Essence", 2, 406, 6),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 5 Combat Essence", 2, 402, 5),
-            createMaterial("Lv 6 Gather Essence", 2, 406, 6),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 5 Combat Essence", 2, 402, 5),
-          createMaterial("Lv 6 Gather Essence", 2, 406, 6),
-        ]),
       },
     },
     {
@@ -3746,28 +4448,37 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 6 Combat Essence", 2, 403, 6),
-          createMaterial("Lv 7 Gather Essence", 2, 605, 7),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 6 Combat Essence", 2, 403, 6),
+            createMaterial("Lv 7 Gather Essence", 2, 605, 7),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 6 Combat Essence", 2, 403, 6),
+              createMaterial("Lv 7 Gather Essence", 2, 605, 7),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 6 Combat Essence", 2, 403, 6),
+              createMaterial("Lv 7 Gather Essence", 2, 605, 7),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 6 Combat Essence", 2, 403, 6),
+            createMaterial("Lv 7 Gather Essence", 2, 605, 7),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Farming Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-753.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 6 Combat Essence", 2, 403, 6),
-            createMaterial("Lv 7 Gather Essence", 2, 605, 7),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 6 Combat Essence", 2, 403, 6),
-            createMaterial("Lv 7 Gather Essence", 2, 605, 7),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 6 Combat Essence", 2, 403, 6),
-          createMaterial("Lv 7 Gather Essence", 2, 605, 7),
-        ]),
       },
     },
     {
@@ -3789,28 +4500,37 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 7 Combat Essence", 2, 602, 7),
-          createMaterial("Lv 8 Gather Essence", 2, 606, 8),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 7 Combat Essence", 2, 602, 7),
+            createMaterial("Lv 8 Gather Essence", 2, 606, 8),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 7 Combat Essence", 2, 602, 7),
+              createMaterial("Lv 8 Gather Essence", 2, 606, 8),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 7 Combat Essence", 2, 602, 7),
+              createMaterial("Lv 8 Gather Essence", 2, 606, 8),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 7 Combat Essence", 2, 602, 7),
+            createMaterial("Lv 8 Gather Essence", 2, 606, 8),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Farming Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-754.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 7 Combat Essence", 2, 602, 7),
-            createMaterial("Lv 8 Gather Essence", 2, 606, 8),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 7 Combat Essence", 2, 602, 7),
-            createMaterial("Lv 8 Gather Essence", 2, 606, 8),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 7 Combat Essence", 2, 602, 7),
-          createMaterial("Lv 8 Gather Essence", 2, 606, 8),
-        ]),
       },
     },
     {
@@ -3832,28 +4552,37 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 8 Combat Essence", 2, 603, 8),
-          createMaterial("Lv 9 Gather Essence", 2, 607, 9),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 8 Combat Essence", 2, 603, 8),
+            createMaterial("Lv 9 Gather Essence", 2, 607, 9),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 8 Combat Essence", 2, 603, 8),
+              createMaterial("Lv 9 Gather Essence", 2, 607, 9),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 8 Combat Essence", 2, 603, 8),
+              createMaterial("Lv 9 Gather Essence", 2, 607, 9),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 8 Combat Essence", 2, 603, 8),
+            createMaterial("Lv 9 Gather Essence", 2, 607, 9),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Farming Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-755.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 8 Combat Essence", 2, 603, 8),
-            createMaterial("Lv 9 Gather Essence", 2, 607, 9),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 8 Combat Essence", 2, 603, 8),
-            createMaterial("Lv 9 Gather Essence", 2, 607, 9),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 8 Combat Essence", 2, 603, 8),
-          createMaterial("Lv 9 Gather Essence", 2, 607, 9),
-        ]),
       },
     },
     {
@@ -3870,18 +4599,27 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [createMaterial("Lv 1 Gather Essence", 2, 207, 1)],
-        minPriceTotalRon: calculateTotalPrice(
-          [createMaterial("Lv 1 Gather Essence", 2, 207, 1)],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [createMaterial("Lv 1 Gather Essence", 2, 207, 1)],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 1 Gather Essence", 2, 207, 1),
-        ]),
+        craftRecipe: {
+          materials: [createMaterial("Lv 1 Gather Essence", 2, 207, 1)],
+          minPriceTotalRon: calculateTotalPrice(
+            [createMaterial("Lv 1 Gather Essence", 2, 207, 1)],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [createMaterial("Lv 1 Gather Essence", 2, 207, 1)],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 1 Gather Essence", 2, 207, 1),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Farming Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-747.png",
+            quantity: 100,
+          },
+        ],
       },
     },
     {
@@ -3898,28 +4636,37 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 1 Combat Essence", 2, 216, 1),
-          createMaterial("Lv 2 Gather Essence", 2, 208, 2),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 1 Combat Essence", 2, 216, 1),
+            createMaterial("Lv 2 Gather Essence", 2, 208, 2),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 1 Combat Essence", 2, 216, 1),
+              createMaterial("Lv 2 Gather Essence", 2, 208, 2),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 1 Combat Essence", 2, 216, 1),
+              createMaterial("Lv 2 Gather Essence", 2, 208, 2),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 1 Combat Essence", 2, 216, 1),
+            createMaterial("Lv 2 Gather Essence", 2, 208, 2),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Farming Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-748.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 1 Combat Essence", 2, 216, 1),
-            createMaterial("Lv 2 Gather Essence", 2, 208, 2),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 1 Combat Essence", 2, 216, 1),
-            createMaterial("Lv 2 Gather Essence", 2, 208, 2),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 1 Combat Essence", 2, 216, 1),
-          createMaterial("Lv 2 Gather Essence", 2, 208, 2),
-        ]),
       },
     },
     {
@@ -3936,28 +4683,37 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 2 Combat Essence", 2, 217, 2),
-          createMaterial("Lv 3 Gather Essence", 2, 209, 3),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 2 Combat Essence", 2, 217, 2),
+            createMaterial("Lv 3 Gather Essence", 2, 209, 3),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 2 Combat Essence", 2, 217, 2),
+              createMaterial("Lv 3 Gather Essence", 2, 209, 3),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 2 Combat Essence", 2, 217, 2),
+              createMaterial("Lv 3 Gather Essence", 2, 209, 3),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 2 Combat Essence", 2, 217, 2),
+            createMaterial("Lv 3 Gather Essence", 2, 209, 3),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Farming Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-749.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 2 Combat Essence", 2, 217, 2),
-            createMaterial("Lv 3 Gather Essence", 2, 209, 3),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 2 Combat Essence", 2, 217, 2),
-            createMaterial("Lv 3 Gather Essence", 2, 209, 3),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 2 Combat Essence", 2, 217, 2),
-          createMaterial("Lv 3 Gather Essence", 2, 209, 3),
-        ]),
       },
     },
     {
@@ -3974,28 +4730,37 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 3 Combat Essence", 2, 218, 3),
-          createMaterial("Lv 4 Gather Essence", 2, 404, 4),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 3 Combat Essence", 2, 218, 3),
+            createMaterial("Lv 4 Gather Essence", 2, 404, 4),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 3 Combat Essence", 2, 218, 3),
+              createMaterial("Lv 4 Gather Essence", 2, 404, 4),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 3 Combat Essence", 2, 218, 3),
+              createMaterial("Lv 4 Gather Essence", 2, 404, 4),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 3 Combat Essence", 2, 218, 3),
+            createMaterial("Lv 4 Gather Essence", 2, 404, 4),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Farming Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-750.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 3 Combat Essence", 2, 218, 3),
-            createMaterial("Lv 4 Gather Essence", 2, 404, 4),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 3 Combat Essence", 2, 218, 3),
-            createMaterial("Lv 4 Gather Essence", 2, 404, 4),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 3 Combat Essence", 2, 218, 3),
-          createMaterial("Lv 4 Gather Essence", 2, 404, 4),
-        ]),
       },
     },
     {
@@ -4012,28 +4777,37 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 4 Combat Essence", 2, 401, 4),
-          createMaterial("Lv 5 Gather Essence", 2, 405, 5),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 4 Combat Essence", 2, 401, 4),
+            createMaterial("Lv 5 Gather Essence", 2, 405, 5),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 4 Combat Essence", 2, 401, 4),
+              createMaterial("Lv 5 Gather Essence", 2, 405, 5),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 4 Combat Essence", 2, 401, 4),
+              createMaterial("Lv 5 Gather Essence", 2, 405, 5),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 4 Combat Essence", 2, 401, 4),
+            createMaterial("Lv 5 Gather Essence", 2, 405, 5),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Farming Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-751.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 4 Combat Essence", 2, 401, 4),
-            createMaterial("Lv 5 Gather Essence", 2, 405, 5),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 4 Combat Essence", 2, 401, 4),
-            createMaterial("Lv 5 Gather Essence", 2, 405, 5),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 4 Combat Essence", 2, 401, 4),
-          createMaterial("Lv 5 Gather Essence", 2, 405, 5),
-        ]),
       },
     },
     {
@@ -4050,28 +4824,37 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 5 Combat Essence", 2, 402, 5),
-          createMaterial("Lv 6 Gather Essence", 2, 406, 6),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 5 Combat Essence", 2, 402, 5),
+            createMaterial("Lv 6 Gather Essence", 2, 406, 6),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 5 Combat Essence", 2, 402, 5),
+              createMaterial("Lv 6 Gather Essence", 2, 406, 6),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 5 Combat Essence", 2, 402, 5),
+              createMaterial("Lv 6 Gather Essence", 2, 406, 6),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 5 Combat Essence", 2, 402, 5),
+            createMaterial("Lv 6 Gather Essence", 2, 406, 6),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Farming Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-752.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 5 Combat Essence", 2, 402, 5),
-            createMaterial("Lv 6 Gather Essence", 2, 406, 6),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 5 Combat Essence", 2, 402, 5),
-            createMaterial("Lv 6 Gather Essence", 2, 406, 6),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 5 Combat Essence", 2, 402, 5),
-          createMaterial("Lv 6 Gather Essence", 2, 406, 6),
-        ]),
       },
     },
     {
@@ -4088,28 +4871,37 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 6 Combat Essence", 2, 403, 6),
-          createMaterial("Lv 7 Gather Essence", 2, 605, 7),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 6 Combat Essence", 2, 403, 6),
+            createMaterial("Lv 7 Gather Essence", 2, 605, 7),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 6 Combat Essence", 2, 403, 6),
+              createMaterial("Lv 7 Gather Essence", 2, 605, 7),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 6 Combat Essence", 2, 403, 6),
+              createMaterial("Lv 7 Gather Essence", 2, 605, 7),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 6 Combat Essence", 2, 403, 6),
+            createMaterial("Lv 7 Gather Essence", 2, 605, 7),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Farming Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-753.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 6 Combat Essence", 2, 403, 6),
-            createMaterial("Lv 7 Gather Essence", 2, 605, 7),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 6 Combat Essence", 2, 403, 6),
-            createMaterial("Lv 7 Gather Essence", 2, 605, 7),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 6 Combat Essence", 2, 403, 6),
-          createMaterial("Lv 7 Gather Essence", 2, 605, 7),
-        ]),
       },
     },
     {
@@ -4126,28 +4918,37 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 7 Combat Essence", 2, 602, 7),
-          createMaterial("Lv 8 Gather Essence", 2, 606, 8),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 7 Combat Essence", 2, 602, 7),
+            createMaterial("Lv 8 Gather Essence", 2, 606, 8),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 7 Combat Essence", 2, 602, 7),
+              createMaterial("Lv 8 Gather Essence", 2, 606, 8),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 7 Combat Essence", 2, 602, 7),
+              createMaterial("Lv 8 Gather Essence", 2, 606, 8),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 7 Combat Essence", 2, 602, 7),
+            createMaterial("Lv 8 Gather Essence", 2, 606, 8),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Farming Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-754.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 7 Combat Essence", 2, 602, 7),
-            createMaterial("Lv 8 Gather Essence", 2, 606, 8),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 7 Combat Essence", 2, 602, 7),
-            createMaterial("Lv 8 Gather Essence", 2, 606, 8),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 7 Combat Essence", 2, 602, 7),
-          createMaterial("Lv 8 Gather Essence", 2, 606, 8),
-        ]),
       },
     },
     {
@@ -4164,28 +4965,37 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 8 Combat Essence", 2, 603, 8),
-          createMaterial("Lv 9 Gather Essence", 2, 607, 9),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 8 Combat Essence", 2, 603, 8),
+            createMaterial("Lv 9 Gather Essence", 2, 607, 9),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 8 Combat Essence", 2, 603, 8),
+              createMaterial("Lv 9 Gather Essence", 2, 607, 9),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 8 Combat Essence", 2, 603, 8),
+              createMaterial("Lv 9 Gather Essence", 2, 607, 9),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 8 Combat Essence", 2, 603, 8),
+            createMaterial("Lv 9 Gather Essence", 2, 607, 9),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Farming Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-755.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 8 Combat Essence", 2, 603, 8),
-            createMaterial("Lv 9 Gather Essence", 2, 607, 9),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 8 Combat Essence", 2, 603, 8),
-            createMaterial("Lv 9 Gather Essence", 2, 607, 9),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 8 Combat Essence", 2, 603, 8),
-          createMaterial("Lv 9 Gather Essence", 2, 607, 9),
-        ]),
       },
     },
     {
@@ -4202,18 +5012,27 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [createMaterial("Lv 1 Gather Essence", 2, 207, 1)],
-        minPriceTotalRon: calculateTotalPrice(
-          [createMaterial("Lv 1 Gather Essence", 2, 207, 1)],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [createMaterial("Lv 1 Gather Essence", 2, 207, 1)],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 1 Gather Essence", 2, 207, 1),
-        ]),
+        craftRecipe: {
+          materials: [createMaterial("Lv 1 Gather Essence", 2, 207, 1)],
+          minPriceTotalRon: calculateTotalPrice(
+            [createMaterial("Lv 1 Gather Essence", 2, 207, 1)],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [createMaterial("Lv 1 Gather Essence", 2, 207, 1)],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 1 Gather Essence", 2, 207, 1),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Farming Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-747.png",
+            quantity: 100,
+          },
+        ],
       },
     },
     {
@@ -4230,28 +5049,37 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 1 Combat Essence", 2, 216, 1),
-          createMaterial("Lv 2 Gather Essence", 2, 208, 2),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 1 Combat Essence", 2, 216, 1),
+            createMaterial("Lv 2 Gather Essence", 2, 208, 2),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 1 Combat Essence", 2, 216, 1),
+              createMaterial("Lv 2 Gather Essence", 2, 208, 2),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 1 Combat Essence", 2, 216, 1),
+              createMaterial("Lv 2 Gather Essence", 2, 208, 2),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 1 Combat Essence", 2, 216, 1),
+            createMaterial("Lv 2 Gather Essence", 2, 208, 2),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Farming Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-748.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 1 Combat Essence", 2, 216, 1),
-            createMaterial("Lv 2 Gather Essence", 2, 208, 2),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 1 Combat Essence", 2, 216, 1),
-            createMaterial("Lv 2 Gather Essence", 2, 208, 2),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 1 Combat Essence", 2, 216, 1),
-          createMaterial("Lv 2 Gather Essence", 2, 208, 2),
-        ]),
       },
     },
     {
@@ -4268,28 +5096,37 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 2 Combat Essence", 2, 217, 2),
-          createMaterial("Lv 3 Gather Essence", 2, 209, 3),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 2 Combat Essence", 2, 217, 2),
+            createMaterial("Lv 3 Gather Essence", 2, 209, 3),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 2 Combat Essence", 2, 217, 2),
+              createMaterial("Lv 3 Gather Essence", 2, 209, 3),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 2 Combat Essence", 2, 217, 2),
+              createMaterial("Lv 3 Gather Essence", 2, 209, 3),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 2 Combat Essence", 2, 217, 2),
+            createMaterial("Lv 3 Gather Essence", 2, 209, 3),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Farming Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-749.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 2 Combat Essence", 2, 217, 2),
-            createMaterial("Lv 3 Gather Essence", 2, 209, 3),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 2 Combat Essence", 2, 217, 2),
-            createMaterial("Lv 3 Gather Essence", 2, 209, 3),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 2 Combat Essence", 2, 217, 2),
-          createMaterial("Lv 3 Gather Essence", 2, 209, 3),
-        ]),
       },
     },
     {
@@ -4306,28 +5143,37 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 3 Combat Essence", 2, 218, 3),
-          createMaterial("Lv 4 Gather Essence", 2, 404, 4),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 3 Combat Essence", 2, 218, 3),
+            createMaterial("Lv 4 Gather Essence", 2, 404, 4),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 3 Combat Essence", 2, 218, 3),
+              createMaterial("Lv 4 Gather Essence", 2, 404, 4),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 3 Combat Essence", 2, 218, 3),
+              createMaterial("Lv 4 Gather Essence", 2, 404, 4),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 3 Combat Essence", 2, 218, 3),
+            createMaterial("Lv 4 Gather Essence", 2, 404, 4),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Farming Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-750.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 3 Combat Essence", 2, 218, 3),
-            createMaterial("Lv 4 Gather Essence", 2, 404, 4),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 3 Combat Essence", 2, 218, 3),
-            createMaterial("Lv 4 Gather Essence", 2, 404, 4),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 3 Combat Essence", 2, 218, 3),
-          createMaterial("Lv 4 Gather Essence", 2, 404, 4),
-        ]),
       },
     },
     {
@@ -4344,28 +5190,37 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 4 Combat Essence", 2, 401, 4),
-          createMaterial("Lv 5 Gather Essence", 2, 405, 5),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 4 Combat Essence", 2, 401, 4),
+            createMaterial("Lv 5 Gather Essence", 2, 405, 5),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 4 Combat Essence", 2, 401, 4),
+              createMaterial("Lv 5 Gather Essence", 2, 405, 5),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 4 Combat Essence", 2, 401, 4),
+              createMaterial("Lv 5 Gather Essence", 2, 405, 5),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 4 Combat Essence", 2, 401, 4),
+            createMaterial("Lv 5 Gather Essence", 2, 405, 5),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Farming Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-751.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 4 Combat Essence", 2, 401, 4),
-            createMaterial("Lv 5 Gather Essence", 2, 405, 5),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 4 Combat Essence", 2, 401, 4),
-            createMaterial("Lv 5 Gather Essence", 2, 405, 5),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 4 Combat Essence", 2, 401, 4),
-          createMaterial("Lv 5 Gather Essence", 2, 405, 5),
-        ]),
       },
     },
     {
@@ -4382,28 +5237,37 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 5 Combat Essence", 2, 402, 5),
-          createMaterial("Lv 6 Gather Essence", 2, 406, 6),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 5 Combat Essence", 2, 402, 5),
+            createMaterial("Lv 6 Gather Essence", 2, 406, 6),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 5 Combat Essence", 2, 402, 5),
+              createMaterial("Lv 6 Gather Essence", 2, 406, 6),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 5 Combat Essence", 2, 402, 5),
+              createMaterial("Lv 6 Gather Essence", 2, 406, 6),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 5 Combat Essence", 2, 402, 5),
+            createMaterial("Lv 6 Gather Essence", 2, 406, 6),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Farming Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-752.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 5 Combat Essence", 2, 402, 5),
-            createMaterial("Lv 6 Gather Essence", 2, 406, 6),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 5 Combat Essence", 2, 402, 5),
-            createMaterial("Lv 6 Gather Essence", 2, 406, 6),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 5 Combat Essence", 2, 402, 5),
-          createMaterial("Lv 6 Gather Essence", 2, 406, 6),
-        ]),
       },
     },
     {
@@ -4420,28 +5284,37 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 6 Combat Essence", 2, 403, 6),
-          createMaterial("Lv 7 Gather Essence", 2, 605, 7),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 6 Combat Essence", 2, 403, 6),
+            createMaterial("Lv 7 Gather Essence", 2, 605, 7),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 6 Combat Essence", 2, 403, 6),
+              createMaterial("Lv 7 Gather Essence", 2, 605, 7),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 6 Combat Essence", 2, 403, 6),
+              createMaterial("Lv 7 Gather Essence", 2, 605, 7),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 6 Combat Essence", 2, 403, 6),
+            createMaterial("Lv 7 Gather Essence", 2, 605, 7),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Farming Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-753.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 6 Combat Essence", 2, 403, 6),
-            createMaterial("Lv 7 Gather Essence", 2, 605, 7),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 6 Combat Essence", 2, 403, 6),
-            createMaterial("Lv 7 Gather Essence", 2, 605, 7),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 6 Combat Essence", 2, 403, 6),
-          createMaterial("Lv 7 Gather Essence", 2, 605, 7),
-        ]),
       },
     },
     {
@@ -4458,28 +5331,37 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 7 Combat Essence", 2, 602, 9),
-          createMaterial("Lv 8 Gather Essence", 2, 606, 8),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 7 Combat Essence", 2, 602, 9),
+            createMaterial("Lv 8 Gather Essence", 2, 606, 8),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 7 Combat Essence", 2, 602, 9),
+              createMaterial("Lv 8 Gather Essence", 2, 606, 8),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 7 Combat Essence", 2, 602, 9),
+              createMaterial("Lv 8 Gather Essence", 2, 606, 8),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 7 Combat Essence", 2, 602, 9),
+            createMaterial("Lv 8 Gather Essence", 2, 606, 8),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Farming Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-754.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 7 Combat Essence", 2, 602, 9),
-            createMaterial("Lv 8 Gather Essence", 2, 606, 8),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 7 Combat Essence", 2, 602, 9),
-            createMaterial("Lv 8 Gather Essence", 2, 606, 8),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 7 Combat Essence", 2, 602, 9),
-          createMaterial("Lv 8 Gather Essence", 2, 606, 8),
-        ]),
       },
     },
     {
@@ -4496,28 +5378,37 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 8 Combat Essence", 2, 603, 8),
-          createMaterial("Lv 9 Gather Essence", 2, 607, 9),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 8 Combat Essence", 2, 603, 8),
+            createMaterial("Lv 9 Gather Essence", 2, 607, 9),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 8 Combat Essence", 2, 603, 8),
+              createMaterial("Lv 9 Gather Essence", 2, 607, 9),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 8 Combat Essence", 2, 603, 8),
+              createMaterial("Lv 9 Gather Essence", 2, 607, 9),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 8 Combat Essence", 2, 603, 8),
+            createMaterial("Lv 9 Gather Essence", 2, 607, 9),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Farming Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-755.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 8 Combat Essence", 2, 603, 8),
-            createMaterial("Lv 9 Gather Essence", 2, 607, 9),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 8 Combat Essence", 2, 603, 8),
-            createMaterial("Lv 9 Gather Essence", 2, 607, 9),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 8 Combat Essence", 2, 603, 8),
-          createMaterial("Lv 9 Gather Essence", 2, 607, 9),
-        ]),
       },
     },
     {
@@ -4549,18 +5440,27 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [createMaterial("Lv 1 Gather Essence", 2, 207, 1)],
-        minPriceTotalRon: calculateTotalPrice(
-          [createMaterial("Lv 1 Gather Essence", 2, 207, 1)],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [createMaterial("Lv 1 Gather Essence", 2, 207, 1)],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 1 Gather Essence", 2, 207, 1),
-        ]),
+        craftRecipe: {
+          materials: [createMaterial("Lv 1 Gather Essence", 2, 207, 1)],
+          minPriceTotalRon: calculateTotalPrice(
+            [createMaterial("Lv 1 Gather Essence", 2, 207, 1)],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [createMaterial("Lv 1 Gather Essence", 2, 207, 1)],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 1 Gather Essence", 2, 207, 1),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Farming Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-747.png",
+            quantity: 100,
+          },
+        ],
       },
     },
     {
@@ -4592,28 +5492,37 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 1 Combat Essence", 2, 216, 1),
-          createMaterial("Lv 2 Gather Essence", 2, 208, 2),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 1 Combat Essence", 2, 216, 1),
+            createMaterial("Lv 2 Gather Essence", 2, 208, 2),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 1 Combat Essence", 2, 216, 1),
+              createMaterial("Lv 2 Gather Essence", 2, 208, 2),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 1 Combat Essence", 2, 216, 1),
+              createMaterial("Lv 2 Gather Essence", 2, 208, 2),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 1 Combat Essence", 2, 216, 1),
+            createMaterial("Lv 2 Gather Essence", 2, 208, 2),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Farming Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-748.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 1 Combat Essence", 2, 216, 1),
-            createMaterial("Lv 2 Gather Essence", 2, 208, 2),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 1 Combat Essence", 2, 216, 1),
-            createMaterial("Lv 2 Gather Essence", 2, 208, 2),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 1 Combat Essence", 2, 216, 1),
-          createMaterial("Lv 2 Gather Essence", 2, 208, 2),
-        ]),
       },
     },
     {
@@ -4645,28 +5554,37 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 2 Combat Essence", 2, 217, 2),
-          createMaterial("Lv 3 Gather Essence", 2, 209, 3),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 2 Combat Essence", 2, 217, 2),
+            createMaterial("Lv 3 Gather Essence", 2, 209, 3),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 2 Combat Essence", 2, 217, 2),
+              createMaterial("Lv 3 Gather Essence", 2, 209, 3),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 2 Combat Essence", 2, 217, 2),
+              createMaterial("Lv 3 Gather Essence", 2, 209, 3),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 2 Combat Essence", 2, 217, 2),
+            createMaterial("Lv 3 Gather Essence", 2, 209, 3),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Farming Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-749.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 2 Combat Essence", 2, 217, 2),
-            createMaterial("Lv 3 Gather Essence", 2, 209, 3),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 2 Combat Essence", 2, 217, 2),
-            createMaterial("Lv 3 Gather Essence", 2, 209, 3),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 2 Combat Essence", 2, 217, 2),
-          createMaterial("Lv 3 Gather Essence", 2, 209, 3),
-        ]),
       },
     },
     {
@@ -4698,28 +5616,37 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 3 Combat Essence", 2, 218, 3),
-          createMaterial("Lv 4 Gather Essence", 2, 404, 4),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 3 Combat Essence", 2, 218, 3),
+            createMaterial("Lv 4 Gather Essence", 2, 404, 4),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 3 Combat Essence", 2, 218, 3),
+              createMaterial("Lv 4 Gather Essence", 2, 404, 4),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 3 Combat Essence", 2, 218, 3),
+              createMaterial("Lv 4 Gather Essence", 2, 404, 4),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 3 Combat Essence", 2, 218, 3),
+            createMaterial("Lv 4 Gather Essence", 2, 404, 4),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Farming Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-750.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 3 Combat Essence", 2, 218, 3),
-            createMaterial("Lv 4 Gather Essence", 2, 404, 4),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 3 Combat Essence", 2, 218, 3),
-            createMaterial("Lv 4 Gather Essence", 2, 404, 4),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 3 Combat Essence", 2, 218, 3),
-          createMaterial("Lv 4 Gather Essence", 2, 404, 4),
-        ]),
       },
     },
     {
@@ -4751,28 +5678,37 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 4 Combat Essence", 2, 401, 4),
-          createMaterial("Lv 5 Gather Essence", 2, 405, 5),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 4 Combat Essence", 2, 401, 4),
+            createMaterial("Lv 5 Gather Essence", 2, 405, 5),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 4 Combat Essence", 2, 401, 4),
+              createMaterial("Lv 5 Gather Essence", 2, 405, 5),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 4 Combat Essence", 2, 401, 4),
+              createMaterial("Lv 5 Gather Essence", 2, 405, 5),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 4 Combat Essence", 2, 401, 4),
+            createMaterial("Lv 5 Gather Essence", 2, 405, 5),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Farming Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-751.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 4 Combat Essence", 2, 401, 4),
-            createMaterial("Lv 5 Gather Essence", 2, 405, 5),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 4 Combat Essence", 2, 401, 4),
-            createMaterial("Lv 5 Gather Essence", 2, 405, 5),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 4 Combat Essence", 2, 401, 4),
-          createMaterial("Lv 5 Gather Essence", 2, 405, 5),
-        ]),
       },
     },
     {
@@ -4804,28 +5740,37 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 5 Combat Essence", 2, 402, 5),
-          createMaterial("Lv 6 Gather Essence", 2, 406, 6),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 5 Combat Essence", 2, 402, 5),
+            createMaterial("Lv 6 Gather Essence", 2, 406, 6),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 5 Combat Essence", 2, 402, 5),
+              createMaterial("Lv 6 Gather Essence", 2, 406, 6),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 5 Combat Essence", 2, 402, 5),
+              createMaterial("Lv 6 Gather Essence", 2, 406, 6),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 5 Combat Essence", 2, 402, 5),
+            createMaterial("Lv 6 Gather Essence", 2, 406, 6),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Farming Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-752.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 5 Combat Essence", 2, 402, 5),
-            createMaterial("Lv 6 Gather Essence", 2, 406, 6),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 5 Combat Essence", 2, 402, 5),
-            createMaterial("Lv 6 Gather Essence", 2, 406, 6),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 5 Combat Essence", 2, 402, 5),
-          createMaterial("Lv 6 Gather Essence", 2, 406, 6),
-        ]),
       },
     },
     {
@@ -4857,28 +5802,37 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 6 Combat Essence", 2, 403, 6),
-          createMaterial("Lv 7 Gather Essence", 2, 605, 7),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 6 Combat Essence", 2, 403, 6),
+            createMaterial("Lv 7 Gather Essence", 2, 605, 7),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 6 Combat Essence", 2, 403, 6),
+              createMaterial("Lv 7 Gather Essence", 2, 605, 7),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 6 Combat Essence", 2, 403, 6),
+              createMaterial("Lv 7 Gather Essence", 2, 605, 7),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 6 Combat Essence", 2, 403, 6),
+            createMaterial("Lv 7 Gather Essence", 2, 605, 7),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Farming Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-753.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 6 Combat Essence", 2, 403, 6),
-            createMaterial("Lv 7 Gather Essence", 2, 605, 7),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 6 Combat Essence", 2, 403, 6),
-            createMaterial("Lv 7 Gather Essence", 2, 605, 7),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 6 Combat Essence", 2, 403, 6),
-          createMaterial("Lv 7 Gather Essence", 2, 605, 7),
-        ]),
       },
     },
     {
@@ -4910,28 +5864,37 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 7 Combat Essence", 2, 602, 7),
-          createMaterial("Lv 8 Gather Essence", 2, 606, 8),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 7 Combat Essence", 2, 602, 7),
+            createMaterial("Lv 8 Gather Essence", 2, 606, 8),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 7 Combat Essence", 2, 602, 7),
+              createMaterial("Lv 8 Gather Essence", 2, 606, 8),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 7 Combat Essence", 2, 602, 7),
+              createMaterial("Lv 8 Gather Essence", 2, 606, 8),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 7 Combat Essence", 2, 602, 7),
+            createMaterial("Lv 8 Gather Essence", 2, 606, 8),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Farming Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-754.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 7 Combat Essence", 2, 602, 7),
-            createMaterial("Lv 8 Gather Essence", 2, 606, 8),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 7 Combat Essence", 2, 602, 7),
-            createMaterial("Lv 8 Gather Essence", 2, 606, 8),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 7 Combat Essence", 2, 602, 7),
-          createMaterial("Lv 8 Gather Essence", 2, 606, 8),
-        ]),
       },
     },
     {
@@ -4963,28 +5926,37 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 8 Combat Essence", 2, 603, 8),
-          createMaterial("Lv 9 Gather Essence", 2, 607, 9),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 8 Combat Essence", 2, 603, 8),
+            createMaterial("Lv 9 Gather Essence", 2, 607, 9),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 8 Combat Essence", 2, 603, 8),
+              createMaterial("Lv 9 Gather Essence", 2, 607, 9),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 8 Combat Essence", 2, 603, 8),
+              createMaterial("Lv 9 Gather Essence", 2, 607, 9),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 8 Combat Essence", 2, 603, 8),
+            createMaterial("Lv 9 Gather Essence", 2, 607, 9),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Farming Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-755.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 8 Combat Essence", 2, 603, 8),
-            createMaterial("Lv 9 Gather Essence", 2, 607, 9),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 8 Combat Essence", 2, 603, 8),
-            createMaterial("Lv 9 Gather Essence", 2, 607, 9),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 8 Combat Essence", 2, 603, 8),
-          createMaterial("Lv 9 Gather Essence", 2, 607, 9),
-        ]),
       },
     },
     {
@@ -5016,18 +5988,27 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [createMaterial("Lv 1 Gather Essence", 2, 207, 1)],
-        minPriceTotalRon: calculateTotalPrice(
-          [createMaterial("Lv 1 Gather Essence", 2, 207, 1)],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [createMaterial("Lv 1 Gather Essence", 2, 207, 1)],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 1 Gather Essence", 2, 207, 1),
-        ]),
+        craftRecipe: {
+          materials: [createMaterial("Lv 1 Gather Essence", 2, 207, 1)],
+          minPriceTotalRon: calculateTotalPrice(
+            [createMaterial("Lv 1 Gather Essence", 2, 207, 1)],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [createMaterial("Lv 1 Gather Essence", 2, 207, 1)],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 1 Gather Essence", 2, 207, 1),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Farming Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-747.png",
+            quantity: 100,
+          },
+        ],
       },
     },
     {
@@ -5059,28 +6040,37 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 1 Combat Essence", 2, 216, 1),
-          createMaterial("Lv 2 Gather Essence", 2, 208, 2),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 1 Combat Essence", 2, 216, 1),
+            createMaterial("Lv 2 Gather Essence", 2, 208, 2),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 1 Combat Essence", 2, 216, 1),
+              createMaterial("Lv 2 Gather Essence", 2, 208, 2),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 1 Combat Essence", 2, 216, 1),
+              createMaterial("Lv 2 Gather Essence", 2, 208, 2),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 1 Combat Essence", 2, 216, 1),
+            createMaterial("Lv 2 Gather Essence", 2, 208, 2),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Farming Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-748.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 1 Combat Essence", 2, 216, 1),
-            createMaterial("Lv 2 Gather Essence", 2, 208, 2),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 1 Combat Essence", 2, 216, 1),
-            createMaterial("Lv 2 Gather Essence", 2, 208, 2),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 1 Combat Essence", 2, 216, 1),
-          createMaterial("Lv 2 Gather Essence", 2, 208, 2),
-        ]),
       },
     },
     {
@@ -5112,28 +6102,37 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 2 Combat Essence", 2, 217, 2),
-          createMaterial("Lv 3 Gather Essence", 2, 209, 3),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 2 Combat Essence", 2, 217, 2),
+            createMaterial("Lv 3 Gather Essence", 2, 209, 3),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 2 Combat Essence", 2, 217, 2),
+              createMaterial("Lv 3 Gather Essence", 2, 209, 3),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 2 Combat Essence", 2, 217, 2),
+              createMaterial("Lv 3 Gather Essence", 2, 209, 3),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 2 Combat Essence", 2, 217, 2),
+            createMaterial("Lv 3 Gather Essence", 2, 209, 3),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Farming Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-749.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 2 Combat Essence", 2, 217, 2),
-            createMaterial("Lv 3 Gather Essence", 2, 209, 3),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 2 Combat Essence", 2, 217, 2),
-            createMaterial("Lv 3 Gather Essence", 2, 209, 3),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 2 Combat Essence", 2, 217, 2),
-          createMaterial("Lv 3 Gather Essence", 2, 209, 3),
-        ]),
       },
     },
     {
@@ -5165,28 +6164,37 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 3 Combat Essence", 2, 218, 3),
-          createMaterial("Lv 4 Gather Essence", 2, 404, 4),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 3 Combat Essence", 2, 218, 3),
+            createMaterial("Lv 4 Gather Essence", 2, 404, 4),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 3 Combat Essence", 2, 218, 3),
+              createMaterial("Lv 4 Gather Essence", 2, 404, 4),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 3 Combat Essence", 2, 218, 3),
+              createMaterial("Lv 4 Gather Essence", 2, 404, 4),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 3 Combat Essence", 2, 218, 3),
+            createMaterial("Lv 4 Gather Essence", 2, 404, 4),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Farming Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-750.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 3 Combat Essence", 2, 218, 3),
-            createMaterial("Lv 4 Gather Essence", 2, 404, 4),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 3 Combat Essence", 2, 218, 3),
-            createMaterial("Lv 4 Gather Essence", 2, 404, 4),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 3 Combat Essence", 2, 218, 3),
-          createMaterial("Lv 4 Gather Essence", 2, 404, 4),
-        ]),
       },
     },
     {
@@ -5218,28 +6226,37 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 4 Combat Essence", 2, 401, 4),
-          createMaterial("Lv 5 Gather Essence", 2, 405, 5),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 4 Combat Essence", 2, 401, 4),
+            createMaterial("Lv 5 Gather Essence", 2, 405, 5),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 4 Combat Essence", 2, 401, 4),
+              createMaterial("Lv 5 Gather Essence", 2, 405, 5),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 4 Combat Essence", 2, 401, 4),
+              createMaterial("Lv 5 Gather Essence", 2, 405, 5),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 4 Combat Essence", 2, 401, 4),
+            createMaterial("Lv 5 Gather Essence", 2, 405, 5),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Farming Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-751.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 4 Combat Essence", 2, 401, 4),
-            createMaterial("Lv 5 Gather Essence", 2, 405, 5),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 4 Combat Essence", 2, 401, 4),
-            createMaterial("Lv 5 Gather Essence", 2, 405, 5),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 4 Combat Essence", 2, 401, 4),
-          createMaterial("Lv 5 Gather Essence", 2, 405, 5),
-        ]),
       },
     },
     {
@@ -5271,28 +6288,37 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 5 Combat Essence", 2, 402, 5),
-          createMaterial("Lv 6 Gather Essence", 2, 406, 6),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 5 Combat Essence", 2, 402, 5),
+            createMaterial("Lv 6 Gather Essence", 2, 406, 6),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 5 Combat Essence", 2, 402, 5),
+              createMaterial("Lv 6 Gather Essence", 2, 406, 6),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 5 Combat Essence", 2, 402, 5),
+              createMaterial("Lv 6 Gather Essence", 2, 406, 6),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 5 Combat Essence", 2, 402, 5),
+            createMaterial("Lv 6 Gather Essence", 2, 406, 6),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Farming Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-752.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 5 Combat Essence", 2, 402, 5),
-            createMaterial("Lv 6 Gather Essence", 2, 406, 6),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 5 Combat Essence", 2, 402, 5),
-            createMaterial("Lv 6 Gather Essence", 2, 406, 6),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 5 Combat Essence", 2, 402, 5),
-          createMaterial("Lv 6 Gather Essence", 2, 406, 6),
-        ]),
       },
     },
     {
@@ -5324,28 +6350,37 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 6 Combat Essence", 2, 403, 6),
-          createMaterial("Lv 7 Gather Essence", 2, 605, 7),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 6 Combat Essence", 2, 403, 6),
+            createMaterial("Lv 7 Gather Essence", 2, 605, 7),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 6 Combat Essence", 2, 403, 6),
+              createMaterial("Lv 7 Gather Essence", 2, 605, 7),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 6 Combat Essence", 2, 403, 6),
+              createMaterial("Lv 7 Gather Essence", 2, 605, 7),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 6 Combat Essence", 2, 403, 6),
+            createMaterial("Lv 7 Gather Essence", 2, 605, 7),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Farming Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-753.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 6 Combat Essence", 2, 403, 6),
-            createMaterial("Lv 7 Gather Essence", 2, 605, 7),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 6 Combat Essence", 2, 403, 6),
-            createMaterial("Lv 7 Gather Essence", 2, 605, 7),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 6 Combat Essence", 2, 403, 6),
-          createMaterial("Lv 7 Gather Essence", 2, 605, 7),
-        ]),
       },
     },
     {
@@ -5377,28 +6412,37 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 7 Combat Essence", 2, 602, 7),
-          createMaterial("Lv 8 Gather Essence", 2, 606, 8),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 7 Combat Essence", 2, 602, 7),
+            createMaterial("Lv 8 Gather Essence", 2, 606, 8),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 7 Combat Essence", 2, 602, 7),
+              createMaterial("Lv 8 Gather Essence", 2, 606, 8),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 7 Combat Essence", 2, 602, 7),
+              createMaterial("Lv 8 Gather Essence", 2, 606, 8),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 7 Combat Essence", 2, 602, 7),
+            createMaterial("Lv 8 Gather Essence", 2, 606, 8),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Farming Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-754.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 7 Combat Essence", 2, 602, 7),
-            createMaterial("Lv 8 Gather Essence", 2, 606, 8),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 7 Combat Essence", 2, 602, 7),
-            createMaterial("Lv 8 Gather Essence", 2, 606, 8),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 7 Combat Essence", 2, 602, 7),
-          createMaterial("Lv 8 Gather Essence", 2, 606, 8),
-        ]),
       },
     },
     {
@@ -5430,28 +6474,37 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 8 Combat Essence", 2, 603, 8),
-          createMaterial("Lv 9 Gather Essence", 2, 607, 9),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 8 Combat Essence", 2, 603, 8),
+            createMaterial("Lv 9 Gather Essence", 2, 607, 9),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 8 Combat Essence", 2, 603, 8),
+              createMaterial("Lv 9 Gather Essence", 2, 607, 9),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 8 Combat Essence", 2, 603, 8),
+              createMaterial("Lv 9 Gather Essence", 2, 607, 9),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 8 Combat Essence", 2, 603, 8),
+            createMaterial("Lv 9 Gather Essence", 2, 607, 9),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Farming Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-755.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 8 Combat Essence", 2, 603, 8),
-            createMaterial("Lv 9 Gather Essence", 2, 607, 9),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 8 Combat Essence", 2, 603, 8),
-            createMaterial("Lv 9 Gather Essence", 2, 607, 9),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 8 Combat Essence", 2, 603, 8),
-          createMaterial("Lv 9 Gather Essence", 2, 607, 9),
-        ]),
       },
     },
     {
@@ -5483,18 +6536,27 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [createMaterial("Lv 1 Gather Essence", 2, 207, 1)],
-        minPriceTotalRon: calculateTotalPrice(
-          [createMaterial("Lv 1 Gather Essence", 2, 207, 1)],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [createMaterial("Lv 1 Gather Essence", 2, 207, 1)],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 1 Gather Essence", 2, 207, 1),
-        ]),
+        craftRecipe: {
+          materials: [createMaterial("Lv 1 Gather Essence", 2, 207, 1)],
+          minPriceTotalRon: calculateTotalPrice(
+            [createMaterial("Lv 1 Gather Essence", 2, 207, 1)],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [createMaterial("Lv 1 Gather Essence", 2, 207, 1)],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 1 Gather Essence", 2, 207, 1),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Farming Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-747.png",
+            quantity: 100,
+          },
+        ],
       },
     },
     {
@@ -5526,28 +6588,37 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 1 Combat Essence", 2, 216, 1),
-          createMaterial("Lv 2 Gather Essence", 2, 208, 2),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 1 Combat Essence", 2, 216, 1),
+            createMaterial("Lv 2 Gather Essence", 2, 208, 2),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 1 Combat Essence", 2, 216, 1),
+              createMaterial("Lv 2 Gather Essence", 2, 208, 2),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 1 Combat Essence", 2, 216, 1),
+              createMaterial("Lv 2 Gather Essence", 2, 208, 2),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 1 Combat Essence", 2, 216, 1),
+            createMaterial("Lv 2 Gather Essence", 2, 208, 2),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Farming Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-748.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 1 Combat Essence", 2, 216, 1),
-            createMaterial("Lv 2 Gather Essence", 2, 208, 2),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 1 Combat Essence", 2, 216, 1),
-            createMaterial("Lv 2 Gather Essence", 2, 208, 2),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 1 Combat Essence", 2, 216, 1),
-          createMaterial("Lv 2 Gather Essence", 2, 208, 2),
-        ]),
       },
     },
     {
@@ -5579,28 +6650,37 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 2 Combat Essence", 2, 217, 2),
-          createMaterial("Lv 3 Gather Essence", 2, 209, 3),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 2 Combat Essence", 2, 217, 2),
+            createMaterial("Lv 3 Gather Essence", 2, 209, 3),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 2 Combat Essence", 2, 217, 2),
+              createMaterial("Lv 3 Gather Essence", 2, 209, 3),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 2 Combat Essence", 2, 217, 2),
+              createMaterial("Lv 3 Gather Essence", 2, 209, 3),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 2 Combat Essence", 2, 217, 2),
+            createMaterial("Lv 3 Gather Essence", 2, 209, 3),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Farming Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-749.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 2 Combat Essence", 2, 217, 2),
-            createMaterial("Lv 3 Gather Essence", 2, 209, 3),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 2 Combat Essence", 2, 217, 2),
-            createMaterial("Lv 3 Gather Essence", 2, 209, 3),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 2 Combat Essence", 2, 217, 2),
-          createMaterial("Lv 3 Gather Essence", 2, 209, 3),
-        ]),
       },
     },
     {
@@ -5632,28 +6712,37 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 3 Combat Essence", 2, 218, 3),
-          createMaterial("Lv 4 Gather Essence", 2, 404, 4),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 3 Combat Essence", 2, 218, 3),
+            createMaterial("Lv 4 Gather Essence", 2, 404, 4),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 3 Combat Essence", 2, 218, 3),
+              createMaterial("Lv 4 Gather Essence", 2, 404, 4),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 3 Combat Essence", 2, 218, 3),
+              createMaterial("Lv 4 Gather Essence", 2, 404, 4),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 3 Combat Essence", 2, 218, 3),
+            createMaterial("Lv 4 Gather Essence", 2, 404, 4),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Farming Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-750.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 3 Combat Essence", 2, 218, 3),
-            createMaterial("Lv 4 Gather Essence", 2, 404, 4),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 3 Combat Essence", 2, 218, 3),
-            createMaterial("Lv 4 Gather Essence", 2, 404, 4),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 3 Combat Essence", 2, 218, 3),
-          createMaterial("Lv 4 Gather Essence", 2, 404, 4),
-        ]),
       },
     },
     {
@@ -5685,28 +6774,37 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 4 Combat Essence", 2, 401, 4),
-          createMaterial("Lv 5 Gather Essence", 2, 405, 5),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 4 Combat Essence", 2, 401, 4),
+            createMaterial("Lv 5 Gather Essence", 2, 405, 5),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 4 Combat Essence", 2, 401, 4),
+              createMaterial("Lv 5 Gather Essence", 2, 405, 5),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 4 Combat Essence", 2, 401, 4),
+              createMaterial("Lv 5 Gather Essence", 2, 405, 5),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 4 Combat Essence", 2, 401, 4),
+            createMaterial("Lv 5 Gather Essence", 2, 405, 5),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Farming Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-751.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 4 Combat Essence", 2, 401, 4),
-            createMaterial("Lv 5 Gather Essence", 2, 405, 5),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 4 Combat Essence", 2, 401, 4),
-            createMaterial("Lv 5 Gather Essence", 2, 405, 5),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 4 Combat Essence", 2, 401, 4),
-          createMaterial("Lv 5 Gather Essence", 2, 405, 5),
-        ]),
       },
     },
     {
@@ -5738,28 +6836,37 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 5 Combat Essence", 2, 402, 5),
-          createMaterial("Lv 6 Gather Essence", 2, 406, 6),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 5 Combat Essence", 2, 402, 5),
+            createMaterial("Lv 6 Gather Essence", 2, 406, 6),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 5 Combat Essence", 2, 402, 5),
+              createMaterial("Lv 6 Gather Essence", 2, 406, 6),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 5 Combat Essence", 2, 402, 5),
+              createMaterial("Lv 6 Gather Essence", 2, 406, 6),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 5 Combat Essence", 2, 402, 5),
+            createMaterial("Lv 6 Gather Essence", 2, 406, 6),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Farming Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-752.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 5 Combat Essence", 2, 402, 5),
-            createMaterial("Lv 6 Gather Essence", 2, 406, 6),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 5 Combat Essence", 2, 402, 5),
-            createMaterial("Lv 6 Gather Essence", 2, 406, 6),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 5 Combat Essence", 2, 402, 5),
-          createMaterial("Lv 6 Gather Essence", 2, 406, 6),
-        ]),
       },
     },
     {
@@ -5791,28 +6898,37 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 6 Combat Essence", 2, 403, 6),
-          createMaterial("Lv 7 Gather Essence", 2, 605, 7),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 6 Combat Essence", 2, 403, 6),
+            createMaterial("Lv 7 Gather Essence", 2, 605, 7),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 6 Combat Essence", 2, 403, 6),
+              createMaterial("Lv 7 Gather Essence", 2, 605, 7),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 6 Combat Essence", 2, 403, 6),
+              createMaterial("Lv 7 Gather Essence", 2, 605, 7),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 6 Combat Essence", 2, 403, 6),
+            createMaterial("Lv 7 Gather Essence", 2, 605, 7),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Farming Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-753.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 6 Combat Essence", 2, 403, 6),
-            createMaterial("Lv 7 Gather Essence", 2, 605, 7),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 6 Combat Essence", 2, 403, 6),
-            createMaterial("Lv 7 Gather Essence", 2, 605, 7),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 6 Combat Essence", 2, 403, 6),
-          createMaterial("Lv 7 Gather Essence", 2, 605, 7),
-        ]),
       },
     },
     {
@@ -5844,28 +6960,37 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 7 Combat Essence", 2, 602, 7),
-          createMaterial("Lv 8 Gather Essence", 2, 606, 8),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 7 Combat Essence", 2, 602, 7),
+            createMaterial("Lv 8 Gather Essence", 2, 606, 8),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 7 Combat Essence", 2, 602, 7),
+              createMaterial("Lv 8 Gather Essence", 2, 606, 8),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 7 Combat Essence", 2, 602, 7),
+              createMaterial("Lv 8 Gather Essence", 2, 606, 8),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 7 Combat Essence", 2, 602, 7),
+            createMaterial("Lv 8 Gather Essence", 2, 606, 8),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Farming Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-754.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 7 Combat Essence", 2, 602, 7),
-            createMaterial("Lv 8 Gather Essence", 2, 606, 8),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 7 Combat Essence", 2, 602, 7),
-            createMaterial("Lv 8 Gather Essence", 2, 606, 8),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 7 Combat Essence", 2, 602, 7),
-          createMaterial("Lv 8 Gather Essence", 2, 606, 8),
-        ]),
       },
     },
     {
@@ -5897,28 +7022,37 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 8 Combat Essence", 2, 603, 8),
-          createMaterial("Lv 9 Gather Essence", 2, 607, 9),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 8 Combat Essence", 2, 603, 8),
+            createMaterial("Lv 9 Gather Essence", 2, 607, 9),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 8 Combat Essence", 2, 603, 8),
+              createMaterial("Lv 9 Gather Essence", 2, 607, 9),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 8 Combat Essence", 2, 603, 8),
+              createMaterial("Lv 9 Gather Essence", 2, 607, 9),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 8 Combat Essence", 2, 603, 8),
+            createMaterial("Lv 9 Gather Essence", 2, 607, 9),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Farming Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-755.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 8 Combat Essence", 2, 603, 8),
-            createMaterial("Lv 9 Gather Essence", 2, 607, 9),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 8 Combat Essence", 2, 603, 8),
-            createMaterial("Lv 9 Gather Essence", 2, 607, 9),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 8 Combat Essence", 2, 603, 8),
-          createMaterial("Lv 9 Gather Essence", 2, 607, 9),
-        ]),
       },
     },
     {
@@ -5950,18 +7084,27 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [createMaterial("Lv 1 Gather Essence", 2, 207, 1)],
-        minPriceTotalRon: calculateTotalPrice(
-          [createMaterial("Lv 1 Gather Essence", 2, 207, 1)],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [createMaterial("Lv 1 Gather Essence", 2, 207, 1)],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 1 Gather Essence", 2, 207, 1),
-        ]),
+        craftRecipe: {
+          materials: [createMaterial("Lv 1 Gather Essence", 2, 207, 1)],
+          minPriceTotalRon: calculateTotalPrice(
+            [createMaterial("Lv 1 Gather Essence", 2, 207, 1)],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [createMaterial("Lv 1 Gather Essence", 2, 207, 1)],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 1 Gather Essence", 2, 207, 1),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Farming Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-747.png",
+            quantity: 100,
+          },
+        ],
       },
     },
     {
@@ -5993,28 +7136,37 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 1 Combat Essence", 2, 216, 1),
-          createMaterial("Lv 2 Gather Essence", 2, 208, 2),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 1 Combat Essence", 2, 216, 1),
+            createMaterial("Lv 2 Gather Essence", 2, 208, 2),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 1 Combat Essence", 2, 216, 1),
+              createMaterial("Lv 2 Gather Essence", 2, 208, 2),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 1 Combat Essence", 2, 216, 1),
+              createMaterial("Lv 2 Gather Essence", 2, 208, 2),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 1 Combat Essence", 2, 216, 1),
+            createMaterial("Lv 2 Gather Essence", 2, 208, 2),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Farming Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-748.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 1 Combat Essence", 2, 216, 1),
-            createMaterial("Lv 2 Gather Essence", 2, 208, 2),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 1 Combat Essence", 2, 216, 1),
-            createMaterial("Lv 2 Gather Essence", 2, 208, 2),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 1 Combat Essence", 2, 216, 1),
-          createMaterial("Lv 2 Gather Essence", 2, 208, 2),
-        ]),
       },
     },
     {
@@ -6046,28 +7198,37 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 2 Combat Essence", 2, 217, 2),
-          createMaterial("Lv 3 Gather Essence", 2, 209, 3),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 2 Combat Essence", 2, 217, 2),
+            createMaterial("Lv 3 Gather Essence", 2, 209, 3),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 2 Combat Essence", 2, 217, 2),
+              createMaterial("Lv 3 Gather Essence", 2, 209, 3),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 2 Combat Essence", 2, 217, 2),
+              createMaterial("Lv 3 Gather Essence", 2, 209, 3),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 2 Combat Essence", 2, 217, 2),
+            createMaterial("Lv 3 Gather Essence", 2, 209, 3),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Farming Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-749.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 2 Combat Essence", 2, 217, 2),
-            createMaterial("Lv 3 Gather Essence", 2, 209, 3),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 2 Combat Essence", 2, 217, 2),
-            createMaterial("Lv 3 Gather Essence", 2, 209, 3),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 2 Combat Essence", 2, 217, 2),
-          createMaterial("Lv 3 Gather Essence", 2, 209, 3),
-        ]),
       },
     },
     {
@@ -6099,28 +7260,37 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 3 Combat Essence", 2, 218, 3),
-          createMaterial("Lv 4 Gather Essence", 2, 404, 4),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 3 Combat Essence", 2, 218, 3),
+            createMaterial("Lv 4 Gather Essence", 2, 404, 4),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 3 Combat Essence", 2, 218, 3),
+              createMaterial("Lv 4 Gather Essence", 2, 404, 4),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 3 Combat Essence", 2, 218, 3),
+              createMaterial("Lv 4 Gather Essence", 2, 404, 4),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 3 Combat Essence", 2, 218, 3),
+            createMaterial("Lv 4 Gather Essence", 2, 404, 4),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Farming Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-750.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 3 Combat Essence", 2, 218, 3),
-            createMaterial("Lv 4 Gather Essence", 2, 404, 4),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 3 Combat Essence", 2, 218, 3),
-            createMaterial("Lv 4 Gather Essence", 2, 404, 4),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 3 Combat Essence", 2, 218, 3),
-          createMaterial("Lv 4 Gather Essence", 2, 404, 4),
-        ]),
       },
     },
     {
@@ -6152,28 +7322,37 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 4 Combat Essence", 2, 401, 4),
-          createMaterial("Lv 5 Gather Essence", 2, 405, 5),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 4 Combat Essence", 2, 401, 4),
+            createMaterial("Lv 5 Gather Essence", 2, 405, 5),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 4 Combat Essence", 2, 401, 4),
+              createMaterial("Lv 5 Gather Essence", 2, 405, 5),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 4 Combat Essence", 2, 401, 4),
+              createMaterial("Lv 5 Gather Essence", 2, 405, 5),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 4 Combat Essence", 2, 401, 4),
+            createMaterial("Lv 5 Gather Essence", 2, 405, 5),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Farming Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-751.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 4 Combat Essence", 2, 401, 4),
-            createMaterial("Lv 5 Gather Essence", 2, 405, 5),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 4 Combat Essence", 2, 401, 4),
-            createMaterial("Lv 5 Gather Essence", 2, 405, 5),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 4 Combat Essence", 2, 401, 4),
-          createMaterial("Lv 5 Gather Essence", 2, 405, 5),
-        ]),
       },
     },
     {
@@ -6205,28 +7384,37 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 5 Combat Essence", 2, 402, 5),
-          createMaterial("Lv 6 Gather Essence", 2, 406, 6),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 5 Combat Essence", 2, 402, 5),
+            createMaterial("Lv 6 Gather Essence", 2, 406, 6),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 5 Combat Essence", 2, 402, 5),
+              createMaterial("Lv 6 Gather Essence", 2, 406, 6),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 5 Combat Essence", 2, 402, 5),
+              createMaterial("Lv 6 Gather Essence", 2, 406, 6),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 5 Combat Essence", 2, 402, 5),
+            createMaterial("Lv 6 Gather Essence", 2, 406, 6),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Farming Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-752.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 5 Combat Essence", 2, 402, 5),
-            createMaterial("Lv 6 Gather Essence", 2, 406, 6),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 5 Combat Essence", 2, 402, 5),
-            createMaterial("Lv 6 Gather Essence", 2, 406, 6),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 5 Combat Essence", 2, 402, 5),
-          createMaterial("Lv 6 Gather Essence", 2, 406, 6),
-        ]),
       },
     },
     {
@@ -6258,28 +7446,37 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 6 Combat Essence", 2, 403, 6),
-          createMaterial("Lv 7 Gather Essence", 2, 605, 7),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 6 Combat Essence", 2, 403, 6),
+            createMaterial("Lv 7 Gather Essence", 2, 605, 7),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 6 Combat Essence", 2, 403, 6),
+              createMaterial("Lv 7 Gather Essence", 2, 605, 7),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 6 Combat Essence", 2, 403, 6),
+              createMaterial("Lv 7 Gather Essence", 2, 605, 7),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 6 Combat Essence", 2, 403, 6),
+            createMaterial("Lv 7 Gather Essence", 2, 605, 7),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Farming Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-753.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 6 Combat Essence", 2, 403, 6),
-            createMaterial("Lv 7 Gather Essence", 2, 605, 7),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 6 Combat Essence", 2, 403, 6),
-            createMaterial("Lv 7 Gather Essence", 2, 605, 7),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 6 Combat Essence", 2, 403, 6),
-          createMaterial("Lv 7 Gather Essence", 2, 605, 7),
-        ]),
       },
     },
     {
@@ -6311,28 +7508,37 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 7 Combat Essence", 2, 602, 7),
-          createMaterial("Lv 8 Gather Essence", 2, 606, 8),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 7 Combat Essence", 2, 602, 7),
+            createMaterial("Lv 8 Gather Essence", 2, 606, 8),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 7 Combat Essence", 2, 602, 7),
+              createMaterial("Lv 8 Gather Essence", 2, 606, 8),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 7 Combat Essence", 2, 602, 7),
+              createMaterial("Lv 8 Gather Essence", 2, 606, 8),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 7 Combat Essence", 2, 602, 7),
+            createMaterial("Lv 8 Gather Essence", 2, 606, 8),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Farming Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-754.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 7 Combat Essence", 2, 602, 7),
-            createMaterial("Lv 8 Gather Essence", 2, 606, 8),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 7 Combat Essence", 2, 602, 7),
-            createMaterial("Lv 8 Gather Essence", 2, 606, 8),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 7 Combat Essence", 2, 602, 7),
-          createMaterial("Lv 8 Gather Essence", 2, 606, 8),
-        ]),
       },
     },
     {
@@ -6364,28 +7570,37 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 8 Combat Essence", 2, 603, 8),
-          createMaterial("Lv 9 Gather Essence", 2, 607, 9),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 8 Combat Essence", 2, 603, 8),
+            createMaterial("Lv 9 Gather Essence", 2, 607, 9),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 8 Combat Essence", 2, 603, 8),
+              createMaterial("Lv 9 Gather Essence", 2, 607, 9),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 8 Combat Essence", 2, 603, 8),
+              createMaterial("Lv 9 Gather Essence", 2, 607, 9),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 8 Combat Essence", 2, 603, 8),
+            createMaterial("Lv 9 Gather Essence", 2, 607, 9),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Farming Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-755.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 8 Combat Essence", 2, 603, 8),
-            createMaterial("Lv 9 Gather Essence", 2, 607, 9),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 8 Combat Essence", 2, 603, 8),
-            createMaterial("Lv 9 Gather Essence", 2, 607, 9),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 8 Combat Essence", 2, 603, 8),
-          createMaterial("Lv 9 Gather Essence", 2, 607, 9),
-        ]),
       },
     },
     {
@@ -6427,18 +7642,27 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [createMaterial("Lv 1 Gather Essence", 2, 207, 1)],
-        minPriceTotalRon: calculateTotalPrice(
-          [createMaterial("Lv 1 Gather Essence", 2, 207, 1)],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [createMaterial("Lv 1 Gather Essence", 2, 207, 1)],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 1 Gather Essence", 2, 207, 1),
-        ]),
+        craftRecipe: {
+          materials: [createMaterial("Lv 1 Gather Essence", 2, 207, 1)],
+          minPriceTotalRon: calculateTotalPrice(
+            [createMaterial("Lv 1 Gather Essence", 2, 207, 1)],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [createMaterial("Lv 1 Gather Essence", 2, 207, 1)],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 1 Gather Essence", 2, 207, 1),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Farming Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-747.png",
+            quantity: 100,
+          },
+        ],
       },
     },
     {
@@ -6480,28 +7704,37 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 1 Combat Essence", 2, 216, 1),
-          createMaterial("Lv 2 Gather Essence", 2, 208, 2),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 1 Combat Essence", 2, 216, 1),
+            createMaterial("Lv 2 Gather Essence", 2, 208, 2),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 1 Combat Essence", 2, 216, 1),
+              createMaterial("Lv 2 Gather Essence", 2, 208, 2),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 1 Combat Essence", 2, 216, 1),
+              createMaterial("Lv 2 Gather Essence", 2, 208, 2),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 1 Combat Essence", 2, 216, 1),
+            createMaterial("Lv 2 Gather Essence", 2, 208, 2),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Farming Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-748.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 1 Combat Essence", 2, 216, 1),
-            createMaterial("Lv 2 Gather Essence", 2, 208, 2),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 1 Combat Essence", 2, 216, 1),
-            createMaterial("Lv 2 Gather Essence", 2, 208, 2),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 1 Combat Essence", 2, 216, 1),
-          createMaterial("Lv 2 Gather Essence", 2, 208, 2),
-        ]),
       },
     },
     {
@@ -6543,28 +7776,37 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 2 Combat Essence", 2, 217, 2),
-          createMaterial("Lv 3 Gather Essence", 2, 209, 3),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 2 Combat Essence", 2, 217, 2),
+            createMaterial("Lv 3 Gather Essence", 2, 209, 3),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 2 Combat Essence", 2, 217, 2),
+              createMaterial("Lv 3 Gather Essence", 2, 209, 3),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 2 Combat Essence", 2, 217, 2),
+              createMaterial("Lv 3 Gather Essence", 2, 209, 3),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 2 Combat Essence", 2, 217, 2),
+            createMaterial("Lv 3 Gather Essence", 2, 209, 3),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Farming Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-749.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 2 Combat Essence", 2, 217, 2),
-            createMaterial("Lv 3 Gather Essence", 2, 209, 3),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 2 Combat Essence", 2, 217, 2),
-            createMaterial("Lv 3 Gather Essence", 2, 209, 3),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 2 Combat Essence", 2, 217, 2),
-          createMaterial("Lv 3 Gather Essence", 2, 209, 3),
-        ]),
       },
     },
     {
@@ -6606,28 +7848,37 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 3 Combat Essence", 2, 218, 3),
-          createMaterial("Lv 4 Gather Essence", 2, 404, 4),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 3 Combat Essence", 2, 218, 3),
+            createMaterial("Lv 4 Gather Essence", 2, 404, 4),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 3 Combat Essence", 2, 218, 3),
+              createMaterial("Lv 4 Gather Essence", 2, 404, 4),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 3 Combat Essence", 2, 218, 3),
+              createMaterial("Lv 4 Gather Essence", 2, 404, 4),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 3 Combat Essence", 2, 218, 3),
+            createMaterial("Lv 4 Gather Essence", 2, 404, 4),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Farming Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-750.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 3 Combat Essence", 2, 218, 3),
-            createMaterial("Lv 4 Gather Essence", 2, 404, 4),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 3 Combat Essence", 2, 218, 3),
-            createMaterial("Lv 4 Gather Essence", 2, 404, 4),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 3 Combat Essence", 2, 218, 3),
-          createMaterial("Lv 4 Gather Essence", 2, 404, 4),
-        ]),
       },
     },
     {
@@ -6669,28 +7920,37 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 4 Combat Essence", 2, 401, 4),
-          createMaterial("Lv 5 Gather Essence", 2, 405, 5),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 4 Combat Essence", 2, 401, 4),
+            createMaterial("Lv 5 Gather Essence", 2, 405, 5),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 4 Combat Essence", 2, 401, 4),
+              createMaterial("Lv 5 Gather Essence", 2, 405, 5),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 4 Combat Essence", 2, 401, 4),
+              createMaterial("Lv 5 Gather Essence", 2, 405, 5),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 4 Combat Essence", 2, 401, 4),
+            createMaterial("Lv 5 Gather Essence", 2, 405, 5),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Farming Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-751.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 4 Combat Essence", 2, 401, 4),
-            createMaterial("Lv 5 Gather Essence", 2, 405, 5),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 4 Combat Essence", 2, 401, 4),
-            createMaterial("Lv 5 Gather Essence", 2, 405, 5),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 4 Combat Essence", 2, 401, 4),
-          createMaterial("Lv 5 Gather Essence", 2, 405, 5),
-        ]),
       },
     },
     {
@@ -6732,28 +7992,37 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 5 Combat Essence", 2, 402, 5),
-          createMaterial("Lv 6 Gather Essence", 2, 406, 6),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 5 Combat Essence", 2, 402, 5),
+            createMaterial("Lv 6 Gather Essence", 2, 406, 6),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 5 Combat Essence", 2, 402, 5),
+              createMaterial("Lv 6 Gather Essence", 2, 406, 6),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 5 Combat Essence", 2, 402, 5),
+              createMaterial("Lv 6 Gather Essence", 2, 406, 6),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 5 Combat Essence", 2, 402, 5),
+            createMaterial("Lv 6 Gather Essence", 2, 406, 6),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Farming Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-752.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 5 Combat Essence", 2, 402, 5),
-            createMaterial("Lv 6 Gather Essence", 2, 406, 6),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 5 Combat Essence", 2, 402, 5),
-            createMaterial("Lv 6 Gather Essence", 2, 406, 6),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 5 Combat Essence", 2, 402, 5),
-          createMaterial("Lv 6 Gather Essence", 2, 406, 6),
-        ]),
       },
     },
     {
@@ -6795,28 +8064,37 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 6 Combat Essence", 2, 403, 6),
-          createMaterial("Lv 7 Gather Essence", 2, 605, 7),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 6 Combat Essence", 2, 403, 6),
+            createMaterial("Lv 7 Gather Essence", 2, 605, 7),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 6 Combat Essence", 2, 403, 6),
+              createMaterial("Lv 7 Gather Essence", 2, 605, 7),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 6 Combat Essence", 2, 403, 6),
+              createMaterial("Lv 7 Gather Essence", 2, 605, 7),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 6 Combat Essence", 2, 403, 6),
+            createMaterial("Lv 7 Gather Essence", 2, 605, 7),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Farming Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-753.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 6 Combat Essence", 2, 403, 6),
-            createMaterial("Lv 7 Gather Essence", 2, 605, 7),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 6 Combat Essence", 2, 403, 6),
-            createMaterial("Lv 7 Gather Essence", 2, 605, 7),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 6 Combat Essence", 2, 403, 6),
-          createMaterial("Lv 7 Gather Essence", 2, 605, 7),
-        ]),
       },
     },
     {
@@ -6858,28 +8136,37 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 7 Combat Essence", 2, 602, 7),
-          createMaterial("Lv 8 Gather Essence", 2, 606, 8),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 7 Combat Essence", 2, 602, 7),
+            createMaterial("Lv 8 Gather Essence", 2, 606, 8),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 7 Combat Essence", 2, 602, 7),
+              createMaterial("Lv 8 Gather Essence", 2, 606, 8),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 7 Combat Essence", 2, 602, 7),
+              createMaterial("Lv 8 Gather Essence", 2, 606, 8),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 7 Combat Essence", 2, 602, 7),
+            createMaterial("Lv 8 Gather Essence", 2, 606, 8),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Farming Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-754.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 7 Combat Essence", 2, 602, 7),
-            createMaterial("Lv 8 Gather Essence", 2, 606, 8),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 7 Combat Essence", 2, 602, 7),
-            createMaterial("Lv 8 Gather Essence", 2, 606, 8),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 7 Combat Essence", 2, 602, 7),
-          createMaterial("Lv 8 Gather Essence", 2, 606, 8),
-        ]),
       },
     },
     {
@@ -6921,28 +8208,37 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 8 Combat Essence", 2, 603, 8),
-          createMaterial("Lv 9 Gather Essence", 2, 607, 9),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 8 Combat Essence", 2, 603, 8),
+            createMaterial("Lv 9 Gather Essence", 2, 607, 9),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 8 Combat Essence", 2, 603, 8),
+              createMaterial("Lv 9 Gather Essence", 2, 607, 9),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 8 Combat Essence", 2, 603, 8),
+              createMaterial("Lv 9 Gather Essence", 2, 607, 9),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 8 Combat Essence", 2, 603, 8),
+            createMaterial("Lv 9 Gather Essence", 2, 607, 9),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Farming Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-755.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 8 Combat Essence", 2, 603, 8),
-            createMaterial("Lv 9 Gather Essence", 2, 607, 9),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 8 Combat Essence", 2, 603, 8),
-            createMaterial("Lv 9 Gather Essence", 2, 607, 9),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 8 Combat Essence", 2, 603, 8),
-          createMaterial("Lv 9 Gather Essence", 2, 607, 9),
-        ]),
       },
     },
   ],
@@ -6966,18 +8262,27 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [createMaterial("Lv 1 Combat Essence", 2, 216, 1)],
-        minPriceTotalRon: calculateTotalPrice(
-          [createMaterial("Lv 1 Combat Essence", 2, 216, 1)],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [createMaterial("Lv 1 Combat Essence", 2, 216, 1)],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 1 Combat Essence", 2, 216, 1),
-        ]),
+        craftRecipe: {
+          materials: [createMaterial("Lv 1 Combat Essence", 2, 216, 1)],
+          minPriceTotalRon: calculateTotalPrice(
+            [createMaterial("Lv 1 Combat Essence", 2, 216, 1)],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [createMaterial("Lv 1 Combat Essence", 2, 216, 1)],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 1 Combat Essence", 2, 216, 1),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Gathering Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-756.png",
+            quantity: 100,
+          },
+        ],
       },
     },
     {
@@ -6999,32 +8304,41 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 1 Agricultural Livestock Essence", 1, 213, 1),
-          createMaterial("Lv 1 Agricultural Planting Essence", 1, 210, 1),
-          createMaterial("Lv 2 Combat Essence", 2, 217, 2),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 1 Agricultural Livestock Essence", 1, 213, 1),
+            createMaterial("Lv 1 Agricultural Planting Essence", 1, 210, 1),
+            createMaterial("Lv 2 Combat Essence", 2, 217, 2),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 1 Agricultural Livestock Essence", 1, 213, 1),
+              createMaterial("Lv 1 Agricultural Planting Essence", 1, 210, 1),
+              createMaterial("Lv 2 Combat Essence", 2, 217, 2),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 1 Agricultural Livestock Essence", 1, 213, 1),
+              createMaterial("Lv 1 Agricultural Planting Essence", 1, 210, 1),
+              createMaterial("Lv 2 Combat Essence", 2, 217, 2),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 1 Agricultural Livestock Essence", 1, 213, 1),
+            createMaterial("Lv 1 Agricultural Planting Essence", 1, 210, 1),
+            createMaterial("Lv 2 Combat Essence", 2, 217, 2),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Gathering Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-757.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 1 Agricultural Livestock Essence", 1, 213, 1),
-            createMaterial("Lv 1 Agricultural Planting Essence", 1, 210, 1),
-            createMaterial("Lv 2 Combat Essence", 2, 217, 2),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 1 Agricultural Livestock Essence", 1, 213, 1),
-            createMaterial("Lv 1 Agricultural Planting Essence", 1, 210, 1),
-            createMaterial("Lv 2 Combat Essence", 2, 217, 2),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 1 Agricultural Livestock Essence", 1, 213, 1),
-          createMaterial("Lv 1 Agricultural Planting Essence", 1, 210, 1),
-          createMaterial("Lv 2 Combat Essence", 2, 217, 2),
-        ]),
       },
     },
     {
@@ -7046,32 +8360,41 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 2 Agricultural Livestock Essence", 1, 214, 2),
-          createMaterial("Lv 2 Agricultural Planting Essence", 1, 211, 2),
-          createMaterial("Lv 3 Combat Essence", 2, 218, 1),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 2 Agricultural Livestock Essence", 1, 214, 2),
+            createMaterial("Lv 2 Agricultural Planting Essence", 1, 211, 2),
+            createMaterial("Lv 3 Combat Essence", 2, 218, 1),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 2 Agricultural Livestock Essence", 1, 214, 2),
+              createMaterial("Lv 2 Agricultural Planting Essence", 1, 211, 2),
+              createMaterial("Lv 3 Combat Essence", 2, 218, 1),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 2 Agricultural Livestock Essence", 1, 214, 2),
+              createMaterial("Lv 2 Agricultural Planting Essence", 1, 211, 2),
+              createMaterial("Lv 3 Combat Essence", 2, 218, 1),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 2 Agricultural Livestock Essence", 1, 214, 2),
+            createMaterial("Lv 2 Agricultural Planting Essence", 1, 211, 2),
+            createMaterial("Lv 3 Combat Essence", 2, 218, 1),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Gathering Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-758.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 2 Agricultural Livestock Essence", 1, 214, 2),
-            createMaterial("Lv 2 Agricultural Planting Essence", 1, 211, 2),
-            createMaterial("Lv 3 Combat Essence", 2, 218, 1),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 2 Agricultural Livestock Essence", 1, 214, 2),
-            createMaterial("Lv 2 Agricultural Planting Essence", 1, 211, 2),
-            createMaterial("Lv 3 Combat Essence", 2, 218, 1),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 2 Agricultural Livestock Essence", 1, 214, 2),
-          createMaterial("Lv 2 Agricultural Planting Essence", 1, 211, 2),
-          createMaterial("Lv 3 Combat Essence", 2, 218, 1),
-        ]),
       },
     },
     {
@@ -7093,32 +8416,41 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 3 Agricultural Livestock Essence", 1, 215, 3),
-          createMaterial("Lv 3 Agricultural Planting Essence", 1, 212, 3),
-          createMaterial("Lv 4 Combat Essence", 2, 401, 4),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 3 Agricultural Livestock Essence", 1, 215, 3),
+            createMaterial("Lv 3 Agricultural Planting Essence", 1, 212, 3),
+            createMaterial("Lv 4 Combat Essence", 2, 401, 4),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 3 Agricultural Livestock Essence", 1, 215, 3),
+              createMaterial("Lv 3 Agricultural Planting Essence", 1, 212, 3),
+              createMaterial("Lv 4 Combat Essence", 2, 401, 4),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 3 Agricultural Livestock Essence", 1, 215, 3),
+              createMaterial("Lv 3 Agricultural Planting Essence", 1, 212, 3),
+              createMaterial("Lv 4 Combat Essence", 2, 401, 4),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 3 Agricultural Livestock Essence", 1, 215, 3),
+            createMaterial("Lv 3 Agricultural Planting Essence", 1, 212, 3),
+            createMaterial("Lv 4 Combat Essence", 2, 401, 4),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Gathering Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-759.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 3 Agricultural Livestock Essence", 1, 215, 3),
-            createMaterial("Lv 3 Agricultural Planting Essence", 1, 212, 3),
-            createMaterial("Lv 4 Combat Essence", 2, 401, 4),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 3 Agricultural Livestock Essence", 1, 215, 3),
-            createMaterial("Lv 3 Agricultural Planting Essence", 1, 212, 3),
-            createMaterial("Lv 4 Combat Essence", 2, 401, 4),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 3 Agricultural Livestock Essence", 1, 215, 3),
-          createMaterial("Lv 3 Agricultural Planting Essence", 1, 212, 3),
-          createMaterial("Lv 4 Combat Essence", 2, 401, 4),
-        ]),
       },
     },
     {
@@ -7140,32 +8472,41 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 4 Agricultural Livestock Essence", 1, 410, 4),
-          createMaterial("Lv 4 Agricultural Planting Essence", 1, 407, 4),
-          createMaterial("Lv 5 Combat Essence", 2, 402, 5),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 4 Agricultural Livestock Essence", 1, 410, 4),
+            createMaterial("Lv 4 Agricultural Planting Essence", 1, 407, 4),
+            createMaterial("Lv 5 Combat Essence", 2, 402, 5),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 4 Agricultural Livestock Essence", 1, 410, 4),
+              createMaterial("Lv 4 Agricultural Planting Essence", 1, 407, 4),
+              createMaterial("Lv 5 Combat Essence", 2, 402, 5),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 4 Agricultural Livestock Essence", 1, 410, 4),
+              createMaterial("Lv 4 Agricultural Planting Essence", 1, 407, 4),
+              createMaterial("Lv 5 Combat Essence", 2, 402, 5),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 4 Agricultural Livestock Essence", 1, 410, 4),
+            createMaterial("Lv 4 Agricultural Planting Essence", 1, 407, 4),
+            createMaterial("Lv 5 Combat Essence", 2, 402, 5),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Gathering Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-760.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 4 Agricultural Livestock Essence", 1, 410, 4),
-            createMaterial("Lv 4 Agricultural Planting Essence", 1, 407, 4),
-            createMaterial("Lv 5 Combat Essence", 2, 402, 5),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 4 Agricultural Livestock Essence", 1, 410, 4),
-            createMaterial("Lv 4 Agricultural Planting Essence", 1, 407, 4),
-            createMaterial("Lv 5 Combat Essence", 2, 402, 5),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 4 Agricultural Livestock Essence", 1, 410, 4),
-          createMaterial("Lv 4 Agricultural Planting Essence", 1, 407, 4),
-          createMaterial("Lv 5 Combat Essence", 2, 402, 5),
-        ]),
       },
     },
     {
@@ -7187,32 +8528,41 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 5 Agricultural Livestock Essence", 1, 411, 5),
-          createMaterial("Lv 5 Agricultural Planting Essence", 1, 408, 5),
-          createMaterial("Lv 6 Combat Essence", 2, 403, 6),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 5 Agricultural Livestock Essence", 1, 411, 5),
+            createMaterial("Lv 5 Agricultural Planting Essence", 1, 408, 5),
+            createMaterial("Lv 6 Combat Essence", 2, 403, 6),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 5 Agricultural Livestock Essence", 1, 411, 5),
+              createMaterial("Lv 5 Agricultural Planting Essence", 1, 408, 5),
+              createMaterial("Lv 6 Combat Essence", 2, 403, 6),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 5 Agricultural Livestock Essence", 1, 411, 5),
+              createMaterial("Lv 5 Agricultural Planting Essence", 1, 408, 5),
+              createMaterial("Lv 6 Combat Essence", 2, 403, 6),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 5 Agricultural Livestock Essence", 1, 411, 5),
+            createMaterial("Lv 5 Agricultural Planting Essence", 1, 408, 5),
+            createMaterial("Lv 6 Combat Essence", 2, 403, 6),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Gathering Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-761.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 5 Agricultural Livestock Essence", 1, 411, 5),
-            createMaterial("Lv 5 Agricultural Planting Essence", 1, 408, 5),
-            createMaterial("Lv 6 Combat Essence", 2, 403, 6),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 5 Agricultural Livestock Essence", 1, 411, 5),
-            createMaterial("Lv 5 Agricultural Planting Essence", 1, 408, 5),
-            createMaterial("Lv 6 Combat Essence", 2, 403, 6),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 5 Agricultural Livestock Essence", 1, 411, 5),
-          createMaterial("Lv 5 Agricultural Planting Essence", 1, 408, 5),
-          createMaterial("Lv 6 Combat Essence", 2, 403, 6),
-        ]),
       },
     },
     {
@@ -7234,32 +8584,41 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 6 Agricultural Livestock Essence", 1, 412, 6),
-          createMaterial("Lv 6 Agricultural Planting Essence", 1, 409, 6),
-          createMaterial("Lv 7 Combat Essence", 2, 602, 7),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 6 Agricultural Livestock Essence", 1, 412, 6),
+            createMaterial("Lv 6 Agricultural Planting Essence", 1, 409, 6),
+            createMaterial("Lv 7 Combat Essence", 2, 602, 7),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 6 Agricultural Livestock Essence", 1, 412, 6),
+              createMaterial("Lv 6 Agricultural Planting Essence", 1, 409, 6),
+              createMaterial("Lv 7 Combat Essence", 2, 602, 7),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 6 Agricultural Livestock Essence", 1, 412, 6),
+              createMaterial("Lv 6 Agricultural Planting Essence", 1, 409, 6),
+              createMaterial("Lv 7 Combat Essence", 2, 602, 7),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 6 Agricultural Livestock Essence", 1, 412, 6),
+            createMaterial("Lv 6 Agricultural Planting Essence", 1, 409, 6),
+            createMaterial("Lv 7 Combat Essence", 2, 602, 7),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Gathering Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-762.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 6 Agricultural Livestock Essence", 1, 412, 6),
-            createMaterial("Lv 6 Agricultural Planting Essence", 1, 409, 6),
-            createMaterial("Lv 7 Combat Essence", 2, 602, 7),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 6 Agricultural Livestock Essence", 1, 412, 6),
-            createMaterial("Lv 6 Agricultural Planting Essence", 1, 409, 6),
-            createMaterial("Lv 7 Combat Essence", 2, 602, 7),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 6 Agricultural Livestock Essence", 1, 412, 6),
-          createMaterial("Lv 6 Agricultural Planting Essence", 1, 409, 6),
-          createMaterial("Lv 7 Combat Essence", 2, 602, 7),
-        ]),
       },
     },
     {
@@ -7281,32 +8640,41 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 7 Agricultural Livestock Essence", 1, 611, 7),
-          createMaterial("Lv 7 Agricultural Planting Essence", 1, 608, 7),
-          createMaterial("Lv 8 Combat Essence", 2, 603, 8),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 7 Agricultural Livestock Essence", 1, 611, 7),
+            createMaterial("Lv 7 Agricultural Planting Essence", 1, 608, 7),
+            createMaterial("Lv 8 Combat Essence", 2, 603, 8),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 7 Agricultural Livestock Essence", 1, 611, 7),
+              createMaterial("Lv 7 Agricultural Planting Essence", 1, 608, 7),
+              createMaterial("Lv 8 Combat Essence", 2, 603, 8),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 7 Agricultural Livestock Essence", 1, 611, 7),
+              createMaterial("Lv 7 Agricultural Planting Essence", 1, 608, 7),
+              createMaterial("Lv 8 Combat Essence", 2, 603, 8),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 7 Agricultural Livestock Essence", 1, 611, 7),
+            createMaterial("Lv 7 Agricultural Planting Essence", 1, 608, 7),
+            createMaterial("Lv 8 Combat Essence", 2, 603, 8),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Gathering Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-763.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 7 Agricultural Livestock Essence", 1, 611, 7),
-            createMaterial("Lv 7 Agricultural Planting Essence", 1, 608, 7),
-            createMaterial("Lv 8 Combat Essence", 2, 603, 8),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 7 Agricultural Livestock Essence", 1, 611, 7),
-            createMaterial("Lv 7 Agricultural Planting Essence", 1, 608, 7),
-            createMaterial("Lv 8 Combat Essence", 2, 603, 8),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 7 Agricultural Livestock Essence", 1, 611, 7),
-          createMaterial("Lv 7 Agricultural Planting Essence", 1, 608, 7),
-          createMaterial("Lv 8 Combat Essence", 2, 603, 8),
-        ]),
       },
     },
     {
@@ -7328,32 +8696,41 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 8 Agricultural Livestock Essence", 1, 612, 8),
-          createMaterial("Lv 8 Agricultural Planting Essence", 1, 609, 8),
-          createMaterial("Lv 9 Combat Essence", 2, 604, 9),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 8 Agricultural Livestock Essence", 1, 612, 8),
+            createMaterial("Lv 8 Agricultural Planting Essence", 1, 609, 8),
+            createMaterial("Lv 9 Combat Essence", 2, 604, 9),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 8 Agricultural Livestock Essence", 1, 612, 8),
+              createMaterial("Lv 8 Agricultural Planting Essence", 1, 609, 8),
+              createMaterial("Lv 9 Combat Essence", 2, 604, 9),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 8 Agricultural Livestock Essence", 1, 612, 8),
+              createMaterial("Lv 8 Agricultural Planting Essence", 1, 609, 8),
+              createMaterial("Lv 9 Combat Essence", 2, 604, 9),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 8 Agricultural Livestock Essence", 1, 612, 8),
+            createMaterial("Lv 8 Agricultural Planting Essence", 1, 609, 8),
+            createMaterial("Lv 9 Combat Essence", 2, 604, 9),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Gathering Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-764.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 8 Agricultural Livestock Essence", 1, 612, 8),
-            createMaterial("Lv 8 Agricultural Planting Essence", 1, 609, 8),
-            createMaterial("Lv 9 Combat Essence", 2, 604, 9),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 8 Agricultural Livestock Essence", 1, 612, 8),
-            createMaterial("Lv 8 Agricultural Planting Essence", 1, 609, 8),
-            createMaterial("Lv 9 Combat Essence", 2, 604, 9),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 8 Agricultural Livestock Essence", 1, 612, 8),
-          createMaterial("Lv 8 Agricultural Planting Essence", 1, 609, 8),
-          createMaterial("Lv 9 Combat Essence", 2, 604, 9),
-        ]),
       },
     },
     {
@@ -7375,18 +8752,27 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [createMaterial("Lv 1 Combat Essence", 2, 216, 1)],
-        minPriceTotalRon: calculateTotalPrice(
-          [createMaterial("Lv 1 Combat Essence", 2, 216, 1)],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [createMaterial("Lv 1 Combat Essence", 2, 216, 1)],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 1 Combat Essence", 2, 216, 1),
-        ]),
+        craftRecipe: {
+          materials: [createMaterial("Lv 1 Combat Essence", 2, 216, 1)],
+          minPriceTotalRon: calculateTotalPrice(
+            [createMaterial("Lv 1 Combat Essence", 2, 216, 1)],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [createMaterial("Lv 1 Combat Essence", 2, 216, 1)],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 1 Combat Essence", 2, 216, 1),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Gathering Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-756.png",
+            quantity: 100,
+          },
+        ],
       },
     },
     {
@@ -7408,32 +8794,41 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 1 Agricultural Livestock Essence", 1, 213, 1),
-          createMaterial("Lv 1 Agricultural Planting Essence", 1, 210, 1),
-          createMaterial("Lv 2 Combat Essence", 2, 217, 2),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 1 Agricultural Livestock Essence", 1, 213, 1),
+            createMaterial("Lv 1 Agricultural Planting Essence", 1, 210, 1),
+            createMaterial("Lv 2 Combat Essence", 2, 217, 2),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 1 Agricultural Livestock Essence", 1, 213, 1),
+              createMaterial("Lv 1 Agricultural Planting Essence", 1, 210, 1),
+              createMaterial("Lv 2 Combat Essence", 2, 217, 2),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 1 Agricultural Livestock Essence", 1, 213, 1),
+              createMaterial("Lv 1 Agricultural Planting Essence", 1, 210, 1),
+              createMaterial("Lv 2 Combat Essence", 2, 217, 2),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 1 Agricultural Livestock Essence", 1, 213, 1),
+            createMaterial("Lv 1 Agricultural Planting Essence", 1, 210, 1),
+            createMaterial("Lv 2 Combat Essence", 2, 217, 2),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Gathering Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-757.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 1 Agricultural Livestock Essence", 1, 213, 1),
-            createMaterial("Lv 1 Agricultural Planting Essence", 1, 210, 1),
-            createMaterial("Lv 2 Combat Essence", 2, 217, 2),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 1 Agricultural Livestock Essence", 1, 213, 1),
-            createMaterial("Lv 1 Agricultural Planting Essence", 1, 210, 1),
-            createMaterial("Lv 2 Combat Essence", 2, 217, 2),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 1 Agricultural Livestock Essence", 1, 213, 1),
-          createMaterial("Lv 1 Agricultural Planting Essence", 1, 210, 1),
-          createMaterial("Lv 2 Combat Essence", 2, 217, 2),
-        ]),
       },
     },
     {
@@ -7455,32 +8850,41 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 2 Agricultural Livestock Essence", 1, 214, 2),
-          createMaterial("Lv 2 Agricultural Planting Essence", 1, 211, 2),
-          createMaterial("Lv 3 Combat Essence", 2, 218, 3),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 2 Agricultural Livestock Essence", 1, 214, 2),
+            createMaterial("Lv 2 Agricultural Planting Essence", 1, 211, 2),
+            createMaterial("Lv 3 Combat Essence", 2, 218, 3),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 2 Agricultural Livestock Essence", 1, 214, 2),
+              createMaterial("Lv 2 Agricultural Planting Essence", 1, 211, 2),
+              createMaterial("Lv 3 Combat Essence", 2, 218, 3),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 2 Agricultural Livestock Essence", 1, 214, 2),
+              createMaterial("Lv 2 Agricultural Planting Essence", 1, 211, 2),
+              createMaterial("Lv 3 Combat Essence", 2, 218, 3),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 2 Agricultural Livestock Essence", 1, 214, 2),
+            createMaterial("Lv 2 Agricultural Planting Essence", 1, 211, 2),
+            createMaterial("Lv 3 Combat Essence", 2, 218, 3),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Gathering Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-758.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 2 Agricultural Livestock Essence", 1, 214, 2),
-            createMaterial("Lv 2 Agricultural Planting Essence", 1, 211, 2),
-            createMaterial("Lv 3 Combat Essence", 2, 218, 3),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 2 Agricultural Livestock Essence", 1, 214, 2),
-            createMaterial("Lv 2 Agricultural Planting Essence", 1, 211, 2),
-            createMaterial("Lv 3 Combat Essence", 2, 218, 3),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 2 Agricultural Livestock Essence", 1, 214, 2),
-          createMaterial("Lv 2 Agricultural Planting Essence", 1, 211, 2),
-          createMaterial("Lv 3 Combat Essence", 2, 218, 3),
-        ]),
       },
     },
     {
@@ -7502,32 +8906,41 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 3 Agricultural Livestock Essence", 1, 215, 3),
-          createMaterial("Lv 3 Agricultural Planting Essence", 1, 212, 3),
-          createMaterial("Lv 4 Combat Essence", 2, 401, 4),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 3 Agricultural Livestock Essence", 1, 215, 3),
+            createMaterial("Lv 3 Agricultural Planting Essence", 1, 212, 3),
+            createMaterial("Lv 4 Combat Essence", 2, 401, 4),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 3 Agricultural Livestock Essence", 1, 215, 3),
+              createMaterial("Lv 3 Agricultural Planting Essence", 1, 212, 3),
+              createMaterial("Lv 4 Combat Essence", 2, 401, 4),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 3 Agricultural Livestock Essence", 1, 215, 3),
+              createMaterial("Lv 3 Agricultural Planting Essence", 1, 212, 3),
+              createMaterial("Lv 4 Combat Essence", 2, 401, 4),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 3 Agricultural Livestock Essence", 1, 215, 3),
+            createMaterial("Lv 3 Agricultural Planting Essence", 1, 212, 3),
+            createMaterial("Lv 4 Combat Essence", 2, 401, 4),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Gathering Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-759.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 3 Agricultural Livestock Essence", 1, 215, 3),
-            createMaterial("Lv 3 Agricultural Planting Essence", 1, 212, 3),
-            createMaterial("Lv 4 Combat Essence", 2, 401, 4),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 3 Agricultural Livestock Essence", 1, 215, 3),
-            createMaterial("Lv 3 Agricultural Planting Essence", 1, 212, 3),
-            createMaterial("Lv 4 Combat Essence", 2, 401, 4),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 3 Agricultural Livestock Essence", 1, 215, 3),
-          createMaterial("Lv 3 Agricultural Planting Essence", 1, 212, 3),
-          createMaterial("Lv 4 Combat Essence", 2, 401, 4),
-        ]),
       },
     },
     {
@@ -7549,32 +8962,41 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 4 Agricultural Livestock Essence", 1, 410, 4),
-          createMaterial("Lv 4 Agricultural Planting Essence", 1, 407, 4),
-          createMaterial("Lv 5 Combat Essence", 2, 402, 5),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 4 Agricultural Livestock Essence", 1, 410, 4),
+            createMaterial("Lv 4 Agricultural Planting Essence", 1, 407, 4),
+            createMaterial("Lv 5 Combat Essence", 2, 402, 5),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 4 Agricultural Livestock Essence", 1, 410, 4),
+              createMaterial("Lv 4 Agricultural Planting Essence", 1, 407, 4),
+              createMaterial("Lv 5 Combat Essence", 2, 402, 5),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 4 Agricultural Livestock Essence", 1, 410, 4),
+              createMaterial("Lv 4 Agricultural Planting Essence", 1, 407, 4),
+              createMaterial("Lv 5 Combat Essence", 2, 402, 5),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 4 Agricultural Livestock Essence", 1, 410, 4),
+            createMaterial("Lv 4 Agricultural Planting Essence", 1, 407, 4),
+            createMaterial("Lv 5 Combat Essence", 2, 402, 5),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Gathering Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-760.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 4 Agricultural Livestock Essence", 1, 410, 4),
-            createMaterial("Lv 4 Agricultural Planting Essence", 1, 407, 4),
-            createMaterial("Lv 5 Combat Essence", 2, 402, 5),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 4 Agricultural Livestock Essence", 1, 410, 4),
-            createMaterial("Lv 4 Agricultural Planting Essence", 1, 407, 4),
-            createMaterial("Lv 5 Combat Essence", 2, 402, 5),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 4 Agricultural Livestock Essence", 1, 410, 4),
-          createMaterial("Lv 4 Agricultural Planting Essence", 1, 407, 4),
-          createMaterial("Lv 5 Combat Essence", 2, 402, 5),
-        ]),
       },
     },
     {
@@ -7596,32 +9018,41 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 5 Agricultural Livestock Essence", 1, 411, 5),
-          createMaterial("Lv 5 Agricultural Planting Essence", 1, 408, 5),
-          createMaterial("Lv 6 Combat Essence", 2, 403, 6),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 5 Agricultural Livestock Essence", 1, 411, 5),
+            createMaterial("Lv 5 Agricultural Planting Essence", 1, 408, 5),
+            createMaterial("Lv 6 Combat Essence", 2, 403, 6),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 5 Agricultural Livestock Essence", 1, 411, 5),
+              createMaterial("Lv 5 Agricultural Planting Essence", 1, 408, 5),
+              createMaterial("Lv 6 Combat Essence", 2, 403, 6),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 5 Agricultural Livestock Essence", 1, 411, 5),
+              createMaterial("Lv 5 Agricultural Planting Essence", 1, 408, 5),
+              createMaterial("Lv 6 Combat Essence", 2, 403, 6),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 5 Agricultural Livestock Essence", 1, 411, 5),
+            createMaterial("Lv 5 Agricultural Planting Essence", 1, 408, 5),
+            createMaterial("Lv 6 Combat Essence", 2, 403, 6),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Gathering Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-761.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 5 Agricultural Livestock Essence", 1, 411, 5),
-            createMaterial("Lv 5 Agricultural Planting Essence", 1, 408, 5),
-            createMaterial("Lv 6 Combat Essence", 2, 403, 6),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 5 Agricultural Livestock Essence", 1, 411, 5),
-            createMaterial("Lv 5 Agricultural Planting Essence", 1, 408, 5),
-            createMaterial("Lv 6 Combat Essence", 2, 403, 6),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 5 Agricultural Livestock Essence", 1, 411, 5),
-          createMaterial("Lv 5 Agricultural Planting Essence", 1, 408, 5),
-          createMaterial("Lv 6 Combat Essence", 2, 403, 6),
-        ]),
       },
     },
     {
@@ -7643,32 +9074,41 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 6 Agricultural Livestock Essence", 1, 412, 6),
-          createMaterial("Lv 6 Agricultural Planting Essence", 1, 409, 6),
-          createMaterial("Lv 7 Combat Essence", 2, 602, 7),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 6 Agricultural Livestock Essence", 1, 412, 6),
+            createMaterial("Lv 6 Agricultural Planting Essence", 1, 409, 6),
+            createMaterial("Lv 7 Combat Essence", 2, 602, 7),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 6 Agricultural Livestock Essence", 1, 412, 6),
+              createMaterial("Lv 6 Agricultural Planting Essence", 1, 409, 6),
+              createMaterial("Lv 7 Combat Essence", 2, 602, 7),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 6 Agricultural Livestock Essence", 1, 412, 6),
+              createMaterial("Lv 6 Agricultural Planting Essence", 1, 409, 6),
+              createMaterial("Lv 7 Combat Essence", 2, 602, 7),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 6 Agricultural Livestock Essence", 1, 412, 6),
+            createMaterial("Lv 6 Agricultural Planting Essence", 1, 409, 6),
+            createMaterial("Lv 7 Combat Essence", 2, 602, 7),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Gathering Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-762.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 6 Agricultural Livestock Essence", 1, 412, 6),
-            createMaterial("Lv 6 Agricultural Planting Essence", 1, 409, 6),
-            createMaterial("Lv 7 Combat Essence", 2, 602, 7),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 6 Agricultural Livestock Essence", 1, 412, 6),
-            createMaterial("Lv 6 Agricultural Planting Essence", 1, 409, 6),
-            createMaterial("Lv 7 Combat Essence", 2, 602, 7),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 6 Agricultural Livestock Essence", 1, 412, 6),
-          createMaterial("Lv 6 Agricultural Planting Essence", 1, 409, 6),
-          createMaterial("Lv 7 Combat Essence", 2, 602, 7),
-        ]),
       },
     },
     {
@@ -7690,32 +9130,41 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 7 Agricultural Livestock Essence", 1, 611, 7),
-          createMaterial("Lv 7 Agricultural Planting Essence", 1, 608, 7),
-          createMaterial("Lv 8 Combat Essence", 2, 603, 8),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 7 Agricultural Livestock Essence", 1, 611, 7),
+            createMaterial("Lv 7 Agricultural Planting Essence", 1, 608, 7),
+            createMaterial("Lv 8 Combat Essence", 2, 603, 8),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 7 Agricultural Livestock Essence", 1, 611, 7),
+              createMaterial("Lv 7 Agricultural Planting Essence", 1, 608, 7),
+              createMaterial("Lv 8 Combat Essence", 2, 603, 8),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 7 Agricultural Livestock Essence", 1, 611, 7),
+              createMaterial("Lv 7 Agricultural Planting Essence", 1, 608, 7),
+              createMaterial("Lv 8 Combat Essence", 2, 603, 8),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 7 Agricultural Livestock Essence", 1, 611, 7),
+            createMaterial("Lv 7 Agricultural Planting Essence", 1, 608, 7),
+            createMaterial("Lv 8 Combat Essence", 2, 603, 8),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Gathering Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-763.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 7 Agricultural Livestock Essence", 1, 611, 7),
-            createMaterial("Lv 7 Agricultural Planting Essence", 1, 608, 7),
-            createMaterial("Lv 8 Combat Essence", 2, 603, 8),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 7 Agricultural Livestock Essence", 1, 611, 7),
-            createMaterial("Lv 7 Agricultural Planting Essence", 1, 608, 7),
-            createMaterial("Lv 8 Combat Essence", 2, 603, 8),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 7 Agricultural Livestock Essence", 1, 611, 7),
-          createMaterial("Lv 7 Agricultural Planting Essence", 1, 608, 7),
-          createMaterial("Lv 8 Combat Essence", 2, 603, 8),
-        ]),
       },
     },
     {
@@ -7737,32 +9186,41 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 8 Agricultural Livestock Essence", 1, 612, 8),
-          createMaterial("Lv 8 Agricultural Planting Essence", 1, 609, 8),
-          createMaterial("Lv 9 Combat Essence", 2, 604, 9),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 8 Agricultural Livestock Essence", 1, 612, 8),
+            createMaterial("Lv 8 Agricultural Planting Essence", 1, 609, 8),
+            createMaterial("Lv 9 Combat Essence", 2, 604, 9),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 8 Agricultural Livestock Essence", 1, 612, 8),
+              createMaterial("Lv 8 Agricultural Planting Essence", 1, 609, 8),
+              createMaterial("Lv 9 Combat Essence", 2, 604, 9),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 8 Agricultural Livestock Essence", 1, 612, 8),
+              createMaterial("Lv 8 Agricultural Planting Essence", 1, 609, 8),
+              createMaterial("Lv 9 Combat Essence", 2, 604, 9),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 8 Agricultural Livestock Essence", 1, 612, 8),
+            createMaterial("Lv 8 Agricultural Planting Essence", 1, 609, 8),
+            createMaterial("Lv 9 Combat Essence", 2, 604, 9),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Gathering Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-764.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 8 Agricultural Livestock Essence", 1, 612, 8),
-            createMaterial("Lv 8 Agricultural Planting Essence", 1, 609, 8),
-            createMaterial("Lv 9 Combat Essence", 2, 604, 9),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 8 Agricultural Livestock Essence", 1, 612, 8),
-            createMaterial("Lv 8 Agricultural Planting Essence", 1, 609, 8),
-            createMaterial("Lv 9 Combat Essence", 2, 604, 9),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 8 Agricultural Livestock Essence", 1, 612, 8),
-          createMaterial("Lv 8 Agricultural Planting Essence", 1, 609, 8),
-          createMaterial("Lv 9 Combat Essence", 2, 604, 9),
-        ]),
       },
     },
     {
@@ -7784,18 +9242,27 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [createMaterial("Lv 1 Combat Essence", 2, 216, 1)],
-        minPriceTotalRon: calculateTotalPrice(
-          [createMaterial("Lv 1 Combat Essence", 2, 216, 1)],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [createMaterial("Lv 1 Combat Essence", 2, 216, 1)],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 1 Combat Essence", 2, 216, 1),
-        ]),
+        craftRecipe: {
+          materials: [createMaterial("Lv 1 Combat Essence", 2, 216, 1)],
+          minPriceTotalRon: calculateTotalPrice(
+            [createMaterial("Lv 1 Combat Essence", 2, 216, 1)],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [createMaterial("Lv 1 Combat Essence", 2, 216, 1)],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 1 Combat Essence", 2, 216, 1),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Gathering Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-756.png",
+            quantity: 100,
+          },
+        ],
       },
     },
     {
@@ -7817,32 +9284,41 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 1 Agricultural Livestock Essence", 1, 213, 1),
-          createMaterial("Lv 1 Agricultural Planting Essence", 1, 210, 1),
-          createMaterial("Lv 2 Combat Essence", 2, 217, 2),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 1 Agricultural Livestock Essence", 1, 213, 1),
+            createMaterial("Lv 1 Agricultural Planting Essence", 1, 210, 1),
+            createMaterial("Lv 2 Combat Essence", 2, 217, 2),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 1 Agricultural Livestock Essence", 1, 213, 1),
+              createMaterial("Lv 1 Agricultural Planting Essence", 1, 210, 1),
+              createMaterial("Lv 2 Combat Essence", 2, 217, 2),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 1 Agricultural Livestock Essence", 1, 213, 1),
+              createMaterial("Lv 1 Agricultural Planting Essence", 1, 210, 1),
+              createMaterial("Lv 2 Combat Essence", 2, 217, 2),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 1 Agricultural Livestock Essence", 1, 213, 1),
+            createMaterial("Lv 1 Agricultural Planting Essence", 1, 210, 1),
+            createMaterial("Lv 2 Combat Essence", 2, 217, 2),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Gathering Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-757.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 1 Agricultural Livestock Essence", 1, 213, 1),
-            createMaterial("Lv 1 Agricultural Planting Essence", 1, 210, 1),
-            createMaterial("Lv 2 Combat Essence", 2, 217, 2),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 1 Agricultural Livestock Essence", 1, 213, 1),
-            createMaterial("Lv 1 Agricultural Planting Essence", 1, 210, 1),
-            createMaterial("Lv 2 Combat Essence", 2, 217, 2),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 1 Agricultural Livestock Essence", 1, 213, 1),
-          createMaterial("Lv 1 Agricultural Planting Essence", 1, 210, 1),
-          createMaterial("Lv 2 Combat Essence", 2, 217, 2),
-        ]),
       },
     },
     {
@@ -7864,32 +9340,41 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 2 Agricultural Livestock Essence", 1, 214, 2),
-          createMaterial("Lv 2 Agricultural Planting Essence", 1, 211, 2),
-          createMaterial("Lv 3 Combat Essence", 2, 218, 3),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 2 Agricultural Livestock Essence", 1, 214, 2),
+            createMaterial("Lv 2 Agricultural Planting Essence", 1, 211, 2),
+            createMaterial("Lv 3 Combat Essence", 2, 218, 3),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 2 Agricultural Livestock Essence", 1, 214, 2),
+              createMaterial("Lv 2 Agricultural Planting Essence", 1, 211, 2),
+              createMaterial("Lv 3 Combat Essence", 2, 218, 3),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 2 Agricultural Livestock Essence", 1, 214, 2),
+              createMaterial("Lv 2 Agricultural Planting Essence", 1, 211, 2),
+              createMaterial("Lv 3 Combat Essence", 2, 218, 3),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 2 Agricultural Livestock Essence", 1, 214, 2),
+            createMaterial("Lv 2 Agricultural Planting Essence", 1, 211, 2),
+            createMaterial("Lv 3 Combat Essence", 2, 218, 3),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Gathering Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-758.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 2 Agricultural Livestock Essence", 1, 214, 2),
-            createMaterial("Lv 2 Agricultural Planting Essence", 1, 211, 2),
-            createMaterial("Lv 3 Combat Essence", 2, 218, 3),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 2 Agricultural Livestock Essence", 1, 214, 2),
-            createMaterial("Lv 2 Agricultural Planting Essence", 1, 211, 2),
-            createMaterial("Lv 3 Combat Essence", 2, 218, 3),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 2 Agricultural Livestock Essence", 1, 214, 2),
-          createMaterial("Lv 2 Agricultural Planting Essence", 1, 211, 2),
-          createMaterial("Lv 3 Combat Essence", 2, 218, 3),
-        ]),
       },
     },
     {
@@ -7911,32 +9396,41 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 3 Agricultural Livestock Essence", 1, 215, 3),
-          createMaterial("Lv 3 Agricultural Planting Essence", 1, 212, 3),
-          createMaterial("Lv 4 Combat Essence", 2, 401, 4),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 3 Agricultural Livestock Essence", 1, 215, 3),
+            createMaterial("Lv 3 Agricultural Planting Essence", 1, 212, 3),
+            createMaterial("Lv 4 Combat Essence", 2, 401, 4),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 3 Agricultural Livestock Essence", 1, 215, 3),
+              createMaterial("Lv 3 Agricultural Planting Essence", 1, 212, 3),
+              createMaterial("Lv 4 Combat Essence", 2, 401, 4),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 3 Agricultural Livestock Essence", 1, 215, 3),
+              createMaterial("Lv 3 Agricultural Planting Essence", 1, 212, 3),
+              createMaterial("Lv 4 Combat Essence", 2, 401, 4),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 3 Agricultural Livestock Essence", 1, 215, 3),
+            createMaterial("Lv 3 Agricultural Planting Essence", 1, 212, 3),
+            createMaterial("Lv 4 Combat Essence", 2, 401, 4),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Gathering Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-759.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 3 Agricultural Livestock Essence", 1, 215, 3),
-            createMaterial("Lv 3 Agricultural Planting Essence", 1, 212, 3),
-            createMaterial("Lv 4 Combat Essence", 2, 401, 4),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 3 Agricultural Livestock Essence", 1, 215, 3),
-            createMaterial("Lv 3 Agricultural Planting Essence", 1, 212, 3),
-            createMaterial("Lv 4 Combat Essence", 2, 401, 4),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 3 Agricultural Livestock Essence", 1, 215, 3),
-          createMaterial("Lv 3 Agricultural Planting Essence", 1, 212, 3),
-          createMaterial("Lv 4 Combat Essence", 2, 401, 4),
-        ]),
       },
     },
     {
@@ -7958,32 +9452,41 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 4 Agricultural Livestock Essence", 1, 410, 4),
-          createMaterial("Lv 4 Agricultural Planting Essence", 1, 407, 4),
-          createMaterial("Lv 5 Combat Essence", 2, 402, 5),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 4 Agricultural Livestock Essence", 1, 410, 4),
+            createMaterial("Lv 4 Agricultural Planting Essence", 1, 407, 4),
+            createMaterial("Lv 5 Combat Essence", 2, 402, 5),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 4 Agricultural Livestock Essence", 1, 410, 4),
+              createMaterial("Lv 4 Agricultural Planting Essence", 1, 407, 4),
+              createMaterial("Lv 5 Combat Essence", 2, 402, 5),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 4 Agricultural Livestock Essence", 1, 410, 4),
+              createMaterial("Lv 4 Agricultural Planting Essence", 1, 407, 4),
+              createMaterial("Lv 5 Combat Essence", 2, 402, 5),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 4 Agricultural Livestock Essence", 1, 410, 4),
+            createMaterial("Lv 4 Agricultural Planting Essence", 1, 407, 4),
+            createMaterial("Lv 5 Combat Essence", 2, 402, 5),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Gathering Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-760.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 4 Agricultural Livestock Essence", 1, 410, 4),
-            createMaterial("Lv 4 Agricultural Planting Essence", 1, 407, 4),
-            createMaterial("Lv 5 Combat Essence", 2, 402, 5),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 4 Agricultural Livestock Essence", 1, 410, 4),
-            createMaterial("Lv 4 Agricultural Planting Essence", 1, 407, 4),
-            createMaterial("Lv 5 Combat Essence", 2, 402, 5),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 4 Agricultural Livestock Essence", 1, 410, 4),
-          createMaterial("Lv 4 Agricultural Planting Essence", 1, 407, 4),
-          createMaterial("Lv 5 Combat Essence", 2, 402, 5),
-        ]),
       },
     },
     {
@@ -8005,32 +9508,41 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 5 Agricultural Livestock Essence", 1, 411, 5),
-          createMaterial("Lv 5 Agricultural Planting Essence", 1, 408, 5),
-          createMaterial("Lv 6 Combat Essence", 2, 403, 6),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 5 Agricultural Livestock Essence", 1, 411, 5),
+            createMaterial("Lv 5 Agricultural Planting Essence", 1, 408, 5),
+            createMaterial("Lv 6 Combat Essence", 2, 403, 6),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 5 Agricultural Livestock Essence", 1, 411, 5),
+              createMaterial("Lv 5 Agricultural Planting Essence", 1, 408, 5),
+              createMaterial("Lv 6 Combat Essence", 2, 403, 6),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 5 Agricultural Livestock Essence", 1, 411, 5),
+              createMaterial("Lv 5 Agricultural Planting Essence", 1, 408, 5),
+              createMaterial("Lv 6 Combat Essence", 2, 403, 6),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 5 Agricultural Livestock Essence", 1, 411, 5),
+            createMaterial("Lv 5 Agricultural Planting Essence", 1, 408, 5),
+            createMaterial("Lv 6 Combat Essence", 2, 403, 6),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Gathering Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-761.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 5 Agricultural Livestock Essence", 1, 411, 5),
-            createMaterial("Lv 5 Agricultural Planting Essence", 1, 408, 5),
-            createMaterial("Lv 6 Combat Essence", 2, 403, 6),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 5 Agricultural Livestock Essence", 1, 411, 5),
-            createMaterial("Lv 5 Agricultural Planting Essence", 1, 408, 5),
-            createMaterial("Lv 6 Combat Essence", 2, 403, 6),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 5 Agricultural Livestock Essence", 1, 411, 5),
-          createMaterial("Lv 5 Agricultural Planting Essence", 1, 408, 5),
-          createMaterial("Lv 6 Combat Essence", 2, 403, 6),
-        ]),
       },
     },
     {
@@ -8052,32 +9564,41 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 6 Agricultural Livestock Essence", 1, 412, 6),
-          createMaterial("Lv 6 Agricultural Planting Essence", 1, 409, 6),
-          createMaterial("Lv 7 Combat Essence", 2, 602, 7),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 6 Agricultural Livestock Essence", 1, 412, 6),
+            createMaterial("Lv 6 Agricultural Planting Essence", 1, 409, 6),
+            createMaterial("Lv 7 Combat Essence", 2, 602, 7),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 6 Agricultural Livestock Essence", 1, 412, 6),
+              createMaterial("Lv 6 Agricultural Planting Essence", 1, 409, 6),
+              createMaterial("Lv 7 Combat Essence", 2, 602, 7),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 6 Agricultural Livestock Essence", 1, 412, 6),
+              createMaterial("Lv 6 Agricultural Planting Essence", 1, 409, 6),
+              createMaterial("Lv 7 Combat Essence", 2, 602, 7),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 6 Agricultural Livestock Essence", 1, 412, 6),
+            createMaterial("Lv 6 Agricultural Planting Essence", 1, 409, 6),
+            createMaterial("Lv 7 Combat Essence", 2, 602, 7),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Gathering Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-762.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 6 Agricultural Livestock Essence", 1, 412, 6),
-            createMaterial("Lv 6 Agricultural Planting Essence", 1, 409, 6),
-            createMaterial("Lv 7 Combat Essence", 2, 602, 7),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 6 Agricultural Livestock Essence", 1, 412, 6),
-            createMaterial("Lv 6 Agricultural Planting Essence", 1, 409, 6),
-            createMaterial("Lv 7 Combat Essence", 2, 602, 7),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 6 Agricultural Livestock Essence", 1, 412, 6),
-          createMaterial("Lv 6 Agricultural Planting Essence", 1, 409, 6),
-          createMaterial("Lv 7 Combat Essence", 2, 602, 7),
-        ]),
       },
     },
     {
@@ -8099,32 +9620,41 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 7 Agricultural Livestock Essence", 1, 611, 7),
-          createMaterial("Lv 7 Agricultural Planting Essence", 1, 608, 7),
-          createMaterial("Lv 8 Combat Essence", 2, 603, 8),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 7 Agricultural Livestock Essence", 1, 611, 7),
+            createMaterial("Lv 7 Agricultural Planting Essence", 1, 608, 7),
+            createMaterial("Lv 8 Combat Essence", 2, 603, 8),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 7 Agricultural Livestock Essence", 1, 611, 7),
+              createMaterial("Lv 7 Agricultural Planting Essence", 1, 608, 7),
+              createMaterial("Lv 8 Combat Essence", 2, 603, 8),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 7 Agricultural Livestock Essence", 1, 611, 7),
+              createMaterial("Lv 7 Agricultural Planting Essence", 1, 608, 7),
+              createMaterial("Lv 8 Combat Essence", 2, 603, 8),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 7 Agricultural Livestock Essence", 1, 611, 7),
+            createMaterial("Lv 7 Agricultural Planting Essence", 1, 608, 7),
+            createMaterial("Lv 8 Combat Essence", 2, 603, 8),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Gathering Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-763.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 7 Agricultural Livestock Essence", 1, 611, 7),
-            createMaterial("Lv 7 Agricultural Planting Essence", 1, 608, 7),
-            createMaterial("Lv 8 Combat Essence", 2, 603, 8),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 7 Agricultural Livestock Essence", 1, 611, 7),
-            createMaterial("Lv 7 Agricultural Planting Essence", 1, 608, 7),
-            createMaterial("Lv 8 Combat Essence", 2, 603, 8),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 7 Agricultural Livestock Essence", 1, 611, 7),
-          createMaterial("Lv 7 Agricultural Planting Essence", 1, 608, 7),
-          createMaterial("Lv 8 Combat Essence", 2, 603, 8),
-        ]),
       },
     },
     {
@@ -8146,32 +9676,41 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 8 Agricultural Livestock Essence", 1, 612, 8),
-          createMaterial("Lv 8 Agricultural Planting Essence", 1, 609, 8),
-          createMaterial("Lv 9 Combat Essence", 2, 604, 9),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 8 Agricultural Livestock Essence", 1, 612, 8),
+            createMaterial("Lv 8 Agricultural Planting Essence", 1, 609, 8),
+            createMaterial("Lv 9 Combat Essence", 2, 604, 9),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 8 Agricultural Livestock Essence", 1, 612, 8),
+              createMaterial("Lv 8 Agricultural Planting Essence", 1, 609, 8),
+              createMaterial("Lv 9 Combat Essence", 2, 604, 9),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 8 Agricultural Livestock Essence", 1, 612, 8),
+              createMaterial("Lv 8 Agricultural Planting Essence", 1, 609, 8),
+              createMaterial("Lv 9 Combat Essence", 2, 604, 9),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 8 Agricultural Livestock Essence", 1, 612, 8),
+            createMaterial("Lv 8 Agricultural Planting Essence", 1, 609, 8),
+            createMaterial("Lv 9 Combat Essence", 2, 604, 9),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Gathering Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-764.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 8 Agricultural Livestock Essence", 1, 612, 8),
-            createMaterial("Lv 8 Agricultural Planting Essence", 1, 609, 8),
-            createMaterial("Lv 9 Combat Essence", 2, 604, 9),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 8 Agricultural Livestock Essence", 1, 612, 8),
-            createMaterial("Lv 8 Agricultural Planting Essence", 1, 609, 8),
-            createMaterial("Lv 9 Combat Essence", 2, 604, 9),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 8 Agricultural Livestock Essence", 1, 612, 8),
-          createMaterial("Lv 8 Agricultural Planting Essence", 1, 609, 8),
-          createMaterial("Lv 9 Combat Essence", 2, 604, 9),
-        ]),
       },
     },
     {
@@ -8198,18 +9737,27 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [createMaterial("Lv 1 Combat Essence", 2, 216, 1)],
-        minPriceTotalRon: calculateTotalPrice(
-          [createMaterial("Lv 1 Combat Essence", 2, 216, 1)],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [createMaterial("Lv 1 Combat Essence", 2, 216, 1)],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 1 Combat Essence", 2, 216, 1),
-        ]),
+        craftRecipe: {
+          materials: [createMaterial("Lv 1 Combat Essence", 2, 216, 1)],
+          minPriceTotalRon: calculateTotalPrice(
+            [createMaterial("Lv 1 Combat Essence", 2, 216, 1)],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [createMaterial("Lv 1 Combat Essence", 2, 216, 1)],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 1 Combat Essence", 2, 216, 1),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Gathering Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-756.png",
+            quantity: 100,
+          },
+        ],
       },
     },
     {
@@ -8236,32 +9784,41 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 1 Agricultural Livestock Essence", 1, 213, 1),
-          createMaterial("Lv 1 Agricultural Planting Essence", 1, 210, 1),
-          createMaterial("Lv 2 Combat Essence", 2, 217, 2),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 1 Agricultural Livestock Essence", 1, 213, 1),
+            createMaterial("Lv 1 Agricultural Planting Essence", 1, 210, 1),
+            createMaterial("Lv 2 Combat Essence", 2, 217, 2),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 1 Agricultural Livestock Essence", 1, 213, 1),
+              createMaterial("Lv 1 Agricultural Planting Essence", 1, 210, 1),
+              createMaterial("Lv 2 Combat Essence", 2, 217, 2),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 1 Agricultural Livestock Essence", 1, 213, 1),
+              createMaterial("Lv 1 Agricultural Planting Essence", 1, 210, 1),
+              createMaterial("Lv 2 Combat Essence", 2, 217, 2),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 1 Agricultural Livestock Essence", 1, 213, 1),
+            createMaterial("Lv 1 Agricultural Planting Essence", 1, 210, 1),
+            createMaterial("Lv 2 Combat Essence", 2, 217, 2),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Gathering Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-757.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 1 Agricultural Livestock Essence", 1, 213, 1),
-            createMaterial("Lv 1 Agricultural Planting Essence", 1, 210, 1),
-            createMaterial("Lv 2 Combat Essence", 2, 217, 2),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 1 Agricultural Livestock Essence", 1, 213, 1),
-            createMaterial("Lv 1 Agricultural Planting Essence", 1, 210, 1),
-            createMaterial("Lv 2 Combat Essence", 2, 217, 2),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 1 Agricultural Livestock Essence", 1, 213, 1),
-          createMaterial("Lv 1 Agricultural Planting Essence", 1, 210, 1),
-          createMaterial("Lv 2 Combat Essence", 2, 217, 2),
-        ]),
       },
     },
     {
@@ -8288,32 +9845,41 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 2 Agricultural Livestock Essence", 1, 214, 2),
-          createMaterial("Lv 2 Agricultural Planting Essence", 1, 211, 2),
-          createMaterial("Lv 3 Combat Essence", 2, 218, 3),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 2 Agricultural Livestock Essence", 1, 214, 2),
+            createMaterial("Lv 2 Agricultural Planting Essence", 1, 211, 2),
+            createMaterial("Lv 3 Combat Essence", 2, 218, 3),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 2 Agricultural Livestock Essence", 1, 214, 2),
+              createMaterial("Lv 2 Agricultural Planting Essence", 1, 211, 2),
+              createMaterial("Lv 3 Combat Essence", 2, 218, 3),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 2 Agricultural Livestock Essence", 1, 214, 2),
+              createMaterial("Lv 2 Agricultural Planting Essence", 1, 211, 2),
+              createMaterial("Lv 3 Combat Essence", 2, 218, 3),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 2 Agricultural Livestock Essence", 1, 214, 2),
+            createMaterial("Lv 2 Agricultural Planting Essence", 1, 211, 2),
+            createMaterial("Lv 3 Combat Essence", 2, 218, 3),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Gathering Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-758.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 2 Agricultural Livestock Essence", 1, 214, 2),
-            createMaterial("Lv 2 Agricultural Planting Essence", 1, 211, 2),
-            createMaterial("Lv 3 Combat Essence", 2, 218, 3),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 2 Agricultural Livestock Essence", 1, 214, 2),
-            createMaterial("Lv 2 Agricultural Planting Essence", 1, 211, 2),
-            createMaterial("Lv 3 Combat Essence", 2, 218, 3),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 2 Agricultural Livestock Essence", 1, 214, 2),
-          createMaterial("Lv 2 Agricultural Planting Essence", 1, 211, 2),
-          createMaterial("Lv 3 Combat Essence", 2, 218, 3),
-        ]),
       },
     },
     {
@@ -8340,32 +9906,41 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 3 Agricultural Livestock Essence", 1, 215, 3),
-          createMaterial("Lv 3 Agricultural Planting Essence", 1, 212, 3),
-          createMaterial("Lv 4 Combat Essence", 2, 401, 4),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 3 Agricultural Livestock Essence", 1, 215, 3),
+            createMaterial("Lv 3 Agricultural Planting Essence", 1, 212, 3),
+            createMaterial("Lv 4 Combat Essence", 2, 401, 4),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 3 Agricultural Livestock Essence", 1, 215, 3),
+              createMaterial("Lv 3 Agricultural Planting Essence", 1, 212, 3),
+              createMaterial("Lv 4 Combat Essence", 2, 401, 4),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 3 Agricultural Livestock Essence", 1, 215, 3),
+              createMaterial("Lv 3 Agricultural Planting Essence", 1, 212, 3),
+              createMaterial("Lv 4 Combat Essence", 2, 401, 4),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 3 Agricultural Livestock Essence", 1, 215, 3),
+            createMaterial("Lv 3 Agricultural Planting Essence", 1, 212, 3),
+            createMaterial("Lv 4 Combat Essence", 2, 401, 4),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Gathering Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-759.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 3 Agricultural Livestock Essence", 1, 215, 3),
-            createMaterial("Lv 3 Agricultural Planting Essence", 1, 212, 3),
-            createMaterial("Lv 4 Combat Essence", 2, 401, 4),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 3 Agricultural Livestock Essence", 1, 215, 3),
-            createMaterial("Lv 3 Agricultural Planting Essence", 1, 212, 3),
-            createMaterial("Lv 4 Combat Essence", 2, 401, 4),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 3 Agricultural Livestock Essence", 1, 215, 3),
-          createMaterial("Lv 3 Agricultural Planting Essence", 1, 212, 3),
-          createMaterial("Lv 4 Combat Essence", 2, 401, 4),
-        ]),
       },
     },
     {
@@ -8392,32 +9967,41 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 4 Agricultural Livestock Essence", 1, 410, 4),
-          createMaterial("Lv 4 Agricultural Planting Essence", 1, 407, 4),
-          createMaterial("Lv 5 Combat Essence", 2, 402, 5),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 4 Agricultural Livestock Essence", 1, 410, 4),
+            createMaterial("Lv 4 Agricultural Planting Essence", 1, 407, 4),
+            createMaterial("Lv 5 Combat Essence", 2, 402, 5),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 4 Agricultural Livestock Essence", 1, 410, 4),
+              createMaterial("Lv 4 Agricultural Planting Essence", 1, 407, 4),
+              createMaterial("Lv 5 Combat Essence", 2, 402, 5),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 4 Agricultural Livestock Essence", 1, 410, 4),
+              createMaterial("Lv 4 Agricultural Planting Essence", 1, 407, 4),
+              createMaterial("Lv 5 Combat Essence", 2, 402, 5),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 4 Agricultural Livestock Essence", 1, 410, 4),
+            createMaterial("Lv 4 Agricultural Planting Essence", 1, 407, 4),
+            createMaterial("Lv 5 Combat Essence", 2, 402, 5),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Gathering Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-760.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 4 Agricultural Livestock Essence", 1, 410, 4),
-            createMaterial("Lv 4 Agricultural Planting Essence", 1, 407, 4),
-            createMaterial("Lv 5 Combat Essence", 2, 402, 5),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 4 Agricultural Livestock Essence", 1, 410, 4),
-            createMaterial("Lv 4 Agricultural Planting Essence", 1, 407, 4),
-            createMaterial("Lv 5 Combat Essence", 2, 402, 5),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 4 Agricultural Livestock Essence", 1, 410, 4),
-          createMaterial("Lv 4 Agricultural Planting Essence", 1, 407, 4),
-          createMaterial("Lv 5 Combat Essence", 2, 402, 5),
-        ]),
       },
     },
     {
@@ -8444,32 +10028,41 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 5 Agricultural Livestock Essence", 1, 411, 5),
-          createMaterial("Lv 5 Agricultural Planting Essence", 1, 408, 5),
-          createMaterial("Lv 6 Combat Essence", 2, 403, 6),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 5 Agricultural Livestock Essence", 1, 411, 5),
+            createMaterial("Lv 5 Agricultural Planting Essence", 1, 408, 5),
+            createMaterial("Lv 6 Combat Essence", 2, 403, 6),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 5 Agricultural Livestock Essence", 1, 411, 5),
+              createMaterial("Lv 5 Agricultural Planting Essence", 1, 408, 5),
+              createMaterial("Lv 6 Combat Essence", 2, 403, 6),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 5 Agricultural Livestock Essence", 1, 411, 5),
+              createMaterial("Lv 5 Agricultural Planting Essence", 1, 408, 5),
+              createMaterial("Lv 6 Combat Essence", 2, 403, 6),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 5 Agricultural Livestock Essence", 1, 411, 5),
+            createMaterial("Lv 5 Agricultural Planting Essence", 1, 408, 5),
+            createMaterial("Lv 6 Combat Essence", 2, 403, 6),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Gathering Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-761.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 5 Agricultural Livestock Essence", 1, 411, 5),
-            createMaterial("Lv 5 Agricultural Planting Essence", 1, 408, 5),
-            createMaterial("Lv 6 Combat Essence", 2, 403, 6),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 5 Agricultural Livestock Essence", 1, 411, 5),
-            createMaterial("Lv 5 Agricultural Planting Essence", 1, 408, 5),
-            createMaterial("Lv 6 Combat Essence", 2, 403, 6),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 5 Agricultural Livestock Essence", 1, 411, 5),
-          createMaterial("Lv 5 Agricultural Planting Essence", 1, 408, 5),
-          createMaterial("Lv 6 Combat Essence", 2, 403, 6),
-        ]),
       },
     },
     {
@@ -8496,32 +10089,41 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 6 Agricultural Livestock Essence", 1, 412, 6),
-          createMaterial("Lv 6 Agricultural Planting Essence", 1, 409, 6),
-          createMaterial("Lv 7 Combat Essence", 2, 602, 7),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 6 Agricultural Livestock Essence", 1, 412, 6),
+            createMaterial("Lv 6 Agricultural Planting Essence", 1, 409, 6),
+            createMaterial("Lv 7 Combat Essence", 2, 602, 7),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 6 Agricultural Livestock Essence", 1, 412, 6),
+              createMaterial("Lv 6 Agricultural Planting Essence", 1, 409, 6),
+              createMaterial("Lv 7 Combat Essence", 2, 602, 7),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 6 Agricultural Livestock Essence", 1, 412, 6),
+              createMaterial("Lv 6 Agricultural Planting Essence", 1, 409, 6),
+              createMaterial("Lv 7 Combat Essence", 2, 602, 7),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 6 Agricultural Livestock Essence", 1, 412, 6),
+            createMaterial("Lv 6 Agricultural Planting Essence", 1, 409, 6),
+            createMaterial("Lv 7 Combat Essence", 2, 602, 7),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Gathering Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-762.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 6 Agricultural Livestock Essence", 1, 412, 6),
-            createMaterial("Lv 6 Agricultural Planting Essence", 1, 409, 6),
-            createMaterial("Lv 7 Combat Essence", 2, 602, 7),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 6 Agricultural Livestock Essence", 1, 412, 6),
-            createMaterial("Lv 6 Agricultural Planting Essence", 1, 409, 6),
-            createMaterial("Lv 7 Combat Essence", 2, 602, 7),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 6 Agricultural Livestock Essence", 1, 412, 6),
-          createMaterial("Lv 6 Agricultural Planting Essence", 1, 409, 6),
-          createMaterial("Lv 7 Combat Essence", 2, 602, 7),
-        ]),
       },
     },
     {
@@ -8548,32 +10150,41 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 7 Agricultural Livestock Essence", 1, 611, 7),
-          createMaterial("Lv 7 Agricultural Planting Essence", 1, 608, 7),
-          createMaterial("Lv 8 Combat Essence", 2, 603, 8),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 7 Agricultural Livestock Essence", 1, 611, 7),
+            createMaterial("Lv 7 Agricultural Planting Essence", 1, 608, 7),
+            createMaterial("Lv 8 Combat Essence", 2, 603, 8),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 7 Agricultural Livestock Essence", 1, 611, 7),
+              createMaterial("Lv 7 Agricultural Planting Essence", 1, 608, 7),
+              createMaterial("Lv 8 Combat Essence", 2, 603, 8),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 7 Agricultural Livestock Essence", 1, 611, 7),
+              createMaterial("Lv 7 Agricultural Planting Essence", 1, 608, 7),
+              createMaterial("Lv 8 Combat Essence", 2, 603, 8),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 7 Agricultural Livestock Essence", 1, 611, 7),
+            createMaterial("Lv 7 Agricultural Planting Essence", 1, 608, 7),
+            createMaterial("Lv 8 Combat Essence", 2, 603, 8),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Gathering Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-763.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 7 Agricultural Livestock Essence", 1, 611, 7),
-            createMaterial("Lv 7 Agricultural Planting Essence", 1, 608, 7),
-            createMaterial("Lv 8 Combat Essence", 2, 603, 8),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 7 Agricultural Livestock Essence", 1, 611, 7),
-            createMaterial("Lv 7 Agricultural Planting Essence", 1, 608, 7),
-            createMaterial("Lv 8 Combat Essence", 2, 603, 8),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 7 Agricultural Livestock Essence", 1, 611, 7),
-          createMaterial("Lv 7 Agricultural Planting Essence", 1, 608, 7),
-          createMaterial("Lv 8 Combat Essence", 2, 603, 8),
-        ]),
       },
     },
     {
@@ -8600,32 +10211,41 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 8 Agricultural Livestock Essence", 1, 612, 8),
-          createMaterial("Lv 8 Agricultural Planting Essence", 1, 609, 8),
-          createMaterial("Lv 9 Combat Essence", 2, 604, 9),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 8 Agricultural Livestock Essence", 1, 612, 8),
+            createMaterial("Lv 8 Agricultural Planting Essence", 1, 609, 8),
+            createMaterial("Lv 9 Combat Essence", 2, 604, 9),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 8 Agricultural Livestock Essence", 1, 612, 8),
+              createMaterial("Lv 8 Agricultural Planting Essence", 1, 609, 8),
+              createMaterial("Lv 9 Combat Essence", 2, 604, 9),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 8 Agricultural Livestock Essence", 1, 612, 8),
+              createMaterial("Lv 8 Agricultural Planting Essence", 1, 609, 8),
+              createMaterial("Lv 9 Combat Essence", 2, 604, 9),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 8 Agricultural Livestock Essence", 1, 612, 8),
+            createMaterial("Lv 8 Agricultural Planting Essence", 1, 609, 8),
+            createMaterial("Lv 9 Combat Essence", 2, 604, 9),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Gathering Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-764.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 8 Agricultural Livestock Essence", 1, 612, 8),
-            createMaterial("Lv 8 Agricultural Planting Essence", 1, 609, 8),
-            createMaterial("Lv 9 Combat Essence", 2, 604, 9),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 8 Agricultural Livestock Essence", 1, 612, 8),
-            createMaterial("Lv 8 Agricultural Planting Essence", 1, 609, 8),
-            createMaterial("Lv 9 Combat Essence", 2, 604, 9),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 8 Agricultural Livestock Essence", 1, 612, 8),
-          createMaterial("Lv 8 Agricultural Planting Essence", 1, 609, 8),
-          createMaterial("Lv 9 Combat Essence", 2, 604, 9),
-        ]),
       },
     },
     {
@@ -8652,18 +10272,27 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [createMaterial("Lv 1 Combat Essence", 2, 216, 1)],
-        minPriceTotalRon: calculateTotalPrice(
-          [createMaterial("Lv 1 Combat Essence", 2, 216, 1)],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [createMaterial("Lv 1 Combat Essence", 2, 216, 1)],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 1 Combat Essence", 2, 216, 1),
-        ]),
+        craftRecipe: {
+          materials: [createMaterial("Lv 1 Combat Essence", 2, 216, 1)],
+          minPriceTotalRon: calculateTotalPrice(
+            [createMaterial("Lv 1 Combat Essence", 2, 216, 1)],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [createMaterial("Lv 1 Combat Essence", 2, 216, 1)],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 1 Combat Essence", 2, 216, 1),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Gathering Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-756.png",
+            quantity: 100,
+          },
+        ],
       },
     },
     {
@@ -8690,32 +10319,41 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 1 Agricultural Livestock Essence", 1, 213, 1),
-          createMaterial("Lv 1 Agricultural Planting Essence", 1, 210, 1),
-          createMaterial("Lv 2 Combat Essence", 2, 217, 2),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 1 Agricultural Livestock Essence", 1, 213, 1),
+            createMaterial("Lv 1 Agricultural Planting Essence", 1, 210, 1),
+            createMaterial("Lv 2 Combat Essence", 2, 217, 2),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 1 Agricultural Livestock Essence", 1, 213, 1),
+              createMaterial("Lv 1 Agricultural Planting Essence", 1, 210, 1),
+              createMaterial("Lv 2 Combat Essence", 2, 217, 2),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 1 Agricultural Livestock Essence", 1, 213, 1),
+              createMaterial("Lv 1 Agricultural Planting Essence", 1, 210, 1),
+              createMaterial("Lv 2 Combat Essence", 2, 217, 2),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 1 Agricultural Livestock Essence", 1, 213, 1),
+            createMaterial("Lv 1 Agricultural Planting Essence", 1, 210, 1),
+            createMaterial("Lv 2 Combat Essence", 2, 217, 2),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Gathering Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-757.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 1 Agricultural Livestock Essence", 1, 213, 1),
-            createMaterial("Lv 1 Agricultural Planting Essence", 1, 210, 1),
-            createMaterial("Lv 2 Combat Essence", 2, 217, 2),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 1 Agricultural Livestock Essence", 1, 213, 1),
-            createMaterial("Lv 1 Agricultural Planting Essence", 1, 210, 1),
-            createMaterial("Lv 2 Combat Essence", 2, 217, 2),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 1 Agricultural Livestock Essence", 1, 213, 1),
-          createMaterial("Lv 1 Agricultural Planting Essence", 1, 210, 1),
-          createMaterial("Lv 2 Combat Essence", 2, 217, 2),
-        ]),
       },
     },
     {
@@ -8742,32 +10380,41 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 2 Agricultural Livestock Essence", 1, 214, 2),
-          createMaterial("Lv 2 Agricultural Planting Essence", 1, 211, 2),
-          createMaterial("Lv 3 Combat Essence", 2, 218, 3),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 2 Agricultural Livestock Essence", 1, 214, 2),
+            createMaterial("Lv 2 Agricultural Planting Essence", 1, 211, 2),
+            createMaterial("Lv 3 Combat Essence", 2, 218, 3),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 2 Agricultural Livestock Essence", 1, 214, 2),
+              createMaterial("Lv 2 Agricultural Planting Essence", 1, 211, 2),
+              createMaterial("Lv 3 Combat Essence", 2, 218, 3),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 2 Agricultural Livestock Essence", 1, 214, 2),
+              createMaterial("Lv 2 Agricultural Planting Essence", 1, 211, 2),
+              createMaterial("Lv 3 Combat Essence", 2, 218, 3),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 2 Agricultural Livestock Essence", 1, 214, 2),
+            createMaterial("Lv 2 Agricultural Planting Essence", 1, 211, 2),
+            createMaterial("Lv 3 Combat Essence", 2, 218, 3),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Gathering Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-758.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 2 Agricultural Livestock Essence", 1, 214, 2),
-            createMaterial("Lv 2 Agricultural Planting Essence", 1, 211, 2),
-            createMaterial("Lv 3 Combat Essence", 2, 218, 3),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 2 Agricultural Livestock Essence", 1, 214, 2),
-            createMaterial("Lv 2 Agricultural Planting Essence", 1, 211, 2),
-            createMaterial("Lv 3 Combat Essence", 2, 218, 3),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 2 Agricultural Livestock Essence", 1, 214, 2),
-          createMaterial("Lv 2 Agricultural Planting Essence", 1, 211, 2),
-          createMaterial("Lv 3 Combat Essence", 2, 218, 3),
-        ]),
       },
     },
     {
@@ -8794,32 +10441,41 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 3 Agricultural Livestock Essence", 1, 215, 3),
-          createMaterial("Lv 3 Agricultural Planting Essence", 1, 212, 3),
-          createMaterial("Lv 4 Combat Essence", 2, 401, 4),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 3 Agricultural Livestock Essence", 1, 215, 3),
+            createMaterial("Lv 3 Agricultural Planting Essence", 1, 212, 3),
+            createMaterial("Lv 4 Combat Essence", 2, 401, 4),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 3 Agricultural Livestock Essence", 1, 215, 3),
+              createMaterial("Lv 3 Agricultural Planting Essence", 1, 212, 3),
+              createMaterial("Lv 4 Combat Essence", 2, 401, 4),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 3 Agricultural Livestock Essence", 1, 215, 3),
+              createMaterial("Lv 3 Agricultural Planting Essence", 1, 212, 3),
+              createMaterial("Lv 4 Combat Essence", 2, 401, 4),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 3 Agricultural Livestock Essence", 1, 215, 3),
+            createMaterial("Lv 3 Agricultural Planting Essence", 1, 212, 3),
+            createMaterial("Lv 4 Combat Essence", 2, 401, 4),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Gathering Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-759.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 3 Agricultural Livestock Essence", 1, 215, 3),
-            createMaterial("Lv 3 Agricultural Planting Essence", 1, 212, 3),
-            createMaterial("Lv 4 Combat Essence", 2, 401, 4),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 3 Agricultural Livestock Essence", 1, 215, 3),
-            createMaterial("Lv 3 Agricultural Planting Essence", 1, 212, 3),
-            createMaterial("Lv 4 Combat Essence", 2, 401, 4),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 3 Agricultural Livestock Essence", 1, 215, 3),
-          createMaterial("Lv 3 Agricultural Planting Essence", 1, 212, 3),
-          createMaterial("Lv 4 Combat Essence", 2, 401, 4),
-        ]),
       },
     },
     {
@@ -8846,32 +10502,41 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 4 Agricultural Livestock Essence", 1, 410, 4),
-          createMaterial("Lv 4 Agricultural Planting Essence", 1, 407, 4),
-          createMaterial("Lv 5 Combat Essence", 2, 402, 5),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 4 Agricultural Livestock Essence", 1, 410, 4),
+            createMaterial("Lv 4 Agricultural Planting Essence", 1, 407, 4),
+            createMaterial("Lv 5 Combat Essence", 2, 402, 5),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 4 Agricultural Livestock Essence", 1, 410, 4),
+              createMaterial("Lv 4 Agricultural Planting Essence", 1, 407, 4),
+              createMaterial("Lv 5 Combat Essence", 2, 402, 5),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 4 Agricultural Livestock Essence", 1, 410, 4),
+              createMaterial("Lv 4 Agricultural Planting Essence", 1, 407, 4),
+              createMaterial("Lv 5 Combat Essence", 2, 402, 5),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 4 Agricultural Livestock Essence", 1, 410, 4),
+            createMaterial("Lv 4 Agricultural Planting Essence", 1, 407, 4),
+            createMaterial("Lv 5 Combat Essence", 2, 402, 5),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Gathering Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-760.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 4 Agricultural Livestock Essence", 1, 410, 4),
-            createMaterial("Lv 4 Agricultural Planting Essence", 1, 407, 4),
-            createMaterial("Lv 5 Combat Essence", 2, 402, 5),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 4 Agricultural Livestock Essence", 1, 410, 4),
-            createMaterial("Lv 4 Agricultural Planting Essence", 1, 407, 4),
-            createMaterial("Lv 5 Combat Essence", 2, 402, 5),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 4 Agricultural Livestock Essence", 1, 410, 4),
-          createMaterial("Lv 4 Agricultural Planting Essence", 1, 407, 4),
-          createMaterial("Lv 5 Combat Essence", 2, 402, 5),
-        ]),
       },
     },
     {
@@ -8898,32 +10563,41 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 5 Agricultural Livestock Essence", 1, 411, 5),
-          createMaterial("Lv 5 Agricultural Planting Essence", 1, 408, 5),
-          createMaterial("Lv 6 Combat Essence", 2, 403, 6),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 5 Agricultural Livestock Essence", 1, 411, 5),
+            createMaterial("Lv 5 Agricultural Planting Essence", 1, 408, 5),
+            createMaterial("Lv 6 Combat Essence", 2, 403, 6),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 5 Agricultural Livestock Essence", 1, 411, 5),
+              createMaterial("Lv 5 Agricultural Planting Essence", 1, 408, 5),
+              createMaterial("Lv 6 Combat Essence", 2, 403, 6),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 5 Agricultural Livestock Essence", 1, 411, 5),
+              createMaterial("Lv 5 Agricultural Planting Essence", 1, 408, 5),
+              createMaterial("Lv 6 Combat Essence", 2, 403, 6),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 5 Agricultural Livestock Essence", 1, 411, 5),
+            createMaterial("Lv 5 Agricultural Planting Essence", 1, 408, 5),
+            createMaterial("Lv 6 Combat Essence", 2, 403, 6),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Gathering Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-761.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 5 Agricultural Livestock Essence", 1, 411, 5),
-            createMaterial("Lv 5 Agricultural Planting Essence", 1, 408, 5),
-            createMaterial("Lv 6 Combat Essence", 2, 403, 6),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 5 Agricultural Livestock Essence", 1, 411, 5),
-            createMaterial("Lv 5 Agricultural Planting Essence", 1, 408, 5),
-            createMaterial("Lv 6 Combat Essence", 2, 403, 6),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 5 Agricultural Livestock Essence", 1, 411, 5),
-          createMaterial("Lv 5 Agricultural Planting Essence", 1, 408, 5),
-          createMaterial("Lv 6 Combat Essence", 2, 403, 6),
-        ]),
       },
     },
     {
@@ -8950,32 +10624,41 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 6 Agricultural Livestock Essence", 1, 412, 6),
-          createMaterial("Lv 6 Agricultural Planting Essence", 1, 409, 6),
-          createMaterial("Lv 7 Combat Essence", 2, 602, 7),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 6 Agricultural Livestock Essence", 1, 412, 6),
+            createMaterial("Lv 6 Agricultural Planting Essence", 1, 409, 6),
+            createMaterial("Lv 7 Combat Essence", 2, 602, 7),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 6 Agricultural Livestock Essence", 1, 412, 6),
+              createMaterial("Lv 6 Agricultural Planting Essence", 1, 409, 6),
+              createMaterial("Lv 7 Combat Essence", 2, 602, 7),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 6 Agricultural Livestock Essence", 1, 412, 6),
+              createMaterial("Lv 6 Agricultural Planting Essence", 1, 409, 6),
+              createMaterial("Lv 7 Combat Essence", 2, 602, 7),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 6 Agricultural Livestock Essence", 1, 412, 6),
+            createMaterial("Lv 6 Agricultural Planting Essence", 1, 409, 6),
+            createMaterial("Lv 7 Combat Essence", 2, 602, 7),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Gathering Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-762.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 6 Agricultural Livestock Essence", 1, 412, 6),
-            createMaterial("Lv 6 Agricultural Planting Essence", 1, 409, 6),
-            createMaterial("Lv 7 Combat Essence", 2, 602, 7),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 6 Agricultural Livestock Essence", 1, 412, 6),
-            createMaterial("Lv 6 Agricultural Planting Essence", 1, 409, 6),
-            createMaterial("Lv 7 Combat Essence", 2, 602, 7),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 6 Agricultural Livestock Essence", 1, 412, 6),
-          createMaterial("Lv 6 Agricultural Planting Essence", 1, 409, 6),
-          createMaterial("Lv 7 Combat Essence", 2, 602, 7),
-        ]),
       },
     },
     {
@@ -9002,32 +10685,41 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 7 Agricultural Livestock Essence", 1, 611, 7),
-          createMaterial("Lv 7 Agricultural Planting Essence", 1, 608, 7),
-          createMaterial("Lv 8 Combat Essence", 2, 603, 8),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 7 Agricultural Livestock Essence", 1, 611, 7),
+            createMaterial("Lv 7 Agricultural Planting Essence", 1, 608, 7),
+            createMaterial("Lv 8 Combat Essence", 2, 603, 8),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 7 Agricultural Livestock Essence", 1, 611, 7),
+              createMaterial("Lv 7 Agricultural Planting Essence", 1, 608, 7),
+              createMaterial("Lv 8 Combat Essence", 2, 603, 8),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 7 Agricultural Livestock Essence", 1, 611, 7),
+              createMaterial("Lv 7 Agricultural Planting Essence", 1, 608, 7),
+              createMaterial("Lv 8 Combat Essence", 2, 603, 8),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 7 Agricultural Livestock Essence", 1, 611, 7),
+            createMaterial("Lv 7 Agricultural Planting Essence", 1, 608, 7),
+            createMaterial("Lv 8 Combat Essence", 2, 603, 8),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Gathering Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-763.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 7 Agricultural Livestock Essence", 1, 611, 7),
-            createMaterial("Lv 7 Agricultural Planting Essence", 1, 608, 7),
-            createMaterial("Lv 8 Combat Essence", 2, 603, 8),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 7 Agricultural Livestock Essence", 1, 611, 7),
-            createMaterial("Lv 7 Agricultural Planting Essence", 1, 608, 7),
-            createMaterial("Lv 8 Combat Essence", 2, 603, 8),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 7 Agricultural Livestock Essence", 1, 611, 7),
-          createMaterial("Lv 7 Agricultural Planting Essence", 1, 608, 7),
-          createMaterial("Lv 8 Combat Essence", 2, 603, 8),
-        ]),
       },
     },
     {
@@ -9054,32 +10746,41 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 8 Agricultural Livestock Essence", 1, 612, 8),
-          createMaterial("Lv 8 Agricultural Planting Essence", 1, 609, 8),
-          createMaterial("Lv 9 Combat Essence", 2, 604, 9),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 8 Agricultural Livestock Essence", 1, 612, 8),
+            createMaterial("Lv 8 Agricultural Planting Essence", 1, 609, 8),
+            createMaterial("Lv 9 Combat Essence", 2, 604, 9),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 8 Agricultural Livestock Essence", 1, 612, 8),
+              createMaterial("Lv 8 Agricultural Planting Essence", 1, 609, 8),
+              createMaterial("Lv 9 Combat Essence", 2, 604, 9),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 8 Agricultural Livestock Essence", 1, 612, 8),
+              createMaterial("Lv 8 Agricultural Planting Essence", 1, 609, 8),
+              createMaterial("Lv 9 Combat Essence", 2, 604, 9),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 8 Agricultural Livestock Essence", 1, 612, 8),
+            createMaterial("Lv 8 Agricultural Planting Essence", 1, 609, 8),
+            createMaterial("Lv 9 Combat Essence", 2, 604, 9),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Gathering Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-764.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 8 Agricultural Livestock Essence", 1, 612, 8),
-            createMaterial("Lv 8 Agricultural Planting Essence", 1, 609, 8),
-            createMaterial("Lv 9 Combat Essence", 2, 604, 9),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 8 Agricultural Livestock Essence", 1, 612, 8),
-            createMaterial("Lv 8 Agricultural Planting Essence", 1, 609, 8),
-            createMaterial("Lv 9 Combat Essence", 2, 604, 9),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 8 Agricultural Livestock Essence", 1, 612, 8),
-          createMaterial("Lv 8 Agricultural Planting Essence", 1, 609, 8),
-          createMaterial("Lv 9 Combat Essence", 2, 604, 9),
-        ]),
       },
     },
     {
@@ -9106,18 +10807,27 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [createMaterial("Lv 1 Combat Essence", 2, 216, 1)],
-        minPriceTotalRon: calculateTotalPrice(
-          [createMaterial("Lv 1 Combat Essence", 2, 216, 1)],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [createMaterial("Lv 1 Combat Essence", 2, 216, 1)],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 1 Combat Essence", 2, 216, 1),
-        ]),
+        craftRecipe: {
+          materials: [createMaterial("Lv 1 Combat Essence", 2, 216, 1)],
+          minPriceTotalRon: calculateTotalPrice(
+            [createMaterial("Lv 1 Combat Essence", 2, 216, 1)],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [createMaterial("Lv 1 Combat Essence", 2, 216, 1)],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 1 Combat Essence", 2, 216, 1),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Gathering Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-756.png",
+            quantity: 100,
+          },
+        ],
       },
     },
     {
@@ -9144,32 +10854,41 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 1 Agricultural Livestock Essence", 1, 213, 1),
-          createMaterial("Lv 1 Agricultural Planting Essence", 1, 210, 1),
-          createMaterial("Lv 2 Combat Essence", 2, 217, 2),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 1 Agricultural Livestock Essence", 1, 213, 1),
+            createMaterial("Lv 1 Agricultural Planting Essence", 1, 210, 1),
+            createMaterial("Lv 2 Combat Essence", 2, 217, 2),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 1 Agricultural Livestock Essence", 1, 213, 1),
+              createMaterial("Lv 1 Agricultural Planting Essence", 1, 210, 1),
+              createMaterial("Lv 2 Combat Essence", 2, 217, 2),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 1 Agricultural Livestock Essence", 1, 213, 1),
+              createMaterial("Lv 1 Agricultural Planting Essence", 1, 210, 1),
+              createMaterial("Lv 2 Combat Essence", 2, 217, 2),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 1 Agricultural Livestock Essence", 1, 213, 1),
+            createMaterial("Lv 1 Agricultural Planting Essence", 1, 210, 1),
+            createMaterial("Lv 2 Combat Essence", 2, 217, 2),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Gathering Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-757.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 1 Agricultural Livestock Essence", 1, 213, 1),
-            createMaterial("Lv 1 Agricultural Planting Essence", 1, 210, 1),
-            createMaterial("Lv 2 Combat Essence", 2, 217, 2),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 1 Agricultural Livestock Essence", 1, 213, 1),
-            createMaterial("Lv 1 Agricultural Planting Essence", 1, 210, 1),
-            createMaterial("Lv 2 Combat Essence", 2, 217, 2),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 1 Agricultural Livestock Essence", 1, 213, 1),
-          createMaterial("Lv 1 Agricultural Planting Essence", 1, 210, 1),
-          createMaterial("Lv 2 Combat Essence", 2, 217, 2),
-        ]),
       },
     },
     {
@@ -9196,32 +10915,41 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 2 Agricultural Livestock Essence", 1, 214, 2),
-          createMaterial("Lv 2 Agricultural Planting Essence", 1, 211, 2),
-          createMaterial("Lv 3 Combat Essence", 2, 218, 3),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 2 Agricultural Livestock Essence", 1, 214, 2),
+            createMaterial("Lv 2 Agricultural Planting Essence", 1, 211, 2),
+            createMaterial("Lv 3 Combat Essence", 2, 218, 3),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 2 Agricultural Livestock Essence", 1, 214, 2),
+              createMaterial("Lv 2 Agricultural Planting Essence", 1, 211, 2),
+              createMaterial("Lv 3 Combat Essence", 2, 218, 3),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 2 Agricultural Livestock Essence", 1, 214, 2),
+              createMaterial("Lv 2 Agricultural Planting Essence", 1, 211, 2),
+              createMaterial("Lv 3 Combat Essence", 2, 218, 3),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 2 Agricultural Livestock Essence", 1, 214, 2),
+            createMaterial("Lv 2 Agricultural Planting Essence", 1, 211, 2),
+            createMaterial("Lv 3 Combat Essence", 2, 218, 3),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Gathering Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-758.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 2 Agricultural Livestock Essence", 1, 214, 2),
-            createMaterial("Lv 2 Agricultural Planting Essence", 1, 211, 2),
-            createMaterial("Lv 3 Combat Essence", 2, 218, 3),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 2 Agricultural Livestock Essence", 1, 214, 2),
-            createMaterial("Lv 2 Agricultural Planting Essence", 1, 211, 2),
-            createMaterial("Lv 3 Combat Essence", 2, 218, 3),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 2 Agricultural Livestock Essence", 1, 214, 2),
-          createMaterial("Lv 2 Agricultural Planting Essence", 1, 211, 2),
-          createMaterial("Lv 3 Combat Essence", 2, 218, 3),
-        ]),
       },
     },
     {
@@ -9248,32 +10976,41 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 3 Agricultural Livestock Essence", 1, 215, 3),
-          createMaterial("Lv 3 Agricultural Planting Essence", 1, 212, 3),
-          createMaterial("Lv 4 Combat Essence", 2, 401, 4),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 3 Agricultural Livestock Essence", 1, 215, 3),
+            createMaterial("Lv 3 Agricultural Planting Essence", 1, 212, 3),
+            createMaterial("Lv 4 Combat Essence", 2, 401, 4),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 3 Agricultural Livestock Essence", 1, 215, 3),
+              createMaterial("Lv 3 Agricultural Planting Essence", 1, 212, 3),
+              createMaterial("Lv 4 Combat Essence", 2, 401, 4),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 3 Agricultural Livestock Essence", 1, 215, 3),
+              createMaterial("Lv 3 Agricultural Planting Essence", 1, 212, 3),
+              createMaterial("Lv 4 Combat Essence", 2, 401, 4),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 3 Agricultural Livestock Essence", 1, 215, 3),
+            createMaterial("Lv 3 Agricultural Planting Essence", 1, 212, 3),
+            createMaterial("Lv 4 Combat Essence", 2, 401, 4),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Gathering Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-759.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 3 Agricultural Livestock Essence", 1, 215, 3),
-            createMaterial("Lv 3 Agricultural Planting Essence", 1, 212, 3),
-            createMaterial("Lv 4 Combat Essence", 2, 401, 4),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 3 Agricultural Livestock Essence", 1, 215, 3),
-            createMaterial("Lv 3 Agricultural Planting Essence", 1, 212, 3),
-            createMaterial("Lv 4 Combat Essence", 2, 401, 4),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 3 Agricultural Livestock Essence", 1, 215, 3),
-          createMaterial("Lv 3 Agricultural Planting Essence", 1, 212, 3),
-          createMaterial("Lv 4 Combat Essence", 2, 401, 4),
-        ]),
       },
     },
     {
@@ -9300,32 +11037,41 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 4 Agricultural Livestock Essence", 1, 410, 4),
-          createMaterial("Lv 4 Agricultural Planting Essence", 1, 407, 4),
-          createMaterial("Lv 5 Combat Essence", 2, 402, 5),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 4 Agricultural Livestock Essence", 1, 410, 4),
+            createMaterial("Lv 4 Agricultural Planting Essence", 1, 407, 4),
+            createMaterial("Lv 5 Combat Essence", 2, 402, 5),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 4 Agricultural Livestock Essence", 1, 410, 4),
+              createMaterial("Lv 4 Agricultural Planting Essence", 1, 407, 4),
+              createMaterial("Lv 5 Combat Essence", 2, 402, 5),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 4 Agricultural Livestock Essence", 1, 410, 4),
+              createMaterial("Lv 4 Agricultural Planting Essence", 1, 407, 4),
+              createMaterial("Lv 5 Combat Essence", 2, 402, 5),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 4 Agricultural Livestock Essence", 1, 410, 4),
+            createMaterial("Lv 4 Agricultural Planting Essence", 1, 407, 4),
+            createMaterial("Lv 5 Combat Essence", 2, 402, 5),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Gathering Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-760.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 4 Agricultural Livestock Essence", 1, 410, 4),
-            createMaterial("Lv 4 Agricultural Planting Essence", 1, 407, 4),
-            createMaterial("Lv 5 Combat Essence", 2, 402, 5),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 4 Agricultural Livestock Essence", 1, 410, 4),
-            createMaterial("Lv 4 Agricultural Planting Essence", 1, 407, 4),
-            createMaterial("Lv 5 Combat Essence", 2, 402, 5),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 4 Agricultural Livestock Essence", 1, 410, 4),
-          createMaterial("Lv 4 Agricultural Planting Essence", 1, 407, 4),
-          createMaterial("Lv 5 Combat Essence", 2, 402, 5),
-        ]),
       },
     },
     {
@@ -9352,32 +11098,41 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 5 Agricultural Livestock Essence", 1, 411, 5),
-          createMaterial("Lv 5 Agricultural Planting Essence", 1, 408, 5),
-          createMaterial("Lv 6 Combat Essence", 2, 403, 6),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 5 Agricultural Livestock Essence", 1, 411, 5),
+            createMaterial("Lv 5 Agricultural Planting Essence", 1, 408, 5),
+            createMaterial("Lv 6 Combat Essence", 2, 403, 6),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 5 Agricultural Livestock Essence", 1, 411, 5),
+              createMaterial("Lv 5 Agricultural Planting Essence", 1, 408, 5),
+              createMaterial("Lv 6 Combat Essence", 2, 403, 6),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 5 Agricultural Livestock Essence", 1, 411, 5),
+              createMaterial("Lv 5 Agricultural Planting Essence", 1, 408, 5),
+              createMaterial("Lv 6 Combat Essence", 2, 403, 6),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 5 Agricultural Livestock Essence", 1, 411, 5),
+            createMaterial("Lv 5 Agricultural Planting Essence", 1, 408, 5),
+            createMaterial("Lv 6 Combat Essence", 2, 403, 6),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Gathering Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-761.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 5 Agricultural Livestock Essence", 1, 411, 5),
-            createMaterial("Lv 5 Agricultural Planting Essence", 1, 408, 5),
-            createMaterial("Lv 6 Combat Essence", 2, 403, 6),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 5 Agricultural Livestock Essence", 1, 411, 5),
-            createMaterial("Lv 5 Agricultural Planting Essence", 1, 408, 5),
-            createMaterial("Lv 6 Combat Essence", 2, 403, 6),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 5 Agricultural Livestock Essence", 1, 411, 5),
-          createMaterial("Lv 5 Agricultural Planting Essence", 1, 408, 5),
-          createMaterial("Lv 6 Combat Essence", 2, 403, 6),
-        ]),
       },
     },
     {
@@ -9404,32 +11159,41 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 6 Agricultural Livestock Essence", 1, 412, 6),
-          createMaterial("Lv 6 Agricultural Planting Essence", 1, 409, 6),
-          createMaterial("Lv 7 Combat Essence", 2, 602, 7),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 6 Agricultural Livestock Essence", 1, 412, 6),
+            createMaterial("Lv 6 Agricultural Planting Essence", 1, 409, 6),
+            createMaterial("Lv 7 Combat Essence", 2, 602, 7),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 6 Agricultural Livestock Essence", 1, 412, 6),
+              createMaterial("Lv 6 Agricultural Planting Essence", 1, 409, 6),
+              createMaterial("Lv 7 Combat Essence", 2, 602, 7),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 6 Agricultural Livestock Essence", 1, 412, 6),
+              createMaterial("Lv 6 Agricultural Planting Essence", 1, 409, 6),
+              createMaterial("Lv 7 Combat Essence", 2, 602, 7),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 6 Agricultural Livestock Essence", 1, 412, 6),
+            createMaterial("Lv 6 Agricultural Planting Essence", 1, 409, 6),
+            createMaterial("Lv 7 Combat Essence", 2, 602, 7),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Gathering Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-762.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 6 Agricultural Livestock Essence", 1, 412, 6),
-            createMaterial("Lv 6 Agricultural Planting Essence", 1, 409, 6),
-            createMaterial("Lv 7 Combat Essence", 2, 602, 7),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 6 Agricultural Livestock Essence", 1, 412, 6),
-            createMaterial("Lv 6 Agricultural Planting Essence", 1, 409, 6),
-            createMaterial("Lv 7 Combat Essence", 2, 602, 7),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 6 Agricultural Livestock Essence", 1, 412, 6),
-          createMaterial("Lv 6 Agricultural Planting Essence", 1, 409, 6),
-          createMaterial("Lv 7 Combat Essence", 2, 602, 7),
-        ]),
       },
     },
     {
@@ -9456,32 +11220,41 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 7 Agricultural Livestock Essence", 1, 611, 7),
-          createMaterial("Lv 7 Agricultural Planting Essence", 1, 608, 7),
-          createMaterial("Lv 8 Combat Essence", 2, 603, 8),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 7 Agricultural Livestock Essence", 1, 611, 7),
+            createMaterial("Lv 7 Agricultural Planting Essence", 1, 608, 7),
+            createMaterial("Lv 8 Combat Essence", 2, 603, 8),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 7 Agricultural Livestock Essence", 1, 611, 7),
+              createMaterial("Lv 7 Agricultural Planting Essence", 1, 608, 7),
+              createMaterial("Lv 8 Combat Essence", 2, 603, 8),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 7 Agricultural Livestock Essence", 1, 611, 7),
+              createMaterial("Lv 7 Agricultural Planting Essence", 1, 608, 7),
+              createMaterial("Lv 8 Combat Essence", 2, 603, 8),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 7 Agricultural Livestock Essence", 1, 611, 7),
+            createMaterial("Lv 7 Agricultural Planting Essence", 1, 608, 7),
+            createMaterial("Lv 8 Combat Essence", 2, 603, 8),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Gathering Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-763.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 7 Agricultural Livestock Essence", 1, 611, 7),
-            createMaterial("Lv 7 Agricultural Planting Essence", 1, 608, 7),
-            createMaterial("Lv 8 Combat Essence", 2, 603, 8),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 7 Agricultural Livestock Essence", 1, 611, 7),
-            createMaterial("Lv 7 Agricultural Planting Essence", 1, 608, 7),
-            createMaterial("Lv 8 Combat Essence", 2, 603, 8),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 7 Agricultural Livestock Essence", 1, 611, 7),
-          createMaterial("Lv 7 Agricultural Planting Essence", 1, 608, 7),
-          createMaterial("Lv 8 Combat Essence", 2, 603, 8),
-        ]),
       },
     },
     {
@@ -9508,32 +11281,41 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 8 Agricultural Livestock Essence", 1, 612, 8),
-          createMaterial("Lv 8 Agricultural Planting Essence", 1, 609, 8),
-          createMaterial("Lv 9 Combat Essence", 2, 604, 9),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 8 Agricultural Livestock Essence", 1, 612, 8),
+            createMaterial("Lv 8 Agricultural Planting Essence", 1, 609, 8),
+            createMaterial("Lv 9 Combat Essence", 2, 604, 9),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 8 Agricultural Livestock Essence", 1, 612, 8),
+              createMaterial("Lv 8 Agricultural Planting Essence", 1, 609, 8),
+              createMaterial("Lv 9 Combat Essence", 2, 604, 9),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 8 Agricultural Livestock Essence", 1, 612, 8),
+              createMaterial("Lv 8 Agricultural Planting Essence", 1, 609, 8),
+              createMaterial("Lv 9 Combat Essence", 2, 604, 9),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 8 Agricultural Livestock Essence", 1, 612, 8),
+            createMaterial("Lv 8 Agricultural Planting Essence", 1, 609, 8),
+            createMaterial("Lv 9 Combat Essence", 2, 604, 9),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Gathering Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-764.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 8 Agricultural Livestock Essence", 1, 612, 8),
-            createMaterial("Lv 8 Agricultural Planting Essence", 1, 609, 8),
-            createMaterial("Lv 9 Combat Essence", 2, 604, 9),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 8 Agricultural Livestock Essence", 1, 612, 8),
-            createMaterial("Lv 8 Agricultural Planting Essence", 1, 609, 8),
-            createMaterial("Lv 9 Combat Essence", 2, 604, 9),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 8 Agricultural Livestock Essence", 1, 612, 8),
-          createMaterial("Lv 8 Agricultural Planting Essence", 1, 609, 8),
-          createMaterial("Lv 9 Combat Essence", 2, 604, 9),
-        ]),
       },
     },
     {
@@ -9560,18 +11342,27 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [createMaterial("Lv 1 Combat Essence", 2, 216, 1)],
-        minPriceTotalRon: calculateTotalPrice(
-          [createMaterial("Lv 1 Combat Essence", 2, 216, 1)],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [createMaterial("Lv 1 Combat Essence", 2, 216, 1)],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 1 Combat Essence", 2, 216, 1),
-        ]),
+        craftRecipe: {
+          materials: [createMaterial("Lv 1 Combat Essence", 2, 216, 1)],
+          minPriceTotalRon: calculateTotalPrice(
+            [createMaterial("Lv 1 Combat Essence", 2, 216, 1)],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [createMaterial("Lv 1 Combat Essence", 2, 216, 1)],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 1 Combat Essence", 2, 216, 1),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Gathering Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-756.png",
+            quantity: 100,
+          },
+        ],
       },
     },
     {
@@ -9598,32 +11389,41 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 1 Agricultural Livestock Essence", 1, 213, 1),
-          createMaterial("Lv 1 Agricultural Planting Essence", 1, 210, 1),
-          createMaterial("Lv 2 Combat Essence", 2, 217, 2),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 1 Agricultural Livestock Essence", 1, 213, 1),
+            createMaterial("Lv 1 Agricultural Planting Essence", 1, 210, 1),
+            createMaterial("Lv 2 Combat Essence", 2, 217, 2),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 1 Agricultural Livestock Essence", 1, 213, 1),
+              createMaterial("Lv 1 Agricultural Planting Essence", 1, 210, 1),
+              createMaterial("Lv 2 Combat Essence", 2, 217, 2),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 1 Agricultural Livestock Essence", 1, 213, 1),
+              createMaterial("Lv 1 Agricultural Planting Essence", 1, 210, 1),
+              createMaterial("Lv 2 Combat Essence", 2, 217, 2),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 1 Agricultural Livestock Essence", 1, 213, 1),
+            createMaterial("Lv 1 Agricultural Planting Essence", 1, 210, 1),
+            createMaterial("Lv 2 Combat Essence", 2, 217, 2),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Gathering Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-757.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 1 Agricultural Livestock Essence", 1, 213, 1),
-            createMaterial("Lv 1 Agricultural Planting Essence", 1, 210, 1),
-            createMaterial("Lv 2 Combat Essence", 2, 217, 2),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 1 Agricultural Livestock Essence", 1, 213, 1),
-            createMaterial("Lv 1 Agricultural Planting Essence", 1, 210, 1),
-            createMaterial("Lv 2 Combat Essence", 2, 217, 2),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 1 Agricultural Livestock Essence", 1, 213, 1),
-          createMaterial("Lv 1 Agricultural Planting Essence", 1, 210, 1),
-          createMaterial("Lv 2 Combat Essence", 2, 217, 2),
-        ]),
       },
     },
     {
@@ -9650,32 +11450,41 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 2 Agricultural Livestock Essence", 1, 214, 2),
-          createMaterial("Lv 2 Agricultural Planting Essence", 1, 211, 2),
-          createMaterial("Lv 3 Combat Essence", 2, 218, 3),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 2 Agricultural Livestock Essence", 1, 214, 2),
+            createMaterial("Lv 2 Agricultural Planting Essence", 1, 211, 2),
+            createMaterial("Lv 3 Combat Essence", 2, 218, 3),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 2 Agricultural Livestock Essence", 1, 214, 2),
+              createMaterial("Lv 2 Agricultural Planting Essence", 1, 211, 2),
+              createMaterial("Lv 3 Combat Essence", 2, 218, 3),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 2 Agricultural Livestock Essence", 1, 214, 2),
+              createMaterial("Lv 2 Agricultural Planting Essence", 1, 211, 2),
+              createMaterial("Lv 3 Combat Essence", 2, 218, 3),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 2 Agricultural Livestock Essence", 1, 214, 2),
+            createMaterial("Lv 2 Agricultural Planting Essence", 1, 211, 2),
+            createMaterial("Lv 3 Combat Essence", 2, 218, 3),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Gathering Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-758.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 2 Agricultural Livestock Essence", 1, 214, 2),
-            createMaterial("Lv 2 Agricultural Planting Essence", 1, 211, 2),
-            createMaterial("Lv 3 Combat Essence", 2, 218, 3),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 2 Agricultural Livestock Essence", 1, 214, 2),
-            createMaterial("Lv 2 Agricultural Planting Essence", 1, 211, 2),
-            createMaterial("Lv 3 Combat Essence", 2, 218, 3),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 2 Agricultural Livestock Essence", 1, 214, 2),
-          createMaterial("Lv 2 Agricultural Planting Essence", 1, 211, 2),
-          createMaterial("Lv 3 Combat Essence", 2, 218, 3),
-        ]),
       },
     },
     {
@@ -9702,32 +11511,41 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 3 Agricultural Livestock Essence", 1, 215, 3),
-          createMaterial("Lv 3 Agricultural Planting Essence", 1, 212, 3),
-          createMaterial("Lv 4 Combat Essence", 2, 401, 4),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 3 Agricultural Livestock Essence", 1, 215, 3),
+            createMaterial("Lv 3 Agricultural Planting Essence", 1, 212, 3),
+            createMaterial("Lv 4 Combat Essence", 2, 401, 4),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 3 Agricultural Livestock Essence", 1, 215, 3),
+              createMaterial("Lv 3 Agricultural Planting Essence", 1, 212, 3),
+              createMaterial("Lv 4 Combat Essence", 2, 401, 4),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 3 Agricultural Livestock Essence", 1, 215, 3),
+              createMaterial("Lv 3 Agricultural Planting Essence", 1, 212, 3),
+              createMaterial("Lv 4 Combat Essence", 2, 401, 4),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 3 Agricultural Livestock Essence", 1, 215, 3),
+            createMaterial("Lv 3 Agricultural Planting Essence", 1, 212, 3),
+            createMaterial("Lv 4 Combat Essence", 2, 401, 4),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Gathering Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-759.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 3 Agricultural Livestock Essence", 1, 215, 3),
-            createMaterial("Lv 3 Agricultural Planting Essence", 1, 212, 3),
-            createMaterial("Lv 4 Combat Essence", 2, 401, 4),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 3 Agricultural Livestock Essence", 1, 215, 3),
-            createMaterial("Lv 3 Agricultural Planting Essence", 1, 212, 3),
-            createMaterial("Lv 4 Combat Essence", 2, 401, 4),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 3 Agricultural Livestock Essence", 1, 215, 3),
-          createMaterial("Lv 3 Agricultural Planting Essence", 1, 212, 3),
-          createMaterial("Lv 4 Combat Essence", 2, 401, 4),
-        ]),
       },
     },
     {
@@ -9754,32 +11572,41 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 4 Agricultural Livestock Essence", 1, 410, 4),
-          createMaterial("Lv 4 Agricultural Planting Essence", 1, 407, 4),
-          createMaterial("Lv 5 Combat Essence", 2, 402, 5),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 4 Agricultural Livestock Essence", 1, 410, 4),
+            createMaterial("Lv 4 Agricultural Planting Essence", 1, 407, 4),
+            createMaterial("Lv 5 Combat Essence", 2, 402, 5),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 4 Agricultural Livestock Essence", 1, 410, 4),
+              createMaterial("Lv 4 Agricultural Planting Essence", 1, 407, 4),
+              createMaterial("Lv 5 Combat Essence", 2, 402, 5),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 4 Agricultural Livestock Essence", 1, 410, 4),
+              createMaterial("Lv 4 Agricultural Planting Essence", 1, 407, 4),
+              createMaterial("Lv 5 Combat Essence", 2, 402, 5),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 4 Agricultural Livestock Essence", 1, 410, 4),
+            createMaterial("Lv 4 Agricultural Planting Essence", 1, 407, 4),
+            createMaterial("Lv 5 Combat Essence", 2, 402, 5),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Gathering Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-760.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 4 Agricultural Livestock Essence", 1, 410, 4),
-            createMaterial("Lv 4 Agricultural Planting Essence", 1, 407, 4),
-            createMaterial("Lv 5 Combat Essence", 2, 402, 5),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 4 Agricultural Livestock Essence", 1, 410, 4),
-            createMaterial("Lv 4 Agricultural Planting Essence", 1, 407, 4),
-            createMaterial("Lv 5 Combat Essence", 2, 402, 5),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 4 Agricultural Livestock Essence", 1, 410, 4),
-          createMaterial("Lv 4 Agricultural Planting Essence", 1, 407, 4),
-          createMaterial("Lv 5 Combat Essence", 2, 402, 5),
-        ]),
       },
     },
     {
@@ -9806,32 +11633,41 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 5 Agricultural Livestock Essence", 1, 411, 5),
-          createMaterial("Lv 5 Agricultural Planting Essence", 1, 408, 5),
-          createMaterial("Lv 6 Combat Essence", 2, 403, 6),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 5 Agricultural Livestock Essence", 1, 411, 5),
+            createMaterial("Lv 5 Agricultural Planting Essence", 1, 408, 5),
+            createMaterial("Lv 6 Combat Essence", 2, 403, 6),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 5 Agricultural Livestock Essence", 1, 411, 5),
+              createMaterial("Lv 5 Agricultural Planting Essence", 1, 408, 5),
+              createMaterial("Lv 6 Combat Essence", 2, 403, 6),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 5 Agricultural Livestock Essence", 1, 411, 5),
+              createMaterial("Lv 5 Agricultural Planting Essence", 1, 408, 5),
+              createMaterial("Lv 6 Combat Essence", 2, 403, 6),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 5 Agricultural Livestock Essence", 1, 411, 5),
+            createMaterial("Lv 5 Agricultural Planting Essence", 1, 408, 5),
+            createMaterial("Lv 6 Combat Essence", 2, 403, 6),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Gathering Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-761.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 5 Agricultural Livestock Essence", 1, 411, 5),
-            createMaterial("Lv 5 Agricultural Planting Essence", 1, 408, 5),
-            createMaterial("Lv 6 Combat Essence", 2, 403, 6),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 5 Agricultural Livestock Essence", 1, 411, 5),
-            createMaterial("Lv 5 Agricultural Planting Essence", 1, 408, 5),
-            createMaterial("Lv 6 Combat Essence", 2, 403, 6),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 5 Agricultural Livestock Essence", 1, 411, 5),
-          createMaterial("Lv 5 Agricultural Planting Essence", 1, 408, 5),
-          createMaterial("Lv 6 Combat Essence", 2, 403, 6),
-        ]),
       },
     },
     {
@@ -9858,32 +11694,41 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 6 Agricultural Livestock Essence", 1, 412, 6),
-          createMaterial("Lv 6 Agricultural Planting Essence", 1, 409, 6),
-          createMaterial("Lv 7 Combat Essence", 2, 602, 7),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 6 Agricultural Livestock Essence", 1, 412, 6),
+            createMaterial("Lv 6 Agricultural Planting Essence", 1, 409, 6),
+            createMaterial("Lv 7 Combat Essence", 2, 602, 7),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 6 Agricultural Livestock Essence", 1, 412, 6),
+              createMaterial("Lv 6 Agricultural Planting Essence", 1, 409, 6),
+              createMaterial("Lv 7 Combat Essence", 2, 602, 7),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 6 Agricultural Livestock Essence", 1, 412, 6),
+              createMaterial("Lv 6 Agricultural Planting Essence", 1, 409, 6),
+              createMaterial("Lv 7 Combat Essence", 2, 602, 7),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 6 Agricultural Livestock Essence", 1, 412, 6),
+            createMaterial("Lv 6 Agricultural Planting Essence", 1, 409, 6),
+            createMaterial("Lv 7 Combat Essence", 2, 602, 7),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Gathering Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-762.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 6 Agricultural Livestock Essence", 1, 412, 6),
-            createMaterial("Lv 6 Agricultural Planting Essence", 1, 409, 6),
-            createMaterial("Lv 7 Combat Essence", 2, 602, 7),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 6 Agricultural Livestock Essence", 1, 412, 6),
-            createMaterial("Lv 6 Agricultural Planting Essence", 1, 409, 6),
-            createMaterial("Lv 7 Combat Essence", 2, 602, 7),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 6 Agricultural Livestock Essence", 1, 412, 6),
-          createMaterial("Lv 6 Agricultural Planting Essence", 1, 409, 6),
-          createMaterial("Lv 7 Combat Essence", 2, 602, 7),
-        ]),
       },
     },
     {
@@ -9910,32 +11755,41 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 7 Agricultural Livestock Essence", 1, 611, 7),
-          createMaterial("Lv 7 Agricultural Planting Essence", 1, 608, 7),
-          createMaterial("Lv 8 Combat Essence", 2, 603, 8),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 7 Agricultural Livestock Essence", 1, 611, 7),
+            createMaterial("Lv 7 Agricultural Planting Essence", 1, 608, 7),
+            createMaterial("Lv 8 Combat Essence", 2, 603, 8),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 7 Agricultural Livestock Essence", 1, 611, 7),
+              createMaterial("Lv 7 Agricultural Planting Essence", 1, 608, 7),
+              createMaterial("Lv 8 Combat Essence", 2, 603, 8),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 7 Agricultural Livestock Essence", 1, 611, 7),
+              createMaterial("Lv 7 Agricultural Planting Essence", 1, 608, 7),
+              createMaterial("Lv 8 Combat Essence", 2, 603, 8),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 7 Agricultural Livestock Essence", 1, 611, 7),
+            createMaterial("Lv 7 Agricultural Planting Essence", 1, 608, 7),
+            createMaterial("Lv 8 Combat Essence", 2, 603, 8),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Gathering Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-763.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 7 Agricultural Livestock Essence", 1, 611, 7),
-            createMaterial("Lv 7 Agricultural Planting Essence", 1, 608, 7),
-            createMaterial("Lv 8 Combat Essence", 2, 603, 8),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 7 Agricultural Livestock Essence", 1, 611, 7),
-            createMaterial("Lv 7 Agricultural Planting Essence", 1, 608, 7),
-            createMaterial("Lv 8 Combat Essence", 2, 603, 8),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 7 Agricultural Livestock Essence", 1, 611, 7),
-          createMaterial("Lv 7 Agricultural Planting Essence", 1, 608, 7),
-          createMaterial("Lv 8 Combat Essence", 2, 603, 8),
-        ]),
       },
     },
     {
@@ -9962,32 +11816,41 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 8 Agricultural Livestock Essence", 1, 612, 8),
-          createMaterial("Lv 8 Agricultural Planting Essence", 1, 609, 8),
-          createMaterial("Lv 9 Combat Essence", 2, 604, 9),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 8 Agricultural Livestock Essence", 1, 612, 8),
+            createMaterial("Lv 8 Agricultural Planting Essence", 1, 609, 8),
+            createMaterial("Lv 9 Combat Essence", 2, 604, 9),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 8 Agricultural Livestock Essence", 1, 612, 8),
+              createMaterial("Lv 8 Agricultural Planting Essence", 1, 609, 8),
+              createMaterial("Lv 9 Combat Essence", 2, 604, 9),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 8 Agricultural Livestock Essence", 1, 612, 8),
+              createMaterial("Lv 8 Agricultural Planting Essence", 1, 609, 8),
+              createMaterial("Lv 9 Combat Essence", 2, 604, 9),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 8 Agricultural Livestock Essence", 1, 612, 8),
+            createMaterial("Lv 8 Agricultural Planting Essence", 1, 609, 8),
+            createMaterial("Lv 9 Combat Essence", 2, 604, 9),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Gathering Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-764.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 8 Agricultural Livestock Essence", 1, 612, 8),
-            createMaterial("Lv 8 Agricultural Planting Essence", 1, 609, 8),
-            createMaterial("Lv 9 Combat Essence", 2, 604, 9),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 8 Agricultural Livestock Essence", 1, 612, 8),
-            createMaterial("Lv 8 Agricultural Planting Essence", 1, 609, 8),
-            createMaterial("Lv 9 Combat Essence", 2, 604, 9),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 8 Agricultural Livestock Essence", 1, 612, 8),
-          createMaterial("Lv 8 Agricultural Planting Essence", 1, 609, 8),
-          createMaterial("Lv 9 Combat Essence", 2, 604, 9),
-        ]),
       },
     },
     {
@@ -10021,18 +11884,27 @@ const itemsData = {
         { name: "Treeatt", typeNumber: "integer", values: { min: 5, max: 14 } },
       ],
       recipe: {
-        materials: [createMaterial("Lv 1 Combat Essence", 2, 216, 1)],
-        minPriceTotalRon: calculateTotalPrice(
-          [createMaterial("Lv 1 Combat Essence", 2, 216, 1)],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [createMaterial("Lv 1 Combat Essence", 2, 216, 1)],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 1 Combat Essence", 2, 216, 1),
-        ]),
+        craftRecipe: {
+          materials: [createMaterial("Lv 1 Combat Essence", 2, 216, 1)],
+          minPriceTotalRon: calculateTotalPrice(
+            [createMaterial("Lv 1 Combat Essence", 2, 216, 1)],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [createMaterial("Lv 1 Combat Essence", 2, 216, 1)],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 1 Combat Essence", 2, 216, 1),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Gathering Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-756.png",
+            quantity: 100,
+          },
+        ],
       },
     },
     {
@@ -10070,32 +11942,41 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 1 Agricultural Livestock Essence", 1, 213, 1),
-          createMaterial("Lv 1 Agricultural Planting Essence", 1, 210, 1),
-          createMaterial("Lv 2 Combat Essence", 2, 217, 2),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 1 Agricultural Livestock Essence", 1, 213, 1),
+            createMaterial("Lv 1 Agricultural Planting Essence", 1, 210, 1),
+            createMaterial("Lv 2 Combat Essence", 2, 217, 2),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 1 Agricultural Livestock Essence", 1, 213, 1),
+              createMaterial("Lv 1 Agricultural Planting Essence", 1, 210, 1),
+              createMaterial("Lv 2 Combat Essence", 2, 217, 2),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 1 Agricultural Livestock Essence", 1, 213, 1),
+              createMaterial("Lv 1 Agricultural Planting Essence", 1, 210, 1),
+              createMaterial("Lv 2 Combat Essence", 2, 217, 2),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 1 Agricultural Livestock Essence", 1, 213, 1),
+            createMaterial("Lv 1 Agricultural Planting Essence", 1, 210, 1),
+            createMaterial("Lv 2 Combat Essence", 2, 217, 2),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Gathering Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-757.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 1 Agricultural Livestock Essence", 1, 213, 1),
-            createMaterial("Lv 1 Agricultural Planting Essence", 1, 210, 1),
-            createMaterial("Lv 2 Combat Essence", 2, 217, 2),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 1 Agricultural Livestock Essence", 1, 213, 1),
-            createMaterial("Lv 1 Agricultural Planting Essence", 1, 210, 1),
-            createMaterial("Lv 2 Combat Essence", 2, 217, 2),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 1 Agricultural Livestock Essence", 1, 213, 1),
-          createMaterial("Lv 1 Agricultural Planting Essence", 1, 210, 1),
-          createMaterial("Lv 2 Combat Essence", 2, 217, 2),
-        ]),
       },
     },
     {
@@ -10133,32 +12014,41 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 2 Agricultural Livestock Essence", 1, 214, 2),
-          createMaterial("Lv 2 Agricultural Planting Essence", 1, 211, 2),
-          createMaterial("Lv 3 Combat Essence", 2, 218, 3),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 2 Agricultural Livestock Essence", 1, 214, 2),
+            createMaterial("Lv 2 Agricultural Planting Essence", 1, 211, 2),
+            createMaterial("Lv 3 Combat Essence", 2, 218, 3),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 2 Agricultural Livestock Essence", 1, 214, 2),
+              createMaterial("Lv 2 Agricultural Planting Essence", 1, 211, 2),
+              createMaterial("Lv 3 Combat Essence", 2, 218, 3),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 2 Agricultural Livestock Essence", 1, 214, 2),
+              createMaterial("Lv 2 Agricultural Planting Essence", 1, 211, 2),
+              createMaterial("Lv 3 Combat Essence", 2, 218, 3),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 2 Agricultural Livestock Essence", 1, 214, 2),
+            createMaterial("Lv 2 Agricultural Planting Essence", 1, 211, 2),
+            createMaterial("Lv 3 Combat Essence", 2, 218, 3),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Gathering Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-758.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 2 Agricultural Livestock Essence", 1, 214, 2),
-            createMaterial("Lv 2 Agricultural Planting Essence", 1, 211, 2),
-            createMaterial("Lv 3 Combat Essence", 2, 218, 3),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 2 Agricultural Livestock Essence", 1, 214, 2),
-            createMaterial("Lv 2 Agricultural Planting Essence", 1, 211, 2),
-            createMaterial("Lv 3 Combat Essence", 2, 218, 3),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 2 Agricultural Livestock Essence", 1, 214, 2),
-          createMaterial("Lv 2 Agricultural Planting Essence", 1, 211, 2),
-          createMaterial("Lv 3 Combat Essence", 2, 218, 3),
-        ]),
       },
     },
     {
@@ -10196,32 +12086,41 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 3 Agricultural Livestock Essence", 1, 215, 3),
-          createMaterial("Lv 3 Agricultural Planting Essence", 1, 212, 3),
-          createMaterial("Lv 4 Combat Essence", 2, 401, 4),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 3 Agricultural Livestock Essence", 1, 215, 3),
+            createMaterial("Lv 3 Agricultural Planting Essence", 1, 212, 3),
+            createMaterial("Lv 4 Combat Essence", 2, 401, 4),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 3 Agricultural Livestock Essence", 1, 215, 3),
+              createMaterial("Lv 3 Agricultural Planting Essence", 1, 212, 3),
+              createMaterial("Lv 4 Combat Essence", 2, 401, 4),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 3 Agricultural Livestock Essence", 1, 215, 3),
+              createMaterial("Lv 3 Agricultural Planting Essence", 1, 212, 3),
+              createMaterial("Lv 4 Combat Essence", 2, 401, 4),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 3 Agricultural Livestock Essence", 1, 215, 3),
+            createMaterial("Lv 3 Agricultural Planting Essence", 1, 212, 3),
+            createMaterial("Lv 4 Combat Essence", 2, 401, 4),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Gathering Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-759.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 3 Agricultural Livestock Essence", 1, 215, 3),
-            createMaterial("Lv 3 Agricultural Planting Essence", 1, 212, 3),
-            createMaterial("Lv 4 Combat Essence", 2, 401, 4),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 3 Agricultural Livestock Essence", 1, 215, 3),
-            createMaterial("Lv 3 Agricultural Planting Essence", 1, 212, 3),
-            createMaterial("Lv 4 Combat Essence", 2, 401, 4),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 3 Agricultural Livestock Essence", 1, 215, 3),
-          createMaterial("Lv 3 Agricultural Planting Essence", 1, 212, 3),
-          createMaterial("Lv 4 Combat Essence", 2, 401, 4),
-        ]),
       },
     },
     {
@@ -10259,32 +12158,41 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 4 Agricultural Livestock Essence", 1, 410, 4),
-          createMaterial("Lv 4 Agricultural Planting Essence", 1, 407, 4),
-          createMaterial("Lv 5 Combat Essence", 2, 402, 5),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 4 Agricultural Livestock Essence", 1, 410, 4),
+            createMaterial("Lv 4 Agricultural Planting Essence", 1, 407, 4),
+            createMaterial("Lv 5 Combat Essence", 2, 402, 5),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 4 Agricultural Livestock Essence", 1, 410, 4),
+              createMaterial("Lv 4 Agricultural Planting Essence", 1, 407, 4),
+              createMaterial("Lv 5 Combat Essence", 2, 402, 5),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 4 Agricultural Livestock Essence", 1, 410, 4),
+              createMaterial("Lv 4 Agricultural Planting Essence", 1, 407, 4),
+              createMaterial("Lv 5 Combat Essence", 2, 402, 5),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 4 Agricultural Livestock Essence", 1, 410, 4),
+            createMaterial("Lv 4 Agricultural Planting Essence", 1, 407, 4),
+            createMaterial("Lv 5 Combat Essence", 2, 402, 5),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Gathering Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-760.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 4 Agricultural Livestock Essence", 1, 410, 4),
-            createMaterial("Lv 4 Agricultural Planting Essence", 1, 407, 4),
-            createMaterial("Lv 5 Combat Essence", 2, 402, 5),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 4 Agricultural Livestock Essence", 1, 410, 4),
-            createMaterial("Lv 4 Agricultural Planting Essence", 1, 407, 4),
-            createMaterial("Lv 5 Combat Essence", 2, 402, 5),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 4 Agricultural Livestock Essence", 1, 410, 4),
-          createMaterial("Lv 4 Agricultural Planting Essence", 1, 407, 4),
-          createMaterial("Lv 5 Combat Essence", 2, 402, 5),
-        ]),
       },
     },
     {
@@ -10322,32 +12230,41 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 5 Agricultural Livestock Essence", 1, 411, 5),
-          createMaterial("Lv 5 Agricultural Planting Essence", 1, 408, 5),
-          createMaterial("Lv 6 Combat Essence", 2, 403, 6),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 5 Agricultural Livestock Essence", 1, 411, 5),
+            createMaterial("Lv 5 Agricultural Planting Essence", 1, 408, 5),
+            createMaterial("Lv 6 Combat Essence", 2, 403, 6),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 5 Agricultural Livestock Essence", 1, 411, 5),
+              createMaterial("Lv 5 Agricultural Planting Essence", 1, 408, 5),
+              createMaterial("Lv 6 Combat Essence", 2, 403, 6),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 5 Agricultural Livestock Essence", 1, 411, 5),
+              createMaterial("Lv 5 Agricultural Planting Essence", 1, 408, 5),
+              createMaterial("Lv 6 Combat Essence", 2, 403, 6),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 5 Agricultural Livestock Essence", 1, 411, 5),
+            createMaterial("Lv 5 Agricultural Planting Essence", 1, 408, 5),
+            createMaterial("Lv 6 Combat Essence", 2, 403, 6),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Gathering Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-761.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 5 Agricultural Livestock Essence", 1, 411, 5),
-            createMaterial("Lv 5 Agricultural Planting Essence", 1, 408, 5),
-            createMaterial("Lv 6 Combat Essence", 2, 403, 6),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 5 Agricultural Livestock Essence", 1, 411, 5),
-            createMaterial("Lv 5 Agricultural Planting Essence", 1, 408, 5),
-            createMaterial("Lv 6 Combat Essence", 2, 403, 6),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 5 Agricultural Livestock Essence", 1, 411, 5),
-          createMaterial("Lv 5 Agricultural Planting Essence", 1, 408, 5),
-          createMaterial("Lv 6 Combat Essence", 2, 403, 6),
-        ]),
       },
     },
     {
@@ -10385,32 +12302,41 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 6 Agricultural Livestock Essence", 1, 412, 6),
-          createMaterial("Lv 6 Agricultural Planting Essence", 1, 409, 6),
-          createMaterial("Lv 7 Combat Essence", 2, 602, 7),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 6 Agricultural Livestock Essence", 1, 412, 6),
+            createMaterial("Lv 6 Agricultural Planting Essence", 1, 409, 6),
+            createMaterial("Lv 7 Combat Essence", 2, 602, 7),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 6 Agricultural Livestock Essence", 1, 412, 6),
+              createMaterial("Lv 6 Agricultural Planting Essence", 1, 409, 6),
+              createMaterial("Lv 7 Combat Essence", 2, 602, 7),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 6 Agricultural Livestock Essence", 1, 412, 6),
+              createMaterial("Lv 6 Agricultural Planting Essence", 1, 409, 6),
+              createMaterial("Lv 7 Combat Essence", 2, 602, 7),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 6 Agricultural Livestock Essence", 1, 412, 6),
+            createMaterial("Lv 6 Agricultural Planting Essence", 1, 409, 6),
+            createMaterial("Lv 7 Combat Essence", 2, 602, 7),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Gathering Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-762.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 6 Agricultural Livestock Essence", 1, 412, 6),
-            createMaterial("Lv 6 Agricultural Planting Essence", 1, 409, 6),
-            createMaterial("Lv 7 Combat Essence", 2, 602, 7),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 6 Agricultural Livestock Essence", 1, 412, 6),
-            createMaterial("Lv 6 Agricultural Planting Essence", 1, 409, 6),
-            createMaterial("Lv 7 Combat Essence", 2, 602, 7),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 6 Agricultural Livestock Essence", 1, 412, 6),
-          createMaterial("Lv 6 Agricultural Planting Essence", 1, 409, 6),
-          createMaterial("Lv 7 Combat Essence", 2, 602, 7),
-        ]),
       },
     },
     {
@@ -10448,32 +12374,41 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 7 Agricultural Livestock Essence", 1, 611, 7),
-          createMaterial("Lv 7 Agricultural Planting Essence", 1, 608, 7),
-          createMaterial("Lv 8 Combat Essence", 2, 603, 8),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 7 Agricultural Livestock Essence", 1, 611, 7),
+            createMaterial("Lv 7 Agricultural Planting Essence", 1, 608, 7),
+            createMaterial("Lv 8 Combat Essence", 2, 603, 8),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 7 Agricultural Livestock Essence", 1, 611, 7),
+              createMaterial("Lv 7 Agricultural Planting Essence", 1, 608, 7),
+              createMaterial("Lv 8 Combat Essence", 2, 603, 8),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 7 Agricultural Livestock Essence", 1, 611, 7),
+              createMaterial("Lv 7 Agricultural Planting Essence", 1, 608, 7),
+              createMaterial("Lv 8 Combat Essence", 2, 603, 8),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 7 Agricultural Livestock Essence", 1, 611, 7),
+            createMaterial("Lv 7 Agricultural Planting Essence", 1, 608, 7),
+            createMaterial("Lv 8 Combat Essence", 2, 603, 8),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Gathering Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-763.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 7 Agricultural Livestock Essence", 1, 611, 7),
-            createMaterial("Lv 7 Agricultural Planting Essence", 1, 608, 7),
-            createMaterial("Lv 8 Combat Essence", 2, 603, 8),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 7 Agricultural Livestock Essence", 1, 611, 7),
-            createMaterial("Lv 7 Agricultural Planting Essence", 1, 608, 7),
-            createMaterial("Lv 8 Combat Essence", 2, 603, 8),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 7 Agricultural Livestock Essence", 1, 611, 7),
-          createMaterial("Lv 7 Agricultural Planting Essence", 1, 608, 7),
-          createMaterial("Lv 8 Combat Essence", 2, 603, 8),
-        ]),
       },
     },
     {
@@ -10511,32 +12446,41 @@ const itemsData = {
         },
       ],
       recipe: {
-        materials: [
-          createMaterial("Lv 8 Agricultural Livestock Essence", 1, 612, 8),
-          createMaterial("Lv 8 Agricultural Planting Essence", 1, 609, 8),
-          createMaterial("Lv 9 Combat Essence", 2, 604, 9),
+        craftRecipe: {
+          materials: [
+            createMaterial("Lv 8 Agricultural Livestock Essence", 1, 612, 8),
+            createMaterial("Lv 8 Agricultural Planting Essence", 1, 609, 8),
+            createMaterial("Lv 9 Combat Essence", 2, 604, 9),
+          ],
+          minPriceTotalRon: calculateTotalPrice(
+            [
+              createMaterial("Lv 8 Agricultural Livestock Essence", 1, 612, 8),
+              createMaterial("Lv 8 Agricultural Planting Essence", 1, 609, 8),
+              createMaterial("Lv 9 Combat Essence", 2, 604, 9),
+            ],
+            "Ron",
+          ),
+          minPriceTotalUsd: calculateTotalPrice(
+            [
+              createMaterial("Lv 8 Agricultural Livestock Essence", 1, 612, 8),
+              createMaterial("Lv 8 Agricultural Planting Essence", 1, 609, 8),
+              createMaterial("Lv 9 Combat Essence", 2, 604, 9),
+            ],
+            "Usd",
+          ),
+          totalRequireEnergy: calculateTotalRequireEnergy([
+            createMaterial("Lv 8 Agricultural Livestock Essence", 1, 612, 8),
+            createMaterial("Lv 8 Agricultural Planting Essence", 1, 609, 8),
+            createMaterial("Lv 9 Combat Essence", 2, 604, 9),
+          ]),
+        },
+        DesenchantRecipe: [
+          {
+            name: "Gathering Equipment Fragment",
+            cdnImage: "https://icons.lumiterra.net/item-icon-764.png",
+            quantity: 100,
+          },
         ],
-        minPriceTotalRon: calculateTotalPrice(
-          [
-            createMaterial("Lv 8 Agricultural Livestock Essence", 1, 612, 8),
-            createMaterial("Lv 8 Agricultural Planting Essence", 1, 609, 8),
-            createMaterial("Lv 9 Combat Essence", 2, 604, 9),
-          ],
-          "Ron",
-        ),
-        minPriceTotalUsd: calculateTotalPrice(
-          [
-            createMaterial("Lv 8 Agricultural Livestock Essence", 1, 612, 8),
-            createMaterial("Lv 8 Agricultural Planting Essence", 1, 609, 8),
-            createMaterial("Lv 9 Combat Essence", 2, 604, 9),
-          ],
-          "Usd",
-        ),
-        totalRequireEnergy: calculateTotalRequireEnergy([
-          createMaterial("Lv 8 Agricultural Livestock Essence", 1, 612, 8),
-          createMaterial("Lv 8 Agricultural Planting Essence", 1, 609, 8),
-          createMaterial("Lv 9 Combat Essence", 2, 604, 9),
-        ]),
       },
     },
   ],
