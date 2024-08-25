@@ -6286,7 +6286,7 @@ const itemsData = {
       name: "Hollow Farming Hat",
       alias: "HollowFarmingHat",
       prices: { ron: null, usd: null },
-      cdnImage: "https://icons.lumiterra.net/item-icon-574.png",
+      cdnImage: "https://icons.lumiterra.net/item-icon-570.png",
       requiresLevel: 8,
       stats: [
         {
@@ -6339,7 +6339,7 @@ const itemsData = {
       name: "Bronze Farming Hat",
       alias: "BronzeFarmingHat",
       prices: { ron: null, usd: null },
-      cdnImage: "https://icons.lumiterra.net/item-icon-598.png",
+      cdnImage: "https://icons.lumiterra.net/item-icon-594.png",
       requiresLevel: 9,
       stats: [
         {
