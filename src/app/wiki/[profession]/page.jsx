@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import axios from "axios";
 import { CircularProgress, Box, Card, CardContent, Typography } from "@mui/joy";
+import CloseIcon from "@mui/icons-material/Close"; // Icono de cruz
 
 import AspectRatio from "@mui/joy/AspectRatio";
 
@@ -13,6 +14,7 @@ const Profession = ({ params }) => {
   const image = (url, alt) => {
     <Image src={url} alt={alt} width={20} height={20} />;
   };
+  const isNotForSale = "Not sale";
   async function fetchData() {
     try {
       const res = await axios.post(
@@ -89,12 +91,37 @@ const Profession = ({ params }) => {
               </Typography>
               <Typography level="body1" sx={{ display: "flex", gap: 0.5 }}>
                 Floor Price:
-                <Typography level="body2">
-                  {selectedItem.prices.ron} RON
-                </Typography>
-                <Typography level="body2">
-                  {selectedItem.prices.usd} USD
-                </Typography>
+                <Box>
+                      {isNotForSale == selectedItem.prices.ron ? (
+                        <Box
+                          sx={{
+                            display: "flex",
+                            alignItems: "center",
+                            gap: 0.5,
+                          }}
+                        >
+                          <CloseIcon color="error" /> {/* Icono de cruz */}
+                          <Typography>Not Sale</Typography>
+                        </Box>
+                      ) : (
+                        <Box sx={{ display: "flex", gap: 0.5 }}>
+                        <Image
+                          src="https://cdn.skymavis.com/ronin/2020/ron/logo.png"
+                          alt="Ron"
+                          width={20}
+                          height={20}
+                        />
+                        {selectedItem.prices.ron}
+                        <Image
+                          src="https://cdn.skymavis.com/ronin/2020/erc20/0x0b7007c13325c48911f73a2dad5fa5dcbf808adc/logo.png"
+                          alt="Ron"
+                          width={20}
+                          height={20}
+                        />
+                        {selectedItem.prices.usd}
+                      </Box>
+                      )}
+                    </Box>
               </Typography>
               <Typography level="body1" sx={{ mt: 2 }}>
                 Stats:
@@ -137,33 +164,66 @@ const Profession = ({ params }) => {
                 sx={{ display: "flex", alignItems: "center", gap: 2, mb: 2 }}
               >
                 {/* Resumen de Precios y Energía */}
-                <Typography level="body2">
-                  Total Recipe Price:
+                <CardContent>
+                  <Typography level="body2">
+                    Total Recipe Price:
+                    <Box>
+                      {isNaN(selectedItem.recipe.minPriceTotalRon) ? (
+                        <Box
+                          sx={{
+                            display: "flex",
+                            alignItems: "center",
+                            gap: 0.5,
+                          }}
+                        >
+                          <CloseIcon color="error" /> {/* Icono de cruz */}
+                          <Typography>Not Sale</Typography>
+                        </Box>
+                      ) : (
+                        <Box sx={{ display: "flex", gap: 0.5 }}>
+                          <Image
+                            src="https://cdn.skymavis.com/ronin/2020/ron/logo.png"
+                            alt="Ron"
+                            width={20}
+                            height={20}
+                          />
+                          {selectedItem.recipe.minPriceTotalRon}
+                          <Image
+                            src="https://cdn.skymavis.com/ronin/2020/erc20/0x0b7007c13325c48911f73a2dad5fa5dcbf808adc/logo.png"
+                            alt="Ron"
+                            width={20}
+                            height={20}
+                          />
+                          {selectedItem.recipe.minPriceTotalUsd}
+                        </Box>
+                      )}
+                    </Box>
+                  </Typography>
+                </CardContent>
+                <CardContent>
+                  <Typography level="body2">Total Energy Required: </Typography>
                   <Box sx={{ display: "flex", gap: 0.5 }}>
                     <Image
-                      src="https://cdn.skymavis.com/ronin/2020/ron/logo.png"
+                      src="https://cdn.skymavis.com/mm-cache/7/e/803fdd893e99fbdb34c55cb81fd6eb.png"
                       alt="Ron"
                       width={20}
                       height={20}
                     />
-                    {selectedItem.recipe.minPriceTotalRon}
+                    {selectedItem.recipe.totalRequireEnergy}
+                  </Box>
+                </CardContent>
+                <CardContent>
+                  <Typography level="body2">Total Energy Cost:</Typography>
+                  <Box sx={{ display: "flex", gap: 0.5 }}>
                     <Image
                       src="https://cdn.skymavis.com/ronin/2020/erc20/0x0b7007c13325c48911f73a2dad5fa5dcbf808adc/logo.png"
                       alt="Ron"
                       width={20}
                       height={20}
                     />
-                    {selectedItem.recipe.minPriceTotalUsd}
+                    {selectedItem.recipe.totalEnergyCost}
                   </Box>
-                </Typography>
-                <Typography level="body2">
-                  Total Energy Required:{" "}
-                  {selectedItem.recipe.totalRequireEnergy}
-                </Typography>
-                <Typography level="body2">Total Energy Cost:</Typography>
-                <Typography level="body2">
-                  USD: {selectedItem.recipe.totalEnergyCost}
-                </Typography>
+                </CardContent>
               </Box>
             </CardContent>
           </Card>

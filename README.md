@@ -7,7 +7,7 @@ The idea of this project is to collect and present Lumiterra game information in
 Clone or fork the repository:
 
 ```bash
-  git clone https://link-to-project
+  git clone https://github.com/JoaquinMeneses/LumiterraRJN.git
 ```
 
 Install dependencies with your favorite package manager:

@@ -112,7 +112,7 @@ export async function POST(request, { params }) {
         item.prices = { ron: "Not sale", usd: "Not sale" };
       }
       item.recipe.totalEnergyCost =
-        item.recipe.totalRequireEnergy * dataEnergy[0].costPerEnergy;
+        (item.recipe.totalRequireEnergy * dataEnergy[0].costPerEnergy).toFixed(2);
     });
 
     return NextResponse.json(itemsVerified);
