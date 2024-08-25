@@ -5,7 +5,7 @@ import { Table, CircularProgress } from "@mui/joy";
 import Image from "next/image";
 import Link from "next/link";
 
-const Energia = () => {
+const Energy = () => {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
 
@@ -81,4 +81,4 @@ const Energia = () => {
   );
 };
 
-export default Energia;
+export default Energy;

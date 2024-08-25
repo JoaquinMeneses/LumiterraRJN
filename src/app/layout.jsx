@@ -5,7 +5,7 @@ import CssBaseline from "@mui/joy/CssBaseline";
 import { Inter } from "next/font/google";
 import "./globals.css";
 
-import Sidebar from "@/components/Sidebar";
+import Navbar from "@/components/Navbar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,9 +23,9 @@ export default function RootLayout({ children }) {
         <InitColorSchemeScript />
         <CssVarsProvider defaultMode="dark">
           <CssBaseline />
-          <Sidebar />
+          <Navbar />
           <div className="text-wrap bg-blue-600 p-2 text-center">
-            Filtro de mercado y Wiki de items en desarrollo
+            Filtros de mercado y Wiki de items en desarrollo
           </div>
           {children}
         </CssVarsProvider>
