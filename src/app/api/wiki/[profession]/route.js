@@ -116,7 +116,7 @@ export async function POST(request, { params }) {
       item.recipe.craftRecipe.totalEnergyCostUsd =
         (item.recipe.craftRecipe.totalRequireEnergy * dataEnergy[0].costPerEnergy).toFixed(2);
       item.recipe.craftRecipe.totalEnergyCostRon =
-        (item.recipe.craftRecipe.totalRequireEnergy * (dataEnergy[0].costPerEnergy * exchangeRate)).toFixed(2);
+        (item.recipe.craftRecipe.totalRequireEnergy * (dataEnergy[0].costPerEnergy / exchangeRate)).toFixed(2);
       item.recipe.craftRecipe.ImageEnergy = dataEnergy[0].cdnImage
     });
 
