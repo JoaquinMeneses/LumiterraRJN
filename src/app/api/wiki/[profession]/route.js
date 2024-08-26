@@ -98,6 +98,7 @@ export async function POST(request, { params }) {
           ? ((result.minPrice / 1e18) * exchangeRate).toFixed(2)
           : "Not sale",
       },
+      tokenId: result.tokenId
     }));
 
     itemsVerified.forEach((item) => {
@@ -108,11 +109,15 @@ export async function POST(request, { params }) {
       );
       if (itemFinalResponse) {
         item.prices = itemFinalResponse.prices;
+        item.tokenId = itemFinalResponse.tokenId;
       } else {
         item.prices = { ron: "Not sale", usd: "Not sale" };
       }
-      item.recipe.totalEnergyCost =
-        (item.recipe.totalRequireEnergy * dataEnergy[0].costPerEnergy).toFixed(2);
+      item.recipe.craftRecipe.totalEnergyCostUsd =
+        (item.recipe.craftRecipe.totalRequireEnergy * dataEnergy[0].costPerEnergy).toFixed(2);
+      item.recipe.craftRecipe.totalEnergyCostRon =
+        (item.recipe.craftRecipe.totalRequireEnergy * (dataEnergy[0].costPerEnergy * exchangeRate)).toFixed(2);
+      item.recipe.craftRecipe.ImageEnergy = dataEnergy[0].cdnImage
     });
 
     return NextResponse.json(itemsVerified);
