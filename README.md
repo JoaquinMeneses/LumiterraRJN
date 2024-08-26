@@ -48,7 +48,7 @@ bun dev
 
 and open http://localhost:3000
 
-## Variables de entorno
+## Environment variables
 
 To run this project, you must add the following environment variables to your .env file
 
