@@ -98,7 +98,7 @@ export async function POST(request, { params }) {
           ? ((result.minPrice / 1e18) * exchangeRate).toFixed(2)
           : "Not sale",
       },
-      tokenId: result.tokenId
+      tokenId: result.tokenId,
     }));
 
     itemsVerified.forEach((item) => {
@@ -108,16 +108,42 @@ export async function POST(request, { params }) {
           Number(response.requiresLevel[0]) === item.requiresLevel,
       );
       if (itemFinalResponse) {
-        item.prices = itemFinalResponse.prices;
-        item.tokenId = itemFinalResponse.tokenId;
+        item.recipe[3].materials[0].price = itemFinalResponse.prices;
+        item.recipe[3].materials[0].tokenId = itemFinalResponse.tokenId;
+        item.recipe[3].minPricesTotal = itemFinalResponse.prices;
+        item.recipe[4].materials[0].price = itemFinalResponse.prices;
+        item.recipe[4].materials[0].tokenId = itemFinalResponse.tokenId;
+        item.recipe[4].minPricesTotal.ron =
+          Number(item.recipe[4].minPricesTotal.ron) + 
+          Number(itemFinalResponse.prices.ron)
+        item.recipe[4].minPricesTotal.usd =
+          Number(item.recipe[4].minPricesTotal.usd) + 
+          Number(itemFinalResponse.prices.usd)
       } else {
-        item.prices = { ron: "Not sale", usd: "Not sale" };
+        item.recipe[3].materials[0].price = {
+          ron: "Not sale",
+          usd: "Not sale",
+        };
+        item.recipe[4].materials[0].price = {
+          ron: "Not sale",
+          usd: "Not sale",
+        };
       }
-      item.recipe.craftRecipe.totalEnergyCostUsd =
-        (item.recipe.craftRecipe.totalRequireEnergy * dataEnergy[0].costPerEnergy).toFixed(2);
-      item.recipe.craftRecipe.totalEnergyCostRon =
-        (item.recipe.craftRecipe.totalRequireEnergy * (dataEnergy[0].costPerEnergy / exchangeRate)).toFixed(2);
-      item.recipe.craftRecipe.ImageEnergy = dataEnergy[0].cdnImage
+       item.recipe[2].materials[0].price.usd = Number(
+        item.recipe[2].materials[0].quantity * dataEnergy[0].costPerEnergy
+      ).toFixed(2)
+      item.recipe[2].materials[0].price.ron = Number(
+        item.recipe[2].materials[0].quantity *
+        (dataEnergy[0].costPerEnergy / exchangeRate)
+      ).toFixed(2)
+      item.recipe[2].materials[0].cdnImage = dataEnergy[0].cdnImage;
+      item.recipe[2].minPricesTotal.ron = Number(
+        item.recipe[2].materials[0].quantity *
+        (dataEnergy[0].costPerEnergy / exchangeRate)
+      ).toFixed(2)
+      item.recipe[2].minPricesTotal.usd = Number(
+        item.recipe[2].materials[0].quantity * dataEnergy[0].costPerEnergy
+      ).toFixed(2)
     });
 
     return NextResponse.json(itemsVerified);
