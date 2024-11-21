@@ -63,6 +63,10 @@ const Navbar = () => {
           { href: "/wiki/gathering", label: "Gathering" },
         ]}
       />
+
+      <Link href="/lulumoon-airdrop">
+        <IconButton>Lulumoon Airdrop</IconButton>
+      </Link>
     </Sheet>
   );
 };

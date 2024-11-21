@@ -40,7 +40,7 @@ export async function GET(request) {
           auctionType: All
           sort: PriceAsc
         ) {
-          results {
+          results {n
             name
             minPrice
             cdnImage
@@ -77,46 +77,44 @@ export async function GET(request) {
       `,
     );
 
-    const resultsDataEnergyBuy = response.data.dataEnergyBuy.results.map(
-      (result) => ({
+    const { dataExchangeRate, dataEnergyBuy, dataSlimes, dataBottle } =
+      response.data;
+    const usdRate = dataExchangeRate.ron.usd;
+
+    const resultsDataEnergyBuy = dataEnergyBuy.results.map((result) => {
+      const minPriceUSD = Number((result.minPrice / 1e18) * usdRate).toFixed(2);
+      const restoreEnergy = Number(result.attributes["restore energy"][0]);
+      const costPerEnergy = (minPriceUSD / restoreEnergy).toFixed(2);
+
+      return {
         ...result,
-        minPrice: Number(
-          (result.minPrice / 1000000000000000000) *
-            response.data.dataExchangeRate.ron.usd,
-        ).toFixed(2),
-        restoreEnergy: Number(result.attributes["restore energy"][0]),
+        minPrice: minPriceUSD,
+        restoreEnergy,
+        costPerEnergy,
+      };
+    });
+
+    const resultsDataEnergyCraft = dataSlimes.results.map((result) => {
+      const minPriceTotalUSD = (
+        (result.minPrice / 1e18 + dataBottle.minPrice / 1e18) *
+        usdRate
+      ).toFixed(2);
+
+      const matchingItem = resultsDataEnergyBuy.find(
+        (item) => item.name.substring(0, 5) === result.name.substring(0, 5),
+      );
+
+      return {
+        ...result,
+        name: `${result.name} + Bottle`,
+        minPrice: minPriceTotalUSD,
+        restoreEnergy: matchingItem.restoreEnergy * 3,
         costPerEnergy: (
-          Number(
-            (result.minPrice / 1000000000000000000) *
-              response.data.dataExchangeRate.ron.usd,
-          ) / result.attributes["restore energy"][0]
+          minPriceTotalUSD /
+          (matchingItem.restoreEnergy * 3)
         ).toFixed(2),
-      }),
-    );
-
-    const resultsDataEnergyCraft = response.data.dataSlimes.results.map(
-      (result) => {
-        const minPriceTotal = (
-          (result.minPrice / 1000000000000000000 +
-            response.data.dataBottle.minPrice / 1000000000000000000) *
-          response.data.dataExchangeRate.ron.usd
-        ).toFixed(2);
-
-        const matchingItem = resultsDataEnergyBuy.find(
-          (item) => item.name.substring(0, 5) === result.name.substring(0, 5),
-        );
-        return {
-          ...result,
-          name: `${result.name} + Bottle`,
-          minPrice: minPriceTotal,
-          restoreEnergy: matchingItem.restoreEnergy * 3,
-          costPerEnergy: (
-            minPriceTotal /
-            (matchingItem.restoreEnergy * 3)
-          ).toFixed(2),
-        };
-      },
-    );
+      };
+    });
 
     const allResults = [
       ...resultsDataEnergyBuy,

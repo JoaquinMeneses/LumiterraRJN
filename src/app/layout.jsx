@@ -24,9 +24,6 @@ export default function RootLayout({ children }) {
         <CssVarsProvider defaultMode="dark">
           <CssBaseline />
           <Navbar />
-          <div className="text-wrap bg-blue-600 p-2 text-center">
-            Filtros de mercado y Wiki de items en desarrollo
-          </div>
           {children}
         </CssVarsProvider>
       </body>
