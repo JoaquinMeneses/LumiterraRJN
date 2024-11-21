@@ -36,7 +36,7 @@ const fetchDataContrat = async (url) => {
 
 export async function POST(request) {
   const apiUrl = "https://api-gateway.skymavis.com/graphql/mavis-marketplace";
-  const url ="https://lulumoon.gg/api/token0/tokenCard/small?size=2000&page=1";
+  const url = "https://lulumoon.gg/api/token0/tokenCard/small?size=2000&page=1";
 
   try {
     // Fetch supply total data
@@ -57,37 +57,64 @@ export async function POST(request) {
             }
           }
         }
-      `
+      `,
     );
 
     // Fetch contract data
     const dataContracts = await fetchDataContrat(url);
 
-    let TotalBurn = 0
+    let TotalBurn = 0;
     // Map contract addresses
     const AddressContratcLulumoon = await Promise.all(
       dataContracts.items.map(async (result) => {
-        const supplyData = await fetchDataContrat("https://lulumoon.gg/api/token0/airdrop/" + result.token.address);
-        TotalBurn += Number(supplyData.airdropSent.badgeSupply)
+        const supplyData = await fetchDataContrat(
+          "https://lulumoon.gg/api/token0/airdrop/" + result.token.address,
+        );
+        TotalBurn += Number(supplyData.airdropSent.badgeSupply);
         return {
           OwnerAddress: result.token.address,
           image: result.image,
           name: result.token.symbol.replace(/\s+/g, ""),
-          supply: supplyData // Guardamos los datos de la respuesta
+          supply: supplyData, // Guardamos los datos de la respuesta
         };
-      })
+      }),
     );
-
 
     const FinalResponse = {
       image: supplyTotal.data.erc1155Token.cdnImage,
-      total: Number(supplyTotal.data.erc1155Token.totalItems),
-      circulation: Number(supplyTotal.data.erc1155Token.totalItems) - Number(TotalBurn),
-      sale: Number(supplyTotal.data.erc1155Token.totalItemsListing),
-      burned: Number(TotalBurn),
-      list: AddressContratcLulumoon
-    }
-
+      total: {
+        value: Number(supplyTotal.data.erc1155Token.totalItems),
+        percentage: 100,
+      },
+      circulation: {
+        value:
+          Number(supplyTotal.data.erc1155Token.totalItems) - Number(TotalBurn),
+        percentage: (
+          ((Number(supplyTotal.data.erc1155Token.totalItems) -
+            Number(TotalBurn)) /
+            Number(supplyTotal.data.erc1155Token.totalItems)) *
+          100
+        ).toFixed(2),
+      },
+      sale: {
+        value: Number(supplyTotal.data.erc1155Token.totalItemsListing),
+        percentage: (
+          (Number(supplyTotal.data.erc1155Token.totalItemsListing) /
+            (Number(supplyTotal.data.erc1155Token.totalItems) -
+              Number(TotalBurn))) *
+          100
+        ).toFixed(2),
+      },
+      burned: {
+        value: Number(TotalBurn),
+        percentage: (
+          (Number(TotalBurn) /
+            Number(supplyTotal.data.erc1155Token.totalItems)) *
+          100
+        ).toFixed(2),
+      },
+      list: AddressContratcLulumoon,
+    };
 
     return NextResponse.json(FinalResponse);
   } catch (error) {

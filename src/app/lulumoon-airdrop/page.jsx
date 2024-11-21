@@ -27,6 +27,9 @@ const LulumoonAirdrop = () => {
     fetchData();
   }, []);
 
+  const formatNumber = (value) =>
+    new Intl.NumberFormat("en-US").format(value || 0);
+
   return (
     <div className="p-3">
       <Card variant="soft">
@@ -60,14 +63,33 @@ const LulumoonAirdrop = () => {
                 >
                   Total supply
                 </Typography>
-                <Typography sx={{ fontWeight: "lg" }}>{data.total}</Typography>
+                <Typography sx={{ fontWeight: "lg" }}>
+                  {data?.total?.percentage || 0}%
+                </Typography>
+                <Typography sx={{ fontWeight: "sm" }}>
+                  {formatNumber(data?.total?.value)}
+                </Typography>
+              </div>
+              <div>
+                <Typography level="body-md" sx={{ fontWeight: "lg" }}>
+                  Burned in meme coins
+                </Typography>
+                <Typography sx={{ fontWeight: "lg" }}>
+                  {data?.burned?.percentage || 0}%
+                </Typography>
+                <Typography sx={{ fontWeight: "sm" }}>
+                  {formatNumber(data?.burned?.value)}
+                </Typography>
               </div>
               <div>
                 <Typography level="body-md" sx={{ fontWeight: "lg" }}>
                   In circulation
                 </Typography>
                 <Typography sx={{ fontWeight: "lg" }}>
-                  {data.circulation}
+                  {data?.circulation?.percentage || 0}%
+                </Typography>
+                <Typography sx={{ fontWeight: "sm" }}>
+                  {formatNumber(data?.circulation?.value)}
                 </Typography>
               </div>
               <div>
@@ -87,13 +109,12 @@ const LulumoonAirdrop = () => {
                 >
                   In sale
                 </Typography>
-                <Typography sx={{ fontWeight: "lg" }}>{data.sale}</Typography>
-              </div>
-              <div>
-                <Typography level="body-md" sx={{ fontWeight: "lg" }}>
-                  Burned in meme coins
+                <Typography sx={{ fontWeight: "lg" }}>
+                  {data?.sale?.percentage || 0}%
                 </Typography>
-                <Typography sx={{ fontWeight: "lg" }}>{data.burned}</Typography>
+                <Typography sx={{ fontWeight: "sm" }}>
+                  {formatNumber(data?.sale?.value)}
+                </Typography>
               </div>
             </Sheet>
           </CardContent>
