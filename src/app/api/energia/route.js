@@ -37,7 +37,7 @@ export async function GET(request) {
           size: 50
           tokenAddress: "0xcc451977a4be9adee892f7e610fe3e3b3927b5a1"
           rangeCriteria: { name: "restore energy", range: { to: "1.157920892373162e+77", from: "1" } }
-          auctionType: All
+          auctionType: Sale
           sort: PriceAsc
         ) {
           results {
@@ -54,7 +54,7 @@ export async function GET(request) {
           size: 50
           tokenAddress: "0xcc451977a4be9adee892f7e610fe3e3b3927b5a1"
           name: "Energy Slime"
-          auctionType: All
+          auctionType: Sale
           sort: PriceAsc
         ) {
           results {
