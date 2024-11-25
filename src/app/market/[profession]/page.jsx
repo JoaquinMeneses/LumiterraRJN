@@ -11,7 +11,7 @@ const Profession = ({ params }) => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [filters, setFilters] = useState({
-    auctionType: "All",
+    auctionType: "Sale",
     type: "sword",
     quality: "basic",
     requiresLevel: 1,

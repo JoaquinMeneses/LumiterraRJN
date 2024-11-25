@@ -9,7 +9,7 @@ import {
 } from "@mui/joy";
 
 const Filters = ({ filters, setFilters, fetchData }) => {
-  const auctionsTypes = ["All", "Sale", "NotForSale"];
+  const auctionsTypes = ["Sale", "NotForSale"];
   const types = [
     "sword",
     "hands armor",
