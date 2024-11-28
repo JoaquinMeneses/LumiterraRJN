@@ -108,10 +108,10 @@ export async function GET(request) {
         ...result,
         name: `${result.name} + Bottle`,
         minPrice: minPriceTotalUSD,
-        restoreEnergy: matchingItem.restoreEnergy * 3,
+        restoreEnergy: matchingItem?.restoreEnergy * 3,
         costPerEnergy: (
           minPriceTotalUSD /
-          (matchingItem.restoreEnergy * 3)
+          (matchingItem?.restoreEnergy * 3)
         ).toFixed(2),
       };
     });
