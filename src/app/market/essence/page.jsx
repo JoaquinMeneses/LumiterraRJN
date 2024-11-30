@@ -1,22 +1,25 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { CircularProgress, Box, Card, CardContent, Typography } from "@mui/joy";
-import Filters from "@/components/Filters";
+import { CircularProgress, Grid, Box, Typography, FormControlLabel } from "@mui/material";
+import Switch from "@mui/joy/Switch";
+import Image from "next/image";
 
-import AspectRatio from "@mui/joy/AspectRatio";
-import Link from "@mui/joy/Link";
 
-const Essence = () => {
+const Page = () => {
   const [data, setData] = useState([]);
-  const [dataFiltered, setDataFiltered] = useState([]);
+  const [gatherData, setDataGather] = useState([]);
+  const [combatData, setDataCombat] = useState([]);
+  const [farmingData, setDataFarming] = useState([]);
+  const [livestockData, setDataLivestock] = useState([]);
+  const [box, setBox] = useState(false); // Estado para el Switch 'box'
+  const [market, setMarket] = useState(false); // Estado para el Switch 'market'
   const [loading, setLoading] = useState(true);
 
-  async function fetchData(url) {
+  async function fetchData() {
     try {
-      const res = await axios.get(url);
+      const res = await axios.get(`${window.location.origin}/api/tableEssence`);
       setData(res.data);
-      setDataFiltered(res.data);
       setLoading(false);
     } catch (error) {
       console.error(error);
@@ -25,8 +28,17 @@ const Essence = () => {
   }
 
   useEffect(() => {
-    fetchData(`${window.location.origin}/api/essence`);
+    fetchData();
   }, []);
+
+  useEffect(() => {
+    if (data.length > 0) {
+      setDataGather(data.filter(item => item.name.includes("Gather")));
+      setDataCombat(data.filter(item => item.name.includes("Combat")));
+      setDataFarming(data.filter(item => item.name.includes("Planting")));
+      setDataLivestock(data.filter(item => item.name.includes("Livestock")));
+    }
+  }, [data]);
 
   if (loading)
     return (
@@ -34,102 +46,423 @@ const Essence = () => {
         <CircularProgress />
       </div>
     );
-
+  
   return (
-    <main className="flex">
-      <Filters data={data} setDataFiltered={setDataFiltered} />
-      <div className="flex h-full w-full flex-wrap justify-center gap-3 p-3">
-        {dataFiltered?.map(
-          ({
-            name,
-            minPriceUsd,
-            minPriceRon,
-            cdnImage,
-            attributes,
-            tokenId,
-          }) => {
-            return (
-              <>
-                <Card
-                  variant="plain"
-                  orientation="horizontal"
+    <Box sx={{ padding: 2 }}>
+      {/* Controles de los switches */}
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "center", // Centra horizontalmente
+          alignItems: "center", // Centra verticalmente
+          gap: 4, // Espaciado entre switches
+          marginBottom: 3, // Separación inferior
+        }}
+      >
+        <FormControlLabel
+          control={
+            <Switch
+              checked={box}
+              onChange={(e) => setBox(e.target.checked)}
+              sx={{
+                "--Switch-thumb-size": "24px", // Tamaño del círculo
+                "--Switch-track-height": "16px", // Altura del track
+                "--Switch-track-width": "48px", // Anchura del track
+              }}
+            />
+          }
+          label="Incorporar Precio de la Packaging box a los costos"
+          sx={{
+            fontSize: "18px", // Tamaño del texto
+          }}
+        />
+        <FormControlLabel
+          control={
+            <Switch
+              checked={market}
+              onChange={(e) => setMarket(e.target.checked)}
+              sx={{
+                "--Switch-thumb-size": "24px",
+                "--Switch-track-height": "16px",
+                "--Switch-track-width": "48px",
+              }}
+            />
+          }
+          label="Mostrar precio de market con fee del 10% aplicado"
+          sx={{
+            fontSize: "18px",
+          }}
+        />
+      </Box>
+
+      {/* Tablas de datos */}
+      <Grid container spacing={2}>
+        <Grid item xs={12} sm={6} md={3}>
+          <Box
+            sx={{
+              border: "1px solid #ccc", // Borde gris claro
+              borderRadius: "8px", // Bordes redondeados
+              padding: 2, // Espaciado interno
+              textAlign: "center", // Texto centrado
+            }}
+          >
+            <Typography variant="h6" sx={{ marginBottom: 2 }}>
+              Gather
+            </Typography>
+            <Box sx={{ marginTop: 2 }}>
+              <Typography variant="h6" align="center" sx={{ marginBottom: 2 }}>
+                Detalles
+              </Typography>
+              
+              <Box 
+                sx={{
+                  display: 'grid',
+                  gridTemplateColumns: 'repeat(5, 1fr)',
+                  gap: 2,
+                  alignItems: 'center',
+                }}
+              >
+                <Typography variant="body2" fontWeight="bold"></Typography>
+                <Typography variant="body2" fontWeight="bold">Energia Requerida</Typography>
+                <Typography variant="body2" fontWeight="bold">Costo de Energía</Typography>
+                <Typography variant="body2" fontWeight="bold">Essencia Anterior + 15 de Energia</Typography>
+                <Typography variant="body2" fontWeight="bold">Precio Market</Typography>
+              </Box>
+
+              {gatherData.map((item, index) => (
+                <Box
+                  key={index}
                   sx={{
-                    width: 320,
+                    display: 'grid',
+                    gridTemplateColumns: 'repeat(5, 1fr)',
+                    gap: 2,
+                    marginTop: 1,
+                    alignItems: 'center',
+                    borderTop: '1px solid #ccc', // Borde superior
+                    paddingY: 1, // Espaciado vertical dentro de la caja
                   }}
                 >
-                  <CardContent
-                    sx={{
-                      display: "flex",
-                      justifyContent: "center",
-                      height: "100%",
-                    }}
-                  >
-                    <Box
-                      sx={{
-                        display: "flex",
-                        gap: 1,
-                        alignItems: "center",
-                      }}
-                    >
-                      <AspectRatio ratio="1" sx={{ width: 60 }}>
-                        <img src={cdnImage} loading="lazy" alt={name} />
-                      </AspectRatio>
-                      <Box>
-                        <Typography level="body-sm" fontWeight="lg">
-                          <Link
-                            overlay
-                            underline="none"
-                            href={`https://marketplace.skymavis.com/collections/lumiterra/${tokenId}`}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            sx={{ color: "text.tertiary" }}
-                          >
-                            {name}
-                          </Link>
+                  <Box>
+                    <a href={item.url} target="_blank" rel="noopener noreferrer">
+                      <Image src={item.img} alt={item.name} width={80} height={80} />
+                    </a>
+                  </Box>
+
+                  <Box sx={{ display: 'flex', alignItems: 'center' }}>
+                    <Image src="https://cdn.skymavis.com/mm-cache/7/1/a982febb7e3f7e75d9ff811d644971.png" alt="Energy Icon" width={20} height={20} style={{ marginRight: '8px' }} />
+                    <Typography variant="body2">{item.requieredEnergy}</Typography>
+                  </Box>
+
+                  <Box sx={{ display: 'flex', alignItems: 'center' }}>
+                    <Image src="https://cdn.skymavis.com/ronin/2020/erc20/0x0b7007c13325c48911f73a2dad5fa5dcbf808adc/logo.png" alt="Price Icon" width={20} height={20} style={{ marginRight: '8px' }} />
+                    <Typography variant="body2">
+                      {box
+                        ? (Number(item.costEnergy * item.requieredEnergy) + Number(item.minPriceBox)).toFixed(2)
+                        : Number(item.costEnergy * item.requieredEnergy).toFixed(2)}
+                    </Typography>
+                  </Box>
+
+                  <Box sx={{ display: 'flex', alignItems: 'center' }}>
+                    <Image src="https://cdn.skymavis.com/ronin/2020/erc20/0x0b7007c13325c48911f73a2dad5fa5dcbf808adc/logo.png" alt="Price Icon" width={20} height={20} style={{ marginRight: '8px' }} />
+                    <Typography variant="body2">
+                      {box
+                        ? (Number(item.minPriceUsdBelowEssence * 2) + Number(item.costEnergy * 15) + Number(item.minPriceBox)).toFixed(2)
+                        : (Number(item.minPriceUsdBelowEssence * 2) + Number(item.costEnergy * 15)).toFixed(2)}
+                    </Typography>
+                  </Box>
+
+                  <Box sx={{ display: 'flex', alignItems: 'center' }}>
+                    <Image src="https://cdn.skymavis.com/ronin/2020/erc20/0x0b7007c13325c48911f73a2dad5fa5dcbf808adc/logo.png" alt="Price Icon" width={20} height={20} style={{ marginRight: '8px' }} />
+                    <Typography variant="body2">
+                      {item.minPriceUsd}
+                      {market && (
+                        <Typography variant="body2" sx={{ fontWeight: "bold" }}>
+                          {Number(Number(item.minPriceUsd) - Number(item.minPriceUsd) * 0.1).toFixed(2)}
                         </Typography>
-                        <Typography
-                          level="body-xs"
-                          fontWeight="lg"
-                          textColor="text.tertiary"
-                        >
-                          {attributes
-                            .filter((attribute) => {
-                              const key = Object.keys(attribute)[0];
-                              return key === "requires level";
-                            })
-                            .map((attribute, index) => {
-                              const key = Object.keys(attribute)[0];
-                              const value = Object.values(attribute)[0];
-                              return (
-                                <Typography key={index} fontWeight="lg">
-                                  Lv {value}
-                                </Typography>
-                              );
-                            })}
+                      )}
+                    </Typography>
+                  </Box>
+                </Box>
+              ))}
+            </Box>
+          </Box>
+        </Grid>
+
+        <Grid item xs={12} sm={6} md={3}>
+          <Box
+            sx={{
+              border: "1px solid #ccc",
+              borderRadius: "8px",
+              padding: 2,
+              textAlign: "center",
+            }}
+          >
+            <Typography variant="h6" sx={{ marginBottom: 2 }}>
+              Combat
+            </Typography>
+            <Box sx={{ marginTop: 2 }}>
+              <Typography variant="h6" align="center" sx={{ marginBottom: 2 }}>
+                Detalles
+              </Typography>
+              
+              <Box 
+                sx={{
+                  display: 'grid',
+                  gridTemplateColumns: 'repeat(5, 1fr)',
+                  gap: 2,
+                  alignItems: 'center',
+                }}
+              >
+                <Typography variant="body2" fontWeight="bold"></Typography>
+                <Typography variant="body2" fontWeight="bold">Energia Requerida</Typography>
+                <Typography variant="body2" fontWeight="bold">Costo de Energía</Typography>
+                <Typography variant="body2" fontWeight="bold">Essencia Anterior + 15 de Energia</Typography>
+                <Typography variant="body2" fontWeight="bold">Precio Market</Typography>
+              </Box>
+
+              {combatData.map((item, index) => (
+                <Box
+                  key={index}
+                  sx={{
+                    display: 'grid',
+                    gridTemplateColumns: 'repeat(5, 1fr)',
+                    gap: 2,
+                    marginTop: 1,
+                    alignItems: 'center',
+                    borderTop: '1px solid #ccc', // Borde superior
+                    paddingY: 1, // Espaciado vertical dentro de la caja
+                  }}
+                >
+                  <Box>
+                    <a href={item.url} target="_blank" rel="noopener noreferrer">
+                      <Image src={item.img} alt={item.name} width={80} height={80} />
+                    </a>
+                  </Box>
+
+                  <Box sx={{ display: 'flex', alignItems: 'center' }}>
+                    <Image src="https://cdn.skymavis.com/mm-cache/7/1/a982febb7e3f7e75d9ff811d644971.png" alt="Energy Icon" width={20} height={20} style={{ marginRight: '8px' }} />
+                    <Typography variant="body2">{item.requieredEnergy}</Typography>
+                  </Box>
+
+                  <Box sx={{ display: 'flex', alignItems: 'center' }}>
+                    <Image src="https://cdn.skymavis.com/ronin/2020/erc20/0x0b7007c13325c48911f73a2dad5fa5dcbf808adc/logo.png" alt="Price Icon" width={20} height={20} style={{ marginRight: '8px' }} />
+                    <Typography variant="body2">
+                      {box
+                        ? (Number(item.costEnergy * item.requieredEnergy) + Number(item.minPriceBox)).toFixed(2)
+                        : Number(item.costEnergy * item.requieredEnergy).toFixed(2)}
+                    </Typography>
+                  </Box>
+
+                  <Box sx={{ display: 'flex', alignItems: 'center' }}>
+                    <Image src="https://cdn.skymavis.com/ronin/2020/erc20/0x0b7007c13325c48911f73a2dad5fa5dcbf808adc/logo.png" alt="Price Icon" width={20} height={20} style={{ marginRight: '8px' }} />
+                    <Typography variant="body2">
+                      {box
+                        ? (Number(item.minPriceUsdBelowEssence * 2) + Number(item.costEnergy * 15) + Number(item.minPriceBox)).toFixed(2)
+                        : (Number(item.minPriceUsdBelowEssence * 2) + Number(item.costEnergy * 15)).toFixed(2)}
+                    </Typography>
+                  </Box>
+
+                  <Box sx={{ display: 'flex', alignItems: 'center' }}>
+                    <Image src="https://cdn.skymavis.com/ronin/2020/erc20/0x0b7007c13325c48911f73a2dad5fa5dcbf808adc/logo.png" alt="Price Icon" width={20} height={20} style={{ marginRight: '8px' }} />
+                    <Typography variant="body2">
+                      {item.minPriceUsd}
+                      {market && (
+                        <Typography variant="body2" sx={{ fontWeight: "bold" }}>
+                          {Number(Number(item.minPriceUsd) - Number(item.minPriceUsd) * 0.1).toFixed(2)}
                         </Typography>
-                        <Box sx={{ display: "flex", gap: 1 }}>
-                          <Typography fontSize="xl" fontWeight="lg">
-                            {!isNaN(Number(minPriceRon))
-                              ? `${minPriceRon}RON`
-                              : minPriceRon}
-                          </Typography>
-                          <Typography fontSize="xl" fontWeight="lg">
-                            {!isNaN(Number(minPriceUsd))
-                              ? `${minPriceUsd}USD`
-                              : minPriceUsd}
-                          </Typography>
-                        </Box>
-                      </Box>
-                    </Box>
-                  </CardContent>
-                </Card>
-              </>
-            );
-          },
-        )}
-      </div>
-    </main>
+                      )}
+                    </Typography>
+                  </Box>
+                </Box>
+              ))}
+            </Box>
+          </Box>
+        </Grid>
+
+        <Grid item xs={12} sm={6} md={3}>
+          <Box
+            sx={{
+              border: "1px solid #ccc",
+              borderRadius: "8px",
+              padding: 2,
+              textAlign: "center",
+            }}
+          >
+            <Typography variant="h6" sx={{ marginBottom: 2 }}>
+              Farming
+            </Typography>
+            <Box sx={{ marginTop: 2 }}>
+              <Typography variant="h6" align="center" sx={{ marginBottom: 2 }}>
+                Detalles
+              </Typography>
+              
+              <Box 
+                sx={{
+                  display: 'grid',
+                  gridTemplateColumns: 'repeat(5, 1fr)',
+                  gap: 2,
+                  alignItems: 'center',
+                }}
+              >
+                <Typography variant="body2" fontWeight="bold"></Typography>
+                <Typography variant="body2" fontWeight="bold">Energia Requerida</Typography>
+                <Typography variant="body2" fontWeight="bold">Costo de Energía</Typography>
+                <Typography variant="body2" fontWeight="bold">Essencia Anterior + 15 de Energia</Typography>
+                <Typography variant="body2" fontWeight="bold">Precio Market</Typography>
+              </Box>
+
+              {farmingData.map((item, index) => (
+                <Box
+                  key={index}
+                  sx={{
+                    display: 'grid',
+                    gridTemplateColumns: 'repeat(5, 1fr)',
+                    gap: 2,
+                    marginTop: 1,
+                    alignItems: 'center',
+                    borderTop: '1px solid #ccc', // Borde superior
+                    paddingY: 1, // Espaciado vertical dentro de la caja
+                  }}
+                >
+                  <Box>
+                    <a href={item.url} target="_blank" rel="noopener noreferrer">
+                      <Image src={item.img} alt={item.name} width={80} height={80} />
+                    </a>
+                  </Box>
+
+                  <Box sx={{ display: 'flex', alignItems: 'center' }}>
+                    <Image src="https://cdn.skymavis.com/mm-cache/7/1/a982febb7e3f7e75d9ff811d644971.png" alt="Energy Icon" width={20} height={20} style={{ marginRight: '8px' }} />
+                    <Typography variant="body2">{item.requieredEnergy}</Typography>
+                  </Box>
+
+                  <Box sx={{ display: 'flex', alignItems: 'center' }}>
+                    <Image src="https://cdn.skymavis.com/ronin/2020/erc20/0x0b7007c13325c48911f73a2dad5fa5dcbf808adc/logo.png" alt="Price Icon" width={20} height={20} style={{ marginRight: '8px' }} />
+                    <Typography variant="body2">
+                      {box
+                        ? (Number(item.costEnergy * item.requieredEnergy) + Number(item.minPriceBox)).toFixed(2)
+                        : Number(item.costEnergy * item.requieredEnergy).toFixed(2)}
+                    </Typography>
+                  </Box>
+
+                  <Box sx={{ display: 'flex', alignItems: 'center' }}>
+                    <Image src="https://cdn.skymavis.com/ronin/2020/erc20/0x0b7007c13325c48911f73a2dad5fa5dcbf808adc/logo.png" alt="Price Icon" width={20} height={20} style={{ marginRight: '8px' }} />
+                    <Typography variant="body2">
+                      {box
+                        ? (Number(item.minPriceUsdBelowEssence * 2) + Number(item.costEnergy * 15) + Number(item.minPriceBox)).toFixed(2)
+                        : (Number(item.minPriceUsdBelowEssence * 2) + Number(item.costEnergy * 15)).toFixed(2)}
+                    </Typography>
+                  </Box>
+
+                  <Box sx={{ display: 'flex', alignItems: 'center' }}>
+                    <Image src="https://cdn.skymavis.com/ronin/2020/erc20/0x0b7007c13325c48911f73a2dad5fa5dcbf808adc/logo.png" alt="Price Icon" width={20} height={20} style={{ marginRight: '8px' }} />
+                    <Typography variant="body2">
+                      {item.minPriceUsd}
+                      {market && (
+                        <Typography variant="body2" sx={{ fontWeight: "bold" }}>
+                          {Number(Number(item.minPriceUsd) - Number(item.minPriceUsd) * 0.1).toFixed(2)}
+                        </Typography>
+                      )}
+                    </Typography>
+                  </Box>
+                </Box>
+              ))}
+            </Box>
+          </Box>
+        </Grid>
+
+        <Grid item xs={12} sm={6} md={3}>
+          <Box
+            sx={{
+              border: "1px solid #ccc",
+              borderRadius: "8px",
+              padding: 2,
+              textAlign: "center",
+            }}
+          >
+            <Typography variant="h6" sx={{ marginBottom: 2 }}>
+              Livestock
+            </Typography>
+            <Box sx={{ marginTop: 2 }}>
+              <Typography variant="h6" align="center" sx={{ marginBottom: 2 }}>
+                Detalles
+              </Typography>
+              
+              <Box 
+                sx={{
+                  display: 'grid',
+                  gridTemplateColumns: 'repeat(5, 1fr)',
+                  gap: 2,
+                  alignItems: 'center',
+                }}
+              >
+                <Typography variant="body2" fontWeight="bold"></Typography>
+                <Typography variant="body2" fontWeight="bold">Energia Requerida</Typography>
+                <Typography variant="body2" fontWeight="bold">Costo de Energía</Typography>
+                <Typography variant="body2" fontWeight="bold">Essencia Anterior + 15 de Energia</Typography>
+                <Typography variant="body2" fontWeight="bold">Precio Market</Typography>
+              </Box>
+
+              {livestockData.map((item, index) => (
+                <Box
+                  key={index}
+                  sx={{
+                    display: 'grid',
+                    gridTemplateColumns: 'repeat(5, 1fr)',
+                    gap: 2,
+                    marginTop: 1,
+                    alignItems: 'center',
+                    borderTop: '1px solid #ccc', // Borde superior
+                    paddingY: 1, // Espaciado vertical dentro de la caja
+                  }}
+                >
+                  <Box>
+                    <a href={item.url} target="_blank" rel="noopener noreferrer">
+                      <Image src={item.img} alt={item.name} width={80} height={80} />
+                    </a>
+                  </Box>
+
+                  <Box sx={{ display: 'flex', alignItems: 'center' }}>
+                    <Image src="https://cdn.skymavis.com/mm-cache/7/1/a982febb7e3f7e75d9ff811d644971.png" alt="Energy Icon" width={20} height={20} style={{ marginRight: '8px' }} />
+                    <Typography variant="body2">{item.requieredEnergy}</Typography>
+                  </Box>
+
+                  <Box sx={{ display: 'flex', alignItems: 'center' }}>
+                    <Image src="https://cdn.skymavis.com/ronin/2020/erc20/0x0b7007c13325c48911f73a2dad5fa5dcbf808adc/logo.png" alt="Price Icon" width={20} height={20} style={{ marginRight: '8px' }} />
+                    <Typography variant="body2">
+                      {box
+                        ? (Number(item.costEnergy * item.requieredEnergy) + Number(item.minPriceBox)).toFixed(2)
+                        : Number(item.costEnergy * item.requieredEnergy).toFixed(2)}
+                    </Typography>
+                  </Box>
+
+                  <Box sx={{ display: 'flex', alignItems: 'center' }}>
+                    <Image src="https://cdn.skymavis.com/ronin/2020/erc20/0x0b7007c13325c48911f73a2dad5fa5dcbf808adc/logo.png" alt="Price Icon" width={20} height={20} style={{ marginRight: '8px' }} />
+                    <Typography variant="body2">
+                      {box
+                        ? (Number(item.minPriceUsdBelowEssence * 2) + Number(item.costEnergy * 15) + Number(item.minPriceBox)).toFixed(2)
+                        : (Number(item.minPriceUsdBelowEssence * 2) + Number(item.costEnergy * 15)).toFixed(2)}
+                    </Typography>
+                  </Box>
+
+                  <Box sx={{ display: 'flex', alignItems: 'center' }}>
+                    <Image src="https://cdn.skymavis.com/ronin/2020/erc20/0x0b7007c13325c48911f73a2dad5fa5dcbf808adc/logo.png" alt="Price Icon" width={20} height={20} style={{ marginRight: '8px' }} />
+                    <Typography variant="body2">
+                      {item.minPriceUsd}
+                      {market && (
+                        <Typography variant="body2" sx={{ fontWeight: "bold" }}>
+                          {Number(Number(item.minPriceUsd) - Number(item.minPriceUsd) * 0.1).toFixed(2)}
+                        </Typography>
+                      )}
+                    </Typography>
+                  </Box>
+                </Box>
+              ))}
+            </Box>
+          </Box>
+        </Grid>
+      </Grid>
+    </Box>
   );
 };
 
-export default Essence;
+export default Page;
