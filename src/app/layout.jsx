@@ -19,7 +19,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="es" suppressHydrationWarning={true}>
       <head>
-        <AdSense pId="2407670967403495" />
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2407670967403495"
+          crossorigin="anonymous"
+        ></script>
       </head>
       <body
         className={`${inter.className} max-w-screen flex min-h-screen flex-col`}
