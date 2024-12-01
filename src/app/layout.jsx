@@ -6,6 +6,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 
 import Navbar from "@/components/Navbar";
+import AdSense from "@/components/AdSense";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,6 +18,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="es" suppressHydrationWarning={true}>
+      <head>
+        <AdSense pId="ca-pub-2407670967403495" />
+      </head>
       <body
         className={`${inter.className} max-w-screen flex min-h-screen flex-col`}
       >
