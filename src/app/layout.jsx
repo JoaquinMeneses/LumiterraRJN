@@ -19,7 +19,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="es" suppressHydrationWarning={true}>
       <head>
-        <AdSense pId="ca-pub-2407670967403495" />
+        <AdSense pId="2407670967403495" />
       </head>
       <body
         className={`${inter.className} max-w-screen flex min-h-screen flex-col`}
