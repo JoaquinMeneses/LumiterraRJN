@@ -174,34 +174,38 @@ export async function GET(request) {
 
     const costPerEnergy = dataEnergy[0].costPerEnergy;
 
-    const finalRsult = dataEssence.map((result) => {
-      let energyRequired = calculateEnergyForMaterial(
-        result.attributes.find((attr) => attr["requires level"])?.[
-          "requires level"
-        ],
-      );
-      return {
-        name: result.name,
-        requireLevel: result.attributes.find(
-          (attr) => attr["requires level"],
-        )?.["requires level"],
-        img: result.cdnImage,
-        tokenId: result.tokenId,
-        minPriceRon: result.minPriceRon,
-        minPriceUsd: result.minPriceUsd,
-        requieredEnergy: energyRequired,
-        minPriceUsdBelowEssence: findPreviousLevelItem(result.name),
-        costEnergy: costPerEnergy,
-        minPriceBox: findRequireBox(
+    const finalRsult = dataEssence
+      .map((result) => {
+        let energyRequired = calculateEnergyForMaterial(
           result.attributes.find((attr) => attr["requires level"])?.[
             "requires level"
           ],
-        ),
-        url:
-          "https://marketplace.skymavis.com/collections/lumiterra/" +
-          result.tokenId,
-      };
-    });
+        );
+        return {
+          name: result.name,
+          requireLevel: result.attributes.find(
+            (attr) => attr["requires level"],
+          )?.["requires level"],
+          img: result.cdnImage,
+          tokenId: result.tokenId,
+          minPriceRon: result.minPriceRon,
+          minPriceUsd: result.minPriceUsd,
+          requieredEnergy: energyRequired,
+          minPriceUsdBelowEssence: findPreviousLevelItem(result.name),
+          costEnergy: costPerEnergy,
+          minPriceBox: findRequireBox(
+            result.attributes.find((attr) => attr["requires level"])?.[
+              "requires level"
+            ],
+          ),
+          url:
+            "https://marketplace.skymavis.com/collections/lumiterra/" +
+            result.tokenId,
+        };
+      })
+      .sort((a, b) => {
+        return a.requireLevel - b.requireLevel;
+      });
 
     return NextResponse.json(finalRsult);
   } catch (error) {
