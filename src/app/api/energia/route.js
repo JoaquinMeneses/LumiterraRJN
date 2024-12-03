@@ -82,9 +82,9 @@ export async function GET(request) {
     const usdRate = dataExchangeRate.ron.usd;
 
     const resultsDataEnergyBuy = dataEnergyBuy.results.map((result) => {
-      const minPriceUSD = Number((result.minPrice / 1e18) * usdRate).toFixed(2);
+      const minPriceUSD = Number((result.minPrice / 1e18) * usdRate).toFixed(4);
       const restoreEnergy = Number(result.attributes["restore energy"][0]);
-      const costPerEnergy = (minPriceUSD / restoreEnergy).toFixed(2);
+      const costPerEnergy = (minPriceUSD / restoreEnergy).toFixed(4);
 
       return {
         ...result,
@@ -98,7 +98,7 @@ export async function GET(request) {
       const minPriceTotalUSD = (
         (result.minPrice / 1e18 + dataBottle.minPrice / 1e18) *
         usdRate
-      ).toFixed(2);
+      ).toFixed(4);
 
       const matchingItem = resultsDataEnergyBuy.find(
         (item) => item.name.substring(0, 5) === result.name.substring(0, 5),
@@ -112,7 +112,7 @@ export async function GET(request) {
         costPerEnergy: (
           minPriceTotalUSD /
           (matchingItem?.restoreEnergy * 3)
-        ).toFixed(2),
+        ).toFixed(4),
       };
     });
 
